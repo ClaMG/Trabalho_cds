@@ -6,6 +6,7 @@
     <meta name="theme-color" content="#303030">
     <title>Pagina Inicial</title> <!--Colocar o titulo no final-->
     <link rel="stylesheet" href="../css/inicial.css">
+    <script src="../js/menu.js"></script>
 </head>
 <body>
     <header> <!--Cabeçalho sem está logado-->
@@ -31,12 +32,31 @@
 
         <hr color="#7b7a7a">
 
-        <menu id="menu"> <!--Menu-->
-            <p class="p_menu"><a href="#" class="a_menu">Inicio</a></p>
-            <p class="p_menu"><a href="#" class="a_menu">Produtos</a></p>
-            <p class="p_menu"><a href="#" class="a_menu">Gênero</a></p>
-            <p class="p_menu"><a href="#" class="a_menu">Artistas</a></p>
-        </menu>
+        <menu > <!--Menu-->
+        <ul id="menu">
+            <li class="p_menu"><a href="#" class="a_menu">Inicio</a></li>
+            <li class="p_menu"><a href="#" class="a_menu">Produtos</a></li>
+            <li class="p_menu" id="menu_genero"><button onclick="aparecer('sumir')">Gênero</button>
+                <ul class="subclasse_menu" id="sumir">
+                    <ul class="sub_subclasse_menu">
+                        <li><a href="#" class="sub_a">Clássica</a></li>
+                        <li><a href="#" class="sub_a">Eletrônica</a></li>
+                        <li><a href="#" class="sub_a">Forro</a></li>
+                        <li><a href="#" class="sub_a">Hip Hop</a></li>
+                        <li><a href="#" class="sub_a">MPB</a></li>
+                    </ul>
+                    <ul class="sub_subclasse_menu">
+                        <li><a href="#" class="sub_a">Clássica</a></li>
+                        <li><a href="#" class="sub_a">Eletrônica</a></li>
+                        <li><a href="#" class="sub_a">Forro</a></li>
+                        <li><a href="#" class="sub_a">Hip Hop</a></li>
+                        <li><a href="#" class="sub_a">MPB</a></li>
+                    </ul>
+                </ul>
+            </li>
+            <li class="p_menu"><a href="#" class="a_menu">Artistas</a></li>
+        </ul>
+    </menu>
     </header>
 </body>
 

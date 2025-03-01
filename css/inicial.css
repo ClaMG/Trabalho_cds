@@ -7,6 +7,9 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body{
+    background-color: red;
+}
 /* Cabeçalho 1*/
 
 header{
@@ -76,7 +79,6 @@ header{
     font-size: 15px;
 }
 
-
 #p_cadastro_login, .a_cadastro_login{
     color: rgb(243, 243, 243);
 }
@@ -89,8 +91,11 @@ header{
 }
 
 .p_menu{
+    position:relative;
+    float:left;
     margin: 7px 30px;
     font-weight: bold;
+    list-style:none;
 }
 
 .a_menu{
@@ -101,6 +106,44 @@ header{
 .a_menu:hover{
     color: #7b7a7a;
     transition: 0.2s;
+}
+
+.b_menu{
+    color: white;
+    background-color: transparent;
+    border: none;
+}
+
+#menu_genero{
+    display: flex;
+    width: 100px;
+    float:left;
+}
+
+.subclasse_menu {
+    position: absolute;
+    display: none;
+    background-color: #ffffff;
+    margin-top: 25px;
+    list-style: none;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.sub_subclasse_menu {
+    list-style: none;
+}
+
+.sub_a{
+    color:#000000; 
+    text-decoration:none; 
+    padding:5px 10px; 
+    display:block;
+}
+
+.sub_a:hover{
+    background-color: #303030;
+    color: #ffffff;
+    transition: 0.3s;
 }
 
 /*Responsividade*/
