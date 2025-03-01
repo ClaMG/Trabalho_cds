@@ -33,7 +33,7 @@ header{
 }
 
 #input_barra_pesquisa{
-    float:left;
+    float: left;
     background-color:transparent;
     padding-left:5px;
     font-style:italic;
@@ -42,18 +42,15 @@ header{
     width:300px;
     margin-top: 2px;
     margin-left: 4px;
-    border: 0 none;
+    outline: none;
+    border: none;
 }
-
-
-#input_barra_pesquisa:focus{
-    outline: 0;
-} 
 
 #lupa, #buttom_lupa{
     margin-top: 5px;
     margin-left: 5px;
     background-color: white;
+    border-radius: 10px;
 }
 
 #check{
@@ -68,7 +65,7 @@ header{
     height: 40px;
 }
 
-#Carrinho{
+#Carrinho, #Perfil{
     height: 40px;
 }
 
@@ -109,18 +106,51 @@ header{
 /*Responsividade*/
 
 @media only screen and (max-width: 680px){
+    /*Barra de Busca*/
+
     #barra_pesquisa{
         max-width: 400px;
         width: 100%;
     }
 
+    #complemento_pesquisa{
+        width: 250px;
+    }
     #barra_pesquisa #complemento_pesquisa{
         position: relative;
-        height: 50px;
-        max-width: 50px;
+        height: 30px;
+        max-width: 30px;
         margin: auto;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
-        border-radius: 25px;
+        border-radius: 10px;
         transition: all 0.3s ease;
+    }
+
+    #check:checked ~ #complemento_pesquisa{
+        max-width: 380px;
+    }
+
+    #input_barra_pesquisa {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+
+    #lupa, #buttom_lupa{
+        position: absolute;
+        right: -2px;
+        width: 30px;
+        height: 100%;
+        margin: 0px;
+    }
+
+    #check:checked ~  #lupa, #buttom_lupa{
+        width: 30px;
+    }
+
+    /*login e cadastro*/
+
+    #p_cadastro_login{
+        display: none;
     }
 }
