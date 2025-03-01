@@ -126,16 +126,22 @@ header{
     float:left;
 }
 
-.subclasse_menu {
+/*Subclasses*/
+
+.subclasse_menu, .subclasse_menu_a{ 
     position: absolute;
     display: none;
     background-color: #ffffff;
-    margin-top: 25px;
+    margin-top: 27px;
     list-style: none;
     border-radius: 0px 0px 10px 10px;
 }
 
-.sub_subclasse_menu {
+.subclasse_menu_a{
+    margin-top: 7px;
+}
+
+.sub_subclasse_menu { 
     list-style: none;
 }
 
