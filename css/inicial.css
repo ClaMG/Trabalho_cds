@@ -3,6 +3,7 @@
 *{
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -10,7 +11,6 @@
 
 header{
     background-color: #303030;
-    margin-top: 0px;
 }
 
 #parte_de_cima_cab{
@@ -25,7 +25,7 @@ header{
 
 /*Barra De pesquisa*/
 
-#barra_pesquisa{
+#complemento_pesquisa{
     background-color:white;
     border-radius:10px;
     width:350px;
@@ -45,15 +45,20 @@ header{
     border: 0 none;
 }
 
+
 #input_barra_pesquisa:focus{
     outline: 0;
 } 
 
-#lupa{
+#lupa, #buttom_lupa{
     margin-top: 5px;
     margin-left: 5px;
+    background-color: white;
 }
 
+#check{
+    display: none;
+  }
 /*Login e Carrinho*/
 
 #login_carrinho{
@@ -104,7 +109,18 @@ header{
 /*Responsividade*/
 
 @media only screen and (max-width: 680px){
-    header{
-        background-color: aqua;
+    #barra_pesquisa{
+        max-width: 400px;
+        width: 100%;
+    }
+
+    #barra_pesquisa #complemento_pesquisa{
+        position: relative;
+        height: 50px;
+        max-width: 50px;
+        margin: auto;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 25px;
+        transition: all 0.3s ease;
     }
 }
