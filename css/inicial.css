@@ -1,0 +1,102 @@
+
+
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Cabeçalho 1*/
+
+header{
+    background-color: #303030;
+    margin-top: 0px;
+}
+
+#parte_de_cima_cab{
+    display: flex;
+    justify-content: space-around;
+}
+
+#logo, #barra_pesquisa, #login_carrinho{
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/*Barra De pesquisa*/
+
+#barra_pesquisa{
+    background-color:white;
+    border-radius:10px;
+    width:350px;
+    height: 37px;
+}
+
+#input_barra_pesquisa{
+    float:left;
+    background-color:transparent;
+    padding-left:5px;
+    font-style:italic;
+    font-size:18px;
+    height:32px;
+    width:300px;
+    margin-top: 2px;
+    margin-left: 4px;
+    border: 0 none;
+}
+
+#input_barra_pesquisa:focus{
+    outline: 0;
+} 
+
+#lupa{
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+/*Login e Carrinho*/
+
+#login_carrinho{
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    height: 40px;
+}
+
+#Carrinho{
+    height: 40px;
+}
+
+/*Login e Cadastro*/
+
+#login_cadastro{
+    display: flex;
+    font-size: 15px;
+}
+
+
+#p_cadastro_login, .a_cadastro_login{
+    color: rgb(243, 243, 243);
+}
+
+/*Menu*/
+
+#menu{
+    display: flex;
+    justify-content: center;
+}
+
+.p_menu{
+    margin: 7px 30px;
+    font-weight: bold;
+}
+
+.a_menu{
+    color: white;
+    text-decoration: none;
+}
+
+.a_menu:hover{
+    color: #7b7a7a;
+    transition: 0.2s;
+}
