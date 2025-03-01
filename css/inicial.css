@@ -108,12 +108,6 @@ header{
     transition: 0.2s;
 }
 
-.b_menu{
-    color: white;
-    background-color: transparent;
-    border: none;
-}
-
 #menu_genero{
     display: flex;
     width: 100px;
