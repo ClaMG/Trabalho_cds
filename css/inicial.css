@@ -98,12 +98,24 @@ header{
     list-style:none;
 }
 
-.a_menu{
+.a_menu, .a_b_menu{
     color: white;
     text-decoration: none;
 }
 
 .a_menu:hover{
+    color: #7b7a7a;
+    transition: 0.2s;
+}
+
+.b_menu{
+    font-size: 17px;
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+}
+
+.a_b_menu:hover{
     color: #7b7a7a;
     transition: 0.2s;
 }
