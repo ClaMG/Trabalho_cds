@@ -105,7 +105,11 @@ header{
 
 /*Responsividade*/
 
-@media only screen and (max-width: 680px){
+@media only screen and (max-width: 650px){
+
+    #parte_de_cima_cab{
+        margin: 0px 20px;
+    }
     /*Barra de Busca*/
 
     #barra_pesquisa{
