@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#303030">
     <title>Pagina Inicial</title> <!-- Definir o título da página -->
-    <link rel="stylesheet" href="../css/inicial.css"> <!-- Link para o arquivo de estilos CSS Cabeçalho -->
-    <link rel="stylesheet" href="../css/carrossel.css"> <!-- Link para o arquivo de estilos CSS Carrossel -->
-    <script src="../js/menu.js"></script> <!-- Link para o script JavaScript do menu -->
+    <link rel="stylesheet" href="../css/cabeçario.css"> <!-- Link para o arquivo de estilos CSS do Cabeçalho -->
+    <link rel="stylesheet" href="../css/carrossel.css"> <!-- Link para o arquivo de estilos CSS do Carrossel -->
+    <script src="../js/menu.js"></script> <!-- Link para o script JavaScript do Menu -->
     <script src="../js/carrossel.js"></script> <!-- Link para o script JavaScript do Carrossel -->
 </head>
 <body>
-    <!-- Cabeçalho da página, que aparece sem o usuário estar logado -->
+    <!-- Cabeçalho da página (sem o usuário estar logado) -->
     <header> 
         <div id="parte_de_cima_cab">
-            <!-- Logo da página com link para a tela inicial -->
+            <!-- Logo da página, com link para a tela inicial -->
             <a href="#" id="logo"><img src="#" alt="Logo"></a> 
             
-            <!-- Barra de pesquisa -->
+            <!-- Barra de pesquisa (campo para o usuário buscar conteúdo) -->
             <div id="barra_pesquisa">
                 <input type="checkbox" id="check"> <!-- Checkbox para controlar visibilidade da barra de pesquisa -->
                 <div id="complemento_pesquisa">
@@ -30,19 +30,19 @@
                 </div>
             </div>
 
-            <!-- Seção para login e carrinho -->
+            <!-- Seção de Login e Carrinho -->
             <div id="login_carrinho"> 
                 <!-- Área de login e cadastro -->
                 <div id="login_cadastro"> 
                     <!-- Ícone de perfil do usuário -->
                     <a href="#"><img src="../img/icones/icone_perfil.png" alt="Perfil" id="Perfil"></a>
-                    <!-- Texto do link de cadastro ou login -->
+                    <!-- Texto do link para cadastro ou login -->
                     <p id="p_cadastro_login">
                         <a href="#" class="a_cadastro_login">Cadastro</a> ou 
                         <br><a href="#" class="a_cadastro_login">Login</a>
                     </p>
                 </div>
-                <!-- Ícone de carrinho de compras com link para a página do carrinho -->
+                <!-- Ícone de carrinho de compras -->
                 <a href="#"><img src="../img/icones/icone_carrinho.png" alt="Carrinho" id="Carrinho"></a>
             </div>
         </div>
@@ -71,7 +71,7 @@
                     </button>
                     <!-- Submenu de Gêneros -->
                     <ul class="subclasse_menu" id="sumir_g">
-                        <!-- Subcategorias de gêneros musicais 1 -->
+                        <!-- Subcategorias de gêneros musicais -->
                         <ul class="sub_subclasse_menu">
                             <li><a href="#" class="sub_a">Clássica</a></li>
                             <li><a href="#" class="sub_a">Eletrônica</a></li>
@@ -79,7 +79,7 @@
                             <li><a href="#" class="sub_a">Hip Hop</a></li>
                             <li><a href="#" class="sub_a">MPB</a></li>
                         </ul>
-                        <!-- Subcategorias de gêneros musicais 2 -->
+                        <!-- Mais subcategorias de gêneros musicais -->
                         <ul class="sub_subclasse_menu">
                             <li><a href="#" class="sub_a">Pagode</a></li>
                             <li><a href="#" class="sub_a">Pop</a></li>
@@ -97,7 +97,7 @@
                     </button>
                     <!-- Submenu de Artistas -->
                     <ul class="subclasse_menu_a" id="sumir_a">
-                        <!-- Subcategorias de artistas 1 -->
+                        <!-- Subcategorias de artistas -->
                         <ul class="sub_subclasse_menu">
                             <li><a href="#" class="sub_a">Clássica</a></li>
                             <li><a href="#" class="sub_a">Eletrônica</a></li>
@@ -105,7 +105,7 @@
                             <li><a href="#" class="sub_a">Hip Hop</a></li>
                             <li><a href="#" class="sub_a">MPB</a></li>
                         </ul>
-                        <!-- Subcategorias de artistas 2 -->
+                        <!-- Mais subcategorias de artistas -->
                         <ul class="sub_subclasse_menu">
                             <li><a href="#" class="sub_a">Pagode</a></li>
                             <li><a href="#" class="sub_a">Pop</a></li>
@@ -118,43 +118,48 @@
             </ul>
         </menu>
     </header>
-    <!--Conteudo-->
+    
+    <!-- Conteúdo principal -->
     <main>
-        <!--Carrossel principal-->
+        <!-- Carrossel principal (exibição de slides) -->
         <section class="slider">
             <div class="cotener_slide">
-                
+                <!-- Botões de navegação por rádio para os slides -->
                 <input type="radio" name="btn-radio" id="radio1">
                 <input type="radio" name="btn-radio" id="radio2">
                 <input type="radio" name="btn-radio" id="radio3">
     
                 <div class="slide_box primeiro">
+                    <!-- Slide 1 (Desktop e Mobile) -->
                     <img class="img_desktop" src="../img/slide/slide1_pc.jpg" alt="slide 1">
                     <img class="img_mobile" src="../img/slide/slide1_cel.jpg" alt="slide 1">
                 </div>
     
                 <div class="slide_box">
-                    <img class="img_desktop" src="../img/slide/slide2_pc.jpg" alt="slide 3">
-                    <img class="img_mobile" src="../img/slide/slide2_cel.jpg" alt="slide 1">
+                    <!-- Slide 2 (Desktop e Mobile) -->
+                    <img class="img_desktop" src="../img/slide/slide2_pc.jpg" alt="slide 2">
+                    <img class="img_mobile" src="../img/slide/slide2_cel.jpg" alt="slide 2">
                 </div>
     
                 <div class="slide_box">
+                    <!-- Slide 3 (Desktop e Mobile) -->
                     <img class="img_desktop" src="../img/slide/slide3_pc.jpg" alt="slide 3">
                     <img class="img_mobile" src="../img/slide/slide3_cel.jpg" alt="slide 3">
                 </div>
     
+                <!-- Navegação automática entre os slides -->
                 <div class="nav_auto">
                     <div class="auto_btn1"></div>
                     <div class="auto_btn2"></div>
                     <div class="auto_btn3"></div>
                 </div>
     
+                <!-- Navegação manual entre os slides -->
                 <div class="nav_manual">
                     <label for="radio1" class="manual_btn"></label>
                     <label for="radio2" class="manual_btn"></label>
                     <label for="radio3" class="manual_btn"></label>
                 </div>
-    
             </div>
         </section>
     </main>

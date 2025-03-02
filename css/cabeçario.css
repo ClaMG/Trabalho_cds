@@ -6,10 +6,6 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
-    background-color: red;
-}
-
 /* Estilização do cabeçalho */
 header{
     background-color: #303030; /* Cor de fundo escura para o cabeçalho */
@@ -84,6 +80,7 @@ header{
 #menu{
     display: flex;
     justify-content: center; /* Centraliza o menu */
+    
 }
 
 .p_menu{
@@ -93,6 +90,7 @@ header{
     font-weight: bold;
     list-style:none; /* Retira o marcador da lista */
 }
+
 
 .a_menu, .a_b_menu{
     color: white;
@@ -129,6 +127,7 @@ header{
     margin-top: 27px;
     list-style: none;
     border-radius: 0px 0px 10px 10px; /* Bordas arredondadas no submenu */
+    z-index: 1;
 }
 
 .subclasse_menu_a{

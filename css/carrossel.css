@@ -1,30 +1,36 @@
-.slider{
+/* Estilo do contêiner principal do slider */
+.slider {
     margin: 0px;
     width: 100%;
     overflow: hidden;
+    z-index: 0;
 }
 
-.cotener_slide{
+/* Contêiner interno com os slides */
+.cotener_slide {
     width: 400%;
     display: flex;
 }
 
-.cotener_slide input, .img_mobile{
+/* Esconde os inputs e imagens móveis */
+.cotener_slide input, .img_mobile {
     display: none;
 }
 
-.slide_box{
+/* Estilo dos slides */
+.slide_box {
     width: 25%;
     position: relative;
     text-align: center;
     transition: 1s;
 }
 
-.slide_box img{
+.slide_box img {
     width: 100%;
 }
 
-.nav_manual, .nav_auto{
+/* Estilo da navegação */
+.nav_manual, .nav_auto {
     position: absolute;
     width: 100%;
     margin-top: 35%;
@@ -34,7 +40,8 @@
     padding: 7px;
 }
 
-.nav_manual .manual_btn, .nav_auto div{
+/* Estilo dos botões de navegação */
+.nav_manual .manual_btn, .nav_auto div {
     border: 1px solid #7b7a7a;
     padding: 10px;
     border-radius: 50%;
@@ -42,40 +49,46 @@
     transition: 0.2s;
 }
 
-.nav_manual .manual_btn:not(:last-child), .nav_auto div:not(:last-child){
+.nav_manual .manual_btn:not(:last-child), .nav_auto div:not(:last-child) {
     margin-right: 10px;
 }
 
-.nav_manual .manual_btn:hover{
+/* Hover nos botões de navegação */
+.nav_manual .manual_btn:hover {
     background-color: #ffffff;
 }
 
-#radio1:checked ~ .nav_auto .auto_btn1, #radio2:checked ~ .nav_auto .auto_btn2, #radio3:checked ~ .nav_auto .auto_btn3{
+/* Botões de navegação destacados quando o slide está ativo */
+#radio1:checked ~ .nav_auto .auto_btn1,
+#radio2:checked ~ .nav_auto .auto_btn2,
+#radio3:checked ~ .nav_auto .auto_btn3 {
     background-color: #ffffff;
 }
 
-#radio1:checked ~ .primeiro{
+/* Ajuste na posição dos slides */
+#radio1:checked ~ .primeiro {
     margin-left: 0%;
 }
 
-#radio2:checked ~ .primeiro{
+#radio2:checked ~ .primeiro {
     margin-left: -25%;
 }
 
-#radio3:checked ~ .primeiro{
+#radio3:checked ~ .primeiro {
     margin-left: -50%;
 }
 
+/* Estilos responsivos */
 @media screen and (max-width: 900px) {
-    .img_desktop{
+    .img_desktop {
         display: none;
     }
 
-    .img_mobile{
+    .img_mobile {
         display: block;
     }
 
-    .nav_auto, .nav_manual{
+    .nav_auto, .nav_manual {
         margin-top: 57%;
     }
 }
