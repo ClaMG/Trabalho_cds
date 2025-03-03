@@ -1,0 +1,65 @@
+ 
+ #destaque{
+    margin-top: 60px;
+ }
+ 
+ #parte_de_cima_destaque{
+    display: flex;
+}
+
+#div_h1{
+    width: 0px;
+}
+
+ /* Definir a primeira imagem (vem da esquerda) */
+ img.left {
+    position: relative;
+    left: -100%; /* Começa fora da tela à esquerda */
+    opacity: 0; /* Começa invisível */
+    transition: all 1s ease-out; /* Transição suave */
+  }
+  
+  /* Definir a segunda imagem (vem da direita) */
+  img.right {
+    position: relative;
+    right: -100%; /* Começa fora da tela à direita */
+    opacity: 0; /* Começa invisível */
+    transition: all 1s ease-out; /* Transição suave */
+  }
+  
+  /* Quando as imagens estiverem visíveis */
+  img.left.visible {
+    left: 0; /* Move a imagem para a posição normal */
+    opacity: 1; /* Torna a imagem visível */
+    
+  }
+  
+  img.right.visible {
+    right: 0; /* Move a imagem para a posição normal */
+    opacity: 1; /* Torna a imagem visível */
+    margin-left: 150px;
+  }
+
+  /* Adicionar o estilo de animação */
+  @keyframes slideInLeft {
+    0% {
+      left: -100%;
+      opacity: 0;
+    }
+    100% {
+      left: 0;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInRight {
+    0% {
+      right: -100%;
+      opacity: 0;
+    }
+    100% {
+      right: 0;
+      opacity: 1;
+    }
+  }
+  

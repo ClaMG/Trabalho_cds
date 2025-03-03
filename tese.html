@@ -35,7 +35,7 @@ img.right.visible {
   margin-left: 105px;
 }
 
-#vdc{
+#parte_de_cima_destaque{
     display: flex;
 }
 
@@ -65,12 +65,30 @@ img.right.visible {
   }
 }
 
+@media screen and (max-width: 768px) {
+  #parte_de_cima_destaque {
+    flex-direction: column; /* As imagens e o título ficam empilhados verticalmente */
+    align-items: center; /* Centraliza as imagens */
+    text-align: center; /* Centraliza o texto */
+  }
+
+  img.left, img.right {
+    max-width: 80%; /* As imagens ocupam no máximo 80% da largura da tela */
+    margin-bottom: 20px; /* Espaço entre as imagens e o título */
+  }
+
+  #h1 {
+    width: auto; /* Permite que o título tenha largura automática */
+    font-size: 1.5rem; /* Ajuste de tamanho da fonte para telas pequenas */
+    margin-top: 20px; /* Espaço superior para o título */
+  }
+}
 
   </style>
 </head>
 <body>
     <div style="height: 1500px;">Conteúdo para rolar</div>
-  <div id="vdc">
+  <div id="parte_de_cima_destaque">
       
         <!-- Imagem que vai aparecer vindo da esquerda -->
         <img class="left" src="img/destaque/lado_esquerdo.png" alt="Imagem vindo da esquerda" />
