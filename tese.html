@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imagem com animação</title>
+  <style>
+
+   /* Definir a primeira imagem (vem da esquerda) */
+img.left {
+  position: relative;
+  left: -100%; /* Começa fora da tela à esquerda */
+  opacity: 0; /* Começa invisível */
+  transition: all 1s ease-out; /* Transição suave */
+}
+
+/* Definir a segunda imagem (vem da direita) */
+img.right {
+  position: relative;
+  right: -100%; /* Começa fora da tela à direita */
+  opacity: 0; /* Começa invisível */
+  transition: all 1s ease-out; /* Transição suave */
+}
+
+/* Quando as imagens estiverem visíveis */
+img.left.visible {
+  left: 0; /* Move a imagem para a posição normal */
+  opacity: 1; /* Torna a imagem visível */
+  
+}
+
+img.right.visible {
+  right: 0; /* Move a imagem para a posição normal */
+  opacity: 1; /* Torna a imagem visível */
+  margin-left: 105px;
+}
+
+#vdc{
+    display: flex;
+}
+
+#h1{
+    width: 0px;
+}
+/* Adicionar o estilo de animação */
+@keyframes slideInLeft {
+  0% {
+    left: -100%;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    right: -100%;
+    opacity: 0;
+  }
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+    <div style="height: 1500px;">Conteúdo para rolar</div>
+  <div id="vdc">
+      
+        <!-- Imagem que vai aparecer vindo da esquerda -->
+        <img class="left" src="img/destaque/lado_esquerdo.png" alt="Imagem vindo da esquerda" />
+        <div id="h1">
+            <h1 >Destaques</h1>
+        </div>
+        <!-- Imagem que vai aparecer vindo da direita -->
+        <img class="right" src="img/destaque/lado_direito.png" alt="Imagem vindo da direita" />
+      
+  </div>
+    <div style="height: 1500px;">Mais conteúdo</div>
+    
+  <script>
+    // Função para verificar se as imagens estão visíveis
+function checkVisibility() {
+  const leftImage = document.querySelector('img.left');
+  const rightImage = document.querySelector('img.right');
+  
+  // Verifica se a imagem da esquerda está visível
+  const leftRect = leftImage.getBoundingClientRect();
+  if (leftRect.top <= window.innerHeight && leftRect.bottom >= 0) {
+    leftImage.classList.add('visible'); // Adiciona a classe 'visible' à imagem da esquerda
+  }
+
+  // Verifica se a imagem da direita está visível
+  const rightRect = rightImage.getBoundingClientRect();
+  if (rightRect.top <= window.innerHeight && rightRect.bottom >= 0) {
+    rightImage.classList.add('visible'); // Adiciona a classe 'visible' à imagem da direita
+  }
+}
+
+// Detecta quando a página for rolada
+window.addEventListener('scroll', checkVisibility);
+
+  </script>
+</body>
+</html>
