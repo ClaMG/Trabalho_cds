@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="../css/carrossel.css"> <!-- Link para o arquivo de estilos CSS do Carrossel -->
     <link rel="stylesheet" href="../css/destaque.css"> <!-- Link para o arquivo de estilos CSS do Destaque -->
     <script src="../js/menu.js"></script> <!-- Link para o script JavaScript do Menu -->
-    <script src="../js/carrossel.js"></script> <!-- Link para o script JavaScript do Carrossel -->
     <script src="../js/destaque.js"></script> <!-- Link para o script JavaScript do Carrossel -->
 </head>
 <body>
@@ -179,7 +178,6 @@
             </div>
 
             <div id="conteudo_destaque">
-
                 <div id="container">
                     <div class="container_imagem">
                         <img src="../img/destaque/capa_de_album_destaque_1.jpg" alt="Musicas Destaques" class="imagem_destaque">
@@ -194,10 +192,64 @@
                         <img src="../img/destaque/disco.png" alt="Disco que gira" class="disco">
                     </div>
                 </div>
-
-                
+                <div class="visualizer-container">
+                    <div class="visualizer">
+                        <div class="bar gray"></div>
+                        <div class="bar gray"></div>
+                        <div class="bar gray"></div>
+                        <div class="bar gray"></div>
+                        <div class="bar gray"></div>
+                        <div class="bar gray"></div>
+                        <div class="bar gray"></div>
+                        <div class="bar gray"></div>
+                        <div class="bar gray"></div>
+                        <div class="bar gray"></div>
+                        <div class="bar gray"></div>
+                        <div class="bar gray"></div>
+                        <div class="bar gray"></div>
+                        <div class="bar gray"></div> 
+                        <div class="bar gray"></div> 
+                        <div class="bar gray"></div> 
+                        <div class="bar gray"></div> 
+                        <div class="bar gray"></div> 
+                        <div class="bar gray"></div> 
+                        <div class="bar gray"></div> 
+                        <div class="bar gray"></div> 
+                        <div class="bar gray"></div> 
+                        <div class="bar gray"></div> 
+                        <div class="bar gray"></div> 
+                        <div class="bar gray"></div> 
+                        <div class="bar gray"></div> 
+                        <div class="bar gray"></div> 
+                        <div class="bar gray"></div> 
+                        <div class="bar gray"></div> 
+                        <div class="bar gray"></div> 
+                    </div>
+                </div>
             </div>
           </section>
     </main>
+    
+    <!--Script do carrossel-->
+    <script> 
+        var radio = document.querySelector('.manual_btn')
+      var cont = 1
+      
+      document.getElementById('radio1').checked = true
+      
+      setInterval(() => {
+          proximaImg()
+      }, 5000)
+      
+      function proximaImg(){
+          cont++
+      
+          if(cont > 3){
+              cont = 1 
+          }
+      
+          document.getElementById('radio'+cont).checked = true
+      }
+      </script>
 </body>
 </html>
