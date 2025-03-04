@@ -235,7 +235,30 @@ header{
         position: absolute;
         top: 110px; /* Distância do topo */
         z-index: 1;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        animation: slideDown 0.5s ease-in-out;
     }
+    
+    /* Quando o menu estiver ativo, ele aparece suavemente */
+    .menu_toggle:checked + .menu_icon + #menu {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    /* Animação de deslizar para baixo */
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    } 
 
     #arredondar_b{
         border-radius: 0px 0px 10px 0px; /* Adiciona bordas arredondadas no botão do menu */
