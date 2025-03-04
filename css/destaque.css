@@ -92,8 +92,11 @@ img.right.visible {
 .imagem_destaque{
   width: 300px;
   border: 15px solid #7b7a7a;
-  z-index: 2; /* Garante que a imagem destaque ficará em cima */
   margin-right: 120px;
+}
+
+.a_imagem{
+  z-index: 2;
 }
 
 .disco{
@@ -324,15 +327,12 @@ img.right.visible {
     }
 
     .imagem_destaque{
-      margin-right: 0px;
+      margin-right: 50px;
       margin-bottom: 80px;
     }
 
     .disco{
-      left: 54%;  /*Move o disco para o centro horizontalmente */
-      top: -28%; /* Alinha o disco em relação à imagem */
-      width: 250px;  /*Tamanho do disco 
-      top: -20%;*/
+      top: -20%;
     }
 
     /*Animação das barras*/
