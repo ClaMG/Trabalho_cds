@@ -85,16 +85,32 @@ img.right.visible {
 
 .container_imagem{
   display: flex;
+  position: relative; /* Cria o contexto para o disco */
 }
 
 .imagem_destaque{
   width: 300px;
   border: 15px solid #7b7a7a;
-  z-index: 1;
+  z-index: 1; /* Garante que a imagem destaque ficará em cima */
+  margin-right: 120px;
 }
 
 .disco{
-  z-index: 0;
+  position: absolute; /* Faz a imagem disco sair do fluxo normal */
+  left: 15%; /* Move o disco para a metade da largura da imagem destaque */
+  top: -24%; /* Alinha o disco ao meio */
+  width: 450px; /* Tamanho do disco */
+  z-index: 0; /* Coloca o disco atrás da imagem destaque */
+  animation: girar 4s linear infinite;
+}
+
+@keyframes girar {
+  0% {
+    transform: rotate(0deg); /* No início a imagem está na posição original */
+  }
+  100% {
+    transform: rotate(360deg); /* Ao final, a imagem completa uma rotação */
+  }
 }
 
 /* Responsividade */
