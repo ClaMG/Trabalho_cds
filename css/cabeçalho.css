@@ -82,6 +82,16 @@ header {
     height: 40px;
 }
 
+/* Estilização da área de login e cadastro */
+#login_cadastro{
+    display: flex;
+    font-size: 15px;
+}
+
+#p_cadastro_login, .a_cadastro_login{
+    color: rgb(243, 243, 243); /* Cor do texto dos links de cadastro e login */
+}
+
 /* === Estilização do Menu de Navegação === */
 
 /* Define a estrutura do menu principal */
