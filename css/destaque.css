@@ -105,7 +105,7 @@ img.right.visible {
   top: -25%; /* Alinha o disco ao meio */
   width: 450px; /* Tamanho do disco */
   z-index: 1; /* Coloca o disco atrás da imagem destaque */
-  animation: girar 4s linear infinite;
+  animation: girar 25s linear infinite;
 }
 
 @keyframes girar {
