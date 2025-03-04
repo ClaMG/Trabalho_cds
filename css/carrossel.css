@@ -1,94 +1,80 @@
-/* Estilo do contêiner principal do slider */
+/* === Estilos do Carrossel === */
+
+/* Contêiner principal do carrossel */
 .slider {
     margin: 0px;
     width: 100%;
-    overflow: hidden;
+    overflow: hidden; /* Evita que imagens ultrapassem os limites */
     z-index: 0;
 }
 
-/* Contêiner interno com os slides */
+/* Contêiner que agrupa todos os slides */
 .cotener_slide {
-    width: 400%;
+    width: 400%; /* Define a largura para comportar múltiplos slides */
     display: flex;
 }
 
-/* Esconde os inputs e imagens móveis */
-.cotener_slide input, .img_mobile {
-    display: none;
-}
+/* Esconde os inputs de rádio e as imagens da versão mobile */
+.cotener_slide input, .img_mobile {display: none;}
 
-/* Estilo dos slides */
+/* Estilos individuais dos slides */
 .slide_box {
-    width: 25%;
+    width: 25%; /* Cada slide ocupa 25% do contêiner */
     position: relative;
     text-align: center;
-    transition: 1s;
+    transition: 1s; /* Suaviza a transição entre slides */
 }
 
-.slide_box img {
-    width: 100%;
-}
+.slide_box img {width: 100%;}/* Garante que as imagens ocupem todo o espaço do slide */
 
-/* Estilo da navegação */
+/* === Navegação do Carrossel === */
+
+/* Contêiner dos botões de navegação */
 .nav_manual, .nav_auto {
     position: absolute;
     width: 100%;
-    margin-top: 35%;
+    margin-top: 35%; /* Ajusta a posição dos botões */
     display: flex;
     justify-content: center;
     background-color: #303030;
     padding: 7px;
 }
 
-/* Estilo dos botões de navegação */
+/* Estiliza os botões de navegação */
 .nav_manual .manual_btn, .nav_auto div {
     border: 1px solid #7b7a7a;
     padding: 10px;
-    border-radius: 50%;
+    border-radius: 50%; /* Deixa os botões redondos */
     cursor: pointer;
     transition: 0.2s;
 }
 
-.nav_manual .manual_btn:not(:last-child), .nav_auto div:not(:last-child) {
-    margin-right: 10px;
-}
+.nav_manual .manual_btn:not(:last-child), .nav_auto div:not(:last-child) { margin-right: 10px;}
 
-/* Hover nos botões de navegação */
-.nav_manual .manual_btn:hover {
-    background-color: #ffffff;
-}
+/* Efeito hover nos botões de navegação */
+.nav_manual .manual_btn:hover {background-color: #ffffff;}
 
-/* Botões de navegação destacados quando o slide está ativo */
+/* Destaque do botão de navegação ativo */
 #radio1:checked ~ .nav_auto .auto_btn1,
 #radio2:checked ~ .nav_auto .auto_btn2,
-#radio3:checked ~ .nav_auto .auto_btn3 {
-    background-color: #ffffff;
-}
+#radio3:checked ~ .nav_auto .auto_btn3 {background-color: #ffffff;}
 
-/* Ajuste na posição dos slides */
-#radio1:checked ~ .primeiro {
-    margin-left: 0%;
-}
+/* Movimentação do carrossel baseada no input de rádio */
+#radio1:checked ~ .primeiro {margin-left: 0%;}
 
-#radio2:checked ~ .primeiro {
-    margin-left: -25%;
-}
+#radio2:checked ~ .primeiro { margin-left: -25%;}
 
-#radio3:checked ~ .primeiro {
-    margin-left: -50%;
-}
+#radio3:checked ~ .primeiro {margin-left: -50%;}
 
-/* Estilos responsivos */
+/* === Responsividade === */
+
 @media screen and (max-width: 900px) {
-    .img_desktop {
-        display: none;
-    }
+    /* Esconde as imagens para desktop */
+    .img_desktop {display: none;}
 
-    .img_mobile {
-        display: block;
-    }
+    /* Exibe as imagens na versão mobile */
+    .img_mobile {display: block;}
 
-    .nav_auto, .nav_manual {
-        margin-top: 57%;
-    }
+    /* Ajusta a posição dos botões de navegação */
+    .nav_auto, .nav_manual { margin-top: 57%;}
 }

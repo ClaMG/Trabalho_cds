@@ -1,20 +1,24 @@
-/*Cabeçario*/
+/* === Estilos da Seção de Destaque === */
+
+/* Define margem superior para separar a seção do restante da página */
 #destaque {
   margin-top: 60px;
 }
 
+/* Alinhamento das imagens e do título na parte superior da seção */
 #parte_de_cima_destaque {
   display: flex;
-  align-items: center; /* Garante que as imagens e o título estejam alinhados verticalmente */
-  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
 }
 
+/* Define tamanho e alinhamento do título "Destaques" */
 #div_h1 {
   display: flex;
-  justify-content: center; /* Centraliza o título horizontalmente */
-  align-items: center; /* Garante que o título fique centralizado verticalmente */
-  width: 200px; /* Define a largura da área do título para controle */
-  margin: 0px 20px; /* Adiciona espaçamento entre as imagens e o título */
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  margin: 0px 20px;
 }
 
 #nome_destaque {
@@ -22,7 +26,9 @@
   margin: 0;
 }
 
-/* Definir a primeira imagem (vem da esquerda) */
+/* === Animação das imagens laterais === */
+
+/* Imagem da esquerda inicia fora da tela */
 img.left {
   position: relative;
   left: -100%;
@@ -30,7 +36,7 @@ img.left {
   transition: all 1s ease-out;
 }
 
-/* Definir a segunda imagem (vem da direita) */
+/* Imagem da direita inicia fora da tela */
 img.right {
   position: relative;
   right: -100%;
@@ -38,7 +44,7 @@ img.right {
   transition: all 1s ease-out;
 }
 
-/* Quando as imagens estiverem visíveis */
+/* Quando visíveis, as imagens entram na tela */
 img.left.visible {
   left: 0;
   opacity: 1;
@@ -49,107 +55,91 @@ img.right.visible {
   opacity: 1;
 }
 
-/* Adicionar o estilo de animação */
+/* Animações de entrada para as imagens laterais */
 @keyframes slideInLeft {
-  0% {
-    left: -100%;
-    opacity: 0;
-  }
-  100% {
-    left: 0;
-    opacity: 1;
-  }
+  0% { left: -100%; opacity: 0; }
+  100% { left: 0; opacity: 1; }
 }
 
 @keyframes slideInRight {
-  0% {
-    right: -100%;
-    opacity: 0;
-  }
-  100% {
-    right: 0;
-    opacity: 1;
-  }
+  0% { right: -100%; opacity: 0; }
+  100% { right: 0; opacity: 1; }
 }
 
-/*Conteudo*/
+/* === Estilos do Conteúdo em Destaque === */
 
-#conteudo_destaque{
+#conteudo_destaque {
   margin-top: 100px;
 }
 
-#container{
+#container {
   display: flex;
   justify-content: space-around;
   z-index: 0;
 }
 
-.container_imagem{
+/* Define posicionamento das imagens de destaque */
+.container_imagem {
   display: flex;
-  position: relative; /* Cria o contexto para o disco */
+  position: relative;
 }
 
-.imagem_destaque{
+.imagem_destaque {
   width: 300px;
   border: 15px solid #7b7a7a;
   margin-right: 120px;
 }
 
-.a_imagem{
+.a_imagem {
   z-index: 2;
 }
 
-.disco{
-  position: absolute; /* Faz a imagem disco sair do fluxo normal */
-  left: 15%; /* Move o disco para a metade da largura da imagem destaque */
-  top: -25%; /* Alinha o disco ao meio */
-  width: 450px; /* Tamanho do disco */
-  z-index: 1; /* Coloca o disco atrás da imagem destaque */
+/* Disco giratório sobreposto às imagens de destaque */
+.disco {
+  position: absolute;
+  left: 15%;
+  top: -25%;
+  width: 450px;
+  z-index: 1;
   animation: girar 25s linear infinite;
 }
 
 @keyframes girar {
-  0% {
-    transform: rotate(0deg); /* No início a imagem está na posição original */
-  }
-  100% {
-    transform: rotate(360deg); /* Ao final, a imagem completa uma rotação */
-  }
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
-
-/*Barras que se mexem*/
+/* === Animação do Visualizador de Barras === */
 
 .visualizer-container {
   display: flex;
-  justify-content: center; /* Centraliza o visualizer horizontalmente */
+  justify-content: center;
   width: 100vw;
   height: 200px;
   z-index: 1;
- 
 }
 
 .visualizer {
   display: flex;
-  justify-content: center; /* Centraliza as barras horizontalmente */
-  gap: 5px; /* Espaçamento entre as barras */
+  justify-content: center;
+  gap: 5px;
   width: 100%;
   height: 100%;
-  transform: rotate(180deg); /* Rotaciona o visualizador 180 graus */
+  transform: rotate(180deg);
 }
 
 .bar {
-  flex-grow: 1; /* Faz com que as barras cresçam para preencher a largura */
+  flex-grow: 1;
   width: 15px;
-  height: 50px; /* altura inicial */
-  background-color: #000000; /* cor da barra */
+  height: 50px;
+  background-color: #000000;
   animation: barAnimation 1s ease-in-out infinite;
   position: relative;
   overflow: hidden;
 }
 
 .bar.gray {
-  background-color: #ffffff; /* cor da barra cinza */
+  background-color: #ffffff;
 }
 
 .bar::before {
@@ -159,225 +149,147 @@ img.right.visible {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(black 5px, transparent 5px); /* cria quadrados pretos */
-  background-size: 100% 10px; /* Tamanho do quadrado */
+  background-image: linear-gradient(black 5px, transparent 5px);
+  background-size: 100% 10px;
 }
 
-.bar:nth-child(1) {
-  animation-delay: 0s;
-}
+/* === Barras animadas === */
 
-.bar:nth-child(2) {
-  animation-delay: 0.1s;
-}
+.bar:nth-child(1) {animation-delay: 0s;}
 
-.bar:nth-child(3) {
-  animation-delay: 0.2s;
-}
+.bar:nth-child(2) {animation-delay: 0.1s;}
 
-.bar:nth-child(4) {
-  animation-delay: 0.3s;
-}
+.bar:nth-child(3) {animation-delay: 0.2s;}
 
-.bar:nth-child(5) {
-  animation-delay: 0.4s;
-}
+.bar:nth-child(4) {animation-delay: 0.3s;}
 
-.bar:nth-child(6) {
-  animation-delay: 0.5s;
-}
+.bar:nth-child(5) {animation-delay: 0.4s;}
 
-.bar:nth-child(7) {
-  animation-delay: 0.6s;
-}
+.bar:nth-child(6) {animation-delay: 0.5s;}
 
-.bar:nth-child(8) {
-  animation-delay: 0.7s;
-}
+.bar:nth-child(7) {animation-delay: 0.6s;}
 
-.bar:nth-child(9) {
-  animation-delay: 0.8s;
-}
+.bar:nth-child(8) {animation-delay: 0.7s;}
 
-.bar:nth-child(10) {
-  animation-delay: 0.9s;
-}
+.bar:nth-child(9) {animation-delay: 0.8s;}
 
-.bar:nth-child(11) {
-  animation-delay: 1s;
-}
+.bar:nth-child(10) {animation-delay: 0.9s;}
 
-.bar:nth-child(12) {
-  animation-delay: 1.1s;
-}
+.bar:nth-child(11) {animation-delay: 1s;}
 
-.bar:nth-child(13) {
-  animation-delay: 1.2s;
-}
+.bar:nth-child(12) {animation-delay: 1.1s;}
 
-.bar:nth-child(14) {
-  animation-delay: 1.3s;
-}
+.bar:nth-child(13) {animation-delay: 1.2s;}
 
-.bar:nth-child(15) {
-  animation-delay: 1.4s;
-}
+.bar:nth-child(14) {animation-delay: 1.3s;}
 
-.bar:nth-child(16) {
-  animation-delay: 1.5s;
-}
+.bar:nth-child(15) {animation-delay: 1.4s;}
 
-.bar:nth-child(17) {
-  animation-delay: 1.6s;
-}
+.bar:nth-child(16) {animation-delay: 1.5s;}
 
-.bar:nth-child(18) {
-  animation-delay: 1.7s;
-}
+.bar:nth-child(17) {animation-delay: 1.6s;}
 
-.bar:nth-child(19) {
-  animation-delay: 1.8s;
-}
+.bar:nth-child(18) {animation-delay: 1.7s;}
 
-.bar:nth-child(20) {
-  animation-delay: 1.9s;
-}
+.bar:nth-child(19) {animation-delay: 1.8s;}
 
-.bar:nth-child(21) {
-  animation-delay: 2s;
-}
+.bar:nth-child(20) {animation-delay: 1.9s;}
 
-.bar:nth-child(22) {
-  animation-delay: 2.1s;
-}
+.bar:nth-child(21) {animation-delay: 2s;}
 
-.bar:nth-child(23) {
-  animation-delay: 2.2s;
-}
+.bar:nth-child(22) {animation-delay: 2.1s;}
 
-.bar:nth-child(24) {
-  animation-delay: 2.3s;
-}
+.bar:nth-child(23) {animation-delay: 2.2s;}
 
-.bar:nth-child(25) {
-  animation-delay: 2.4s;
-}
+.bar:nth-child(24) {animation-delay: 2.3s;}
 
-.bar:nth-child(26) {
-  animation-delay: 2.5s;
-}
+.bar:nth-child(25) {animation-delay: 2.4s;}
 
-.bar:nth-child(27) {
-  animation-delay: 2.6s;
-}
+.bar:nth-child(26) {animation-delay: 2.5s;}
 
-.bar:nth-child(28) {
-  animation-delay: 2.7s;
-}
+.bar:nth-child(27) {animation-delay: 2.6s;}
 
-.bar:nth-child(29) {
-  animation-delay: 2.8s;
-}
+.bar:nth-child(28) {animation-delay: 2.7s;}
 
-.bar:nth-child(30) {
-  animation-delay: 2.9s;
-}
+.bar:nth-child(29) {animation-delay: 2.8s;}
+
+.bar:nth-child(30) {animation-delay: 2.9s;}
 
 @keyframes barAnimation {
-  0% {
-      height: 50px; /* altura inicial */
-  }
-  50% {
-      height: 150px; /* altura máxima */
-  }
-  100% {
-      height: 50px; /* altura final */
-  }
+  0% {height: 50px; /* altura inicial */}
+  50% {height: 150px; /* altura máxima */}
+  100% {height: 50px; /* altura final */}
 }
 
-/* Responsividade */
+/* === Responsividade === */
+
 @media screen and (max-width: 768px) {
 
-  /*Cabeçario*/
-  #destaque{
+  /* Ajusta a margem superior do destaque para telas menores */
+  #destaque {
     margin-top: 50px;
   }
 
+  /* Ajusta a disposição do cabeçalho para telas pequenas */
   #parte_de_cima_destaque {
     flex-direction: column; /* Empilha as imagens e o título verticalmente */
-    align-items: center; /* Centraliza as imagens e o título */
-    text-align: center; /* Centraliza o texto */
+    align-items: center; /* Centraliza os elementos */
+    text-align: center; /* Alinha o texto ao centro */
   }
 
+  /* Redimensiona as imagens laterais para melhor adaptação */
   img.left, img.right {
-    max-width: 80%; /* Limita as imagens a 80% da largura da tela */
+    max-width: 80%; /* Reduz a largura das imagens */
     margin-bottom: 10px; /* Espaço entre as imagens e o título */
   }
 
+  /* Ajusta o tamanho do título em telas menores */
   #div_h1 {
-    width: auto; /* Permite que o título tenha largura automática */
-    font-size: 1.5rem; /* Ajuste de tamanho da fonte para telas pequenas */
+    width: auto; /* Define largura automática */
+    font-size: 1.5rem; /* Reduz o tamanho da fonte */
     margin-top: 0px;
   }
 
-  /*Conteudo*/
-    #container {
-      flex-direction: column;
-      align-items: center;
-    }
+  /* === Ajustes no Conteúdo === */
+  #container {
+    flex-direction: column; /* Empilha os elementos verticalmente */
+    align-items: center; /* Centraliza o conteúdo */
+  }
 
-    .imagem_destaque{
-      margin-right: 50px;
-      margin-bottom: 80px;
-    }
+  /* Ajustes no espaçamento das imagens em destaque */
+  .imagem_destaque {
+    margin-right: 50px;
+    margin-bottom: 80px;
+  }
 
-    .disco{
-      top: -20%;
-    }
+  /* Ajuste na posição do disco giratório */
+  .disco {
+    top: -20%;
+  }
 
-    /*Animação das barras*/
+    /* === Animação das barras === */
 
-    .visualizer-container{
-      margin-top: -60px;
-    }
+    .visualizer-container{margin-top: -60px;}
 
-    .bar:nth-child(20) {
-     display: none;
-    }
-    .bar:nth-child(21) {
-     display: none;
-    }
-    .bar:nth-child(22) {
-     display: none;
-    }
-    .bar:nth-child(23) {
-     display: none;
-    }
-    .bar:nth-child(24) {
-     display: none;
-    }
+    .bar:nth-child(20) {display: none;}
+
+    .bar:nth-child(21) {display: none;}
+
+    .bar:nth-child(22) {display: none;}
+
+    .bar:nth-child(23) {display: none;}
+
+    .bar:nth-child(24) {display: none;}
     
-    .bar:nth-child(25) {
-      display: none;
-    }
+    .bar:nth-child(25) {display: none;}
     
-    .bar:nth-child(26) {
-      display: none;
-    }
+    .bar:nth-child(26) {display: none;}
     
-    .bar:nth-child(27) {
-      display: none;
-    }
+    .bar:nth-child(27) {display: none;}
     
-    .bar:nth-child(28) {
-      display: none;
-    }
+    .bar:nth-child(28) {display: none;}
     
-    .bar:nth-child(29) {
-      display: none;
-    }
+    .bar:nth-child(29) {display: none;}
     
-    .bar:nth-child(30) {
-      display: none;
-    }
+    .bar:nth-child(30) {display: none;}
 }

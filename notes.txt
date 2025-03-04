@@ -16,3 +16,14 @@ Pop
 Reggae
 Rock
 Sertanejo
+
+obsevação: os links dos slides podem ser removidos, contanto que o css que estiver na 'class' do 'a', seja colocada para 'class' da imagem.
+
+Comentados:
+
+cabeçalho.css
+carrossel.css
+destaque.css
+destaque.js
+menu.js
+index.html(Destaques)

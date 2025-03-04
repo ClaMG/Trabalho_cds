@@ -5,74 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#303030">
     <title>Pagina Inicial</title> <!-- Definir o título da página -->
-    <link rel="stylesheet" href="../css/cabeçario.css"> <!-- Link para o arquivo de estilos CSS do Cabeçalho -->
-    <link rel="stylesheet" href="../css/carrossel.css"> <!-- Link para o arquivo de estilos CSS do Carrossel -->
-    <link rel="stylesheet" href="../css/destaque.css"> <!-- Link para o arquivo de estilos CSS do Destaque -->
-    <script src="../js/menu.js"></script> <!-- Link para o script JavaScript do Menu -->
-    <script src="../js/destaque.js"></script> <!-- Link para o script JavaScript do Destaque -->
+
+    <!-- Importação dos arquivos de estilo -->
+    <link rel="stylesheet" href="../css/cabeçalho.css"> <!-- Estilos do cabeçalho -->
+    <link rel="stylesheet" href="../css/carrossel.css"> <!-- Estilos do carrossel -->
+    <link rel="stylesheet" href="../css/destaque.css"> <!-- Estilos da seção de destaque -->
+
+    <!-- Importação dos scripts JavaScript -->
+    <script src="../js/menu.js"></script> <!-- Script do menu interativo -->
+    <script src="../js/destaque.js"></script> <!-- Script das animações de destaque -->
+
 </head>
 <body>
     <!-- Cabeçalho da página (sem o usuário estar logado) -->
     <header> 
+
         <div id="parte_de_cima_cab">
-            <!-- Logo da página, com link para a tela inicial -->
+
+            <!-- Logo da página -->
             <a href="#" id="logo"><img src="#" alt="Logo"></a> 
             
-            <!-- Barra de pesquisa (campo para o usuário buscar conteúdo) -->
+            <!-- Barra de pesquisa -->
             <div id="barra_pesquisa">
-                <input type="checkbox" id="check"> <!-- Checkbox para controlar visibilidade da barra de pesquisa -->
+                <input type="checkbox" id="check"> <!-- Controle de visibilidade -->
                 <div id="complemento_pesquisa">
-                    <!-- Campo de texto para pesquisa -->
+
+                    <!-- Campo de pesquisa -->
                     <input type="text" id="input_barra_pesquisa" placeholder="Buscar..." >
-                    <!-- Botão de lupa para acionar a pesquisa -->
+
+                    <!-- Botão de pesquisa -->
                     <label for="check" id="buttom_lupa">
                         <img src="../img/icones/icone_lupa.png" alt="Lupa" id="lupa">
                     </label>
                 </div>
             </div>
 
-            <!-- Seção de Login e Carrinho -->
-            <div id="login_carrinho"> 
-                <!-- Área de login e cadastro -->
-                <div id="login_cadastro"> 
-                    <!-- Ícone de perfil do usuário -->
-                    <a href="#"><img src="../img/icones/icone_perfil.png" alt="Perfil" id="Perfil"></a>
-                    <!-- Texto do link para cadastro ou login -->
+            <div id="login_carrinho"> <!-- Login e Carrinho -->
+                <div id="login_cadastro"> <!-- Login e cadastro -->
+
+                    <a href="#"><img src="../img/icones/icone_perfil.png" alt="Perfil" id="Perfil"></a><!-- Ícone de perfil -->
                     <p id="p_cadastro_login">
-                        <a href="#" class="a_cadastro_login">Cadastro</a> ou 
-                        <br><a href="#" class="a_cadastro_login">Login</a>
+                        <a href="#" class="a_cadastro_login">Cadastro</a> ou <br>
+                        <a href="#" class="a_cadastro_login">Login</a>
                     </p>
                 </div>
-                <!-- Ícone de carrinho de compras -->
-                <a href="#"><img src="../img/icones/icone_carrinho.png" alt="Carrinho" id="Carrinho"></a>
+
+                <a href="#"><img src="../img/icones/icone_carrinho.png" alt="Carrinho" id="Carrinho"></a><!-- Ícone de carrinho -->
             </div>
         </div>
 
-        <!-- Linha horizontal para separar o cabeçalho do menu -->
-        <hr color="#7b7a7a">
+        <hr color="#7b7a7a"><!-- Linha separadora -->
 
         <!-- Menu de navegação -->
-        <menu class="menu-underline">
-            <!-- Lista de itens do menu -->
-            <!-- Botão do menu hambúrguer (para dispositivos móveis) -->
-            <input type="checkbox" id="menu_toggle" class="menu_toggle">
-            <label for="menu_toggle" class="menu_icon">&#9776;</label> <!-- Ícone do menu hambúrguer -->
+        <nav class="menu-underline">
+            <input type="checkbox" id="menu_toggle" class="menu_toggle"><!-- Menu responsivo -->
+            <label for="menu_toggle" class="menu_icon">&#9776;</label> 
 
             <ul id="menu">
-                <!-- Item "Início" do menu -->
+
                 <li class="p_menu"><a href="#" class="a_menu">Inicio</a></li>
-                
-                <!-- Item "Produtos" do menu -->
                 <li class="p_menu"><a href="#" class="a_menu">Produtos</a></li>
                 
-                <!-- Menu suspenso para "Gênero" -->
+                 <!-- Menu suspenso de gêneros musicais -->
                 <li class="p_menu" id="menu_genero">
+
                     <button onclick="aparecer_g('sumir_g')" class="b_menu">
                         <a href="#" class="a_b_menu">Gênero</a>
                     </button>
+
                     <!-- Submenu de Gêneros -->
                     <ul class="subclasse_menu" id="sumir_g">
-                        <!-- Subcategorias de gêneros musicais -->
+                        
                         <ul class="sub_subclasse_menu">
                             <li><a href="#" class="sub_a">Clássica</a></li>
                             <li><a href="#" class="sub_a">Eletrônica</a></li>
@@ -80,7 +83,7 @@
                             <li><a href="#" class="sub_a">Hip Hop</a></li>
                             <li><a href="#" class="sub_a">MPB</a></li>
                         </ul>
-                        <!-- Mais subcategorias de gêneros musicais -->
+                        
                         <ul class="sub_subclasse_menu">
                             <li><a href="#" class="sub_a">Pagode</a></li>
                             <li><a href="#" class="sub_a">Pop</a></li>
@@ -91,14 +94,16 @@
                     </ul>
                 </li>
 
-                <!-- Menu suspenso para "Artistas" -->
+                <!-- Menu suspenso para Artistas -->
                 <li class="p_menu" id="arredondar_b">
+
                     <button onclick="aparecer_a('sumir_a')" class="b_menu">
                         <a href="#" class="a_b_menu">Artistas</a>
                     </button>
+
                     <!-- Submenu de Artistas -->
                     <ul class="subclasse_menu_a" id="sumir_a">
-                        <!-- Subcategorias de artistas -->
+                        
                         <ul class="sub_subclasse_menu">
                             <li><a href="#" class="sub_a">Ludwing Beethowen</a></li>
                             <li><a href="#" class="sub_a">Marshmello</a></li>
@@ -106,7 +111,7 @@
                             <li><a href="#" class="sub_a">Snoop Dogg</a></li>
                             <li><a href="#" class="sub_a">Maria Bethânia</a></li>
                         </ul>
-                        <!-- Mais subcategorias de artistas -->
+                        
                         <ul class="sub_subclasse_menu">
                             <li><a href="#" class="sub_a">Péricles</a></li>
                             <li><a href="#" class="sub_a">Michael Jackson</a></li>
@@ -117,21 +122,24 @@
                     </ul>
                 </li>
             </ul>
-        </menu>
+        </nav>
     </header>
     
     <!-- Conteúdo principal -->
     <main>
-        <!-- Carrossel principal (exibição de slides) -->
+
+        <!-- Carrossel principal -->
         <section class="slider">
             <div class="cotener_slide">
+
                 <!-- Botões de navegação por rádio para os slides -->
                 <input type="radio" name="btn-radio" id="radio1">
                 <input type="radio" name="btn-radio" id="radio2">
                 <input type="radio" name="btn-radio" id="radio3">
     
                 <div class="slide_box primeiro">
-                    <!-- Slide 1 (Desktop e Mobile) -->
+
+                    <!-- Slide 1 -->
                     <a href="#">
                         <img class="img_desktop" src="../img/slide/slide1_pc.jpg" alt="slide 1">
                         <img class="img_mobile" src="../img/slide/slide1_cel.jpg" alt="slide 1">
@@ -139,7 +147,8 @@
                 </div>
     
                 <div class="slide_box">
-                    <!-- Slide 2 (Desktop e Mobile) -->
+
+                    <!-- Slide 2 -->
                     <a href="#">
                         <img class="img_desktop" src="../img/slide/slide2_pc.jpg" alt="slide 2">
                         <img class="img_mobile" src="../img/slide/slide2_cel.jpg" alt="slide 2">
@@ -147,21 +156,22 @@
                 </div>
     
                 <div class="slide_box">
-                    <!-- Slide 3 (Desktop e Mobile) -->
+
+                    <!-- Slide 3 -->
                     <a href="#">
                         <img class="img_desktop" src="../img/slide/slide3_pc.jpg" alt="slide 3">
                         <img class="img_mobile" src="../img/slide/slide3_cel.jpg" alt="slide 3"> 
                     </a>
                 </div>
     
-                <!-- Navegação automática entre os slides -->
+                <!-- Navegação automática -->
                 <div class="nav_auto">
                     <div class="auto_btn1"></div>
                     <div class="auto_btn2"></div>
                     <div class="auto_btn3"></div>
                 </div>
     
-                <!-- Navegação manual entre os slides -->
+                <!-- Navegação manual -->
                 <div class="nav_manual">
                     <label for="radio1" class="manual_btn"></label>
                     <label for="radio2" class="manual_btn"></label>
@@ -170,34 +180,47 @@
             </div>
         </section>
 
+        <!-- Destaques -->
         <section id="destaque">
             <div id="parte_de_cima_destaque">
-              <!-- Imagem que vai aparecer vindo da esquerda -->
+
+              <!-- Imagem da esquerda -->
               <img class="left" src="../img/destaque/lado_esquerdo.png" alt="Imagem vindo da esquerda" />
               
+              <!-- Texto -->
               <div id="div_h1">
                 <h1 id="nome_destaque">Destaques</h1>
               </div>
         
-              <!-- Imagem que vai aparecer vindo da direita -->
+              <!-- Imagem da direita -->
               <img class="right" src="../img/destaque/lado_direito.png" alt="Imagem vindo da direita" />
             </div>
 
             <div id="conteudo_destaque">
+                <!-- Conteudo -->
                 <div id="container">
+
+                    <!-- CD Destaque -->
                     <div class="container_imagem">
                         <a href="#" class="a_imagem"><img src="../img/destaque/capa_de_album_destaque_1.jpg" alt="Musicas Destaques" class="imagem_destaque"></a>
                         <img src="../img/destaque/disco.png" alt="Disco que gira" class="disco">
                     </div>
+
+                    <!-- CD Destaque -->
                     <div class="container_imagem">
                         <a href="#" class="a_imagem"><img src="../img/destaque/capa_de_album_destaque_2.jpg" alt="Musicas Destaques" class="imagem_destaque"></a>
                         <img src="../img/destaque/disco.png" alt="Disco que gira" class="disco">
                     </div>
+
+                    <!-- CD Destaque -->
                     <div class="container_imagem">
                         <a href="#" class="a_imagem"><img src="../img/destaque/capa_de_album_destaque_3.jpg" alt="Musicas Destaques" class="imagem_destaque"></a>
                         <img src="../img/destaque/disco.png" alt="Disco que gira" class="disco">
                     </div>
+
                 </div>
+
+                <!-- Barra animada -->
                 <div class="visualizer-container">
                     <div class="visualizer">
                         <div class="bar gray"></div>
@@ -236,26 +259,35 @@
           </section>
     </main>
     
-    <!--Script do carrossel-->
-    <script> 
-        var radio = document.querySelector('.manual_btn')
-      var cont = 1
-      
-      document.getElementById('radio1').checked = true
-      
-      setInterval(() => {
-          proximaImg()
-      }, 5000)
-      
-      function proximaImg(){
-          cont++
-      
-          if(cont > 3){
-              cont = 1 
-          }
-      
-          document.getElementById('radio'+cont).checked = true
-      }
-      </script>
+<!--Script do carrossel-->
+<script> 
+
+    // Seleciona um botão de navegação manual do carrossel
+    var radio = document.querySelector('.manual_btn');
+
+    // Inicializa o contador de imagens do carrossel
+    var cont = 1;
+
+    // Define a primeira imagem como selecionada ao carregar a página
+    document.getElementById('radio1').checked = true;
+
+    // Configura um intervalo para trocar as imagens automaticamente a cada 5 segundos
+    setInterval(() => {
+        proximaImg();
+    }, 5000);
+
+    // Função que avança para a próxima imagem do carrossel
+    function proximaImg() {
+        cont++;
+
+        // Se chegar além da última imagem, volta para a primeira
+        if (cont > 3) {
+            cont = 1;
+        }
+
+        // Atualiza a seleção da imagem correspondente
+        document.getElementById('radio' + cont).checked = true;
+    }
+</script>
 </body>
 </html>
