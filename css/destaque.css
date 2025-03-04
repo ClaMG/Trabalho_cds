@@ -1,88 +1,124 @@
- 
- #destaque{
-    margin-top: 60px;
- }
- 
- #parte_de_cima_destaque{
-    display: flex;
+/*Cabeçario*/
+#destaque {
+  margin-top: 60px;
 }
 
-#div_h1{
-    width: 0px;
+#parte_de_cima_destaque {
+  display: flex;
+  align-items: center; /* Garante que as imagens e o título estejam alinhados verticalmente */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
 }
 
- /* Definir a primeira imagem (vem da esquerda) */
- img.left {
-    position: relative;
-    left: -100%; /* Começa fora da tela à esquerda */
-    opacity: 0; /* Começa invisível */
-    transition: all 1s ease-out; /* Transição suave */
+#div_h1 {
+  display: flex;
+  justify-content: center; /* Centraliza o título horizontalmente */
+  align-items: center; /* Garante que o título fique centralizado verticalmente */
+  width: 200px; /* Define a largura da área do título para controle */
+  margin: 0px 20px; /* Adiciona espaçamento entre as imagens e o título */
+}
+
+#nome_destaque {
+  font-size: 70px;
+  margin: 0;
+}
+
+/* Definir a primeira imagem (vem da esquerda) */
+img.left {
+  position: relative;
+  left: -100%;
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+
+/* Definir a segunda imagem (vem da direita) */
+img.right {
+  position: relative;
+  right: -100%;
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+
+/* Quando as imagens estiverem visíveis */
+img.left.visible {
+  left: 0;
+  opacity: 1;
+}
+
+img.right.visible {
+  right: 0;
+  opacity: 1;
+}
+
+/* Adicionar o estilo de animação */
+@keyframes slideInLeft {
+  0% {
+    left: -100%;
+    opacity: 0;
   }
-  
-  /* Definir a segunda imagem (vem da direita) */
-  img.right {
-    position: relative;
-    right: -100%; /* Começa fora da tela à direita */
-    opacity: 0; /* Começa invisível */
-    transition: all 1s ease-out; /* Transição suave */
+  100% {
+    left: 0;
+    opacity: 1;
   }
-  
-  /* Quando as imagens estiverem visíveis */
-  img.left.visible {
-    left: 0; /* Move a imagem para a posição normal */
-    opacity: 1; /* Torna a imagem visível */
-    
+}
+
+@keyframes slideInRight {
+  0% {
+    right: -100%;
+    opacity: 0;
   }
-  
-  img.right.visible {
-    right: 0; /* Move a imagem para a posição normal */
-    opacity: 1; /* Torna a imagem visível */
-    margin-left: 150px;
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+/*Conteudo*/
+
+#conteudo_destaque{
+  margin-top: 100px;
+}
+
+#container{
+  display: flex;
+  justify-content: space-around;
+}
+
+.container_imagem{
+  display: flex;
+}
+
+.imagem_destaque{
+  width: 300px;
+  border: 15px solid #7b7a7a;
+  z-index: 1;
+}
+
+.disco{
+  z-index: 0;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+
+  /*Cabeçario*/
+  #destaque{
+    margin-top: 50px;
   }
 
-  /* Adicionar o estilo de animação */
-  @keyframes slideInLeft {
-    0% {
-      left: -100%;
-      opacity: 0;
-    }
-    100% {
-      left: 0;
-      opacity: 1;
-    }
+  #parte_de_cima_destaque {
+    flex-direction: column; /* Empilha as imagens e o título verticalmente */
+    align-items: center; /* Centraliza as imagens e o título */
+    text-align: center; /* Centraliza o texto */
   }
-  
-  @keyframes slideInRight {
-    0% {
-      right: -100%;
-      opacity: 0;
-    }
-    100% {
-      right: 0;
-      opacity: 1;
-    }
-  }
-  
 
-  @media screen and (max-width: 768px) {
-    #parte_de_cima_destaque {
-      flex-direction: column; /* As imagens e o título ficam empilhados verticalmente */
-      align-items: center; /* Centraliza as imagens */
-      text-align: center; /* Centraliza o texto */
-    }
-  
-    img.left, img.right {
-      max-width: 80%; /* As imagens ocupam no máximo 80% da largura da tela */
-      margin-bottom: 20px; /* Espaço entre as imagens e o título */
-    }
-  
-    img.left{
-      margin-right: 150px;
-    }
-  
-    #h1 {
-      width: auto; /* Permite que o título tenha largura automática */
-      font-size: 1.5rem; /* Ajuste de tamanho da fonte para telas pequenas */
-      margin-top: 20px; /* Espaço superior para o título */
-    }
+  img.left, img.right {
+    max-width: 80%; /* Limita as imagens a 80% da largura da tela */
+    margin-bottom: 10px; /* Espaço entre as imagens e o título */
   }
+
+  #div_h1 {
+    width: auto; /* Permite que o título tenha largura automática */
+    font-size: 1.5rem; /* Ajuste de tamanho da fonte para telas pequenas */
+    margin-top: 0px;
+  }
+}

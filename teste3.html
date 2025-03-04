@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imagem Girando</title>
+  <style>
+    .imagem-girando {
+      width: 200px; /* Tamanho da imagem */
+      height: 200px; /* Tamanho da imagem */
+      animation: girar 4s linear infinite; /* Aplica a animação */
+    }
+
+    @keyframes girar {
+      0% {
+        transform: rotate(0deg); /* No início a imagem está na posição original */
+      }
+      100% {
+        transform: rotate(360deg); /* Ao final, a imagem completa uma rotação */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <img src="img/destaque/disco.png" alt="Imagem Girando" class="imagem-girando">
+
+</body>
+</html>
