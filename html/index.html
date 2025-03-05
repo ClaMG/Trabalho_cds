@@ -10,10 +10,12 @@
     <link rel="stylesheet" href="../css/cabeçalho.css"> <!-- Estilos do cabeçalho -->
     <link rel="stylesheet" href="../css/carrossel.css"> <!-- Estilos do carrossel -->
     <link rel="stylesheet" href="../css/destaque.css"> <!-- Estilos da seção de destaque -->
+    <link rel="stylesheet" href="../css/artistas.css"> <!-- Estilos da seção de artistas -->
 
     <!-- Importação dos scripts JavaScript -->
     <script src="../js/menu.js"></script> <!-- Script do menu interativo -->
     <script src="../js/destaque.js"></script> <!-- Script das animações de destaque -->
+    <script src="../js/artista.js"></script> <!-- Script das animações de Artista -->
 
 </head>
 <body>
@@ -133,9 +135,9 @@
             <div class="cotener_slide">
 
                 <!-- Botões de navegação por rádio para os slides -->
-                <input type="radio" name="btn-radio" id="radio1">
-                <input type="radio" name="btn-radio" id="radio2">
-                <input type="radio" name="btn-radio" id="radio3">
+                <input type="radio" name="btn-radio" id="radio-1">
+                <input type="radio" name="btn-radio" id="radio-2">
+                <input type="radio" name="btn-radio" id="radio-3">
     
                 <div class="slide_box primeiro">
 
@@ -173,9 +175,9 @@
     
                 <!-- Navegação manual -->
                 <div class="nav_manual">
-                    <label for="radio1" class="manual_btn"></label>
-                    <label for="radio2" class="manual_btn"></label>
-                    <label for="radio3" class="manual_btn"></label>
+                    <label for="radio-1" class="manual_btn"></label>
+                    <label for="radio-2" class="manual_btn"></label>
+                    <label for="radio-3" class="manual_btn"></label>
                 </div>
             </div>
         </section>
@@ -257,6 +259,42 @@
                 </div>
             </div>
           </section>
+
+          <section class="slider_artista">
+            <div class="cotener_slide_artista">
+                <!-- Botões de navegação por rádio para os slides -->
+                <input type="radio" name="btn-radio-artista" id="radio_1">
+                <input type="radio" name="btn-radio-artista" id="radio_2">
+                <input type="radio" name="btn-radio-artista" id="radio_3">
+
+        
+                <div class="slide_box_artista primeiro">
+                    <!-- Slide 1 -->
+                    
+                        <img class="img_desktop" src="../img/artistas/artista4.jpg" alt="slide 1">
+                        <img class="img_mobile_artista" src="../img/slide/slide1_cel.jpg" alt="slide 1">
+                    
+                    <!-- Botão sobre a imagem -->
+                    <button class="button_artista"><a href="#" class="a_button_artista">Músicas</a></button>
+                </div>
+        
+                <div class="slide_box_artista">
+                    <!-- Slide 2 -->
+                        <img class="img_desktop" src="../img/artistas/artista2.jpg" alt="slide 2">
+                        <img class="img_mobile_artista" src="../img/slide/slide2_cel.jpg" alt="slide 2">
+                    <!-- Botão sobre a imagem -->
+                    <button class="button_artista"><a href="#" class="a_button_artista">Músicas</a></button>
+                </div>
+        
+                <div class="slide_box_artista">
+                    <!-- Slide 3 -->
+                        <img class="img_desktop" src="../img/artistas/artista3.jpg" alt="slide 3">
+                        <img class="img_mobile_artista" src="../img/slide/slide3_cel.jpg" alt="slide 3">
+                    <!-- Botão sobre a imagem -->
+                    <button class="button_artista"><a href="#" class="a_button_artista">Músicas</a></button>
+                </div>
+            </div>
+        </section>
     </main>
     
 <!--Script do carrossel-->
@@ -269,15 +307,15 @@
     var cont = 1;
 
     // Define a primeira imagem como selecionada ao carregar a página
-    document.getElementById('radio1').checked = true;
+    document.getElementById('radio-1').checked = true;
 
     // Configura um intervalo para trocar as imagens automaticamente a cada 5 segundos
     setInterval(() => {
-        proximaImg();
+        trocarSlidePrincipal();
     }, 5000);
 
     // Função que avança para a próxima imagem do carrossel
-    function proximaImg() {
+    function trocarSlidePrincipal() {
         cont++;
 
         // Se chegar além da última imagem, volta para a primeira
@@ -286,8 +324,35 @@
         }
 
         // Atualiza a seleção da imagem correspondente
-        document.getElementById('radio' + cont).checked = true;
+        document.getElementById('radio-' + cont).checked = true;
     }
+</script>
+
+<!--Script dos Artistas-->
+<script>
+    // Inicializa o contador de imagens do carrossel
+var conta = 1;
+
+// Define a primeira imagem como selecionada ao carregar a página
+document.getElementById('radio_1').checked = true;
+
+// Configura um intervalo para trocar as imagens automaticamente a cada 5 segundos
+setInterval(() => {
+    trocarSlideArtistas();
+}, 5000);
+
+// Função que avança para a próxima imagem do carrossel
+function trocarSlideArtistas() {
+    conta++;
+
+    // Se chegar além da última imagem, volta para a primeira
+    if (conta > 3) {
+        conta = 1;
+    }
+
+    // Atualiza a seleção da imagem correspondente
+    document.getElementById('radio_' + conta).checked = true;
+}
 </script>
 </body>
 </html>
