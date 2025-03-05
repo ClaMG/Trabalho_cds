@@ -1,26 +1,29 @@
- // Seleciona um botão de navegação manual do carrossel
- var radio = document.querySelector('.manual_btn');
+// Seleciona um dos botões de navegação manual do carrossel (embora não seja usado diretamente no código)
+var radio = document.querySelector('.manual_btn');
 
- // Inicializa o contador de imagens do carrossel
- var cont = 1;
+// Contador que controla qual imagem do carrossel está sendo exibida
+var cont = 1;
 
- // Define a primeira imagem como selecionada ao carregar a página
- document.getElementById('radio-1').checked = true;
+// Ao carregar a página, define a primeira imagem do carrossel como ativa
+document.getElementById('radio-1').checked = true;
 
- // Configura um intervalo para trocar as imagens automaticamente a cada 5 segundos
- setInterval(() => {
-     trocarSlidePrincipal();
- }, 5000);
+// Define um intervalo para trocar as imagens automaticamente a cada 5 segundos
+setInterval(() => {
+    trocarSlidePrincipal();
+}, 5000);
 
- // Função que avança para a próxima imagem do carrossel
- function trocarSlidePrincipal() {
-     cont++;
+/**
+ * Alterna para o próximo slide do carrossel.
+ * Se estiver no último slide, volta para o primeiro.
+ */
+function trocarSlidePrincipal() {
+    cont++;
 
-     // Se chegar além da última imagem, volta para a primeira
-     if (cont > 3) {
-         cont = 1;
-     }
+    // Se o contador ultrapassar o número total de slides (3), reinicia no primeiro slide
+    if (cont > 3) {
+        cont = 1;
+    }
 
-     // Atualiza a seleção da imagem correspondente
-     document.getElementById('radio-' + cont).checked = true;
- }
+    // Atualiza a seleção do botão de rádio correspondente ao slide atual
+    document.getElementById('radio-' + cont).checked = true;
+}

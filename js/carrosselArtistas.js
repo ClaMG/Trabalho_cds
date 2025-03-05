@@ -1,23 +1,26 @@
-// Inicializa o contador de imagens do carrossel
+// Contador que controla o slide atual do carrossel de artistas
 var conta = 1;
 
-// Define a primeira imagem como selecionada ao carregar a página
+// Ao carregar a página, define o primeiro slide como ativo
 document.getElementById('radio_1').checked = true;
 
-// Configura um intervalo para trocar as imagens automaticamente a cada 5 segundos
+// Define um intervalo para trocar os slides automaticamente a cada 5 segundos
 setInterval(() => {
     trocarSlideArtistas();
 }, 5000);
 
-// Função que avança para a próxima imagem do carrossel
+/**
+ * Função que avança para o próximo slide do carrossel de artistas.
+ * Se estiver no último slide, volta para o primeiro.
+ */
 function trocarSlideArtistas() {
     conta++;
 
-    // Se chegar além da última imagem, volta para a primeira
+    // Se o contador ultrapassar o número total de slides (3), reinicia no primeiro slide
     if (conta > 3) {
         conta = 1;
     }
 
-    // Atualiza a seleção da imagem correspondente
+    // Marca o botão de rádio correspondente ao slide atual, alterando a exibição do carrossel
     document.getElementById('radio_' + conta).checked = true;
 }
