@@ -15,113 +15,111 @@
 /* === Estilos do Carrossel === */
 
 /* Contêiner principal do carrossel */
-.slider {
+.slider_artista {
     width: 100vw;
-    height: 200px;
+    height: 250px;
     overflow: hidden; /* Evita que imagens ultrapassem os limites */
 }
 
 /* Contêiner que agrupa todos os slides */
-.cotener_slide {
+.cotener_slide_artista {
     width: 400%; /* Define a largura para comportar múltiplos slides */
     display: flex;
 }
 
 /* Esconde os inputs de rádio e as imagens da versão mobile */
-.cotener_slide input, .img_mobile {
+.cotener_slide_artista input, .img_mobile_artista {
     display: none;
 }
 
 /* Estilos individuais dos slides */
-.slide_box {
+.slide_box_artista {
     width: 25%; /* Cada slide ocupa 25% do contêiner */
     position: relative;
     text-align: center;
     transition: 1s; /* Suaviza a transição entre slides */
 }
 
-.slide_box img {
+.slide_box_artista img {
     width: 100%; /* Garante que as imagens ocupem todo o espaço do slide */
     transform: translate(0%, -20%); /* Centraliza a imagem */
 }
 
 /* === Estilos do botão sobre a imagem === */
-.button .a_button_artista{
+.button_artista .a_button_artista{
     position: absolute;
-    top: 10%; /* Posiciona o botão no topo da imagem */
-    left: 50%;
+    top: 29%; /* Posiciona o botão no topo da imagem */
+    left: 80%;
     transform: translateX(-50%); /* Centraliza horizontalmente */
     background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
     color: white;
     border: none;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 15px 30px;
+    font-size: 38px;
     cursor: pointer;
     border-radius: 5px;
     z-index: 1;
+    text-decoration: none;
 }
 
 /* === Navegação do Carrossel === */
 
 /* Movimentação do carrossel baseada no input de rádio */
-#radio1:checked ~ .primeiro { margin-left: 0%; }
-#radio2:checked ~ .primeiro { margin-left: -25%; }
-#radio3:checked ~ .primeiro { margin-left: -50%; }
+#radio_1:checked ~ .primeiro { margin-left: 0%; }
+#radio_2:checked ~ .primeiro { margin-left: -25%; }
+#radio_3:checked ~ .primeiro { margin-left: -50%; }
 
 /* === Responsividade === */
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 650px) {
     /* Esconde as imagens para desktop */
     .img_desktop { display: none; }
 
     /* Exibe as imagens na versão mobile */
-    .img_mobile { display: block; }
+    .img_mobile_artista { display: block; }
 
-    /* Ajusta a posição dos botões de navegação */
-    .nav_auto { margin-top: 57%; }
+    .button_artista .a_button_artista{
+    top: 12%; /* Posiciona o botão no topo da imagem */
+    left: 74%;
+    padding: 10px 20px;
+    font-size: 23px;
+}
 }
 
 </style>
 <body>
 
-    <section class="slider">
-        <div class="cotener_slide">
+    <section class="slider_artista">
+        <div class="cotener_slide_artista">
             <!-- Botões de navegação por rádio para os slides -->
-            <input type="radio" name="btn-radio" id="radio1">
-            <input type="radio" name="btn-radio" id="radio2">
-            <input type="radio" name="btn-radio" id="radio3">
+            <input type="radio" name="btn-radio" id="radio_1">
+            <input type="radio" name="btn-radio" id="radio_2">
+            <input type="radio" name="btn-radio" id="radio_3">
     
-            <div class="slide_box primeiro">
+            <div class="slide_box_artista primeiro">
                 <!-- Slide 1 -->
                 
                     <img class="img_desktop" src="img/artistas/artista4.jpg" alt="slide 1">
-                    <img class="img_mobile" src="../img/slide/slide1_cel.jpg" alt="slide 1">
+                    <img class="img_mobile_artista" src="../img/slide/slide1_cel.jpg" alt="slide 1">
                 
                 <!-- Botão sobre a imagem -->
-                <button class="button"><a href="#" class="a_button_artista">Botão em cima da imagem</a></button>
+                <button class="button_artista"><a href="#" class="a_button_artista">Músicas</a></button>
             </div>
     
-            <div class="slide_box">
+            <div class="slide_box_artista">
                 <!-- Slide 2 -->
                     <img class="img_desktop" src="img/artistas/artista2.jpg" alt="slide 2">
-                    <img class="img_mobile" src="../img/slide/slide2_cel.jpg" alt="slide 2">
+                    <img class="img_mobile_artista" src="../img/slide/slide2_cel.jpg" alt="slide 2">
                 <!-- Botão sobre a imagem -->
-                <button class="button"><a href="#" class="a_button_artista">Botão em cima da imagem</a></button>
+                <button class="button_artista"><a href="#" class="a_button_artista">Músicas</a></button>
             </div>
     
-            <div class="slide_box">
+            <div class="slide_box_artista">
                 <!-- Slide 3 -->
                     <img class="img_desktop" src="img/artistas/artista3.jpg" alt="slide 3">
-                    <img class="img_mobile" src="../img/slide/slide3_cel.jpg" alt="slide 3">
+                    <img class="img_mobile_artista" src="../img/slide/slide3_cel.jpg" alt="slide 3">
                 <!-- Botão sobre a imagem -->
-                <button class="button"><a href="#" class="a_button_artista">Botão em cima da imagem</a></button>
-            </div>
-    
-            <!-- Navegação automática -->
-            <div class="nav_auto">
-                <div class="auto_btn1"></div>
-                <div class="auto_btn2"></div>
-                <div class="auto_btn3"></div>
+                <button class="button_artista"><a href="#" class="a_button_artista">Músicas</a></button>
             </div>
         </div>
     </section>
@@ -133,7 +131,7 @@
     var cont = 1;
 
 // Define a primeira imagem como selecionada ao carregar a página
-document.getElementById('radio1').checked = true;
+document.getElementById('radio_1').checked = true;
 
 // Configura um intervalo para trocar as imagens automaticamente a cada 5 segundos
 setInterval(() => {
@@ -150,7 +148,7 @@ function proximaImg() {
     }
 
     // Atualiza a seleção da imagem correspondente
-    document.getElementById('radio' + cont).checked = true;
+    document.getElementById('radio_' + cont).checked = true;
 }
     </script>
 </body>
