@@ -7,12 +7,12 @@
 </head>
 
 <style>
-
-    *{
-        margin: 0px;
+* {
+    margin: 0px;
     padding: 0px;
-    }
-    /* === Estilos do Carrossel === */
+}
+
+/* === Estilos do Carrossel === */
 
 /* Contêiner principal do carrossel */
 .slider {
@@ -41,78 +41,91 @@
 }
 
 .slide_box img {
-    width: 100%;/* Garante que as imagens ocupem todo o espaço do slide */
+    width: 100%; /* Garante que as imagens ocupem todo o espaço do slide */
     transform: translate(0%, -20%); /* Centraliza a imagem */
+}
+
+/* === Estilos do botão sobre a imagem === */
+.button {
+    position: absolute;
+    top: 10%; /* Posiciona o botão no topo da imagem */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 1;
 }
 
 /* === Navegação do Carrossel === */
 
 /* Movimentação do carrossel baseada no input de rádio */
-#radio1:checked ~ .primeiro {margin-left: 0%;}
-
-#radio2:checked ~ .primeiro { margin-left: -25%;}
-
-#radio3:checked ~ .primeiro {margin-left: -50%;}
+#radio1:checked ~ .primeiro { margin-left: 0%; }
+#radio2:checked ~ .primeiro { margin-left: -25%; }
+#radio3:checked ~ .primeiro { margin-left: -50%; }
 
 /* === Responsividade === */
 
 @media screen and (max-width: 900px) {
     /* Esconde as imagens para desktop */
-    .img_desktop {display: none;}
+    .img_desktop { display: none; }
 
     /* Exibe as imagens na versão mobile */
-    .img_mobile {display: block;}
+    .img_mobile { display: block; }
 
     /* Ajusta a posição dos botões de navegação */
-    .nav_auto{ margin-top: 57%;}
+    .nav_auto { margin-top: 57%; }
 }
 
 </style>
 <body>
 
     <section class="slider">
-            <div class="cotener_slide">
-
-                <!-- Botões de navegação por rádio para os slides -->
-                <input type="radio" name="btn-radio" id="radio1">
-                <input type="radio" name="btn-radio" id="radio2">
-                <input type="radio" name="btn-radio" id="radio3">
+        <div class="cotener_slide">
+            <!-- Botões de navegação por rádio para os slides -->
+            <input type="radio" name="btn-radio" id="radio1">
+            <input type="radio" name="btn-radio" id="radio2">
+            <input type="radio" name="btn-radio" id="radio3">
     
-                <div class="slide_box primeiro">
-
-                    <!-- Slide 1 -->
-                    <a href="#">
-                        <img class="img_desktop" src="img/artistas/artista4.jpg" alt="slide 1">
-                        <img class="img_mobile" src="../img/slide/slide1_cel.jpg" alt="slide 1">
-                    </a>
-                </div>
-    
-                <div class="slide_box">
-
-                    <!-- Slide 2 -->
-                    <a href="#">
-                        <img class="img_desktop" src="img/artistas/artista2.jpg" alt="slide 2">
-                        <img class="img_mobile" src="../img/slide/slide2_cel.jpg" alt="slide 2">
-                    </a>
-                </div>
-    
-                <div class="slide_box">
-
-                    <!-- Slide 3 -->
-                    <a href="#">
-                        <img class="img_desktop" src="img/artistas/artista3.jpg" alt="slide 3">
-                        <img class="img_mobile" src="../img/slide/slide3_cel.jpg" alt="slide 3"> 
-                    </a>
-                </div>
-    
-                <!-- Navegação automática -->
-                <div class="nav_auto">
-                    <div class="auto_btn1"></div>
-                    <div class="auto_btn2"></div>
-                    <div class="auto_btn3"></div>
-                </div>
+            <div class="slide_box primeiro">
+                <!-- Slide 1 -->
+                
+                    <img class="img_desktop" src="img/artistas/artista4.jpg" alt="slide 1">
+                    <img class="img_mobile" src="../img/slide/slide1_cel.jpg" alt="slide 1">
+                
+                <!-- Botão sobre a imagem -->
+                <button class="button"><a href="#">Botão em cima da imagem</a></button>
             </div>
-        </section>
+    
+            <div class="slide_box">
+                <!-- Slide 2 -->
+                    <img class="img_desktop" src="img/artistas/artista2.jpg" alt="slide 2">
+                    <img class="img_mobile" src="../img/slide/slide2_cel.jpg" alt="slide 2">
+                <!-- Botão sobre a imagem -->
+                <button class="button"><a href="#">Botão em cima da imagem</a></button>
+            </div>
+    
+            <div class="slide_box">
+                <!-- Slide 3 -->
+                    <img class="img_desktop" src="img/artistas/artista3.jpg" alt="slide 3">
+                    <img class="img_mobile" src="../img/slide/slide3_cel.jpg" alt="slide 3">
+                <!-- Botão sobre a imagem -->
+                <button class="button"><a href="#">Botão em cima da imagem</a></button>
+            </div>
+    
+            <!-- Navegação automática -->
+            <div class="nav_auto">
+                <div class="auto_btn1"></div>
+                <div class="auto_btn2"></div>
+                <div class="auto_btn3"></div>
+            </div>
+        </div>
+    </section>
+    
 
 
     <script>
