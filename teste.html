@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    *{
+        margin: 0px;
+    padding: 0px;
+    }
+    /* === Estilos do Carrossel === */
+
+/* Contêiner principal do carrossel */
+.slider {
+    width: 100vw;
+    height: 200px;
+    overflow: hidden; /* Evita que imagens ultrapassem os limites */
+}
+
+/* Contêiner que agrupa todos os slides */
+.cotener_slide {
+    width: 400%; /* Define a largura para comportar múltiplos slides */
+    display: flex;
+}
+
+/* Esconde os inputs de rádio e as imagens da versão mobile */
+.cotener_slide input, .img_mobile {
+    display: none;
+}
+
+/* Estilos individuais dos slides */
+.slide_box {
+    width: 25%; /* Cada slide ocupa 25% do contêiner */
+    position: relative;
+    text-align: center;
+    transition: 1s; /* Suaviza a transição entre slides */
+}
+
+.slide_box img {
+    width: 100%;/* Garante que as imagens ocupem todo o espaço do slide */
+    transform: translate(0%, -20%); /* Centraliza a imagem */
+}
+
+/* === Navegação do Carrossel === */
+
+/* Movimentação do carrossel baseada no input de rádio */
+#radio1:checked ~ .primeiro {margin-left: 0%;}
+
+#radio2:checked ~ .primeiro { margin-left: -25%;}
+
+#radio3:checked ~ .primeiro {margin-left: -50%;}
+
+/* === Responsividade === */
+
+@media screen and (max-width: 900px) {
+    /* Esconde as imagens para desktop */
+    .img_desktop {display: none;}
+
+    /* Exibe as imagens na versão mobile */
+    .img_mobile {display: block;}
+
+    /* Ajusta a posição dos botões de navegação */
+    .nav_auto{ margin-top: 57%;}
+}
+
+</style>
+<body>
+
+    <section class="slider">
+            <div class="cotener_slide">
+
+                <!-- Botões de navegação por rádio para os slides -->
+                <input type="radio" name="btn-radio" id="radio1">
+                <input type="radio" name="btn-radio" id="radio2">
+                <input type="radio" name="btn-radio" id="radio3">
+    
+                <div class="slide_box primeiro">
+
+                    <!-- Slide 1 -->
+                    <a href="#">
+                        <img class="img_desktop" src="img/artistas/artista4.jpg" alt="slide 1">
+                        <img class="img_mobile" src="../img/slide/slide1_cel.jpg" alt="slide 1">
+                    </a>
+                </div>
+    
+                <div class="slide_box">
+
+                    <!-- Slide 2 -->
+                    <a href="#">
+                        <img class="img_desktop" src="img/artistas/artista2.jpg" alt="slide 2">
+                        <img class="img_mobile" src="../img/slide/slide2_cel.jpg" alt="slide 2">
+                    </a>
+                </div>
+    
+                <div class="slide_box">
+
+                    <!-- Slide 3 -->
+                    <a href="#">
+                        <img class="img_desktop" src="img/artistas/artista3.jpg" alt="slide 3">
+                        <img class="img_mobile" src="../img/slide/slide3_cel.jpg" alt="slide 3"> 
+                    </a>
+                </div>
+    
+                <!-- Navegação automática -->
+                <div class="nav_auto">
+                    <div class="auto_btn1"></div>
+                    <div class="auto_btn2"></div>
+                    <div class="auto_btn3"></div>
+                </div>
+            </div>
+        </section>
+
+
+    <script>
+        // Inicializa o contador de imagens do carrossel
+    var cont = 1;
+
+// Define a primeira imagem como selecionada ao carregar a página
+document.getElementById('radio1').checked = true;
+
+// Configura um intervalo para trocar as imagens automaticamente a cada 5 segundos
+setInterval(() => {
+    proximaImg();
+}, 5000);
+
+// Função que avança para a próxima imagem do carrossel
+function proximaImg() {
+    cont++;
+
+    // Se chegar além da última imagem, volta para a primeira
+    if (cont > 3) {
+        cont = 1;
+    }
+
+    // Atualiza a seleção da imagem correspondente
+    document.getElementById('radio' + cont).checked = true;
+}
+    </script>
+</body>
+</html>

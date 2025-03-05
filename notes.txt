@@ -4,6 +4,8 @@ img slide tamanho: 1800x600 e 1040x600, https://br.freepik.com/fotos-gratis/anim
 
 imagem destaque: 1200x1200
 
+
+img silde artista: ?? x ?? e 1800x500
 Gêneros:
 
 Clássica

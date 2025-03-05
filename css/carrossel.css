@@ -15,7 +15,9 @@
 }
 
 /* Esconde os inputs de rádio e as imagens da versão mobile */
-.cotener_slide input, .img_mobile {display: none;}
+.cotener_slide input, .img_mobile {
+    display: none;
+}
 
 /* Estilos individuais dos slides */
 .slide_box {
@@ -25,7 +27,9 @@
     transition: 1s; /* Suaviza a transição entre slides */
 }
 
-.slide_box img {width: 100%;}/* Garante que as imagens ocupem todo o espaço do slide */
+.slide_box img {
+    width: 100%;/* Garante que as imagens ocupem todo o espaço do slide */
+}
 
 /* === Navegação do Carrossel === */
 
@@ -52,12 +56,16 @@
 .nav_manual .manual_btn:not(:last-child), .nav_auto div:not(:last-child) { margin-right: 10px;}
 
 /* Efeito hover nos botões de navegação */
-.nav_manual .manual_btn:hover {background-color: #ffffff;}
+.nav_manual .manual_btn:hover {
+    background-color: #ffffff;
+}
 
 /* Destaque do botão de navegação ativo */
 #radio1:checked ~ .nav_auto .auto_btn1,
 #radio2:checked ~ .nav_auto .auto_btn2,
-#radio3:checked ~ .nav_auto .auto_btn3 {background-color: #ffffff;}
+#radio3:checked ~ .nav_auto .auto_btn3 {
+    background-color: #ffffff;
+}
 
 /* Movimentação do carrossel baseada no input de rádio */
 #radio1:checked ~ .primeiro {margin-left: 0%;}
