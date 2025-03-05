@@ -15,6 +15,8 @@
     <!-- Importação dos scripts JavaScript -->
     <script src="../js/menu.js"></script> <!-- Script do menu interativo -->
     <script src="../js/destaque.js"></script> <!-- Script das animações de destaque -->
+    <script src="../js/carrossel.js" defer></script>
+    <script src="../js/carrosselArtistas.js" defer></script>
 
 </head>
 <body>
@@ -295,63 +297,6 @@
             </div>
         </section>
     </main>
-    
-<!--Script do carrossel-->
-<script> 
 
-    // Seleciona um botão de navegação manual do carrossel
-    var radio = document.querySelector('.manual_btn');
-
-    // Inicializa o contador de imagens do carrossel
-    var cont = 1;
-
-    // Define a primeira imagem como selecionada ao carregar a página
-    document.getElementById('radio-1').checked = true;
-
-    // Configura um intervalo para trocar as imagens automaticamente a cada 5 segundos
-    setInterval(() => {
-        trocarSlidePrincipal();
-    }, 5000);
-
-    // Função que avança para a próxima imagem do carrossel
-    function trocarSlidePrincipal() {
-        cont++;
-
-        // Se chegar além da última imagem, volta para a primeira
-        if (cont > 3) {
-            cont = 1;
-        }
-
-        // Atualiza a seleção da imagem correspondente
-        document.getElementById('radio-' + cont).checked = true;
-    }
-</script>
-
-<!--Script dos Artistas-->
-<script>
-    // Inicializa o contador de imagens do carrossel
-var conta = 1;
-
-// Define a primeira imagem como selecionada ao carregar a página
-document.getElementById('radio_1').checked = true;
-
-// Configura um intervalo para trocar as imagens automaticamente a cada 5 segundos
-setInterval(() => {
-    trocarSlideArtistas();
-}, 5000);
-
-// Função que avança para a próxima imagem do carrossel
-function trocarSlideArtistas() {
-    conta++;
-
-    // Se chegar além da última imagem, volta para a primeira
-    if (conta > 3) {
-        conta = 1;
-    }
-
-    // Atualiza a seleção da imagem correspondente
-    document.getElementById('radio_' + conta).checked = true;
-}
-</script>
 </body>
 </html>
