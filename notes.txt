@@ -23,9 +23,12 @@ obsevação: os links dos slides podem ser removidos, contanto que o css que est
 
 Comentados:
 
+artistas.css
 cabeçalho.css
 carrossel.css
 destaque.css
+carrossel.js
+carrosselArtistas.js
 destaque.js
 menu.js
-index.html(Destaques)
+index.html(Artistas)
