@@ -32,6 +32,7 @@ body {
 /* Estiliza a barra de rolagem dentro de #imagens_genero no Chrome, Edge e Safari */
 #imagens_genero::-webkit-scrollbar {
     background: #888; /* Degradê do preto ao cinza */
+    
 }
 
 #imagens_genero::-webkit-scrollbar-thumb{
@@ -90,4 +91,20 @@ body {
     top: -70%; /* Move a imagem para cima */
     left: 71%; /* Posiciona a imagem à direita */
     background-attachment: fixed; /* Mantém a imagem fixa ao rolar a página */
+}
+
+/* === Responsivide === */
+
+@media screen and (max-width: 650px) {
+    /* Ajusta o último item para ficar mais distante da direita */
+    #ultimo{
+        margin-right: 160px;
+    }
+    
+    /* Estiliza a imagem do disco ao lado da seção */
+    #disco_genero{
+        height: 700px; /* Define a altura da imagem */
+        top: -52%; /* Move a imagem para cima */
+        left: 45%; /* Posiciona a imagem à direita */
+    }
 }
