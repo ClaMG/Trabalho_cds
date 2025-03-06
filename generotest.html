@@ -5,109 +5,185 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body {
-            overflow-x: hidden; /* Esconde a barra de rolagem horizontal */
-        }
+        /* Esconde a barra de rolagem horizontal da página inteira */
+body {
+    overflow-x: hidden; 
+}
 
-        #genero{
-            height: 490px;
-        }
+#genero {
+    position: relative; /* Define a seção como referência para posicionamento absoluto */
+}
 
-        #texto_genero{
-            font-size: 70px;
-            margin-left: 20px;
-        }
-        #conteudo_genero{
-            display: flex;
-            position: relative;
-        }
+#bolinhas {
+    position: absolute;
+    top: -2%; /* Ajuste para alinhar corretamente abaixo do título */
+    width: 100vw;
+    height: 170px;
+    background-color: white;
+    background-image: radial-gradient(circle, black 10%, transparent 20%);
+    background-size: 40px 40px;
+    background-repeat: repeat;
 
-        #imagens_genero{
-            display: flex;
-            justify-content: space-around;
-            z-index: 0;
-            overflow: auto;
-        }
+    /* Aplica o efeito de degradê de cima para baixo */
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    
+    z-index: -1; /* Joga a camada para trás do conteúdo */
+}
 
-        #imagens_genero::-webkit-scrollbar{
-            background-color: black;
-        }
 
-        .img_genero{
-            display: flex;
-            position: relative;
-            margin-right: 120px;
-            margin-bottom: 50px;
-        }
 
-        #ultimo{
-            margin-right: 270px;
-        }
+/* Estiliza o título "Gênero" */
+#texto_genero {
+    font-size: 70px; /* Define o tamanho da fonte */
+    margin-left: 20px; /* Define um espaçamento à esquerda */
+    margin-bottom: 50px; /* Define um espaçamento abaixo do título */
+    background-color: white;
+}
 
-        #primeiro{
-            margin-left: 40px;
-        }
+#div_h1_genero{
+    display: flex;
+}
 
-        .img_genero img{
-            width: 300px;
-            border: 15px solid #7b7a7a;
-        }
+/* Define a organização dos elementos dentro da seção "Gênero" */
+#conteudo_genero {
+    display: flex; /* Usa o modelo flexbox para organizar os elementos */
+    position: relative; /* Define a posição relativa para alinhar elementos filhos */
+}
 
-        .button_genero{
-            position: absolute;
-            top: 4.5%; /* Posiciona o botão no topo da imagem */
-            left: 50%;
-            transform: translateX(-50%); /* Centraliza horizontalmente */
-            background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
-            border: none;
-            padding: 115px 30px;
-            font-size: 62px;
-            cursor: pointer;
-            z-index: 1;
-        }
+/* Define o comportamento da div que contém as imagens dos gêneros */
+#imagens_genero {
+    display: flex; /* Organiza as imagens lado a lado */
+    justify-content: space-around; /* Distribui as imagens uniformemente */
+    z-index: 0; /* Mantém as imagens atrás de outros elementos */
+    overflow: auto; /* Adiciona rolagem caso o conteúdo ultrapasse o tamanho */
+}
 
-        .button_genero a{
-            color: white;
-            text-decoration: none;
-        }
+/* Estiliza a barra de rolagem dentro de #imagens_genero no Chrome, Edge e Safari */
+#imagens_genero::-webkit-scrollbar {
+    background: #888; /* Degradê do preto ao cinza */
+    
+}
 
-        #disco_genero{
-            z-index: 2;
-            position: absolute;
-            height: 830px;
-            top: -70%;
-            left: 71%;
-            background-attachment: fixed;
-        }
+#imagens_genero::-webkit-scrollbar-thumb{
+    background-color: #000;
+}
+
+/* Estiliza cada item de gênero musical */
+.img_genero {
+    display: flex; /* Define um layout flexível */
+    position: relative; /* Permite posicionamento absoluto dos botões dentro */
+    margin-right: 120px; /* Adiciona espaço entre os itens */
+    margin-bottom: 50px; /* Adiciona espaço abaixo dos itens */
+}
+
+/* Ajusta o último item para ficar mais distante da direita */
+#ultimo {
+    margin-right: 270px;
+}
+
+/* Ajusta o primeiro item para ficar mais afastado da esquerda */
+#primeiro {
+    margin-left: 40px;
+}
+
+/* Estiliza as imagens dentro de cada item de gênero */
+.img_genero img {
+    width: 300px; /* Define um tamanho fixo para as imagens */
+    border: 15px solid #7b7a7a; /* Adiciona uma borda cinza ao redor da imagem */
+}
+
+/* Estiliza o botão que sobrepõe as imagens */
+.button_genero {
+    position: absolute; /* Fixa o botão dentro do elemento pai */
+    top: 5%; /* Posiciona o botão no topo da imagem */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta para manter centralizado */
+    background-color: rgba(0, 0, 0, 0.5); /* Define um fundo semitransparente */
+    border: none; /* Remove a borda do botão */
+    padding: 99.5px 14.5px; /* Ajusta o tamanho do botão */
+    font-size: 62px; /* Define um tamanho grande para o texto */
+    cursor: pointer; /* Define o cursor como ponteiro ao passar por cima */
+    z-index: 1; /* Mantém o botão acima da imagem */
+}
+
+/* Estiliza o link dentro do botão */
+.button_genero a {
+    color: white; /* Define a cor do texto como branco */
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+/* Estiliza a imagem do disco ao lado da seção */
+#disco_genero {
+    z-index: 2; /* Mantém a imagem do disco acima dos demais elementos */
+    position: absolute; /* Permite o posicionamento exato na tela */
+    height: 830px; /* Define a altura da imagem */
+    top: -70%; /* Move a imagem para cima */
+    left: 71%; /* Posiciona a imagem à direita */
+    background-attachment: fixed; /* Mantém a imagem fixa ao rolar a página */
+}
+
+/* === Responsivide === */
+
+@media screen and (max-width: 650px) {
+    /* Ajusta o último item para ficar mais distante da direita */
+    #ultimo{
+        margin-right: 160px;
+    }
+    
+    /* Estiliza a imagem do disco ao lado da seção */
+    #disco_genero{
+        height: 700px; /* Define a altura da imagem */
+        top: -52%; /* Move a imagem para cima */
+        left: 45%; /* Posiciona a imagem à direita */
+    }
+}
 
     </style>
 </head>
 <body>
-    <div style="height: 500px;">oi</div>
-    <div id="genero">
-        <h1 id="texto_genero">Gênero</h1>
+    <div style="height: 500px;">conteudo</div>
+    <section id="genero">
+                <div id="bolinhas"></div>
+        <!-- Título da seção -->
+        <div id="div_h1_genero">
+            <h1 id="texto_genero">Gênero</h1>
+        </div>
+
+        <!-- Container principal do conteúdo relacionado aos gêneros -->
         <div id="conteudo_genero">
             
+            <!-- Div que contém todas as imagens dos gêneros musicais -->
             <div id="imagens_genero">
+                
+                <!-- Primeira imagem do gênero musical com um botão -->
                 <div class="img_genero" id="primeiro">
-                    <img src="img/genero/genero1.jpg" alt="genero musical">
+                    <img src="../img/genero/genero1.jpg" alt="genero musical">
                     <button class="button_genero"><a href="#">Genero1</a></button>
                 </div>
+
+                <!-- Segunda imagem do gênero musical com um botão -->
                 <div class="img_genero">
-                    <img src="img/genero/genero2.jpg" alt="genero musical">
+                    <img src="../img/genero/genero2.jpg" alt="genero musical">
                     <button class="button_genero"><a href="#">Genero2</a></button>
                 </div>
+
+                <!-- Terceira imagem do gênero musical com um botão -->
                 <div class="img_genero">
-                    <img src="img/genero/genero3.jpg" alt="genero musical">
+                    <img src="../img/genero/genero3.jpg" alt="genero musical">
                     <button class="button_genero"><a href="#">Genero3</a></button>
                 </div>
+
+                <!-- Quarta imagem do gênero musical com um botão -->
                 <div class="img_genero" id="ultimo">
-                    <img src="img/genero/genero4.jpg" alt="genero musical">
+                    <img src="../img/genero/genero4.jpg" alt="genero musical">
                     <button class="button_genero"><a href="#">Genero4</a></button>
                 </div>
             </div>
-            <img src="img/genero/disco.png" alt="disco lateral" id="disco_genero">
+
+            <!-- Imagem decorativa de um disco ao lado da seção -->
+            <img src="../img/genero/disco.png" alt="disco lateral" id="disco_genero">
+        
         </div>
-    </div>
 </body>
 </html>

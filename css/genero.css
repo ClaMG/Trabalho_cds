@@ -5,14 +5,37 @@ body {
 
 /* Define a margem superior da seção "Gênero" */
 #genero {
+    position: relative; /* Define a seção como referência para posicionamento absoluto */
     margin-top: 50px;
+}
+
+#bolinhas {
+    position: absolute;
+    top: -10%; /* Ajuste para alinhar corretamente abaixo do título */
+    width: 100vw;
+    height: 170px;
+    background-color: white;
+    background-image: radial-gradient(circle, black 10%, transparent 20%);
+    background-size: 40px 40px;
+    background-repeat: repeat;
+
+    /* Aplica o efeito de degradê de cima para baixo */
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    
+    z-index: -1; /* Joga a camada para trás do conteúdo */
 }
 
 /* Estiliza o título "Gênero" */
 #texto_genero {
     font-size: 70px; /* Define o tamanho da fonte */
-    margin-left: 20px; /* Define um espaçamento à esquerda */
+    margin-left: 30px; /* Define um espaçamento à esquerda */
     margin-bottom: 50px; /* Define um espaçamento abaixo do título */
+    background-color: white;
+}
+
+#div_h1_genero{
+    display: flex;
 }
 
 /* Define a organização dos elementos dentro da seção "Gênero" */
@@ -96,11 +119,15 @@ body {
 /* === Responsivide === */
 
 @media screen and (max-width: 650px) {
+
+    #bolinhas{
+        top: -13%; /* Ajuste para alinhar corretamente abaixo do título */
+    }
     /* Ajusta o último item para ficar mais distante da direita */
     #ultimo{
         margin-right: 160px;
     }
-    
+
     /* Estiliza a imagem do disco ao lado da seção */
     #disco_genero{
         height: 700px; /* Define a altura da imagem */
