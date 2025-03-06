@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #conteudo_genero{
+            display: flex;
+        }
+
+        #imagens_genero{
+            display: flex;
+            justify-content: space-around;
+            z-index: 0;
+        }
+
+        .img_genero{
+            display: flex;
+            position: relative;
+            margin-right: 120px;
+        }
+
+        #sem_margin{
+            margin-right: 0px;
+        }
+
+        .img_genero img{
+            width: 300px;
+            border: 15px solid #7b7a7a;
+        }
+
+        .button_genero{
+            position: absolute;
+            top: 4.5%; /* Posiciona o botão no topo da imagem */
+            left: 50%;
+            transform: translateX(-50%); /* Centraliza horizontalmente */
+            background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+            border: none;
+            padding: 115px 30px;
+            font-size: 62px;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .button_genero a{
+            color: white;
+            text-decoration: none;
+        }
+
+        #disco_genero{
+            z-index: 2;
+            position: fixed;
+            height: 890px;
+            top: -27%;
+            left: 69%;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="genero">
+        <h1>Genero</h1>
+        <div id="conteudo_genero">
+            
+            <div id="imagens_genero">
+                <div class="img_genero">
+                    <img src="img/genero/genero1.jpg" alt="genero musical">
+                    <button class="button_genero"><a href="#">Genero1</a></button>
+                </div>
+                <div class="img_genero">
+                    <img src="img/genero/genero2.jpg" alt="genero musical">
+                    <button class="button_genero"><a href="#">Genero2</a></button>
+                </div>
+                <div class="img_genero">
+                    <img src="img/genero/genero3.jpg" alt="genero musical">
+                    <button class="button_genero"><a href="#">Genero3</a></button>
+                </div>
+                <div class="img_genero" id="sem_margin">
+                    <img src="img/genero/genero4.jpg" alt="genero musical">
+                    <button class="button_genero"><a href="#">Genero4</a></button>
+                </div>
+            </div>
+            <img src="img/genero/disco.png" alt="disco lateral" id="disco_genero">
+        </div>
+    </div>
+</body>
+</html>
