@@ -70,7 +70,7 @@
     .img_mobile_artista { display: block; }
 
     .button_artista .a_button_artista{
-    top: 12%; /* Posiciona o botão no topo da imagem */
+    top: 42%; /* Posiciona o botão no topo da imagem */
     left: 74%;
     padding: 10px 20px;
     font-size: 23px;
