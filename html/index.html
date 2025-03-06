@@ -11,13 +11,13 @@
     <link rel="stylesheet" href="../css/carrossel.css"> <!-- Estilos do carrossel -->
     <link rel="stylesheet" href="../css/destaque.css"> <!-- Estilos da seção de destaque -->
     <link rel="stylesheet" href="../css/artistas.css"> <!-- Estilos da seção de artistas -->
-    <link rel="stylesheet" href="../css/genero.css"> <!-- Estilos da seção de artistas -->
+    <link rel="stylesheet" href="../css/genero.css"> <!-- Estilos da seção de genero -->
 
     <!-- Importação dos scripts JavaScript -->
     <script src="../js/menu.js"></script> <!-- Script do menu interativo -->
+    <script src="../js/carrossel.js" defer></script> <!-- Script das animações do carrossel -->
     <script src="../js/destaque.js"></script> <!-- Script das animações de destaque -->
-    <script src="../js/carrossel.js" defer></script>
-    <script src="../js/carrosselArtistas.js" defer></script>
+    <script src="../js/carrosselArtistas.js" defer></script> <!-- Script das animações de artista -->
 
 </head>
 <body>
@@ -312,31 +312,50 @@
                 </div>
             </div>
           </section>
-          <section id="genero">
+
+          <!-- Seção dedicada aos gêneros musicais -->
+            <section id="genero">
+                
+                <!-- Título da seção -->
                 <h1 id="texto_genero">Gênero</h1>
+
+                <!-- Container principal do conteúdo relacionado aos gêneros -->
                 <div id="conteudo_genero">
                     
+                    <!-- Div que contém todas as imagens dos gêneros musicais -->
                     <div id="imagens_genero">
+                        
+                        <!-- Primeira imagem do gênero musical com um botão -->
                         <div class="img_genero" id="primeiro">
                             <img src="../img/genero/genero1.jpg" alt="genero musical">
                             <button class="button_genero"><a href="#">Genero1</a></button>
                         </div>
+
+                        <!-- Segunda imagem do gênero musical com um botão -->
                         <div class="img_genero">
                             <img src="../img/genero/genero2.jpg" alt="genero musical">
                             <button class="button_genero"><a href="#">Genero2</a></button>
                         </div>
+
+                        <!-- Terceira imagem do gênero musical com um botão -->
                         <div class="img_genero">
                             <img src="../img/genero/genero3.jpg" alt="genero musical">
                             <button class="button_genero"><a href="#">Genero3</a></button>
                         </div>
+
+                        <!-- Quarta imagem do gênero musical com um botão -->
                         <div class="img_genero" id="ultimo">
                             <img src="../img/genero/genero4.jpg" alt="genero musical">
                             <button class="button_genero"><a href="#">Genero4</a></button>
                         </div>
                     </div>
+
+                    <!-- Imagem decorativa de um disco ao lado da seção -->
                     <img src="../img/genero/disco.png" alt="disco lateral" id="disco_genero">
+                
                 </div>
-          </section>
+</section>
+
     </main>
 </body>
 </html>
