@@ -27,8 +27,9 @@ artistas.css
 cabeçalho.css
 carrossel.css
 destaque.css
+genero.css
 carrossel.js
 carrosselArtistas.js
 destaque.js
 menu.js
-index.html(Artistas)
+index.html(Genero)

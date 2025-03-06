@@ -9,6 +9,7 @@ body {
     margin-top: 50px;
 }
 
+/* Bolas de fundo */
 #bolinhas {
     position: absolute;
     top: -10%; /* Ajuste para alinhar corretamente abaixo do título */
@@ -34,6 +35,7 @@ body {
     background-color: white;
 }
 
+/* Posição do título "Gênero" */
 #div_h1_genero{
     display: flex;
 }
@@ -119,10 +121,11 @@ body {
 /* === Responsivide === */
 
 @media screen and (max-width: 650px) {
-
+    /* Bolas de fundo */
     #bolinhas{
         top: -13%; /* Ajuste para alinhar corretamente abaixo do título */
     }
+
     /* Ajusta o último item para ficar mais distante da direita */
     #ultimo{
         margin-right: 160px;
