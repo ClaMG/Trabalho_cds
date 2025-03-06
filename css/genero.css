@@ -1,0 +1,75 @@
+body {
+    overflow-x: hidden; /* Esconde a barra de rolagem horizontal */
+}
+
+#genero{
+    margin-top: 50px;
+}
+
+#texto_genero{
+    font-size: 70px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+}
+#conteudo_genero{
+    display: flex;
+    position: relative;
+}
+
+#imagens_genero{
+    display: flex;
+    justify-content: space-around;
+    z-index: 0;
+    overflow: auto;
+}
+
+#imagens_genero::-webkit-scrollbar{
+    background-color: black;
+}
+
+.img_genero{
+    display: flex;
+    position: relative;
+    margin-right: 120px;
+    margin-bottom: 50px;
+}
+
+#ultimo{
+    margin-right: 270px;
+}
+
+#primeiro{
+    margin-left: 40px;
+}
+
+.img_genero img{
+    width: 300px;
+    border: 15px solid #7b7a7a;
+}
+
+.button_genero{
+    position: absolute;
+    top: 5%; /* Posiciona o botão no topo da imagem */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    border: none;
+    padding: 99.5px 14.5px;
+    font-size: 62px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.button_genero a{
+    color: white;
+    text-decoration: none;
+}
+
+#disco_genero{
+    z-index: 2;
+    position: absolute;
+    height: 830px;
+    top: -70%;
+    left: 71%;
+    background-attachment: fixed;
+}

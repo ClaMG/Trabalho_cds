@@ -5,25 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body {
+            overflow-x: hidden; /* Esconde a barra de rolagem horizontal */
+        }
 
+        #genero{
+            height: 490px;
+        }
+
+        #texto_genero{
+            font-size: 70px;
+            margin-left: 20px;
+        }
         #conteudo_genero{
             display: flex;
+            position: relative;
         }
 
         #imagens_genero{
             display: flex;
             justify-content: space-around;
             z-index: 0;
+            overflow: auto;
+        }
+
+        #imagens_genero::-webkit-scrollbar{
+            background-color: black;
         }
 
         .img_genero{
             display: flex;
             position: relative;
             margin-right: 120px;
+            margin-bottom: 50px;
         }
 
-        #sem_margin{
-            margin-right: 0px;
+        #ultimo{
+            margin-right: 270px;
+        }
+
+        #primeiro{
+            margin-left: 40px;
         }
 
         .img_genero img{
@@ -51,21 +73,23 @@
 
         #disco_genero{
             z-index: 2;
-            position: fixed;
-            height: 890px;
-            top: -27%;
-            left: 69%;
+            position: absolute;
+            height: 830px;
+            top: -70%;
+            left: 71%;
+            background-attachment: fixed;
         }
 
     </style>
 </head>
 <body>
+    <div style="height: 500px;">oi</div>
     <div id="genero">
-        <h1>Genero</h1>
+        <h1 id="texto_genero">Gênero</h1>
         <div id="conteudo_genero">
             
             <div id="imagens_genero">
-                <div class="img_genero">
+                <div class="img_genero" id="primeiro">
                     <img src="img/genero/genero1.jpg" alt="genero musical">
                     <button class="button_genero"><a href="#">Genero1</a></button>
                 </div>
@@ -77,7 +101,7 @@
                     <img src="img/genero/genero3.jpg" alt="genero musical">
                     <button class="button_genero"><a href="#">Genero3</a></button>
                 </div>
-                <div class="img_genero" id="sem_margin">
+                <div class="img_genero" id="ultimo">
                     <img src="img/genero/genero4.jpg" alt="genero musical">
                     <button class="button_genero"><a href="#">Genero4</a></button>
                 </div>
