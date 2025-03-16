@@ -1,0 +1,47 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+#avliacoes{
+    background-color: #303030;
+    width: 100%;
+    height: 500px;
+    margin-top: 60px;
+}
+
+#avaliacao{
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 70px;
+    padding-top: 20px;
+}
+
+#div_avaliacao{
+    display: flex;
+    justify-content: space-around;
+}
+
+.conteiner_avaliacao{
+    background-color: #949494;
+    color: white;
+    display: flex;
+    margin: 50px 40px;
+    flex-direction: column;
+    border-radius: 20px;
+}
+
+.part_de_cima_avaliacao{
+    display: flex;
+    margin: 25px 5px 0px 25px;
+}
+
+.lado_direito_avaliacao{
+    margin-left: 10px;
+}
+
+.texto_avalicao{
+    margin: 50px 20px;
+    text-align: justify;
+}
