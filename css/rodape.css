@@ -1,0 +1,41 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#corpo_rodape{
+    margin: 40px 40px;
+}
+
+#sobre_texto_rodape{
+    margin-top: 10px;
+    text-align: justify;
+    margin-right: 50px;
+}
+
+#corpo_rodape li{
+    margin-top: 20px;
+}
+
+#parte_de_baixo_rodape{
+    display: flex;
+    margin-top: 20px;
+}
+
+.topicos_rodape{
+    margin-right: 90px;
+}
+
+.link_rodape{
+    text-decoration: none;
+    color: black;
+}
+
+.lista_rodape{
+    list-style-type: none;
+}
+
+.link_rodape:hover{
+    color: #949494;
+    text-decoration: underline;
+}
