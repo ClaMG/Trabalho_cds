@@ -1,47 +1,95 @@
+/* == Reset de Estilos Gerais == */
 *{
     padding: 0px;
     margin: 0px;
 }
 
-#avliacoes{
-    background-color: #303030;
-    width: 100%;
-    height: 500px;
-    margin-top: 60px;
+/* == Seção de Avaliações == */
+#avliacoes {
+    background-color: #303030; /* Define um fundo escuro para a seção */
+    width: 100%; /* Ocupa toda a largura da tela */
+    height: 500px; /* Define a altura da seção */
+    margin-top: 60px; /* Adiciona espaçamento superior */
 }
 
-#avaliacao{
-    color: white;
+/* == Título da Seção == */
+#avaliacao {
+    color: white; /* Define a cor do texto */
     display: flex;
-    justify-content: center;
-    font-size: 70px;
-    padding-top: 20px;
+    justify-content: center; /* Centraliza o título horizontalmente */
+    font-size: 70px; /* Define o tamanho da fonte */
+    padding-top: 20px; /* Adiciona espaçamento superior */
 }
 
-#div_avaliacao{
+/* == Contêiner principal das avaliações == */
+#div_avaliacao {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around; /* Distribui os itens igualmente na linha */
 }
 
-.conteiner_avaliacao{
-    background-color: #949494;
-    color: white;
+/* == Bloco individual de cada avaliação == */
+.conteiner_avaliacao {
+    background-color: #949494; /* Cor de fundo do bloco */
+    color: white; /* Cor do texto */
     display: flex;
-    margin: 50px 40px;
-    flex-direction: column;
-    border-radius: 20px;
+    margin: 50px 40px; /* Adiciona espaçamento externo */
+    flex-direction: column; /* Organiza os elementos verticalmente */
+    border-radius: 20px; /* Bordas arredondadas para um design mais suave */
 }
 
-.part_de_cima_avaliacao{
+/* == Parte superior da avaliação (Imagem + Nome + Estrelas) == */
+.part_de_cima_avaliacao {
     display: flex;
-    margin: 25px 5px 0px 25px;
+    margin: 25px 0px 0px 25px; /* Espaçamento superior e esquerdo */
 }
 
-.lado_direito_avaliacao{
-    margin-left: 10px;
+/* == Área que contém o nome do cliente e a avaliação por estrelas == */
+.lado_direito_avaliacao {
+    margin-left: 30px; /* Espaçamento entre a imagem e o texto */
 }
 
-.texto_avalicao{
-    margin: 50px 20px;
-    text-align: justify;
+/* == Texto da avaliação == */
+.texto_avalicao {
+    margin: 30px 20px; /* Define margens ao redor do texto */
+    text-align: justify; /* Justifica o texto para melhor legibilidade */
+}
+
+/* == Imagem do perfil do cliente == */
+.img_avaliacao {
+    width: 70px;
+    height: 70px;
+}
+
+/* == Estrelas de avaliação == */
+.estrelas_avaliacao {
+    width: 150px; /* Define a largura da imagem de estrelas */
+    margin-top: -35px; /* Ajuste fino para o posicionamento */
+    margin-left: -15px;
+}
+
+/* == Responsividade: Ajustes para telas menores que 650px == */
+@media screen and (max-width: 650px) {
+    #avliacoes {
+        height: 1200px; /* Aumenta a altura da seção para melhor exibição */
+    }
+
+    #avaliacao {
+        font-size: 43px; /* Reduz o tamanho do título */
+        padding-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    #div_avaliacao {
+        flex-direction: column; /* Empilha as avaliações verticalmente */
+        align-items: center; /* Centraliza os elementos */
+        text-align: center; /* Alinha o texto ao centro */
+    }
+
+    .conteiner_avaliacao {
+        margin: 30px 70px; /* Ajusta o espaçamento */
+    }
+
+    .estrelas_avaliacao {
+        margin-left: -25px; /* Ajuste fino para o posicionamento */
+    }
 }
