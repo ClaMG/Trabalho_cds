@@ -26,6 +26,14 @@
     font-size: 15px;
 }
 
+#link_inicio{
+    color: white;
+}
+
+#link_inicio:hover{
+    color: #303030;
+}
+
 #inputs{
     margin-top: 20px;
 }
@@ -40,6 +48,11 @@
     height: 30px;
     border-radius: 10px;
     border: none;
+    padding-left: 10px;
+}
+
+.input:focus{
+    outline: none;
 }
 
 #senha{
@@ -52,13 +65,13 @@
     border: none;
     position: absolute;
     z-index: 1;
-    left: 47%;
-    top: 59.5%;
+    left: 48.5%;
+    top: 59%;
 }
 
 #img_olho{
-    width: 40px;
-    height: 20px;
+    width: 30px;
+    height: 25px;
 }
 
 #link_senha, #p_link_senha{
@@ -216,5 +229,8 @@ background-size: 100% 10px;
 
 #img_login{
     width: 340px;
-    border-radius: 20px;
+    border-radius: 0px 20px 20px 0px;
+}
+
+@media only screen and (max-width: 650px){
 }

@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <!-- Link para o arquivo CSS -->
     <link rel="stylesheet" href="../css/Login/login.css">
 </head>
 <body>
+    <!-- Barras animadas no lado esquerdo -->
     <div class="visualizer-container" id="esquerda">
         <div class="visualizer">
+            <!-- Barras animadas -->
             <div class="bar gray"></div>
             <div class="bar gray"></div>
             <div class="bar gray"></div>
@@ -36,8 +39,10 @@
             <div class="bar gray"></div>  
         </div>
     </div>
+    <!-- Barras animadas no lado Direito -->
     <div class="visualizer-container" id="direita">
         <div class="visualizer">
+            <!-- Barras animadas -->
             <div class="bar gray"></div>
             <div class="bar gray"></div>
             <div class="bar gray"></div>
@@ -65,26 +70,55 @@
             <div class="bar gray"></div>  
         </div>
     </div>
-    <section id="login">
-
+     <!-- Seção principal do login -->
+     <section id="login">
+        <!-- Lado esquerdo com o formulário de login -->
         <div id="lado_esquerdo">
             <h1 id="titulo">Login</h1>
-            <p id="p_titulo">Preencha os campos com seus dados de acesso.</p>
+            <p id="p_titulo">Preencha os campos com seus dados de acesso ou voltar para
+                <a href="#" id="link_inicio">tela inicial.</a>
+            </p>
+
+            <!-- Inputs de usuário e senha -->
             <div id="inputs">
-                <h2 class="titulo_input">Usuário</h2> <input type="text" class="input">
+                <h2 class="titulo_input">Usuário</h2>
+                <input type="text" class="input" placeholder="Digite seu nome de usuário">
+
                 <div id="senha">
-                    <h2 class="titulo_input">Senha</h2> <input type="text" class="input">
-                    <button id="olho"><img src="#" alt="olho" id="img_olho"></button>
+                    <h2 class="titulo_input">Senha</h2>
+                    <input type="password" id="password" class="input" placeholder="Digite sua senha">
+                    <!-- Botão para alternar a visibilidade da senha -->
+                    <button id="olho">
+                        <img src="../img/icones/icone_olho_fechado.png" alt="olho" id="img_olho" onclick="togglePassword()">
+                    </button>
                 </div>
+
                 <p id="p_link_senha">Esqueceu a <a href="#" id="link_senha">senha?</a></p>
             </div>
 
+            <!-- Botão de acesso -->
             <button id="acessar">Acessar</button>
             <p id="p_link_criar">Você é novo aqui? <a href="#" id="link_criar">Crie uma conta</a></p>
         </div>
 
-        <img src="#" alt="lado direito" id="img_login">
+        <!-- Imagem decorativa no lado direito -->
+        <img src="../img/login/img_login.jpg" alt="lado direito" id="img_login">
     </section>
 
+    <!-- Script para alternar a visibilidade da senha -->
+    <script>
+        function togglePassword() {
+            let passwordInput = document.getElementById("password");
+            let eyeIcon = document.getElementById("img_olho");
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                eyeIcon.src = "../img/icones/icone_olho_aberto.png"; // Troca o ícone para olho aberto
+            } else {
+                passwordInput.type = "password";
+                eyeIcon.src = "../img/icones/icone_olho_fechado.png"; // Volta para o ícone de olho fechado
+            }
+        }
+    </script>
 </body>
 </html>

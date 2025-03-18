@@ -35,3 +35,4 @@ carrosselArtistas.js
 destaque.js
 menu.js
 index.html
+login.html
