@@ -29,10 +29,15 @@ cabeçalho.css
 carrossel.css
 destaque.css
 genero.css
+login.css
 rodape.css
+
 carrossel.js
 carrosselArtistas.js
 destaque.js
+login.js
 menu.js
+
+
 index.html
 login.html

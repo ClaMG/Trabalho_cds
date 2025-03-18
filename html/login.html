@@ -6,6 +6,9 @@
     <title>Login</title>
     <!-- Link para o arquivo CSS -->
     <link rel="stylesheet" href="../css/Login/login.css">
+
+    <!-- Link para o arquivo JS -->
+    <script src="../js/Login/login.js"></script>
 </head>
 <body>
     <!-- Barras animadas no lado esquerdo -->
@@ -104,21 +107,5 @@
         <!-- Imagem decorativa no lado direito -->
         <img src="../img/login/img_login.jpg" alt="lado direito" id="img_login">
     </section>
-
-    <!-- Script para alternar a visibilidade da senha -->
-    <script>
-        function togglePassword() {
-            let passwordInput = document.getElementById("password");
-            let eyeIcon = document.getElementById("img_olho");
-
-            if (passwordInput.type === "password") {
-                passwordInput.type = "text";
-                eyeIcon.src = "../img/icones/icone_olho_aberto.png"; // Troca o ícone para olho aberto
-            } else {
-                passwordInput.type = "password";
-                eyeIcon.src = "../img/icones/icone_olho_fechado.png"; // Volta para o ícone de olho fechado
-            }
-        }
-    </script>
 </body>
 </html>
