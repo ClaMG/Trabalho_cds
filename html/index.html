@@ -434,72 +434,97 @@
                 </div>
             </section>
     </main>
-    <!--Rodapé-->
-    <footer>
+    <!-- Rodapé -->
+<footer>
 
-        <section id="logo_rodape">
-            <div></div>
-            <div><img src="#" alt="Logo"></div>
-            <div></div>
-        </section>
+    <!-- Seção com a logo no rodapé, contendo duas linhas laterais -->
+    <section id="logo_rodape">
+        <div class="linha_logo_rodape"></div> <!-- Linha à esquerda -->
+        <!-- Logo central -->
+        <img src="#" alt="Logo" id="img_rodape_logo">
+        <div class="linha_logo_rodape"></div> <!-- Linha à direita -->
+    </section>
 
-        <section id="corpo_rodape">
-            <div id="parte_de_cima_rodape">
-                <h1>Sobre nos</h1>
-                <p id="sobre_texto_rodape">Lorem ipsum dolor sit amet consectetur adipisicing elit. In repellat animi pariatur vero, incidunt obcaecati iusto minima voluptates voluptatibus illum sint, eius impedit at eligendi reprehenderit cupiditate quaerat. Ex, harum? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae, quas! Libero molestias distinctio ab et, facilis in ratione, animi velit magnam dignissimos autem magni officiis modi iure? Accusamus, praesentium enim!</p>
-            </div>
-            <div id="parte_de_baixo_rodape">
-                <div class="topicos_rodape">
-                    <h1>Politica comercial</h1>
-                    <ul>
-                        <li class="lista_rodape"><a href="#" class="link_rodape">Trocas e Devoluções</a></li>
-                        <li class="lista_rodape"><a href="#" class="link_rodape">Termos de uso</a></li>
-                        <li class="lista_rodape"><a href="#" class="link_rodape">Politicas de privacidade</a></li>
-                        <li class="lista_rodape"><a href="#" class="link_rodape">Direito de arrependimento</a></li>
-                    </ul>
-                </div>
+    <!-- Corpo principal do rodapé -->
+    <section id="corpo_rodape">
+        <div id="parte_de_cima_rodape">
+            <h1>Sobre nós</h1>
+            <!-- Texto de descrição sobre a empresa ou site -->
+            <p id="sobre_texto_rodape">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. In repellat animi pariatur vero Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque maxime ducimus quaerat quos exercitationem maiores, voluptatibus saepe, adipisci dignissimos libero perspiciatis. Nulla, temporibus et. Aperiam laudantium fuga magnam ipsum reiciendis?
+            </p>
+        </div>
 
-                <div class="topicos_rodape">
-                    <h1>Ajuda</h1>
-                    <ul>
-                        <li class="lista_rodape"><a href="#" class="link_rodape">Perguntas Frequentes</a></li>
-                        <li class="lista_rodape"><a href="#" class="link_rodape">Fale conosco</a></li>
-                        <li class="lista_rodape"><a href="#" class="link_rodape">Prazos e entregas</a></li>
-                    </ul>
-                </div>
-
-                <div class="topicos_rodape">
-                    <h1>Atendimento</h1>
-                    <ul>
-                        <li class="lista_rodape"><a href="#" class="link_rodape"> Recomendar produtos </a></li>
-                        <li class="lista_rodape"><a href="#" class="link_rodape"> <img src="#" alt="icone email"> Email</a></li>
-                        <li class="lista_rodape"><a href="#" class="link_rodape"> <img src="#" alt="icone telefone"> Telefone</a></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <hr>
-        <section id="final_rodape">
-            <div>
-                <h1>Formas de pagamento</h1>
-                <img src="#" alt="Cartão">
-                <img src="#" alt="Cartão">
-                <img src="#" alt="Cartão">
-                <img src="#" alt="Cartão">
-                <img src="#" alt="Cartão">
+        <div id="parte_de_baixo_rodape">
+            <!-- Seção: Política Comercial -->
+            <div class="topicos_rodape">
+                <h1>Política comercial</h1>
+                <ul>
+                    <li class="lista_rodape"><a href="#" class="link_rodape">Trocas e Devoluções</a></li>
+                    <li class="lista_rodape"><a href="#" class="link_rodape">Termos de uso</a></li>
+                    <li class="lista_rodape"><a href="#" class="link_rodape">Políticas de privacidade</a></li>
+                    <li class="lista_rodape"><a href="#" class="link_rodape">Direito de arrependimento</a></li>
+                </ul>
             </div>
 
-            <div>
-                <h1>Redes Sociais</h1>
-                <a href="#"><img src="#" alt="Instagram" class="img_rodape_social"></a>
-                <a href="#"><img src="#" alt="Facebook" class="img_rodape_social"></a>
-                <a href="#"><img src="#" alt="X" class="img_rodape_social"></a>
-                <a href="#"><img src="#" alt="Tiktok" class="img_rodape_social"></a>
-                <a href="#"><img src="#" alt="Spotify" class="img_rodape_social"></a>
-                <a href="#"><img src="#" alt="Youtube" class="img_rodape_social"></a>
-
+            <!-- Seção: Suporte -->
+            <div class="topicos_rodape">
+                <h1>Suporte</h1>
+                <ul>
+                    <li class="lista_rodape"><a href="#" class="link_rodape">Perguntas Frequentes</a></li>
+                    <li class="lista_rodape"><a href="#" class="link_rodape">Fale conosco</a></li>
+                    <li class="lista_rodape"><a href="#" class="link_rodape">Recomendar produtos</a></li>
+                </ul>
             </div>
-        </section>
-    </footer>
+
+            <!-- Seção: Atendimento -->
+            <div class="topicos_rodape">
+                <h1>Atendimento</h1>
+                <ul>
+                    <li class="lista_rodape">
+                        <a href="#" class="link_rodape">
+                            <img src="../img/icones/icone_email.png" alt="Ícone email" class="img_rodape_contatos"> Email
+                        </a>
+                    </li>
+                    <li class="lista_rodape">
+                        <a href="#" class="link_rodape">
+                            <img src="../img/icones/icone_telefone.png" alt="Ícone telefone" class="img_rodape_contatos"> Telefone
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Linha separadora do rodapé -->
+    <hr id="hr_rodape">
+
+    <!-- Seção final do rodapé -->
+    <section id="final_rodape">
+        <div>
+            <h1>Formas de pagamento</h1>
+            <!-- Ícones representando formas de pagamento -->
+            <img src="../img/icones/icone_cartao1.png" alt="Cartão" class="img_cartao_rodape">
+            <img src="../img/icones/icone_cartao2.png" alt="Cartão" class="img_cartao_rodape">
+            <img src="../img/icones/icone_cartao1.png" alt="Cartão" class="img_cartao_rodape">
+            <img src="../img/icones/icone_cartao2.png" alt="Cartão" class="img_cartao_rodape">
+            <img src="../img/icones/icone_cartao1.png" alt="Cartão" class="img_cartao_rodape">
+            <img src="../img/icones/icone_cartao2.png" alt="Cartão" class="img_cartao_rodape">
+        </div>
+
+        <!-- Seção de redes sociais -->
+        <div id="redes_sociais_rodape">
+            <h1>Redes Sociais</h1>
+            <!-- Ícones representando redes sociais -->
+            <a href="#"><img src="../img/icones/icone_instagram.png" alt="Instagram" class="img_rodape_social"></a>
+            <a href="#"><img src="../img/icones/icone_facebook.png" alt="Facebook" class="img_rodape_social"></a>
+            <a href="#"><img src="../img/icones/icone_x.png" alt="X (Twitter)" class="img_rodape_social"></a>
+            <a href="#"><img src="../img/icones/icone_tiktok.png" alt="TikTok" class="img_rodape_social"></a>
+            <a href="#"><img src="../img/icones/icone_spotify.png" alt="Spotify" class="img_rodape_social"></a>
+            <a href="#"><img src="../img/icones/icone_youtube.png" alt="YouTube" class="img_rodape_social"></a>
+        </div>
+    </section>
+</footer>
+
 </body>
 </html>

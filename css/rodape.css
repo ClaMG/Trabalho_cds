@@ -1,41 +1,141 @@
+/* == Reset de Estilos Gerais == */
+/* Remove margens e preenchimentos padrão do navegador */
 *{
     margin: 0px;
     padding: 0px;
 }
 
-#corpo_rodape{
-    margin: 40px 40px;
-}
-
-#sobre_texto_rodape{
-    margin-top: 10px;
-    text-align: justify;
-    margin-right: 50px;
-}
-
-#corpo_rodape li{
-    margin-top: 20px;
-}
-
-#parte_de_baixo_rodape{
+/* == Seção da Logo no Rodapé == */
+#logo_rodape {
     display: flex;
+    align-items: center; /* Alinha os elementos verticalmente ao centro */
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 10px; /* Espaçamento entre os elementos */
+    margin-top: 30px;
+}
+
+/* Linhas ao lado da logo */
+.linha_logo_rodape {
+    flex: 1; /* Faz com que as linhas ocupem o espaço disponível */
+    height: 2px; /* Define a espessura da linha */
+    background-color: #303030; /* Define a cor da linha */
+}
+
+/* Estilização da imagem do logo */
+#img_rodape_logo {
+    width: 70px; /* Define o tamanho da imagem */
+    margin: 0px 10px; /* Espaçamento ao redor da imagem */
+}
+
+/* == Corpo Principal do Rodapé == */
+#corpo_rodape {
+    margin: 20px 40px; /* Espaçamento externo */
+}
+
+/* Estilização do texto "Sobre nós" */
+#sobre_texto_rodape {
+    margin-top: 10px;
+    text-align: justify; /* Justifica o texto */
+    margin-right: 50px; /* Adiciona espaço à direita */
+}
+
+/* == Parte Inferior do Rodapé (Listas e Links) == */
+#parte_de_baixo_rodape {
+    display: flex; /* Alinha os elementos em linha */
     margin-top: 20px;
 }
 
-.topicos_rodape{
-    margin-right: 90px;
+/* Seções dos tópicos do rodapé (ex: Suporte, Política Comercial) */
+.topicos_rodape {
+    margin-right: 90px; /* Espaço entre os blocos */
 }
 
-.link_rodape{
-    text-decoration: none;
-    color: black;
+/* Links do rodapé */
+.link_rodape {
+    text-decoration: none; /* Remove o sublinhado */
+    color: black; /* Define a cor do texto */
 }
 
-.lista_rodape{
-    list-style-type: none;
+/* Estilização das listas do rodapé */
+.lista_rodape {
+    list-style-type: none; /* Remove os marcadores da lista */
+    margin-top: 20px;
 }
 
-.link_rodape:hover{
-    color: #949494;
-    text-decoration: underline;
+/* Efeito hover nos links */
+.link_rodape:hover {
+    color: #949494; /* Muda a cor ao passar o mouse */
+    text-decoration: underline; /* Adiciona sublinhado */
+}
+
+/* Ícones de contato (email, telefone) */
+.img_rodape_contatos {
+    width: 20px; /* Define o tamanho do ícone */
+    margin-bottom: -4px; /* Ajuste fino para alinhar com o texto */
+}
+
+/* == Linha Separadora do Rodapé == */
+#hr_rodape {
+    height: 2px; /* Define a espessura da linha */
+    background-color: #303030; /* Define a cor */
+    border: none; /* Remove a borda padrão */
+}
+
+/* == Seção Final do Rodapé (Pagamento e Redes Sociais) == */
+#final_rodape {
+    display: flex;
+    justify-content: space-between; /* Distribui os elementos igualmente */
+    margin: 10px 30px;
+}
+
+/* Ícones das redes sociais */
+.img_rodape_social {
+    width: 30px; /* Define o tamanho dos ícones */
+    margin: 10px 5px;
+}
+
+/* Ícones das formas de pagamento */
+.img_cartao_rodape {
+    width: 30px; /* Define o tamanho dos ícones */
+    margin: 10px 5px;
+}
+
+/* == Responsividade para Telas Menores (máx. 650px) == */
+@media screen and (max-width: 650px) {
+    /* Ajuste do texto para telas menores */
+    #sobre_texto_rodape {
+        margin-right: 0px; /* Remove margem direita para melhor adaptação */
+    }
+
+    /* Reduz o espaçamento entre seções */
+    .topicos_rodape {
+        margin-right: 40px;
+    }
+
+    /* Diminui o espaçamento entre os itens da lista */
+    .lista_rodape {
+        margin-top: 10px;
+    }
+
+    /* Ajuste da margem do rodapé para telas pequenas */
+    #final_rodape {
+        margin: 10px;
+    }
+
+    /* Reduz tamanho dos ícones sociais */
+    .img_rodape_social {
+        width: 25px;
+        margin: 10px 0px;
+    }
+
+    /* Ajuste fino no alinhamento das redes sociais */
+    #redes_sociais_rodape {
+        margin-left: 5px;
+    }
+
+    /* Ajusta os ícones de pagamento */
+    .img_cartao_rodape {
+        width: 30px;
+        margin: 10px 3px;
+    }
 }

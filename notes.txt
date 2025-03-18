@@ -29,8 +29,9 @@ cabeçalho.css
 carrossel.css
 destaque.css
 genero.css
+rodape.css
 carrossel.js
 carrosselArtistas.js
 destaque.js
 menu.js
-index.html(avalicao)
+index.html
