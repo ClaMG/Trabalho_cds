@@ -1,172 +1,202 @@
-*{
+/* Reseta as margens e o preenchimento de todos os elementos e define a fonte padrão */
+* {
     margin: 0px;
     padding: 0px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#login{
-    background-color: #6d6d6d;
-    display: flex;
-    width: 700px;
-    height: 420px;
-    margin: 100px 25vw;
-    border-radius: 20px;
+/* Estilo para o container principal de login */
+#login {
+    background-color: #6d6d6d; /* Cor de fundo cinza */
+    display: flex; /* Flexbox para organizar o layout dos elementos */
+    width: 700px; /* Largura fixa do box de login */
+    height: 420px; /* Altura fixa do box de login */
+    margin: 100px 25vw; /* Margem superior de 100px e margem lateral de 25% da largura da tela */
+    border-radius: 20px; /* Bordas arredondadas */
+    position: relative; /* Permite que elementos internos se posicionem em relação a esse container */
 }
 
-#lado_esquerdo{
+/* Estilos para a parte esquerda do container de login */
+#lado_esquerdo {
     margin: 20px;
+    color: white; /* Cor do texto em branco */
+}
+
+/* Estilo do título principal */
+#titulo {
+    font-size: 60px; /* Tamanho da fonte grande */
+}
+
+/* Estilo para o subtítulo */
+#p_titulo {
+    font-size: 15px; /* Tamanho da fonte menor */
+}
+
+/* Estilo do link de início */
+#link_inicio {
     color: white;
 }
 
-#titulo{
-    font-size: 60px;
+/* Efeito hover para o link de início */
+#link_inicio:hover {
+    color: #303030; /* Altera a cor para um cinza mais escuro ao passar o mouse */
 }
 
-#p_titulo{
-    font-size: 15px;
+/* Estilos para os inputs de login */
+#inputs {
+    margin-top: 20px; /* Margem superior para separar os campos */
 }
 
-#link_inicio{
-    color: white;
+/* Estilo para os títulos dos campos de input */
+.titulo_input {
+    font-size: 30px; /* Tamanho da fonte maior */
+    margin-bottom: 10px; /* Espaço abaixo do título */
 }
 
-#link_inicio:hover{
-    color: #303030;
+/* Estilo para os campos de input */
+.input {
+    width: 330px; /* Largura fixa do campo de input */
+    height: 30px; /* Altura do campo */
+    border-radius: 10px; /* Bordas arredondadas */
+    border: none; /* Remove a borda padrão */
+    padding-left: 10px; /* Espaço interno à esquerda */
 }
 
-#inputs{
-    margin-top: 20px;
-}
-
-.titulo_input{
-    font-size: 30px;
-    margin-bottom: 10px;
-}
-
-.input{
-    width: 330px;
-    height: 30px;
-    border-radius: 10px;
-    border: none;
-    padding-left: 10px;
-}
-
-.input:focus{
+/* Foco nos campos de input (remover borda de foco padrão) */
+.input:focus {
     outline: none;
 }
 
-#senha{
+/* Estilos para o campo de senha */
+#senha {
     margin-top: 10px;
-    z-index: 0;
+    z-index: 0; /* Organiza a camada do elemento */
 }
 
-#olho{
-    background-color: transparent;
-    border: none;
-    position: absolute;
-    z-index: 1;
-    left: 48.5%;
-    top: 59%;
+/* Estilos para o botão "olho" (mostrar/ocultar senha) */
+#olho {
+    background-color: transparent; /* Fundo transparente */
+    border: none; /* Remove a borda */
+    position: absolute; /* Posicionamento absoluto */
+    z-index: 1; /* Organiza a camada do elemento */
+    left: 46%; /* Posiciona a partir da esquerda */
+    top: 65%; /* Posiciona a partir do topo */
 }
 
-#img_olho{
+/* Tamanho da imagem do ícone do olho */
+#img_olho {
     width: 30px;
     height: 25px;
 }
 
-#link_senha, #p_link_senha{
-    color: white;
-    font-size: 15px;
+/* Estilos para os links relacionados à senha */
+#link_senha, #p_link_senha {
+    color: white; /* Cor do texto branco */
+    font-size: 15px; /* Tamanho da fonte pequeno */
 }
 
-#p_link_senha{
+/* Margens para o link de senha */
+#p_link_senha {
     margin: 5px 0px 0px 5px;
 }
 
-#link_senha:hover{
-    color: #303030;
+/* Efeito hover no link de senha */
+#link_senha:hover {
+    color: #303030; /* Cor ao passar o mouse */
 }
 
-#acessar{
+/* Estilos para o botão de acesso */
+#acessar {
     width: 300px;
     height: 40px;
     border-radius: 10px;
     border: none;
     margin: 25px 15px 0px 15px;
-    background-color: #abaaaa;
-    color: #5d5d5d;
-    font-size: 25px;
-    font-weight: bold;
+    background-color: #abaaaa; /* Cor de fundo */
+    color: #5d5d5d; /* Cor do texto */
+    font-size: 25px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
 }
 
-#acessar:hover{
-    color: white;
-    background-color: #303030;
+/* Efeito hover no botão de acesso */
+#acessar:hover {
+    color: white; /* Cor do texto ao passar o mouse */
+    background-color: #303030; /* Cor de fundo ao passar o mouse */
 }
 
-#link_criar, #p_link_criar{
-    color: white;
+/* Estilos para o link de criar conta */
+#link_criar, #p_link_criar {
+    color: white; /* Cor do texto branco */
 }
 
-#link_criar:hover{
-    color: #303030;
+/* Efeito hover no link de criar conta */
+#link_criar:hover {
+    color: #303030; /* Cor ao passar o mouse */
 }
 
-#p_link_criar{
+/* Estilos para o parágrafo de criar conta */
+#p_link_criar {
     margin: 5px 0px 0px 20px;
-    font-size: 15px;
+    font-size: 15px; /* Tamanho da fonte */
 }
 
+/* Estilos para o visualizador de animação */
 .visualizer-container {
     display: flex;
     justify-content: center;
     width: 100vw;
     height: 200px;
-    position: fixed;
+    position: fixed; /* Fixa o visualizador na tela */
+    z-index: -1; /* Coloca atrás dos outros elementos */
 }
 
-#esquerda{
-    left: -43%;
-    transform: rotate(90deg);
+/* Estilos para a barra de animação da esquerda */
+#esquerda {
+    left: -43%; /* Posiciona fora da tela */
+    transform: rotate(270deg); /* Rotaciona a barra */
 }
 
-#direita{
-    right: -43%;
-    transform: rotate(270deg);
+/* Estilos para a barra de animação da direita */
+#direita {
+    right: -43%; /* Posiciona fora da tela */
+    transform: rotate(90deg); /* Rotaciona a barra */
 }
 
+/* Contêiner para as barras animadas */
 .visualizer {
-display: flex;
-justify-content: center;
-gap: 5px;
-width: 100%;
-height: 100%;
-transform: rotate(180deg);
+    display: flex;
+    justify-content: center;
+    gap: 5px; /* Espaço entre as barras */
+    width: 100%;
+    height: 100%;
 }
 
+/* Estilos para cada barra de animação */
 .bar {
-flex-grow: 1;
-width: 15px;
-height: 50px;
-background-color: #000000;
-animation: barAnimation 1s ease-in-out infinite;
-position: relative;
-overflow: hidden;
+    flex-grow: 1; /* Expande para preencher o espaço */
+    width: 15px; /* Largura da barra */
+    height: 50px; /* Altura inicial */
+    background-color: #000000; /* Cor de fundo preta */
+    animation: barAnimation 1s ease-in-out infinite; /* Animação */
+    position: relative;
+    overflow: hidden; /* Impede o conteúdo de ultrapassar a barra */
 }
 
+/* Estilos para as barras cinzas */
 .bar.gray {
-background-color: #ffffff;
+    background-color: #ffffff; /* Cor de fundo branca */
 }
 
+/* Animação das barras */
 .bar::before {
-content: "";
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background-image: linear-gradient(black 5px, transparent 5px);
-background-size: 100% 10px;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(black 5px, transparent 5px); /* Efeito de linha dentro da barra */
+    background-size: 100% 10px;
 }
 
 /* === Barras animadas === */
@@ -221,16 +251,43 @@ background-size: 100% 10px;
 
 .bar:nth-child(25) {animation-delay: 2.4s;}
 
+/* Definindo a animação das barras */
 @keyframes barAnimation {
-0% {height: 50px; /* altura inicial */}
-50% {height: 150px; /* altura máxima */}
-100% {height: 50px; /* altura final */}
+    0% {height: 50px;} /* Altura inicial */
+    50% {height: 150px;} /* Altura máxima no meio da animação */
+    100% {height: 50px;} /* Altura final */
 }
 
-#img_login{
+/* Estilo para a imagem de login */
+#img_login {
     width: 340px;
-    border-radius: 0px 20px 20px 0px;
+    border-radius: 0px 20px 20px 0px; /* Bordas arredondadas do lado direito */
 }
 
-@media only screen and (max-width: 650px){
+/* Media query para telas pequenas (como dispositivos móveis) */
+@media only screen and (max-width: 650px) {
+    #login {
+        width: 400px; /* Largura reduzida para telas pequenas */
+        height: 420px; /* Altura mantida */
+        margin: 100px 50px; /* Ajuste da margem */
+    }
+
+    #img_login {
+        display: none; /* Oculta a imagem de login em telas pequenas */
+    }
+
+    #olho {
+        left: 80%; /* Reposiciona o ícone do olho para se ajustar à tela menor */
+    }
+
+    .visualizer-container {
+        display: none; /* Esconde o visualizador de animação */
+    }
+
+    body {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../img/login/img_login.jpg);
+        background-repeat: no-repeat; /* Evita que a imagem de fundo se repita */
+        background-size: cover; /* Faz a imagem cobrir toda a tela */
+        background-position: center; /* Centraliza a imagem de fundo */
+    }
 }
