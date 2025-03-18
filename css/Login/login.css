@@ -8,13 +8,13 @@
     background-color: #6d6d6d;
     display: flex;
     width: 700px;
-    height: 400px;
-    margin: 20px 25vw;
+    height: 420px;
+    margin: 100px 25vw;
     border-radius: 20px;
 }
 
 #lado_esquerdo{
-    margin: 20px 10px;
+    margin: 20px;
     color: white;
 }
 
@@ -36,6 +36,61 @@
 }
 
 .input{
-    width: 300px;
+    width: 330px;
     height: 30px;
+    border-radius: 10px;
+    border: none;
 }
+
+#senha{
+    margin-top: 10px;
+}
+
+#olho{
+    z-index: 1;
+    margin-left: -40px;
+}
+
+#link_senha, #p_link_senha{
+    color: white;
+    font-size: 15px;
+}
+
+#p_link_senha{
+    margin: 5px 0px 0px 5px;
+}
+
+#link_senha:hover{
+    color: #303030;
+}
+
+#acessar{
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    margin: 30px 15px 0px 15px;
+    background-color: #abaaaa;
+    color: #5d5d5d;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#acessar:hover{
+    color: white;
+    background-color: #303030;
+}
+
+#link_criar, #p_link_criar{
+    color: white;
+}
+
+#link_criar:hover{
+    color: #303030;
+}
+
+#p_link_criar{
+    margin: 5px 0px 0px 20px;
+    font-size: 15px;
+}
+
