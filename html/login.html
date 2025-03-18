@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/cabeçalho.css">
+    <link rel="stylesheet" href="../css/Login/login.css">
+</head>
+<body>
+    <!-- Cabeçalho da página (sem o usuário estar logado) -->
+    <header> 
+
+        <div id="parte_de_cima_cab">
+
+            <!-- Logo da página -->
+            <a href="#" id="logo"><img src="#" alt="Logo"></a> 
+            
+            <!-- Barra de pesquisa -->
+            <div id="barra_pesquisa">
+                <input type="checkbox" id="check"> <!-- Controle de visibilidade -->
+                <div id="complemento_pesquisa">
+
+                    <!-- Campo de pesquisa -->
+                    <input type="text" id="input_barra_pesquisa" placeholder="Buscar..." >
+
+                    <!-- Botão de pesquisa -->
+                    <label for="check" id="buttom_lupa">
+                        <img src="../img/icones/icone_lupa.png" alt="Lupa" id="lupa">
+                    </label>
+                </div>
+            </div>
+
+            <div id="login_carrinho"> <!-- Login e Carrinho -->
+                <div id="login_cadastro"> <!-- Login e cadastro -->
+
+                    <a href="#"><img src="../img/icones/icone_perfil.png" alt="Perfil" id="Perfil"></a><!-- Ícone de perfil -->
+                    <p id="p_cadastro_login">
+                        <a href="#" class="a_cadastro_login">Cadastro</a> ou <br>
+                        <a href="#" class="a_cadastro_login">Login</a>
+                    </p>
+                </div>
+
+                <a href="#"><img src="../img/icones/icone_carrinho.png" alt="Carrinho" id="Carrinho"></a><!-- Ícone de carrinho -->
+            </div>
+        </div>
+
+        <hr style="color: #7b7a7a;"><!-- Linha separadora -->
+
+        <!-- Menu de navegação -->
+        <nav class="menu-underline">
+            <input type="checkbox" id="menu_toggle" class="menu_toggle"><!-- Menu responsivo -->
+            <label for="menu_toggle" class="menu_icon">&#9776;</label> 
+
+            <ul id="menu">
+
+                <li class="p_menu"><a href="#" class="a_menu">Inicio</a></li>
+                <li class="p_menu"><a href="#" class="a_menu">Produtos</a></li>
+                
+                 <!-- Menu suspenso de gêneros musicais -->
+                <li class="p_menu" id="menu_genero">
+
+                    <button onclick="aparecer_g('sumir_g')" class="b_menu">
+                        <a href="#" class="a_b_menu">Gênero</a>
+                    </button>
+
+                    <!-- Submenu de Gêneros -->
+                    <ul class="subclasse_menu" id="sumir_g">
+                        
+                        <ul class="sub_subclasse_menu">
+                            <li><a href="#" class="sub_a">Clássica</a></li>
+                            <li><a href="#" class="sub_a">Eletrônica</a></li>
+                            <li><a href="#" class="sub_a">Forro</a></li>
+                            <li><a href="#" class="sub_a">Hip Hop</a></li>
+                            <li><a href="#" class="sub_a">MPB</a></li>
+                        </ul>
+                        
+                        <ul class="sub_subclasse_menu">
+                            <li><a href="#" class="sub_a">Pagode</a></li>
+                            <li><a href="#" class="sub_a">Pop</a></li>
+                            <li><a href="#" class="sub_a">Reggae</a></li>
+                            <li><a href="#" class="sub_a">Rock</a></li>
+                            <li><a href="#" class="sub_a">Sertanejo</a></li>
+                        </ul>
+                    </ul>
+                </li>
+
+                <!-- Menu suspenso para Artistas -->
+                <li class="p_menu" id="arredondar_b">
+
+                    <button onclick="aparecer_a('sumir_a')" class="b_menu">
+                        <a href="#" class="a_b_menu">Artistas</a>
+                    </button>
+
+                    <!-- Submenu de Artistas -->
+                    <ul class="subclasse_menu_a" id="sumir_a">
+                        
+                        <ul class="sub_subclasse_menu">
+                            <li><a href="#" class="sub_a">Ludwing Beethowen</a></li>
+                            <li><a href="#" class="sub_a">Marshmello</a></li>
+                            <li><a href="#" class="sub_a">Luiz Gonzaga</a></li>
+                            <li><a href="#" class="sub_a">Snoop Dogg</a></li>
+                            <li><a href="#" class="sub_a">Maria Bethânia</a></li>
+                        </ul>
+                        
+                        <ul class="sub_subclasse_menu">
+                            <li><a href="#" class="sub_a">Péricles</a></li>
+                            <li><a href="#" class="sub_a">Michael Jackson</a></li>
+                            <li><a href="#" class="sub_a">Bob Marley</a></li>
+                            <li><a href="#" class="sub_a">Elvis Presley</a></li>
+                            <li><a href="#" class="sub_a">Luan Santana</a></li>
+                        </ul>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="login">
+
+        <div id="lado_esquerdo">
+            <h1 id="titulo">Login</h1>
+            <p id="p_titulo">Preencha os campos com seus dados de acesso.</p>
+            <div id="inputs">
+                <h2 class="titulo_input">Usuário</h2> <input type="text" class="input">
+                <div id="senha">
+                    <h2 class="titulo_input">Senha</h2> <input type="text" class="input">
+                    <button>Olho</button>
+                </div>
+                <p>Esqueceu a <a href="#">senha?</a></p>
+            </div>
+
+            <button>Acessar</button>
+            <p>Você é novo aqui? <a href="#">Crie uma conta</a></p>
+        </div>
+
+        <img src="#" alt="lado direito">
+    </section>
+
+</body>
+</html>
