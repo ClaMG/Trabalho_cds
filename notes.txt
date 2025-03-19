@@ -37,6 +37,9 @@ carrossel.js
 carrosselArtistas.js
 destaque.js
 login.js
+mascara_cep.js
+mascara_cpf.js
+mascara_tel.js
 menu.js
 
 cadastro.html
