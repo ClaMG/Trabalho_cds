@@ -80,7 +80,7 @@ main{
 
 /* Estilos para o botão "olho" (mostrar/ocultar senha) */
 #olho {
-    background-color: transparent; /* Fundo transparente */
+    background-color: white; /* Fundo branco */
     border: none; /* Remove a borda */
     position: absolute; /* Posicionamento absoluto */
     z-index: 1; /* Organiza a camada do elemento */
@@ -274,7 +274,7 @@ main{
 }
 
 /* Media query para telas pequenas (como dispositivos móveis) */
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 850px) {
     #login {
         width: 400px; /* Largura reduzida para telas pequenas */
         height: 420px; /* Altura mantida */

@@ -14,7 +14,7 @@ main{
 }
 
 #cadastro{
-    background-color: white;
+    background-color: rgb(247, 247, 247);
     border-radius: 10px;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
     width: 900px;
@@ -25,6 +25,23 @@ main{
 #titulo{
     color: #595959;
     font-size: 80px;
+    margin-left: 10px;
+}
+
+#p_titulo{
+    color: #595959;
+    margin: -10px 20px;
+    font-size: 15px;
+}
+
+#link_login{
+    color: #595959;
+    font-weight: bold;
+}
+
+#link_login:hover{
+    color: #abaaaa;
+    transition: 0.2s;
 }
 
 #cima{
@@ -35,15 +52,27 @@ main{
     margin-left: 20px;
 }
 
-.separacao{
+#lado{
+    display: flex;
+}
+
+.separacao, .separacao2{
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: 350px;
     margin-left: 20px;
 }
 
+.separacao2{
+    width: 310px;
+}
+
 #direita{
-    margin-left: 100px;
+    margin-left: 50px;
+}
+
+#direita_baixo{
+    margin-left: 90px;
 }
 
 .subtitulo{
@@ -60,8 +89,7 @@ main{
 
 #endereco{
     margin-top: 20px;
-    width: 720px;
-    
+    width: 750px;
 }
 
 #inputs{
@@ -69,6 +97,7 @@ main{
 }
 
 .input, .input_baixo{
+    background-color: transparent;
     margin: 15px 10px;
     border: none;
     border-bottom: 2px solid #7b7a7a; /* Apenas borda inferior */
@@ -79,19 +108,19 @@ main{
     margin: 15px -10px;
 }
 
-.input:focus{
+.input:focus, .input_baixo:focus{
     outline: none;
 }
 
 #button{
-    width: 200px;
+    width: 300px;
     height: 40px;
     border-radius: 10px;
     border: none;
-    margin: 10px 25px;
+    margin: 10px 0px;
     color: white; /* Cor do texto */
     background-color: #303030; /* Cor de fundo */
-    font-size: 25px; /* Tamanho da fonte */
+    font-size: 30px; /* Tamanho da fonte */
     font-weight: bold; /* Negrito */
 }
 
@@ -102,6 +131,10 @@ main{
 }
 
 /* == Imagens laterais == */
+
+#sumir_d, #sumir_e{
+    display: none;
+}
 
 #imgs_direita {
     display: flex;
@@ -126,7 +159,6 @@ main{
     height: 100%;
 }
 
-
 .img_direita {
     width: 300px;
     margin-right: -200px;
@@ -140,4 +172,37 @@ main{
     width: 300px;
     margin-left: -200px;
     transform: scaleX(-1);
+}
+
+
+@media only screen and (max-width: 850px){
+        #cadastro{
+            width: 450px;
+            height: 1120px;
+        }
+
+        #cima{
+            display: block;
+        }
+
+        #direita{
+            margin: 25px;
+        }
+
+        #endereco{
+            width: 240px;
+        }
+
+        #lado{
+            display: block;
+        }
+
+        #direita_baixo{
+            margin-left: 20px;
+        }
+
+        #sumir_d, #sumir_e{
+            display: block;
+        }
+
 }

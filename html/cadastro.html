@@ -10,6 +10,7 @@
     <main>
         <section id="cadastro">
             <h1 id="titulo">Cadastrar</h1>
+            <p id="p_titulo">Já tem uma conta? <a href="#" id="link_login">Logar</a></p>
             <div id="inputs">
                 <div id="cima">
                     <div class="separacao">
@@ -29,15 +30,25 @@
                 
                 <div id="baixo">
 
-                    <h1 class="subtitulo" id="endereco">Dados de endereço:</h1>
+                        <h1 class="subtitulo" id="endereco">Dados de endereço:</h1>
 
-                    <div class="separacao">
-                        <input type="text" placeholder="CPF" class="input_baixo">
+                    <div id="lado">
+                        <div class="separacao2">
+                            <input type="text" placeholder="CEP" class="input_baixo">
+                            <input type="text" placeholder="Estado" class="input_baixo">
+                            <input type="text" placeholder="Cidade" class="input_baixo">
+                            <input type="text" placeholder="Bairro" class="input_baixo">
+                        </div>
+                        <div class="separacao2" id="direita_baixo">
+                            <input type="text" placeholder="Logradouro / Rua" class="input_baixo">
+                            <input type="text" placeholder="Número" class="input_baixo">
+                            <input type="text" placeholder="Complemento" class="input_baixo">
+                            <button id="button">Cadastrar</button>
+                        </div>
                     </div>
                     
                 </div>
             </div>
-            <button id="button">Cadastrar</button>
         </section>
     </main>
 
@@ -45,11 +56,13 @@
         <img src="../img/cadastro/img_direito.png" alt="notas musicais" class="img_direita">
         <img src="../img/cadastro/img_direito.png" alt="notas musicais" class="img_direita">
         <img src="../img/cadastro/img_direito.png" alt="notas musicais" class="img_direita">
+        <img src="../img/cadastro/img_direito.png" alt="notas musicais" class="img_direita" id="sumir_e">
     </div>
     <div id="imgs_esquerda">
         <img src="../img/cadastro/img_direito.png" alt="notas musicais" class="img_esquerda">
         <img src="../img/cadastro/img_direito.png" alt="notas musicais" class="img_esquerda">
         <img src="../img/cadastro/img_direito.png" alt="notas musicais" class="img_esquerda">
+        <img src="../img/cadastro/img_direito.png" alt="notas musicais" class="img_esquerda" id="sumir_d">
     </div>
 </body>
 </html>
