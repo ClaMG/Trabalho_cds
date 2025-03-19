@@ -4,14 +4,18 @@
     padding: 0px;
     font-family: Arial, Helvetica, sans-serif;
 }
+main{
+    display: flex;
+    justify-content: center;
+}
 
 /* Estilo para o container principal de login */
 #login {
     background-color: #6d6d6d; /* Cor de fundo cinza */
     display: flex; /* Flexbox para organizar o layout dos elementos */
+    margin-top: 100px;
     width: 700px; /* Largura fixa do box de login */
     height: 420px; /* Altura fixa do box de login */
-    margin: 100px 25vw; /* Margem superior de 100px e margem lateral de 25% da largura da tela */
     border-radius: 20px; /* Bordas arredondadas */
     position: relative; /* Permite que elementos internos se posicionem em relação a esse container */
 }
@@ -40,6 +44,7 @@
 /* Efeito hover para o link de início */
 #link_inicio:hover {
     color: #303030; /* Altera a cor para um cinza mais escuro ao passar o mouse */
+    transition: 0.2s;
 }
 
 /* Estilos para os inputs de login */
@@ -79,8 +84,9 @@
     border: none; /* Remove a borda */
     position: absolute; /* Posicionamento absoluto */
     z-index: 1; /* Organiza a camada do elemento */
-    left: 46%; /* Posiciona a partir da esquerda */
-    top: 65%; /* Posiciona a partir do topo */
+    left: 44%; /* Posiciona a partir da esquerda */
+    top: 61%; /* Posiciona a partir do topo */
+    transform: translate(44%, 61%);
 }
 
 /* Tamanho da imagem do ícone do olho */
@@ -103,6 +109,7 @@
 /* Efeito hover no link de senha */
 #link_senha:hover {
     color: #303030; /* Cor ao passar o mouse */
+    transition: 0.2s;
 }
 
 /* Estilos para o botão de acesso */
@@ -122,6 +129,7 @@
 #acessar:hover {
     color: white; /* Cor do texto ao passar o mouse */
     background-color: #303030; /* Cor de fundo ao passar o mouse */
+    transition: 0.3s;
 }
 
 /* Estilos para o link de criar conta */
@@ -132,6 +140,7 @@
 /* Efeito hover no link de criar conta */
 #link_criar:hover {
     color: #303030; /* Cor ao passar o mouse */
+    transition: 0.2s;
 }
 
 /* Estilos para o parágrafo de criar conta */
@@ -140,7 +149,7 @@
     font-size: 15px; /* Tamanho da fonte */
 }
 
-/* Estilos para o visualizador de animação */
+/* == Barras de animação == */
 .visualizer-container {
     display: flex;
     justify-content: center;
@@ -277,7 +286,7 @@
     }
 
     #olho {
-        left: 80%; /* Reposiciona o ícone do olho para se ajustar à tela menor */
+        left: 77%; /* Reposiciona o ícone do olho para se ajustar à tela menor */
     }
 
     .visualizer-container {

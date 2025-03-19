@@ -1,0 +1,143 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+main{
+    display: flex;
+    justify-content: center
+}
+
+#cadastro{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+    width: 900px;
+    height: 700px;
+    margin-top: 40px;
+}
+
+#titulo{
+    color: #595959;
+    font-size: 80px;
+}
+
+#cima{
+    display: flex;
+}
+
+#baixo{
+    margin-left: 20px;
+}
+
+.separacao{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-left: 20px;
+}
+
+#direita{
+    margin-left: 100px;
+}
+
+.subtitulo{
+    color: #5d5d5d;
+    border-bottom: 2px dotted rgb(142, 142, 142);
+}
+#acesso{
+    width: 210px;
+}
+
+#pessoais{
+    width: 230px;
+}
+
+#endereco{
+    margin-top: 20px;
+    width: 720px;
+    
+}
+
+#inputs{
+    margin: 50px 30px;
+}
+
+.input, .input_baixo{
+    margin: 15px 10px;
+    border: none;
+    border-bottom: 2px solid #7b7a7a; /* Apenas borda inferior */
+    font-size: 20px;
+}
+
+.input_baixo{
+    margin: 15px -10px;
+}
+
+.input:focus{
+    outline: none;
+}
+
+#button{
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    margin: 10px 25px;
+    color: white; /* Cor do texto */
+    background-color: #303030; /* Cor de fundo */
+    font-size: 25px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+}
+
+#button:hover{
+    background-color: #abaaaa; /* Cor de fundo ao passar o mouse */
+    color: #5d5d5d; /* Cor do texto ao passar o mouse */
+    transition: 0.2s;
+}
+
+/* == Imagens laterais == */
+
+#imgs_direita {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    position: absolute; /* Garante que fique sobreposto */
+    bottom: 0;
+    right: 0;
+    z-index: -1; /* Coloca atrás de outros elementos */
+    width: 100%;
+    height: 100%;
+}
+
+#imgs_esquerda{
+    display: flex;
+    flex-direction: column;
+    position: absolute; /* Garante que fique sobreposto */
+    bottom: 0;
+    left: 0;
+    z-index: -1; /* Coloca atrás de outros elementos */
+    width: 100%;
+    height: 100%;
+}
+
+
+.img_direita {
+    width: 300px;
+    margin-right: -200px;
+}
+
+.img_direita:not(:first-child) {
+    margin-top: -5px;
+}
+
+.img_esquerda{
+    width: 300px;
+    margin-left: -200px;
+    transform: scaleX(-1);
+}
