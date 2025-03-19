@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
+    <title>Alterar Dados de Usuario</title>
     
      <!-- Link para o arquivo de estilos CSS externo -->
     <link rel="stylesheet" href="../css/alterar/alterar.css">
+    <link rel="stylesheet" href="../css/cabeçalhos/cabeçalho_com_login_sem_menu.css">
 
     <!-- Link para o arquivo de estilos JS externo -->
     <script src="../js/alterar/mascara_cpf.js" defer></script>
@@ -15,6 +16,52 @@
     
 </head>
 <body>
+    <!-- Cabeçalho da página (com user logado) -->
+    <header> 
+
+        <div id="parte_de_cima_cab">
+
+            <!-- Logo da página -->
+            <a href="#" id="logo"><img src="#" alt="Logo"></a> 
+            
+            <!-- Barra de pesquisa -->
+            <div id="barra_pesquisa">
+                <input type="checkbox" id="check"> <!-- Controle de visibilidade -->
+                <div id="complemento_pesquisa">
+
+                    <!-- Campo de pesquisa -->
+                    <input type="text" id="input_barra_pesquisa" placeholder="Buscar..." >
+
+                    <!-- Botão de pesquisa -->
+                    <label for="check" id="buttom_lupa">
+                        <img src="../img/cabeçario/icone_lupa.png" alt="Lupa" id="lupa">
+                    </label>
+                </div>
+            </div>
+
+            <div id="login_carrinho"> <!-- Conta e Carrinho -->
+                    <a href="#"><img src="../img/cabeçario/icone_perfil.png" alt="Perfil" id="Perfil"></a><!-- Imagem de perfil -->
+
+                <a href="#"><img src="../img/cabeçario/icone_carrinho.png" alt="Carrinho" id="Carrinho"></a><!-- Ícone de carrinho -->
+            </div>
+        </div>
+
+        <hr style="color: #7b7a7a;"><!-- Linha separadora -->
+
+        <!-- Menu de navegação -->
+        <nav class="menu-underline">
+            <input type="checkbox" id="menu_toggle" class="menu_toggle"><!-- Menu responsivo -->
+            <label for="menu_toggle" class="menu_icon">&#9776;</label> 
+
+            <ul id="menu">
+
+                <li class="p_menu"><a href="#" class="a_menu">Inicio</a></li>
+                <li class="p_menu"><a href="#" class="a_menu">Produtos</a></li>
+                <li class="p_menu"><a href="#" class="a_menu">Gênero</a></li>
+                <li class="p_menu" id="arredondar_b"><a href="#" class="a_menu">Artistas</a></li>
+            </ul>
+        </nav>
+    </header>
     <!-- Elemento principal da página, onde o formulário de cadastro está contido -->
     <main>
         <!-- Seção de Alterar dados -->

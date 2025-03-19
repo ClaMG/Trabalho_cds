@@ -82,16 +82,6 @@ header {
     height: 40px;
 }
 
-/* Estilização da área de login e cadastro */
-#login_cadastro{
-    display: flex;
-    font-size: 15px;
-}
-
-#p_cadastro_login, .a_cadastro_login{
-    color: rgb(243, 243, 243); /* Cor do texto dos links de cadastro e login */
-}
-
 /* === Estilização do Menu de Navegação === */
 
 /* Define a estrutura do menu principal */
@@ -121,63 +111,7 @@ header {
     transition: 0.2s; /* Suaviza a transição ao passar o mouse */
 }
 
-/* Botões do menu suspenso */
-.b_menu {
-    color: white;
-    font-size: 17px;
-    background-color: transparent;
-    border: none;
-    font-weight: bold;
-}
-
-/* Efeito hover nos botões do menu */
-.b_menu:hover {
-    color: #7b7a7a;
-    transition: 0.2s;
-}
-
-/* Ajuste para a seção de gêneros musicais */
-#menu_genero {
-    display: flex;
-    float: left;
-}
-
 /* === Estilização dos Submenus === */
-
-.subclasse_menu, .subclasse_menu_a { 
-    position: absolute;
-    display: none; /* Esconde os submenus por padrão */
-    background-color: #ffffff;
-    margin-top: 27px;
-    list-style: none;
-    border-radius: 0px 0px 10px 10px; /* Bordas arredondadas no submenu */
-    z-index: 1;
-}
-
-/* Ajuste de espaçamento no submenu de "Artistas" */
-.subclasse_menu_a { 
-    margin-top: 7px; 
-}
-
-/* Remove os marcadores das sublistas */
-.sub_subclasse_menu { 
-    list-style: none; 
-}
-
-/* Estilização dos links dentro dos submenus */
-.sub_a {
-    color: #000000; 
-    text-decoration: none; 
-    padding: 5px 10px; 
-    display: block;
-}
-
-/* Efeito hover para os links do submenu */
-.sub_a:hover {
-    background-color: #303030;
-    color: #ffffff; /* Altera as cores no hover */
-    transition: 0.3s;
-}
 
 /* Responsividade */
 .menu_toggle {
@@ -258,11 +192,6 @@ header {
         width: 30px;
     }
 
-    /* Esconde a área de login e cadastro no mobile para otimizar espaço */
-    #p_cadastro_login {
-        display: none;
-    }
-
     /* === Estilização do Menu === */
 
     /* Configuração inicial do menu, oculto por padrão */
@@ -321,34 +250,11 @@ header {
     }
 
     /* Configuração dos links do menu */
-    .a_menu, .b_menu {
+    .a_menu {
         display: block;
         padding: 10px;
         font-size: 18px;
         text-align: left;
-    }
-
-    /* === Estilização do Submenu === */
-
-    /* Esconde os submenus por padrão */
-    .subclasse_menu, .subclasse_menu_a {
-        display: none;
-        border-radius: 0px 10px 10px 10px; /* Bordas arredondadas para o submenu */
-    }
-
-    /* Ajuste de espaçamento do submenu */
-    .subclasse_menu {
-        margin-top: 41px;
-    }
-
-    .subclasse_menu_a {
-        margin-top: 0px;
-    }
-
-    /* Exibe o submenu quando o botão recebe foco */
-    .p_menu button:focus + .subclasse_menu,
-    .p_menu button:focus + .subclasse_menu_a {
-        display: block;
     }
 
 }
