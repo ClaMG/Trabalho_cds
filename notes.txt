@@ -66,12 +66,12 @@ alterar_dados
 perfil_user
 perfil_adm
 
->adm:
+>>adm:
 alterar_cds
 alterar_user
 alterar_atividades
 
->butoes:
+>>butoes:
 favoritos
 carrinho
 avaliar
