@@ -24,30 +24,29 @@ obsevação: os links dos slides podem ser removidos, contanto que o css que est
 Comentados:
 
 alterar.css
-artistas.css
-avalicao.css
 cabeçalho_com_login_sem_menu.css
+cabeçalho_com_login.css
 cabeçalho_sem_login.css
 cadastro.css
+login.css
+artistas.css
+avalicao.css
 carrossel.css
 destaque.css
 genero.css
-login.css
 rodape.css
 
-carrossel.js
-carrosselArtistas.js
-destaque.js
+menu.js
 login.js
 mascara_cep.js
 mascara_cpf.js
 mascara_tel.js
-mascara_cep.js
-mascara_cpf.js
-mascara_tel.js
-menu.js
+carrossel.js
+carrosselArtistas.js
+destaque.js
 
 alterar_dados.html > cabeçalho_com_login_sem_menu.css
 cadastro.html
+index_logado.html > cabeçalho_com_login.css
 index.html > cabeçalho_sem_login.css
 login.html

@@ -1,0 +1,344 @@
+/* === Reset de Estilos Globais === */
+
+/* Remove margens e paddings padrão e define box-sizing para facilitar o layout */
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif; /* Define a fonte padrão */
+}
+
+/* Oculta a barra de rolagem no Chrome, Safari e navegadores baseados em WebKit */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* === Estilização do Cabeçalho === */
+
+/* Define um fundo escuro para o cabeçalho */
+header {
+    background-color: #303030;
+}
+
+/* Organiza os elementos na parte superior do cabeçalho */
+#parte_de_cima_cab {
+    display: flex;
+    justify-content: space-around; /* Distribui os itens igualmente */
+}
+
+/* Adiciona espaçamento nos elementos do cabeçalho */
+#logo, #barra_pesquisa, #login_carrinho {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/* === Estilização da Barra de Pesquisa === */
+
+#complemento_pesquisa {
+    background-color: white;
+    border-radius: 10px; /* Arredonda as bordas */
+    width: 350px;
+    height: 37px;
+}
+
+#input_barra_pesquisa {
+    float: left;
+    background-color: transparent;
+    padding-left: 5px;
+    font-style: italic;
+    font-size: 18px;
+    height: 32px;
+    width: 300px;
+    margin-top: 2px;
+    margin-left: 4px;
+    outline: none;
+    border: none; /* Remove a borda do campo de entrada */
+}
+
+/* Estilização do botão de pesquisa e ícone de lupa */
+#lupa, #buttom_lupa {
+    margin-top: 5px;
+    margin-left: 5px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* Esconde o checkbox que controla a barra de pesquisa */
+#check {
+    display: none;
+}
+
+/* === Estilização da Seção de Login e Carrinho === */
+
+#login_carrinho {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    height: 40px;
+}
+
+/* Define a altura dos ícones de carrinho e perfil */
+#Carrinho, #Perfil {
+    height: 40px;
+}
+
+/* === Estilização do Menu de Navegação === */
+
+/* Define a estrutura do menu principal */
+#menu {
+    display: flex;
+    justify-content: center; /* Centraliza o menu */  
+}
+
+/* Estilização dos itens do menu */
+.p_menu {
+    position: relative;
+    float: left;
+    margin: 7px 30px;
+    font-weight: bold;
+    list-style: none; /* Remove os marcadores da lista */
+}
+
+/* Links do menu principal */
+.a_menu {
+    color: white;
+    text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+/* Efeito hover para os links do menu */
+.a_menu:hover {
+    color: #7b7a7a;
+    transition: 0.2s; /* Suaviza a transição ao passar o mouse */
+}
+
+/* Botões do menu suspenso */
+.b_menu {
+    color: white;
+    font-size: 17px;
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+}
+
+/* Efeito hover nos botões do menu */
+.b_menu:hover {
+    color: #7b7a7a;
+    transition: 0.2s;
+}
+
+/* Ajuste para a seção de gêneros musicais */
+#menu_genero {
+    display: flex;
+    float: left;
+}
+
+/* === Estilização dos Submenus === */
+
+.subclasse_menu, .subclasse_menu_a { 
+    position: absolute;
+    display: none; /* Esconde os submenus por padrão */
+    background-color: #ffffff;
+    margin-top: 27px;
+    list-style: none;
+    border-radius: 0px 0px 10px 10px; /* Bordas arredondadas no submenu */
+    z-index: 1;
+}
+
+/* Ajuste de espaçamento no submenu de "Artistas" */
+.subclasse_menu_a { 
+    margin-top: 7px; 
+}
+
+/* Remove os marcadores das sublistas */
+.sub_subclasse_menu { 
+    list-style: none; 
+}
+
+/* Estilização dos links dentro dos submenus */
+.sub_a {
+    color: #000000; 
+    text-decoration: none; 
+    padding: 5px 10px; 
+    display: block;
+}
+
+/* Efeito hover para os links do submenu */
+.sub_a:hover {
+    background-color: #303030;
+    color: #ffffff; /* Altera as cores no hover */
+    transition: 0.3s;
+}
+
+/* Responsividade */
+.menu_toggle {
+    display: none; /* Esconde o checkbox por padrão */
+}
+
+.menu_icon {
+    display: none; /* Esconde o ícone do menu hamburguer por padrão */
+    font-size: 30px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: auto;
+}
+
+/* === Responsividade === */
+@media only screen and (max-width: 650px) {
+
+    /* Ajusta a altura do cabeçalho em telas menores */
+    header {
+        height: 110px;
+    }
+
+    /* Ajusta a margem do cabeçalho para melhor espaçamento */
+    #parte_de_cima_cab {
+        margin: 0px 20px;
+    }
+
+    /* === Ajustes na Barra de Pesquisa === */
+
+    /* Define um tamanho máximo para a barra de pesquisa no mobile */
+    #barra_pesquisa {
+        max-width: 400px;
+        width: 100%;
+    }
+
+    /* Ajusta o tamanho da barra de pesquisa */
+    #complemento_pesquisa {
+        width: 250px;
+    }
+
+    /* Estilização da barra de pesquisa expansível */
+    #barra_pesquisa #complemento_pesquisa {
+        position: relative;
+        height: 30px;
+        max-width: 30px; /* Inicia compacta */
+        margin: auto;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+
+    /* Expande a barra de pesquisa quando o checkbox é ativado */
+    #check:checked ~ #complemento_pesquisa {
+        max-width: 380px;
+    }
+
+    /* Faz o campo de pesquisa preencher toda a largura disponível */
+    #input_barra_pesquisa {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+
+    /* Ajusta o botão da lupa */
+    #lupa, #buttom_lupa {
+        position: absolute;
+        right: -2px;
+        width: 30px;
+        height: 100%;
+        margin: 0px;
+    }
+
+    /* Ajusta a lupa quando a barra de pesquisa está expandida */
+    #check:checked ~ #lupa, #buttom_lupa {
+        width: 30px;
+    }
+
+    /* Esconde a área de login e cadastro no mobile para otimizar espaço */
+    #p_cadastro_login {
+        display: none;
+    }
+
+    /* === Estilização do Menu === */
+
+    /* Configuração inicial do menu, oculto por padrão */
+    #menu {
+        display: none; /* Esconde o menu */
+        width: 100%;
+        position: absolute;
+        top: 110px; /* Define a posição do menu abaixo do cabeçalho */
+        z-index: 1;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        animation: slideDown 0.5s ease-in-out;
+    }
+
+    /* Exibe o menu quando o checkbox do menu hambúrguer está marcado */
+    .menu_toggle:checked + .menu_icon + #menu {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Animação de deslizar para baixo ao abrir o menu */
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Adiciona bordas arredondadas no botão do menu */
+    #arredondar_b {
+        border-radius: 0px 0px 10px 0px;
+    }
+
+    /* Exibe o ícone do menu hambúrguer em telas pequenas */
+    .menu_icon {
+        display: block;
+        margin-top: -10px;
+    }
+
+    /* Garante que o menu apareça ao ativar o checkbox */
+    .menu_toggle:checked + .menu_icon + #menu {
+        display: block;
+    }
+
+    /* Torna os itens do menu verticais para melhor organização */
+    .p_menu {
+        margin: 0px;
+        display: block;
+        background-color: #303030; /* Define fundo escuro para os itens do menu */
+    }
+
+    /* Configuração dos links do menu */
+    .a_menu, .b_menu {
+        display: block;
+        padding: 10px;
+        font-size: 18px;
+        text-align: left;
+    }
+
+    /* === Estilização do Submenu === */
+
+    /* Esconde os submenus por padrão */
+    .subclasse_menu, .subclasse_menu_a {
+        display: none;
+        border-radius: 0px 10px 10px 10px; /* Bordas arredondadas para o submenu */
+    }
+
+    /* Ajuste de espaçamento do submenu */
+    .subclasse_menu {
+        margin-top: 41px;
+    }
+
+    .subclasse_menu_a {
+        margin-top: 0px;
+    }
+
+    /* Exibe o submenu quando o botão recebe foco */
+    .p_menu button:focus + .subclasse_menu,
+    .p_menu button:focus + .subclasse_menu_a {
+        display: block;
+    }
+
+}
