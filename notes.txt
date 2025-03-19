@@ -26,7 +26,8 @@ Comentados:
 alterar.css
 artistas.css
 avalicao.css
-cabeçalho.css
+cabeçalho_com_login_sem_menu.css
+cabeçalho_sem_login.css
 cadastro.css
 carrossel.css
 destaque.css
@@ -46,7 +47,7 @@ mascara_cpf.js
 mascara_tel.js
 menu.js
 
-alterar_dados.html
+alterar_dados.html > cabeçalho_com_login_sem_menu.css
 cadastro.html
-index.html
+index.html > cabeçalho_sem_login.css
 login.html
