@@ -29,6 +29,7 @@ cabeçalho_com_login.css
 cabeçalho_sem_login.css
 cadastro.css
 login.css
+politica_comercial.css
 artistas.css
 avalicao.css
 carrossel.css
@@ -50,3 +51,4 @@ cadastro.html > cabeçalho_sem_login.css
 index_logado.html > cabeçalho_com_login.css
 index.html > cabeçalho_sem_login.css
 login.html > cabeçalho_sem_login.css
+politica_comercial.html > cabeçalho_com_login.css

@@ -206,6 +206,10 @@ main{
     transform: scaleX(-1); /* Inverte horizontalmente as imagens */
 }
 
+.img_esquerda:not(:first-child) {
+    margin-top: -5px; /* Margem superior para não sobrepor */
+}
+
 /* == Estilos responsivos == */
 
 /* Estilos para telas pequenas (máximo de 850px) */
