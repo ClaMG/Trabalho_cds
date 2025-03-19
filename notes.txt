@@ -52,3 +52,41 @@ index_logado.html > cabeçalho_com_login.css
 index.html > cabeçalho_sem_login.css
 login.html > cabeçalho_sem_login.css
 politica_comercial.html > cabeçalho_com_login.css
+
+
+
+pastas html
+
+login_cadastro:
+login
+cadastro
+
+>perfil:
+alterar_dados
+perfil_user
+perfil_adm
+
+>adm:
+alterar_cds
+alterar_user
+alterar_atividades
+
+>butoes:
+favoritos
+carrinho
+avaliar
+recomendar
+
+
+pagina_inicial:
+index
+index_logado
+
+>rodape:
+politica_comercial
+
+
+produtos:
+todos_produtos
+produtos
+comprar
