@@ -18,15 +18,84 @@ main {
 
 /* Estilização da área de conteúdo principal */
 #conteudo {
-    border: 1px solid black;
+    border: 1px solid #aaaaaa;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Adiciona sombra para efeito de profundidade */
     background-color: rgb(247, 247, 247); /* Define a cor de fundo */
     width: 1000px; /* Define a largura do conteúdo */
     height: auto; /* Altura ajustável conforme o conteúdo */
     padding: 10px;
+    color: #595959; /* Define a cor do texto */
+    font-weight: bold;
+    border-radius: 0px 0px 10px 10px;
 }
 
+#titulo{
+    font-size: 60px; /* Define o tamanho da fonte */
+    margin-bottom: 20px;
+}
 
+#avaliar_estrelas{
+    margin-bottom: 20px;
+    gap: 10px;
+    cursor: pointer;
+}
+
+#avaliar_estrelas_titulo, #text_avalicao_titulo{
+    margin-bottom: 5px;
+}
+
+.button_estrelas{
+    background-color: transparent;
+    border: none;
+}
+
+.estrela{
+    width: 20px; 
+}
+
+#input_text{
+    width: 990px;
+    height: 100px;
+    font-size: 18px;
+    padding: 5px;
+    resize: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+#informacoes{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.input_baixo{
+    width: 450px;
+    height: 30px;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+#enviar{
+    margin-top: 30px;
+    width: 200px; /* Largura do botão */
+    height: 40px; /* Altura do botão */
+    border-radius: 10px; /* Bordas arredondadas */
+    border: none; /* Sem borda */
+    color: #5d5d5d; /* Cor do texto */
+    background-color: #abaaaa; /* Cor de fundo */
+    font-size: 20px; /* Tamanho da fonte */
+    font-weight: bold; /* Texto em negrito */
+}
+
+#enviar:hover{
+    background-color: #303030; /* Cor do fundo ao passar o mouse */
+    color: white; /* Cor do texto ao passar o mouse */
+    transition: 0.2s; /* Transição suave */
+}
 
 
 

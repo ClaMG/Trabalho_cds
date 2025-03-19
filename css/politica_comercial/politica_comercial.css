@@ -23,6 +23,7 @@ main {
     width: 1000px; /* Define a largura do conteúdo */
     height: auto; /* Altura ajustável conforme o conteúdo */
     padding: 10px;
+    border-radius: 0px 0px 10px 10px;
 }
 
 /* Estilização do título principal */

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avaliação com Estrelas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .estrelas {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      cursor: pointer;
+    }
+
+    .estrela {
+      width: 50px;
+      height: 50px;
+      background: url('../../../../img/avaliar/star_17645624.png') no-repeat center;
+      background-size: cover;
+      transition: transform 0.2s;
+    }
+
+    .estrela:hover {
+      transform: scale(1.2);
+    }
+
+    .selecionada {
+      background: url('estrela-cheia.png') no-repeat center;
+      background-size: cover;
+    }
+
+    .resultado {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Avaliação com Estrelas</h1>
+
+  <div class="estrelas">
+    <div class="estrela" data-valor="1"></div>
+    <div class="estrela" data-valor="2"></div>
+    <div class="estrela" data-valor="3"></div>
+    <div class="estrela" data-valor="4"></div>
+    <div class="estrela" data-valor="5"></div>
+  </div>
+
+  <div class="resultado">Nota: 0</div>
+
+  <script>
+    const estrelas = document.querySelectorAll(".estrela");
+    const resultado = document.querySelector(".resultado");
+
+    estrelas.forEach((estrela, index) => {
+      estrela.addEventListener("click", () => {
+        let nota = index + 1;
+
+        // Remove a seleção de todas as estrelas
+        estrelas.forEach(e => e.classList.remove("selecionada"));
+
+        // Adiciona a seleção até a estrela clicada
+        for (let i = 0; i < nota; i++) {
+          estrelas[i].classList.add("selecionada");
+        }
+
+        // Atualiza a nota exibida
+        resultado.textContent = `Nota: ${nota}`;
+      });
+    });
+  </script>
+
+</body>
+</html>
