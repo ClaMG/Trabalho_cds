@@ -23,6 +23,7 @@ obsevação: os links dos slides podem ser removidos, contanto que o css que est
 
 Comentados:
 
+alterar.css
 artistas.css
 avalicao.css
 cabeçalho.css
@@ -40,8 +41,12 @@ login.js
 mascara_cep.js
 mascara_cpf.js
 mascara_tel.js
+mascara_cep.js
+mascara_cpf.js
+mascara_tel.js
 menu.js
 
+alterar_dados.html
 cadastro.html
 index.html
 login.html
