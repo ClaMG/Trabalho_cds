@@ -13,7 +13,7 @@ main{
 #login {
     background-color: #6d6d6d; /* Cor de fundo cinza */
     display: flex; /* Flexbox para organizar o layout dos elementos */
-    margin-top: 100px;
+    margin-top: 70px;
     width: 700px; /* Largura fixa do box de login */
     height: 420px; /* Altura fixa do box de login */
     border-radius: 20px; /* Bordas arredondadas */
@@ -80,11 +80,11 @@ main{
 
 /* Estilos para o botão "olho" (mostrar/ocultar senha) */
 #olho {
-    background-color: white; /* Fundo branco */
+    background-color: transparent; /* Fundo transparente */
     border: none; /* Remove a borda */
     position: absolute; /* Posicionamento absoluto */
     z-index: 1; /* Organiza a camada do elemento */
-    left: 44%; /* Posiciona a partir da esquerda */
+    left: 43%; /* Posiciona a partir da esquerda */
     top: 61%; /* Posiciona a partir do topo */
     transform: translate(44%, 61%);
 }
@@ -278,7 +278,7 @@ main{
     #login {
         width: 400px; /* Largura reduzida para telas pequenas */
         height: 420px; /* Altura mantida */
-        margin: 100px 50px; /* Ajuste da margem */
+        margin: 68px 50px; /* Ajuste da margem */
     }
 
     #img_login {
@@ -286,7 +286,7 @@ main{
     }
 
     #olho {
-        left: 77%; /* Reposiciona o ícone do olho para se ajustar à tela menor */
+        left: 75%; /* Reposiciona o ícone do olho para se ajustar à tela menor */
     }
 
     .visualizer-container {

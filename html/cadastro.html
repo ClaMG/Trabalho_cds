@@ -7,6 +7,7 @@
     
      <!-- Link para o arquivo de estilos CSS externo -->
     <link rel="stylesheet" href="../css/cadastrar/cadastro.css">
+    <link rel="stylesheet" href="../css/cabeçalhos/cabeçalho_sem_login.css">
 
     <!-- Link para o arquivo de estilos JS externo -->
     <script src="../js/mascaras/mascara_cpf.js" defer></script>
@@ -15,6 +16,21 @@
     
 </head>
 <body>
+    <!-- Cabeçalho da página (sem o usuário estar logado) -->
+    <header> 
+        <div id="parte_de_cima_cab">
+
+            <!-- Logo da página -->
+            <a href="#" id="logo"><img src="#" alt="Logo"></a> 
+                <div id="login_cadastro"> <!-- Login e cadastro -->
+                    <a href="#"><img src="../img/cabeçario/icone_perfil.png" alt="Perfil" id="Perfil"></a><!-- Ícone de perfil -->
+                    <p id="p_cadastro_login">
+                        <a href="#" class="a_cadastro_login">Cadastro</a> ou <br>
+                        <a href="#" class="a_cadastro_login">Login</a>
+                    </p>
+                </div>
+        </div>
+    </header>
     <!-- Elemento principal da página, onde o formulário de cadastro está contido -->
     <main>
         <!-- Seção de cadastro -->

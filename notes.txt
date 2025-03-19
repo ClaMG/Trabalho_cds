@@ -46,7 +46,7 @@ carrosselArtistas.js
 destaque.js
 
 alterar_dados.html > cabeçalho_com_login_sem_menu.css
-cadastro.html
+cadastro.html > cabeçalho_sem_login.css
 index_logado.html > cabeçalho_com_login.css
 index.html > cabeçalho_sem_login.css
-login.html
+login.html > cabeçalho_sem_login.css

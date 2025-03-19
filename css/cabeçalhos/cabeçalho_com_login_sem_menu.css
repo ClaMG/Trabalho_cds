@@ -82,60 +82,8 @@ header {
     height: 40px;
 }
 
-/* === Estilização do Menu de Navegação === */
-
-/* Define a estrutura do menu principal */
-#menu {
-    display: flex;
-    justify-content: center; /* Centraliza o menu */  
-}
-
-/* Estilização dos itens do menu */
-.p_menu {
-    position: relative;
-    float: left;
-    margin: 7px 30px;
-    font-weight: bold;
-    list-style: none; /* Remove os marcadores da lista */
-}
-
-/* Links do menu principal */
-.a_menu {
-    color: white;
-    text-decoration: none; /* Remove o sublinhado dos links */
-}
-
-/* Efeito hover para os links do menu */
-.a_menu:hover {
-    color: #7b7a7a;
-    transition: 0.2s; /* Suaviza a transição ao passar o mouse */
-}
-
-/* === Estilização dos Submenus === */
-
-/* Responsividade */
-.menu_toggle {
-    display: none; /* Esconde o checkbox por padrão */
-}
-
-.menu_icon {
-    display: none; /* Esconde o ícone do menu hamburguer por padrão */
-    font-size: 30px;
-    color: white;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    margin-left: auto;
-}
-
 /* === Responsividade === */
 @media only screen and (max-width: 650px) {
-
-    /* Ajusta a altura do cabeçalho em telas menores */
-    header {
-        height: 110px;
-    }
 
     /* Ajusta a margem do cabeçalho para melhor espaçamento */
     #parte_de_cima_cab {
@@ -190,71 +138,6 @@ header {
     /* Ajusta a lupa quando a barra de pesquisa está expandida */
     #check:checked ~ #lupa, #buttom_lupa {
         width: 30px;
-    }
-
-    /* === Estilização do Menu === */
-
-    /* Configuração inicial do menu, oculto por padrão */
-    #menu {
-        display: none; /* Esconde o menu */
-        width: 100%;
-        position: absolute;
-        top: 110px; /* Define a posição do menu abaixo do cabeçalho */
-        z-index: 1;
-        opacity: 0;
-        transform: translateY(-20px);
-        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-        animation: slideDown 0.5s ease-in-out;
-    }
-
-    /* Exibe o menu quando o checkbox do menu hambúrguer está marcado */
-    .menu_toggle:checked + .menu_icon + #menu {
-        display: flex;
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    /* Animação de deslizar para baixo ao abrir o menu */
-    @keyframes slideDown {
-        from {
-            opacity: 0;
-            transform: translateY(-20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    /* Adiciona bordas arredondadas no botão do menu */
-    #arredondar_b {
-        border-radius: 0px 0px 10px 0px;
-    }
-
-    /* Exibe o ícone do menu hambúrguer em telas pequenas */
-    .menu_icon {
-        display: block;
-        margin-top: -10px;
-    }
-
-    /* Garante que o menu apareça ao ativar o checkbox */
-    .menu_toggle:checked + .menu_icon + #menu {
-        display: block;
-    }
-
-    /* Torna os itens do menu verticais para melhor organização */
-    .p_menu {
-        margin: 0px;
-        display: block;
-        background-color: #303030; /* Define fundo escuro para os itens do menu */
-    }
-
-    /* Configuração dos links do menu */
-    .a_menu {
-        display: block;
-        padding: 10px;
-        font-size: 18px;
-        text-align: left;
     }
 
 }
