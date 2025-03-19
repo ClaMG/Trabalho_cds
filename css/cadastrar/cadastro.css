@@ -1,208 +1,241 @@
+/* Reset de estilo para todos os elementos da página */
 *{
-    padding: 0px;
-    margin: 0px;
-    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px; /* Remove o preenchimento de todos os elementos */
+    margin: 0px; /* Remove a margem de todos os elementos */
+    font-family: Arial, Helvetica, sans-serif; /* Define a fonte padrão */
 }
 
+/* Estilo para o corpo da página */
 body {
-    overflow-x: hidden;
+    overflow-x: hidden; /* Impede o overflow horizontal, evitando barras de rolagem indesejadas */
 }
 
+/* Estilo para o container principal do conteúdo */
 main{
-    display: flex;
-    justify-content: center
+    display: flex; /* Define o uso do flexbox */
+    justify-content: center; /* Centraliza o conteúdo dentro do main */
 }
 
+/* Estilo da seção de cadastro */
 #cadastro{
-    background-color: rgb(247, 247, 247);
-    border-radius: 10px;
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
-    width: 900px;
-    height: 700px;
-    margin-top: 40px;
+    background-color: rgb(247, 247, 247); /* Cor de fundo */
+    border-radius: 10px; /* Borda arredondada */
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidade */
+    width: 900px; /* Largura do formulário */
+    height: 700px; /* Altura do formulário */
+    margin-top: 40px; /* Espaço acima do formulário */
 }
 
+/* Estilo do título principal */
 #titulo{
-    color: #595959;
-    font-size: 80px;
-    margin-left: 10px;
+    color: #595959; /* Cor do título */
+    font-size: 80px; /* Tamanho da fonte */
+    margin-left: 10px; /* Margem à esquerda */
 }
 
+/* Estilo do parágrafo com link para login */
 #p_titulo{
-    color: #595959;
-    margin: -10px 20px;
-    font-size: 15px;
+    color: #595959; /* Cor do texto */
+    margin: -10px 20px; /* Margens superiores e laterais */
+    font-size: 15px; /* Tamanho da fonte */
 }
 
+/* Estilo do link de login */
 #link_login{
-    color: #595959;
-    font-weight: bold;
+    color: #595959; /* Cor do link */
+    font-weight: bold; /* Deixa o link em negrito */
 }
 
+/* Estilo do link ao passar o mouse */
 #link_login:hover{
-    color: #abaaaa;
-    transition: 0.2s;
+    color: #abaaaa; /* Cor ao passar o mouse */
+    transition: 0.2s; /* Transição suave */
 }
 
+/* Estilo da parte superior do formulário */
 #cima{
-    display: flex;
+    display: flex; /* Flexbox para alinhamento dos itens */
 }
 
+/* Estilo da parte inferior do formulário */
 #baixo{
-    margin-left: 20px;
+    margin-left: 20px; /* Margem à esquerda */
 }
 
+/* Estilo para o container lateral de entradas */
 #lado{
-    display: flex;
+    display: flex; /* Flexbox para alinhar as colunas */
 }
 
+/* Estilo comum para as divisões de entrada */
 .separacao, .separacao2{
-    display: flex;
-    flex-direction: column;
-    width: 350px;
-    margin-left: 20px;
+    display: flex; /* Flexbox para alinhar itens */
+    flex-direction: column; /* Organiza os campos em coluna */
+    width: 350px; /* Largura padrão das divisões */
+    margin-left: 20px; /* Margem à esquerda */
 }
 
+/* Ajuste na largura para a classe separacao2 */
 .separacao2{
-    width: 310px;
+    width: 310px; /* Largura reduzida para a separacao2 */
 }
 
+/* Estilo para a coluna direita */
 #direita{
-    margin-left: 50px;
+    margin-left: 50px; /* Margem à esquerda da coluna direita */
 }
 
+/* Estilo para a coluna direita na parte inferior */
 #direita_baixo{
-    margin-left: 90px;
+    margin-left: 90px; /* Margem à esquerda */
 }
 
+/* Estilo dos subtítulos */
 .subtitulo{
-    color: #5d5d5d;
-    border-bottom: 2px dotted rgb(142, 142, 142);
+    color: #5d5d5d; /* Cor do subtítulo */
+    border-bottom: 2px dotted rgb(142, 142, 142); /* Linha pontilhada abaixo do subtítulo */
 }
+
+/* Estilo do subtítulo "Dados de acesso" */
 #acesso{
-    width: 210px;
+    width: 210px; /* Largura específica */
 }
 
+/* Estilo do subtítulo "Dados pessoais" */
 #pessoais{
-    width: 230px;
+    width: 230px; /* Largura específica */
 }
 
+/* Estilo do subtítulo "Dados de endereço" */
 #endereco{
-    margin-top: 20px;
-    width: 750px;
+    margin-top: 20px; /* Espaço superior */
+    width: 750px; /* Largura específica */
 }
 
+/* Estilo do container de inputs */
 #inputs{
-    margin: 50px 30px;
+    margin: 50px 30px; /* Margem interna do container */
 }
 
+/* Estilo dos campos de entrada */
 .input, .input_baixo{
-    background-color: transparent;
-    margin: 15px 10px;
-    border: none;
-    border-bottom: 2px solid #7b7a7a; /* Apenas borda inferior */
-    font-size: 20px;
+    background-color: transparent; /* Fundo transparente */
+    margin: 15px 10px; /* Margens internas */
+    border: none; /* Remove as bordas padrão */
+    border-bottom: 2px solid #7b7a7a; /* Apenas a borda inferior */
+    font-size: 20px; /* Tamanho da fonte */
 }
 
+/* Ajuste de margem para os campos de entrada na parte inferior */
 .input_baixo{
-    margin: 15px -10px;
+    margin: 15px -10px; /* Margem ajustada */
 }
 
+/* Remover o contorno ao focar nos campos de entrada */
 .input:focus, .input_baixo:focus{
-    outline: none;
+    outline: none; /* Remove o outline ao focar */
 }
 
+/* Estilo do botão de cadastro */
 #button{
-    width: 300px;
-    height: 40px;
-    border-radius: 10px;
-    border: none;
-    margin: 10px 0px;
+    width: 300px; /* Largura do botão */
+    height: 40px; /* Altura do botão */
+    border-radius: 10px; /* Bordas arredondadas */
+    border: none; /* Sem borda */
+    margin: 10px 0px; /* Margem do botão */
     color: white; /* Cor do texto */
     background-color: #303030; /* Cor de fundo */
     font-size: 30px; /* Tamanho da fonte */
-    font-weight: bold; /* Negrito */
+    font-weight: bold; /* Texto em negrito */
 }
 
+/* Estilo do botão ao passar o mouse */
 #button:hover{
-    background-color: #abaaaa; /* Cor de fundo ao passar o mouse */
+    background-color: #abaaaa; /* Cor do fundo ao passar o mouse */
     color: #5d5d5d; /* Cor do texto ao passar o mouse */
-    transition: 0.2s;
+    transition: 0.2s; /* Transição suave */
 }
 
-/* == Imagens laterais == */
+/* == Estilo das imagens laterais == */
 
+/* Esconde as imagens com IDs específicos */
 #sumir_d, #sumir_e{
-    display: none;
+    display: none; /* Não exibe as imagens */
 }
 
+/* Estilo das imagens à direita */
 #imgs_direita {
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
-    position: absolute; /* Garante que fique sobreposto */
-    bottom: 0;
-    right: 0;
+    display: flex; /* Flexbox para alinhar as imagens */
+    align-items: flex-end; /* Alinha as imagens ao fundo */
+    flex-direction: column; /* Organiza as imagens em coluna */
+    position: absolute; /* Posiciona as imagens sobre o conteúdo */
+    bottom: 0; /* Alinha ao fundo da tela */
+    right: 0; /* Alinha à direita */
     z-index: -1; /* Coloca atrás de outros elementos */
-    width: 100%;
-    height: 100%;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
 }
 
+/* Estilo das imagens à esquerda */
 #imgs_esquerda{
-    display: flex;
-    flex-direction: column;
-    position: absolute; /* Garante que fique sobreposto */
-    bottom: 0;
-    left: 0;
+    display: flex; /* Flexbox para alinhar as imagens */
+    flex-direction: column; /* Organiza as imagens em coluna */
+    position: absolute; /* Posiciona as imagens sobre o conteúdo */
+    bottom: 0; /* Alinha ao fundo da tela */
+    left: 0; /* Alinha à esquerda */
     z-index: -1; /* Coloca atrás de outros elementos */
-    width: 100%;
-    height: 100%;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
 }
 
+/* Estilo das imagens à direita */
 .img_direita {
-    width: 300px;
-    margin-right: -200px;
+    width: 300px; /* Largura das imagens */
+    margin-right: -200px; /* Ajuste de margem para o posicionamento */
 }
 
+/* Ajuste na margem das imagens, exceto a primeira */
 .img_direita:not(:first-child) {
-    margin-top: -5px;
+    margin-top: -5px; /* Margem superior para não sobrepor */
 }
 
+/* Estilo das imagens à esquerda (invertidas) */
 .img_esquerda{
-    width: 300px;
-    margin-left: -200px;
-    transform: scaleX(-1);
+    width: 300px; /* Largura das imagens */
+    margin-left: -200px; /* Ajuste de margem para o posicionamento */
+    transform: scaleX(-1); /* Inverte horizontalmente as imagens */
 }
 
+/* == Estilos responsivos == */
 
+/* Estilos para telas pequenas (máximo de 850px) */
 @media only screen and (max-width: 850px){
-        #cadastro{
-            width: 450px;
-            height: 1120px;
-        }
+    #cadastro{
+        width: 450px; /* Ajuste de largura para telas menores */
+        height: 1120px; /* Ajuste de altura */
+    }
 
-        #cima{
-            display: block;
-        }
+    #cima{
+        display: block; /* Organiza os elementos em bloco */
+    }
 
-        #direita{
-            margin: 25px;
-        }
+    #direita{
+        margin: 25px; /* Ajuste de margem na coluna direita */
+    }
 
-        #endereco{
-            width: 240px;
-        }
+    #endereco{
+        width: 240px; /* Ajuste de largura para o endereço */
+    }
 
-        #lado{
-            display: block;
-        }
+    #lado{
+        display: block; /* Organiza os campos em bloco */
+    }
 
-        #direita_baixo{
-            margin-left: 20px;
-        }
+    #direita_baixo{
+        margin-left: 20px; /* Ajuste de margem */
+    }
 
-        #sumir_d, #sumir_e{
-            display: block;
-        }
-
+    #sumir_d, #sumir_e{
+        display: block; /* Exibe as imagens */
+    }
 }

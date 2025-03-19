@@ -26,6 +26,7 @@ Comentados:
 artistas.css
 avalicao.css
 cabeçalho.css
+cadastro.css
 carrossel.css
 destaque.css
 genero.css
@@ -38,6 +39,6 @@ destaque.js
 login.js
 menu.js
 
-
+cadastro.html
 index.html
 login.html

@@ -4,61 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
+    
+     <!-- Link para o arquivo de estilos CSS externo -->
     <link rel="stylesheet" href="../css/cadastrar/cadastro.css">
+
+    <!-- Link para o arquivo de estilos JS externo -->
+    <script src="../js/cadastro/mascara_cpf.js" defer></script>
+    <script src="../js/cadastro/mascara_cep.js" defer></script>
+    <script src="../js/cadastro/mascara_tel.js" defer></script>
+    
 </head>
 <body>
+    <!-- Elemento principal da página, onde o formulário de cadastro está contido -->
     <main>
+        <!-- Seção de cadastro -->
         <section id="cadastro">
+        
+            <!-- Título principal da página -->
             <h1 id="titulo">Cadastrar</h1>
+            
+            <!-- Texto com link para redirecionar o usuário para a tela de login caso já tenha uma conta -->
             <p id="p_titulo">Já tem uma conta? <a href="#" id="link_login">Logar</a></p>
+            
+            <!-- Div que contém os campos de entrada do formulário -->
             <div id="inputs">
+                
+                <!-- Div para os dados de acesso -->
                 <div id="cima">
                     <div class="separacao">
+                        <!-- Subtítulo para a seção de dados de acesso -->
                         <h1 class="subtitulo" id="acesso">Dados de acesso:</h1>
+                        
+                        <!-- Campos de entrada para usuário, e-mail, senha e confirmação de senha -->
                         <input type="text" placeholder="Usuario" class="input">
                         <input type="text" placeholder="E-mail" class="input">
-                        <input type="text" placeholder="Senha" class="input">
-                        <input type="text" placeholder="Confirmar Senha" class="input">
+                        <input type="text" placeholder="Senha" maxlength="20" class="input">
+                        <input type="text" placeholder="Confirmar Senha" maxlength="20" class="input">
                     </div>
+                    
+                    <!-- Div para os dados pessoais -->
                     <div class="separacao" id="direita">
-                        <h1 class="subtitulo" id="pessoais">Dados de pessoais:</h1>
+                        <h1 class="subtitulo" id="pessoais">Dados pessoais:</h1>
+                        
+                        <!-- Campos de entrada para nome completo, telefone e CPF -->
                         <input type="text" placeholder="Nome Completo" class="input">
-                        <input type="text" placeholder="Telefone" class="input">
-                        <input type="text" placeholder="CPF" class="input">
+                        <input type="text" id="telefone" placeholder="Telefone" maxlength="15" class="input">
+                        <input type="text" id="cpf" placeholder="CPF" maxlength="14" class="input">
                     </div>
                 </div>
                 
+                <!-- Div para os dados de endereço -->
                 <div id="baixo">
-
-                        <h1 class="subtitulo" id="endereco">Dados de endereço:</h1>
+                    <!-- Subtítulo para a seção de dados de endereço -->
+                    <h1 class="subtitulo" id="endereco">Dados de endereço:</h1>
 
                     <div id="lado">
+                        <!-- Div com campos de entrada para endereço (CEP, estado, cidade, bairro) -->
                         <div class="separacao2">
-                            <input type="text" placeholder="CEP" class="input_baixo">
+                            <input type="text"  id="cep" placeholder="CEP" maxlength="10" class="input_baixo">
                             <input type="text" placeholder="Estado" class="input_baixo">
                             <input type="text" placeholder="Cidade" class="input_baixo">
                             <input type="text" placeholder="Bairro" class="input_baixo">
                         </div>
+                        
+                        <!-- Div com campos de entrada para o restante do endereço (logradouro, número, complemento) -->
                         <div class="separacao2" id="direita_baixo">
                             <input type="text" placeholder="Logradouro / Rua" class="input_baixo">
                             <input type="text" placeholder="Número" class="input_baixo">
                             <input type="text" placeholder="Complemento" class="input_baixo">
+                            
+                            <!-- Botão de cadastro -->
                             <button id="button">Cadastrar</button>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Seção de imagens à direita -->
     <div id="imgs_direita">
+        <!-- Imagens decorativas à direita -->
         <img src="../img/cadastro/img_direito.png" alt="notas musicais" class="img_direita">
         <img src="../img/cadastro/img_direito.png" alt="notas musicais" class="img_direita">
         <img src="../img/cadastro/img_direito.png" alt="notas musicais" class="img_direita">
         <img src="../img/cadastro/img_direito.png" alt="notas musicais" class="img_direita" id="sumir_e">
     </div>
+
+    <!-- Seção de imagens à esquerda -->
     <div id="imgs_esquerda">
+        <!-- Imagens decorativas à esquerda -->
         <img src="../img/cadastro/img_direito.png" alt="notas musicais" class="img_esquerda">
         <img src="../img/cadastro/img_direito.png" alt="notas musicais" class="img_esquerda">
         <img src="../img/cadastro/img_direito.png" alt="notas musicais" class="img_esquerda">
