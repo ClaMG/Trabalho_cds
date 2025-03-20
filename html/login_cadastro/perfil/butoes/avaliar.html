@@ -7,19 +7,57 @@
 
      <!-- Link para o arquivo CSS -->
       <link rel="stylesheet" href="../../../../css/avaliar_site/avaliar_site.css">
+      <link rel="stylesheet" href="../../../../css/cabeçalhos/cabeçalho_com_login_sem_menu.css">
+
+      <!-- Link para o arquivo JS -->
+       <script src="../../../../js/avaliar/estrelas.js" defer></script>
+
 </head>
 <body>
+
+    <!-- Cabeçalho da página (com user logado) -->
+    <header> 
+
+        <div id="parte_de_cima_cab">
+
+            <!-- Logo da página -->
+            <a href="#" id="logo"><img src="#" alt="Logo"></a> 
+            
+            <!-- Barra de pesquisa -->
+            <div id="barra_pesquisa">
+                <input type="checkbox" id="check"> <!-- Controle de visibilidade -->
+                <div id="complemento_pesquisa">
+
+                    <!-- Campo de pesquisa -->
+                    <input type="text" id="input_barra_pesquisa" placeholder="Buscar..." >
+
+                    <!-- Botão de pesquisa -->
+                    <label for="check" id="buttom_lupa">
+                        <img src="../../../../img/cabeçario/icone_lupa.png" alt="Lupa" id="lupa">
+                    </label>
+                </div>
+            </div>
+
+            <div id="login_carrinho"> <!-- Conta e Carrinho -->
+                    <a href="#"><img src="../../../../img/cabeçario/icone_perfil.png" alt="Perfil" id="Perfil"></a><!-- Imagem de perfil -->
+
+                <a href="#"><img src="../../../../img/cabeçario/icone_carrinho.png" alt="Carrinho" id="Carrinho"></a><!-- Ícone de carrinho -->
+            </div>
+        </div>
+    </header>
     <main>
         <section id="conteudo">
             <h1 id="titulo">Avaliar</h1>
 
             <div id="avaliar_estrelas">
                 <p id="avaliar_estrelas_titulo">Sua Avaliação</p>
-                <button class="button_estrelas"><img src="../../../../img/avaliar/star_17645624.png" alt="Estrela" class="estrela imagem-trocavel" id="imagem_estrela"></button>
-                <button class="button_estrelas"><img src="../../../../img/avaliar/star_17645624.png" alt="Estrela" class="estrela imagem-trocavel"></button>
-                <button class="button_estrelas"><img src="../../../../img/avaliar/star_17645624.png" alt="Estrela" class="estrela"></button>
-                <button class="button_estrelas"><img src="../../../../img/avaliar/star_17645624.png" alt="Estrela" class="estrela imagem-trocavel"></button>
-                <button class="button_estrelas"><img src="../../../../img/avaliar/star_17645624.png" alt="Estrela" class="estrela imagem-trocavel"></button>
+                <div id="linha_de_estrelas">
+                    <div class="estrela" data-valor="1"></div>
+                    <div class="estrela" data-valor="2"></div>
+                    <div class="estrela" data-valor="3"></div>
+                    <div class="estrela" data-valor="4"></div>
+                    <div class="estrela" data-valor="5"></div>
+                </div>
             </div>
 
             <div id="text_avalicao">
@@ -47,20 +85,6 @@
         <!-- Imagens decorativas à direita -->
         <img src="../../../../img/img_cantos/img_cantos.png" alt="notas musicais" class="img_direita">
         <img src="../../../../img/img_cantos/img_cantos.png" alt="notas musicais" class="img_direita">
-        <img src="../../../../img/img_cantos/img_cantos.png" alt="notas musicais" class="img_direita">
-        <img src="../../../../img/img_cantos/img_cantos.png" alt="notas musicais" class="img_direita">
-        <img src="../../../../img/img_cantos/img_cantos.png" alt="notas musicais" class="img_direita">
-        <img src="../../../../img/img_cantos/img_cantos.png" alt="notas musicais" class="img_direita">
-        <img src="../../../../img/img_cantos/img_cantos.png" alt="notas musicais" class="img_direita">
-        <img src="../../../../img/img_cantos/img_cantos.png" alt="notas musicais" class="img_direita">
-        <img src="../../../../img/img_cantos/img_cantos.png" alt="notas musicais" class="img_direita sumir">
-        <img src="../../../../img/img_cantos/img_cantos.png" alt="notas musicais" class="img_direita sumir">
-        <img src="../../../../img/img_cantos/img_cantos.png" alt="notas musicais" class="img_direita sumir">
-        <img src="../../../../img/img_cantos/img_cantos.png" alt="notas musicais" class="img_direita sumir">
-        <img src="../../../../img/img_cantos/img_cantos.png" alt="notas musicais" class="img_direita sumir">
-        <img src="../../../../img/img_cantos/img_cantos.png" alt="notas musicais" class="img_direita sumir">
-        <img src="../../../../img/img_cantos/img_cantos.png" alt="notas musicais" class="img_direita sumir">
-        
     </div>
 
     <!-- Seção de imagens à esquerda -->
@@ -68,20 +92,7 @@
         <!-- Imagens decorativas à esquerda -->
         <img src="../../../../img/img_cantos/img_cantos.png" alt="notas musicais" class="img_esquerda">
         <img src="../../../../img/img_cantos/img_cantos.png" alt="notas musicais" class="img_esquerda">
-        <img src="../../../../img/img_cantos/img_cantos.png" alt="notas musicais" class="img_esquerda">
-        <img src="../../../../img/img_cantos/img_cantos.png" alt="notas musicais" class="img_esquerda">
-        <img src="../../../../img/img_cantos/img_cantos.png" alt="notas musicais" class="img_esquerda">
-        <img src="../../../../img/img_cantos/img_cantos.png" alt="notas musicais" class="img_esquerda">
-        <img src="../../../../img/img_cantos/img_cantos.png" alt="notas musicais" class="img_esquerda">
-        <img src="../../../../img/img_cantos/img_cantos.png" alt="notas musicais" class="img_esquerda">
-        <img src="../../../../img/img_cantos/img_cantos.png" alt="notas musicais" class="img_esquerda sumir">
-        <img src="../../../../img/img_cantos/img_cantos.png" alt="notas musicais" class="img_esquerda sumir">
-        <img src="../../../../img/img_cantos/img_cantos.png" alt="notas musicais" class="img_esquerda sumir">
-        <img src="../../../../img/img_cantos/img_cantos.png" alt="notas musicais" class="img_esquerda sumir">
-        <img src="../../../../img/img_cantos/img_cantos.png" alt="notas musicais" class="img_esquerda sumir">
-        <img src="../../../../img/img_cantos/img_cantos.png" alt="notas musicais" class="img_esquerda sumir">
-        <img src="../../../../img/img_cantos/img_cantos.png" alt="notas musicais" class="img_esquerda sumir">
     </div>
-
+    
 </body>
 </html>

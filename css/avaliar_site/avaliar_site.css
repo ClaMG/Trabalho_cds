@@ -26,7 +26,8 @@ main {
     padding: 10px;
     color: #595959; /* Define a cor do texto */
     font-weight: bold;
-    border-radius: 0px 0px 10px 10px;
+    border-radius: 10px;
+    margin-top: 50px;
 }
 
 #titulo{
@@ -36,25 +37,38 @@ main {
 
 #avaliar_estrelas{
     margin-bottom: 20px;
-    gap: 10px;
     cursor: pointer;
+    
+}
+
+#linha_de_estrelas{
+    display: flex;
+    gap: 10px;
 }
 
 #avaliar_estrelas_titulo, #text_avalicao_titulo{
     margin-bottom: 5px;
 }
 
-.button_estrelas{
-    background-color: transparent;
-    border: none;
+.estrela{
+    width: 20px;
+    height: 20px; 
+    background: url('../../img/avaliar/estrela_escura.png');
+    background-size: cover;
+    transition: transform 0.2s;
 }
 
-.estrela{
-    width: 20px; 
+.estrela:hover {
+    transform: scale(1.2);
+}
+
+.selecionada {
+    background: url('../../img/avaliar/estrela_amarela.png');
+    background-size: cover;
 }
 
 #input_text{
-    width: 990px;
+    width: 975px;
     height: 100px;
     font-size: 18px;
     padding: 5px;
@@ -157,7 +171,18 @@ main {
 /* ======= Responsividade ======= */
 
 @media only screen and (max-width: 850px) {
+    #conteudo{
+        width: 450px;
+    }
 
+    #input_text{
+        width: 420px;
+    }
+
+
+    .input_baixo{
+        width: 200px;
+    }
     /* Exibe imagens ocultas em telas menores */
     .sumir {
         display: block;
