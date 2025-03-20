@@ -54,7 +54,7 @@ index_logado.html > cabeçalho_com_login.css
 index.html > cabeçalho_sem_login.css
 login.html > cabeçalho_sem_login.css
 politica_comercial.html > cabeçalho_com_login.css
-avaliar.html
+avaliar.html > cabeçalho_com_login_sem_menu.css
 
 
 
