@@ -1,3 +1,5 @@
+/* ======================== RESET GLOBAL ======================== */
+
 /* Reset básico para remover margens e paddings padrão dos elementos */
 * {
     padding: 0px;
@@ -10,6 +12,8 @@ body {
     overflow-x: hidden;
 }
 
+/* ======================== ESTILIZAÇÃO DO CONTEÚDO PRINCIPAL ======================== */
+
 /* Centraliza o conteúdo principal */
 main {
     display: flex;
@@ -18,7 +22,7 @@ main {
 
 /* Estilização da área de conteúdo principal */
 #conteudo {
-    border: 1px solid #aaaaaa;
+    border: 1px solid #aaaaaa; /* Borda cinza clara */
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Adiciona sombra para efeito de profundidade */
     background-color: rgb(247, 247, 247); /* Define a cor de fundo */
     width: 1000px; /* Define a largura do conteúdo */
@@ -26,74 +30,89 @@ main {
     padding: 10px;
     color: #595959; /* Define a cor do texto */
     font-weight: bold;
-    border-radius: 10px;
-    margin-top: 50px;
+    border-radius: 10px; /* Bordas arredondadas */
+    margin-top: 50px; /* Adiciona espaçamento superior */
 }
 
-#titulo{
+/* Título principal */
+#titulo {
     font-size: 60px; /* Define o tamanho da fonte */
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Espaçamento inferior */
 }
 
-#avaliar_estrelas{
+/* ======================== AVALIAÇÃO COM ESTRELAS ======================== */
+
+#avaliar_estrelas {
     margin-bottom: 20px;
-    cursor: pointer;
-    
+    cursor: pointer; /* Cursor interativo */
 }
 
-#linha_de_estrelas{
+/* Linha contendo as estrelas */
+#linha_de_estrelas {
     display: flex;
-    gap: 10px;
+    gap: 10px; /* Espaçamento entre as estrelas */
 }
 
-#avaliar_estrelas_titulo, #text_avalicao_titulo{
+/* Estilos para os títulos das seções de avaliação */
+#avaliar_estrelas_titulo, 
+#text_avalicao_titulo {
     margin-bottom: 5px;
 }
 
-.estrela{
+/* Estilização das estrelas */
+.estrela {
     width: 20px;
     height: 20px; 
-    background: url('../../img/avaliar/estrela_escura.png');
+    background: url('../../img/avaliar/estrela_escura.png'); /* Define a estrela padrão */
     background-size: cover;
-    transition: transform 0.2s;
+    transition: transform 0.2s; /* Suaviza a animação ao passar o mouse */
 }
 
+/* Efeito ao passar o mouse sobre a estrela */
 .estrela:hover {
-    transform: scale(1.2);
+    transform: scale(1.2); /* Aumenta ligeiramente a estrela */
 }
 
+/* Classe que define a estrela como selecionada */
 .selecionada {
-    background: url('../../img/avaliar/estrela_amarela.png');
+    background: url('../../img/avaliar/estrela_amarela.png'); /* Altera a imagem para a estrela amarela */
     background-size: cover;
 }
 
-#input_text{
-    width: 975px;
-    height: 100px;
+/* ======================== CAMPO DE TEXTO DA AVALIAÇÃO ======================== */
+
+#input_text {
+    width: 975px; /* Define a largura do campo */
+    height: 100px; /* Altura do campo de texto */
     font-size: 18px;
     padding: 5px;
-    resize: none;
+    resize: none; /* Impede redimensionamento */
     border: 1px solid black;
-    border-radius: 5px;
+    border-radius: 5px; /* Bordas arredondadas */
     margin-top: 5px;
 }
 
-#informacoes{
+/* ======================== CAMPOS DE INFORMAÇÕES (NOME E EMAIL) ======================== */
+
+#informacoes {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Alinha os campos um ao lado do outro */
     margin-top: 10px;
 }
 
-.input_baixo{
+/* Estilização dos inputs de nome e email */
+.input_baixo {
     width: 450px;
     height: 30px;
     font-size: 20px;
     border: 1px solid black;
-    border-radius: 5px;
+    border-radius: 5px; /* Bordas arredondadas */
     margin-top: 5px;
 }
 
-#enviar{
+/* ======================== BOTÃO DE ENVIO ======================== */
+
+#enviar {
     margin-top: 30px;
     width: 200px; /* Largura do botão */
     height: 40px; /* Altura do botão */
@@ -105,22 +124,21 @@ main {
     font-weight: bold; /* Texto em negrito */
 }
 
-#enviar:hover{
+/* Efeito hover no botão */
+#enviar:hover {
     background-color: #303030; /* Cor do fundo ao passar o mouse */
     color: white; /* Cor do texto ao passar o mouse */
     transition: 0.2s; /* Transição suave */
 }
 
-
-
-/* ======= Estilização das imagens laterais ======= */
+/* ======================== ESTILIZAÇÃO DAS IMAGENS LATERAIS ======================== */
 
 /* Classe para esconder elementos específicos */
 .sumir {
     display: none; /* Oculta as imagens */
 }
 
-/* Estilização das imagens posicionadas à direita */
+/* Imagens decorativas posicionadas à direita */
 #imgs_direita {
     display: flex; /* Usa flexbox para organização */
     align-items: flex-end; /* Alinha as imagens ao fundo */
@@ -133,7 +151,7 @@ main {
     height: 100%;
 }
 
-/* Estilização das imagens posicionadas à esquerda */
+/* Imagens decorativas posicionadas à esquerda */
 #imgs_esquerda {
     display: flex;
     flex-direction: column;
@@ -145,44 +163,47 @@ main {
     height: 100%;
 }
 
-/* Ajuste das imagens da direita */
+/* Ajuste de tamanho e margem das imagens da direita */
 .img_direita {
     width: 300px; /* Define a largura das imagens */
     margin-right: -200px; /* Ajusta a posição da imagem */
 }
 
-/* Ajuste na margem das imagens da direita, exceto a primeira */
+/* Ajuste de espaçamento entre imagens da direita, exceto a primeira */
 .img_direita:not(:first-child) {
-    margin-top: -5px; /* Define espaçamento entre imagens */
+    margin-top: -5px;
 }
 
-/* Ajuste das imagens da esquerda (invertidas) */
+/* Ajuste das imagens da esquerda (espelhadas horizontalmente) */
 .img_esquerda {
     width: 300px;
     margin-left: -200px;
     transform: scaleX(-1); /* Inverte horizontalmente a imagem */
 }
 
-/* Ajuste na margem das imagens da esquerda, exceto a primeira */
+/* Ajuste de espaçamento entre imagens da esquerda, exceto a primeira */
 .img_esquerda:not(:first-child) {
     margin-top: -5px;
 }
 
-/* ======= Responsividade ======= */
+/* ======================== RESPONSIVIDADE ======================== */
 
 @media only screen and (max-width: 850px) {
-    #conteudo{
+    /* Ajusta o tamanho do conteúdo principal */
+    #conteudo {
         width: 450px;
     }
 
-    #input_text{
+    /* Reduz a largura do campo de texto */
+    #input_text {
         width: 420px;
     }
 
-
-    .input_baixo{
+    /* Reduz a largura dos inputs de nome e email */
+    .input_baixo {
         width: 200px;
     }
+
     /* Exibe imagens ocultas em telas menores */
     .sumir {
         display: block;

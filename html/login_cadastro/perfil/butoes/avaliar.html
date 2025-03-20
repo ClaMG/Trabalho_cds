@@ -5,19 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avaliar Site</title>
 
-     <!-- Link para o arquivo CSS -->
-      <link rel="stylesheet" href="../../../../css/avaliar_site/avaliar_site.css">
-      <link rel="stylesheet" href="../../../../css/cabeçalhos/cabeçalho_com_login_sem_menu.css">
+    <!-- Importação dos arquivos CSS -->
+    <link rel="stylesheet" href="../../../../css/avaliar_site/avaliar_site.css">
+    <link rel="stylesheet" href="../../../../css/cabeçalhos/cabeçalho_com_login_sem_menu.css">
 
-      <!-- Link para o arquivo JS -->
-       <script src="../../../../js/avaliar/estrelas.js" defer></script>
+    <!-- Importação do script JavaScript responsável pela avaliação com estrelas -->
+    <script src="../../../../js/avaliar/estrelas.js" defer></script>
 
 </head>
 <body>
 
-    <!-- Cabeçalho da página (com user logado) -->
+    <!-- Cabeçalho da página (com usuário logado) -->
     <header> 
-
         <div id="parte_de_cima_cab">
 
             <!-- Logo da página -->
@@ -25,33 +24,37 @@
             
             <!-- Barra de pesquisa -->
             <div id="barra_pesquisa">
-                <input type="checkbox" id="check"> <!-- Controle de visibilidade -->
+                <input type="checkbox" id="check"> <!-- Checkbox para exibir ou ocultar a barra de pesquisa -->
                 <div id="complemento_pesquisa">
 
-                    <!-- Campo de pesquisa -->
+                    <!-- Campo de entrada para pesquisa -->
                     <input type="text" id="input_barra_pesquisa" placeholder="Buscar..." >
 
-                    <!-- Botão de pesquisa -->
+                    <!-- Botão de pesquisa com ícone de lupa -->
                     <label for="check" id="buttom_lupa">
                         <img src="../../../../img/cabeçario/icone_lupa.png" alt="Lupa" id="lupa">
                     </label>
                 </div>
             </div>
 
-            <div id="login_carrinho"> <!-- Conta e Carrinho -->
-                    <a href="#"><img src="../../../../img/cabeçario/icone_perfil.png" alt="Perfil" id="Perfil"></a><!-- Imagem de perfil -->
-
-                <a href="#"><img src="../../../../img/cabeçario/icone_carrinho.png" alt="Carrinho" id="Carrinho"></a><!-- Ícone de carrinho -->
+            <!-- Ícones de perfil e carrinho de compras -->
+            <div id="login_carrinho">
+                <a href="#"><img src="../../../../img/cabeçario/icone_perfil.png" alt="Perfil" id="Perfil"></a>
+                <a href="#"><img src="../../../../img/cabeçario/icone_carrinho.png" alt="Carrinho" id="Carrinho"></a>
             </div>
         </div>
     </header>
+
     <main>
         <section id="conteudo">
+            <!-- Título principal da página -->
             <h1 id="titulo">Avaliar</h1>
 
+            <!-- Seção para avaliação com estrelas -->
             <div id="avaliar_estrelas">
                 <p id="avaliar_estrelas_titulo">Sua Avaliação</p>
                 <div id="linha_de_estrelas">
+                    <!-- Cada div representa uma estrela interativa -->
                     <div class="estrela" data-valor="1"></div>
                     <div class="estrela" data-valor="2"></div>
                     <div class="estrela" data-valor="3"></div>
@@ -60,11 +63,13 @@
                 </div>
             </div>
 
+            <!-- Campo para o usuário escrever um comentário sobre o produto -->
             <div id="text_avalicao">
                 <p id="text_avalicao_titulo">Sua avaliação sobre o produto</p>
                 <textarea rows="4" cols="50" placeholder="Digite seu texto aqui..." id="input_text"></textarea>
             </div>
 
+            <!-- Campos para o usuário inserir nome e e-mail -->
             <div id="informacoes">
                 <div id="nome">
                     <p>Nome:</p>
@@ -75,21 +80,20 @@
                     <input type="text" class="input_baixo">
                 </div>
             </div>
+
+            <!-- Botão de envio da avaliação -->
             <button id="enviar">Enviar</button>
         </section>
     </main>
 
-
-     <!-- Seção de imagens à direita -->
-     <div id="imgs_direita">
-        <!-- Imagens decorativas à direita -->
+    <!-- Seção de imagens decorativas à direita -->
+    <div id="imgs_direita">
         <img src="../../../../img/img_cantos/img_cantos.png" alt="notas musicais" class="img_direita">
         <img src="../../../../img/img_cantos/img_cantos.png" alt="notas musicais" class="img_direita">
     </div>
 
-    <!-- Seção de imagens à esquerda -->
+    <!-- Seção de imagens decorativas à esquerda -->
     <div id="imgs_esquerda">
-        <!-- Imagens decorativas à esquerda -->
         <img src="../../../../img/img_cantos/img_cantos.png" alt="notas musicais" class="img_esquerda">
         <img src="../../../../img/img_cantos/img_cantos.png" alt="notas musicais" class="img_esquerda">
     </div>

@@ -24,6 +24,7 @@ obsevação: os links dos slides podem ser removidos, contanto que o css que est
 Comentados:
 
 alterar.css
+avaliar_site.css
 cabeçalho_com_login_sem_menu.css
 cabeçalho_com_login.css
 cabeçalho_sem_login.css
@@ -37,6 +38,7 @@ destaque.css
 genero.css
 rodape.css
 
+estrelas.js
 menu.js
 login.js
 mascara_cep.js
@@ -52,6 +54,7 @@ index_logado.html > cabeçalho_com_login.css
 index.html > cabeçalho_sem_login.css
 login.html > cabeçalho_sem_login.css
 politica_comercial.html > cabeçalho_com_login.css
+avaliar.html
 
 
 
