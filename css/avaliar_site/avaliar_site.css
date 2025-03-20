@@ -1,4 +1,4 @@
-/* ======================== RESET GLOBAL ======================== */
+/* == RESET GLOBAL == */
 
 /* Reset básico para remover margens e paddings padrão dos elementos */
 * {
@@ -12,7 +12,7 @@ body {
     overflow-x: hidden;
 }
 
-/* ======================== ESTILIZAÇÃO DO CONTEÚDO PRINCIPAL ======================== */
+/* == ESTILIZAÇÃO DO CONTEÚDO PRINCIPAL == */
 
 /* Centraliza o conteúdo principal */
 main {
@@ -40,7 +40,7 @@ main {
     margin-bottom: 20px; /* Espaçamento inferior */
 }
 
-/* ======================== AVALIAÇÃO COM ESTRELAS ======================== */
+/* == AVALIAÇÃO COM ESTRELAS == */
 
 #avaliar_estrelas {
     margin-bottom: 20px;
@@ -79,7 +79,7 @@ main {
     background-size: cover;
 }
 
-/* ======================== CAMPO DE TEXTO DA AVALIAÇÃO ======================== */
+/* == CAMPO DE TEXTO DA AVALIAÇÃO == */
 
 #input_text {
     width: 975px; /* Define a largura do campo */
@@ -92,7 +92,7 @@ main {
     margin-top: 5px;
 }
 
-/* ======================== CAMPOS DE INFORMAÇÕES (NOME E EMAIL) ======================== */
+/* == CAMPOS DE INFORMAÇÕES (NOME E EMAIL) == */
 
 #informacoes {
     display: flex;
@@ -110,7 +110,7 @@ main {
     margin-top: 5px;
 }
 
-/* ======================== BOTÃO DE ENVIO ======================== */
+/* == BOTÃO DE ENVIO == */
 
 #enviar {
     margin-top: 30px;
@@ -131,7 +131,7 @@ main {
     transition: 0.2s; /* Transição suave */
 }
 
-/* ======================== ESTILIZAÇÃO DAS IMAGENS LATERAIS ======================== */
+/* == ESTILIZAÇÃO DAS IMAGENS LATERAIS == */
 
 /* Classe para esconder elementos específicos */
 .sumir {
@@ -186,7 +186,7 @@ main {
     margin-top: -5px;
 }
 
-/* ======================== RESPONSIVIDADE ======================== */
+/* == RESPONSIVIDADE == */
 
 @media only screen and (max-width: 850px) {
     /* Ajusta o tamanho do conteúdo principal */
