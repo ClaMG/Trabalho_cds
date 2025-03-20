@@ -93,3 +93,71 @@ produtos:
 todos_produtos
 produtos
 comprar
+
+
+
+Organização:
+
+php_matriz{
+    >css{...}
+    >html{
+        >login_cadastro{
+            >perfil{
+                >adm{
+                    >add{
+                        -adicionar_artistas
+                        -adicionar_cd
+                        -adicionar_musica
+                    }
+                    >delete{
+                        -deletar_cd
+                    }
+                    >edicao{
+                        -editar_artista
+                        -editar_cd
+                        -editar_musica
+                    }
+                    >gerenciamento{
+                        -gerenciar_artista
+                        -gerenciar_cd
+                        -gerenciar_musicas
+                    }
+                    >puro{...}
+                }
+                >butoes{
+                    -detalhes_cd ??????
+                    -favoritos
+                    -logout
+                    -sugestao
+                    -uploud_foto
+                    -carrinho
+                    -avaliar_site
+                }
+                >uplouds{...}
+                -editar_cliente (alterar_dados)
+                -index (perfil_user)
+                -perfil_adm
+            }
+            >puro{...}
+            -cadastro
+            -login
+        }
+        >pagina_inicial{
+            >rodape{
+                -politica_comercial
+            }
+            -index
+            -index_logado
+
+        }
+        >produtos{
+            -todos_produtos
+            -produtos
+            -comprar
+        }
+    }
+    >imagens{...}
+    >img_code{...}
+    >js{...}
+}
+
