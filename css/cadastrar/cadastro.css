@@ -22,15 +22,21 @@ main{
     border-radius: 10px; /* Borda arredondada */
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidade */
     width: 900px; /* Largura do formulário */
-    height: 700px; /* Altura do formulário */
+    height: 750px; /* Altura do formulário */
     margin-top: 40px; /* Espaço acima do formulário */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%; /* Permite que o formulário ocupe um espaço flexível */
+    max-width: 900px;
 }
 
 /* Estilo do título principal */
 #titulo{
     color: #595959; /* Cor do título */
-    font-size: 80px; /* Tamanho da fonte */
     margin-left: 10px; /* Margem à esquerda */
+    font-size: 8vw; /* Se adapta ao tamanho da tela */
+    text-align: center;
 }
 
 /* Estilo do parágrafo com link para login */
@@ -54,7 +60,9 @@ main{
 
 /* Estilo da parte superior do formulário */
 #cima{
-    display: flex; /* Flexbox para alinhamento dos itens */
+    display: flex;
+    flex-wrap: wrap; /* Permite que os campos se reorganizem quando necessário */
+    justify-content: center;
 }
 
 /* Estilo da parte inferior do formulário */
@@ -64,7 +72,9 @@ main{
 
 /* Estilo para o container lateral de entradas */
 #lado{
-    display: flex; /* Flexbox para alinhar as colunas */
+    display: flex;
+    flex-wrap: wrap; /* Permite que os campos se reorganizem quando necessário */
+    justify-content: center;
 }
 
 /* Estilo comum para as divisões de entrada */
@@ -73,6 +83,7 @@ main{
     flex-direction: column; /* Organiza os campos em coluna */
     width: 350px; /* Largura padrão das divisões */
     margin-left: 20px; /* Margem à esquerda */
+    max-width: 400px; /* Impede que fique muito largo */
 }
 
 /* Ajuste na largura para a classe separacao2 */
@@ -124,6 +135,8 @@ main{
     border: none; /* Remove as bordas padrão */
     border-bottom: 2px solid #7b7a7a; /* Apenas a borda inferior */
     font-size: 20px; /* Tamanho da fonte */
+    width: 100%; /* Para evitar cortes laterais */
+    max-width: 350px;
 }
 
 /* Ajuste de margem para os campos de entrada na parte inferior */
@@ -138,7 +151,8 @@ main{
 
 /* Estilo do botão de cadastro */
 #button{
-    width: 300px; /* Largura do botão */
+    width: 100%; /* Para evitar cortes laterais */
+    max-width: 350px;
     height: 40px; /* Altura do botão */
     border-radius: 10px; /* Bordas arredondadas */
     border: none; /* Sem borda */
@@ -210,13 +224,19 @@ main{
     margin-top: -5px; /* Margem superior para não sobrepor */
 }
 
+.img_direita, .img_esquerda {
+    max-width: 300px; /* Mantém as imagens menores em telas pequenas */
+    opacity: 0.5; /* Reduz a opacidade para não sobrecarregar o layout */
+}
+
+
 /* == Estilos responsivos == */
 
 /* Estilos para telas pequenas (máximo de 850px) */
-@media only screen and (max-width: 850px){
+@media only screen and (max-width:  768px){
     #cadastro{
         width: 450px; /* Ajuste de largura para telas menores */
-        height: 1120px; /* Ajuste de altura */
+        height: auto;
     }
 
     #cima{
@@ -242,4 +262,63 @@ main{
     #sumir_d, #sumir_e{
         display: block; /* Exibe as imagens */
     }
+
+    #button{
+        font-size: 20px; /* Reduz o tamanho do botão */
+        margin-bottom: -20px;
+    }
+
+    .separacao, .separacao2 {
+        max-width: 100%;
+    }
+    
 }
+
+/* Para telas pequenas, como celulares (até 480px) */
+@media only screen and (max-width: 480px) {
+    #cadastro {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .input, .input_baixo {
+        font-size: 16px;
+    }
+
+    #button {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+}
+
+/* Para telas grandes (até 1200px ou mais) */
+@media only screen and (min-width: 1200px) {
+    #cadastro {
+        width: 75%; /* Ajusta para uma largura mais proporcional */
+        max-width: 1000px; /* Define um limite máximo */
+        height: auto; /* Permite que a altura se ajuste */
+    }
+
+    #titulo {
+        font-size: 60px; /* Reduz um pouco o tamanho do título */
+    }
+
+    .input, .input_baixo {
+        font-size: 22px; /* Aumenta o tamanho da fonte dos inputs */
+    }
+
+    #button {
+        height: 50px;
+        font-size: 28px;
+    }
+
+    /* Ajuste para organizar melhor os campos */
+    #lado {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    
+}
+

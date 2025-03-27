@@ -25,10 +25,10 @@ Comentados:
 
 alterar.css
 avaliar_site.css
-cabeçalho_com_login_sem_menu.css
-cabeçalho_com_login.css
-cabeçalho_sem_login.css
-cadastro.css
+cabeçalho_com_login_sem_menu.css R
+cabeçalho_com_login.css R
+cabeçalho_sem_login.css R
+cadastro.css R
 login.css
 politica_comercial.css
 artistas.css

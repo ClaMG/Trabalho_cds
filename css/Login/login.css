@@ -18,6 +18,8 @@ main{
     height: 420px; /* Altura fixa do box de login */
     border-radius: 20px; /* Bordas arredondadas */
     position: relative; /* Permite que elementos internos se posicionem em relação a esse container */
+    width: 90%; /* Ocupa 90% da tela */
+    max-width: 700px; /* Máximo de 700px */
 }
 
 /* Estilos para a parte esquerda do container de login */
@@ -60,7 +62,8 @@ main{
 
 /* Estilo para os campos de input */
 .input {
-    width: 330px; /* Largura fixa do campo de input */
+    width: 100%;
+    max-width: 330px;
     height: 30px; /* Altura do campo */
     border-radius: 10px; /* Bordas arredondadas */
     border: none; /* Remove a borda padrão */
@@ -84,9 +87,9 @@ main{
     border: none; /* Remove a borda */
     position: absolute; /* Posicionamento absoluto */
     z-index: 1; /* Organiza a camada do elemento */
-    left: 43%; /* Posiciona a partir da esquerda */
+    left: 42%; /* Posiciona a partir da esquerda */
     top: 61%; /* Posiciona a partir do topo */
-    transform: translate(44%, 61%);
+    transform: translate(43%, 61%);
 }
 
 /* Tamanho da imagem do ícone do olho */
@@ -114,7 +117,8 @@ main{
 
 /* Estilos para o botão de acesso */
 #acessar {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     height: 40px;
     border-radius: 10px;
     border: none;
@@ -273,11 +277,13 @@ main{
     border-radius: 0px 20px 20px 0px; /* Bordas arredondadas do lado direito */
 }
 
+
+
 /* Media query para telas pequenas (como dispositivos móveis) */
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 768px) {
     #login {
-        width: 400px; /* Largura reduzida para telas pequenas */
-        height: 420px; /* Altura mantida */
+        width: 400px; 
+        height: auto;
         margin: 68px 50px; /* Ajuste da margem */
     }
 
@@ -287,6 +293,7 @@ main{
 
     #olho {
         left: 75%; /* Reposiciona o ícone do olho para se ajustar à tela menor */
+        transform: translate(43%, 40%);
     }
 
     .visualizer-container {
@@ -300,3 +307,36 @@ main{
         background-position: center; /* Centraliza a imagem de fundo */
     }
 }
+
+/* ✅ Para telas pequenas, como celulares (até 480px) */
+@media only screen and (max-width: 480px) {
+    #login {
+        width: 95%;
+        padding: 20px;
+    }
+
+    #titulo {
+        font-size: 28px; /* Reduz ainda mais para caber melhor */
+    }
+
+    .input {
+        font-size: 16px;
+    }
+
+    #acessar {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    /* Ícone do olho melhor posicionado */
+    #olho {
+        right: 10px;
+    }
+
+    /* Esconde elementos decorativos para otimizar a tela */
+    .img_direita, .img_esquerda {
+        display: none;
+    }
+    
+}
+

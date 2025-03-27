@@ -11,12 +11,12 @@ function togglePassword() {
         passwordInput.type = "text";
         
         // Altera a imagem do ícone para um olho aberto
-        eyeIcon.src = "../img/login/icone_olho_aberto.png";
+        eyeIcon.src = "../../img/login/icone_olho_aberto.png";
     } else {
         // Retorna o tipo do campo para "password" para esconder a senha
         passwordInput.type = "password";
         
         // Altera a imagem do ícone para um olho fechado
-        eyeIcon.src = "../img/login/icone_olho_fechado.png";
+        eyeIcon.src = "../../img/login/icone_olho_fechado.png";
     }
 }
