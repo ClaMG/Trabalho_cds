@@ -277,12 +277,48 @@ main{
     border-radius: 0px 20px 20px 0px; /* Bordas arredondadas do lado direito */
 }
 
+/* ✅ Para telas grandes (a partir de 1200px) */
+@media only screen and (max-width: 1200px) {
+    #login {
+        width: 50%; /* Evita que fique pequeno em telas grandes */
+        max-width: 900px;
+    }
 
+    #titulo {
+        font-size: 50px; /* Ajusta tamanho do título */
+    }
+
+    .input {
+        font-size: 22px;
+        max-width: 100%;
+    }
+
+    #acessar {
+        font-size: 24px;
+        width: 350px;
+    }
+
+    /* Centralizar melhor o layout */
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* Aumentar ícone do olho */
+    #olho {
+        width: 30px;
+        height: 30px;
+        left: 46%; /* Posiciona a partir da esquerda */
+        top: 58%; /* Posiciona a partir do topo */ 
+    }
+}
 
 /* Media query para telas pequenas (como dispositivos móveis) */
 @media only screen and (max-width: 768px) {
     #login {
-        width: 400px; 
+        width: 450px; 
         height: auto;
         margin: 68px 50px; /* Ajuste da margem */
     }
@@ -293,7 +329,7 @@ main{
 
     #olho {
         left: 75%; /* Reposiciona o ícone do olho para se ajustar à tela menor */
-        transform: translate(43%, 40%);
+        transform: translate(43%, 60%);
     }
 
     .visualizer-container {
@@ -306,13 +342,15 @@ main{
         background-size: cover; /* Faz a imagem cobrir toda a tela */
         background-position: center; /* Centraliza a imagem de fundo */
     }
+    .input{
+        width: 350px;
+    }
 }
 
 /* ✅ Para telas pequenas, como celulares (até 480px) */
 @media only screen and (max-width: 480px) {
     #login {
         width: 95%;
-        padding: 20px;
     }
 
     #titulo {
@@ -339,4 +377,6 @@ main{
     }
     
 }
+
+
 
