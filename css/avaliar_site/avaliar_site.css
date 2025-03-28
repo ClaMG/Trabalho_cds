@@ -145,7 +145,7 @@ main {
     display: flex; /* Usa flexbox para organização */
     align-items: flex-end; /* Alinha as imagens ao fundo */
     flex-direction: column; /* Organiza as imagens em coluna */
-    position: absolute; /* Posicionamento absoluto sobre o conteúdo */
+    position: fixed; /* Posicionamento absoluto sobre o conteúdo */
     bottom: 0; /* Alinha ao fundo da tela */
     right: 0; /* Alinha à direita */
     z-index: -1; /* Coloca as imagens atrás do conteúdo principal */
@@ -157,7 +157,7 @@ main {
 #imgs_esquerda {
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     z-index: -1;
@@ -238,9 +238,6 @@ main {
         overflow: hidden; /* Esconde parte da imagem fora da área */
     }
 
-    #imgs_direita, #imgs_esquerda {
-        position: fixed; /* Posiciona as imagens sobre o conteúdo */
-    }
 }
 
 @media only screen and (max-width: 480px) {

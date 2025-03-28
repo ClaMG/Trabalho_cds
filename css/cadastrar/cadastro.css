@@ -182,7 +182,7 @@ main{
     display: flex; /* Flexbox para alinhar as imagens */
     align-items: flex-end; /* Alinha as imagens ao fundo */
     flex-direction: column; /* Organiza as imagens em coluna */
-    position: absolute; /* Posiciona as imagens sobre o conteúdo */
+    position: fixed; /* Posiciona as imagens sobre o conteúdo */
     bottom: 0; /* Alinha ao fundo da tela */
     right: 0; /* Alinha à direita */
     z-index: -1; /* Coloca atrás de outros elementos */
@@ -194,7 +194,7 @@ main{
 #imgs_esquerda{
     display: flex; /* Flexbox para alinhar as imagens */
     flex-direction: column; /* Organiza as imagens em coluna */
-    position: absolute; /* Posiciona as imagens sobre o conteúdo */
+    position: fixed; /* Posiciona as imagens sobre o conteúdo */
     bottom: 0; /* Alinha ao fundo da tela */
     left: 0; /* Alinha à esquerda */
     z-index: -1; /* Coloca atrás de outros elementos */
@@ -281,13 +281,6 @@ main{
         width: 150px;
         overflow: hidden; /* Esconde parte da imagem fora da área */
     }
-
-    #imgs_direita, #imgs_esquerda {
-        position: fixed; /* Posiciona as imagens sobre o conteúdo */
-    }
-
-
-    
 }
 
 /* Para telas pequenas, como celulares (até 480px) */

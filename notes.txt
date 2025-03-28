@@ -21,7 +21,7 @@ Sertanejo
 
 obsevação: os links dos slides podem ser removidos, contanto que o css que estiver na 'class' do 'a', seja colocada para 'class' da imagem.
 
-Comentados:
+Codigos feitos:
 
 alterar.css 
 avaliar_site.css
@@ -29,7 +29,8 @@ cabeçalho_com_login_sem_menu.css
 cabeçalho_com_login.css 
 cabeçalho_sem_login.css 
 cadastro.css 
-login.css 
+login.css
+perfil.css 
 politica_comercial.css
 artistas.css
 avalicao.css
@@ -55,7 +56,8 @@ index.html > cabeçalho_sem_login.css
 login.html > cabeçalho_sem_login.css
 politica_comercial.html > cabeçalho_com_login.css
 avaliar.html > cabeçalho_com_login_sem_menu.css
-
+adm.html > cabeçalho_com_login.css
+user.html > cabeçalho_com_login.css
 
 
 pastas html
