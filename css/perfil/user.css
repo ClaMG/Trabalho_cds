@@ -1,0 +1,112 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section{
+    display: flex;
+    width: 70%;
+    margin: 50px auto;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+#esquerda{
+    margin-top: 40px;
+    margin-left: 30px;
+    width: 500px;
+}
+
+#cima{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    align-items: center;
+}
+
+#nome_user{
+    color: #5d5d5d;
+    margin-left: 10px;
+}
+
+#foto_perfil{
+    width: 80px;  /* Define um tamanho fixo */
+    height: 80px; /* Altura fixa */
+    border-radius: 50px;
+}
+
+#hr_em_pe{
+    margin: 0px 30px;
+    width: 5px; /* Espessura da linha */
+    height: 500px; /* Altura da linha */
+    background-color: #303030; /* Cor da linha */
+}
+
+.dados{
+    margin-top: 30px;
+    color: #5d5d5d;
+    border-bottom: 2px solid #7b7a7a; /* Apenas a borda inferior */
+    font-size: 25px; /* Tamanho da fonte */
+    width: 100%; /* Para evitar cortes laterais */
+    max-width: 350px;
+}
+
+#button, .butoes{
+    width: 250px; /* Para evitar cortes laterais */
+    max-width: 350px;
+    height: 40px; /* Altura do botão */
+    border-radius: 10px; /* Bordas arredondadas */
+    border: none; /* Sem borda */
+    margin: 50px 0px; /* Margem do botão */
+    background-color: #303030; /* Cor de fundo */
+    font-size: 25px; /* Tamanho da fonte */
+    font-weight: bold; /* Texto em negrito */
+}
+
+/* Estilo do botão ao passar o mouse */
+#button:hover, .butoes:hover{
+    background-color: #abaaaa; /* Cor do fundo ao passar o mouse */
+    transition: 0.2s; /* Transição suave */
+}
+
+#a_buton_principal, .a_butoes{
+    color: white; /* Cor do texto */
+    text-decoration: none;
+}
+
+#a_buton_principal:hover, .a_butoes:hover{
+    color: #5d5d5d; /* Cor do texto ao passar o mouse */
+    transition: 0.2s; /* Transição suave */
+}
+
+#direita{
+    display: flex;
+    width: 500px;
+}
+
+#butoes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 450px;
+}
+
+.butoes{
+    margin: 20px 0px;
+    height: 50px;
+    font-size: 30px;
+}
+
+#cortar{
+    margin-left: -15%;
+    width: 350px;  /* Define um tamanho fixo */
+    height: 500px; /* Altura fixa */
+    overflow: hidden; /* Esconde a parte cortada */
+}
+
+#img_cd{
+    width: 240%;
+    height: 101%;
+    object-fit: cover; /* Corta a imagem mantendo a proporção */
+}
