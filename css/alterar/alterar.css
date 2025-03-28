@@ -21,9 +21,10 @@ main{
     background-color: rgb(247, 247, 247); /* Cor de fundo */
     border-radius: 10px; /* Borda arredondada */
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidade */
-    width: 900px; /* Largura do formulário */
-    height: 700px; /* Altura do formulário */
     margin-top: 40px; /* Espaço acima do formulário */
+    width: 90%;  /* Em vez de um tamanho fixo */
+    max-width: 900px; /* Mantém um limite */
+    height: auto; /* Deixa altura dinâmica */
 }
 
 /* Estilo do título principal */
@@ -110,7 +111,9 @@ main{
     margin: 15px 10px; /* Margens internas */
     border: none; /* Remove as bordas padrão */
     border-bottom: 2px solid #7b7a7a; /* Apenas a borda inferior */
-    font-size: 20px; /* Tamanho da fonte */
+    font-size: 1.2rem;
+    width: 100%;
+    max-width: 350px;
 }
 
 /* Ajuste de margem para os campos de entrada na parte inferior */
@@ -125,15 +128,16 @@ main{
 
 /* Estilo do botão de cadastro */
 #button{
-    width: 300px; /* Largura do botão */
     height: 40px; /* Altura do botão */
     border-radius: 10px; /* Bordas arredondadas */
     border: none; /* Sem borda */
     margin: 10px 0px; /* Margem do botão */
     color: white; /* Cor do texto */
     background-color: #303030; /* Cor de fundo */
-    font-size: 30px; /* Tamanho da fonte */
     font-weight: bold; /* Texto em negrito */
+    width: 100%;
+    max-width: 300px;
+    font-size: 2rem;
 }
 
 /* Estilo do botão ao passar o mouse */
@@ -195,12 +199,40 @@ main{
 
 /* == Estilos responsivos == */
 
-/* Estilos para telas pequenas (máximo de 850px) */
-@media only screen and (max-width: 850px){
-    #alterar{
-        width: 450px; /* Ajuste de largura para telas menores */
-        height: 1210px; /* Ajuste de altura */
+
+/* 🖥️ Para telas maiores que 1440px (monitores grandes) */
+@media only screen and (max-width: 1200px) {
+    #alterar {
+        max-width: 1100px;
     }
+
+    #titulo {
+        font-size: 3rem;
+    }
+
+    .input, .input_baixo {
+        font-size: 1.5rem;
+        max-width: 500px;
+    }
+
+    #button {
+        font-size: 1.5rem;
+        max-width: 400px;
+    }
+}
+
+/* Estilos para telas pequenas (máximo de 850px) */
+@media only screen and (max-width: 743px){
+    #alterar{
+        width: 95%;
+    }
+
+    #titulo {
+        font-size: 3rem;
+        text-align: center;
+        margin-top: 10px;
+    }
+
 
     #cima{
         display: block; /* Organiza os elementos em bloco */
@@ -218,11 +250,34 @@ main{
         display: block; /* Organiza os campos em bloco */
     }
 
+    #cima, #lado {
+        display: block;
+    }
+
     #direita_baixo{
         margin-left: 20px; /* Ajuste de margem */
     }
 
     #sumir_d, #sumir_e, #sumir_e2, #sumir_d2{
         display: block; /* Exibe as imagens */
+    }
+}
+
+/* 📱 Para telas menores que 480px (celulares pequenos) */
+@media only screen and (max-width: 480px) {
+
+    
+    #alterar {
+        width: 100%;
+    }
+
+    #titulo {
+        font-size: 1.8rem;
+    }
+
+
+    #button {
+        width: 100%;
+        font-size: 1rem;
     }
 }
