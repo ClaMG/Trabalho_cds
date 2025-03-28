@@ -229,7 +229,6 @@ main{
     opacity: 0.5; /* Reduz a opacidade para não sobrecarregar o layout */
 }
 
-
 /* == Estilos responsivos == */
 
 /* Estilos para telas pequenas (máximo de 850px) */
@@ -271,6 +270,23 @@ main{
     .separacao, .separacao2 {
         max-width: 100%;
     }
+
+    .img_direita {
+        width: 200%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .cortar{
+        width: 150px;
+        overflow: hidden; /* Esconde parte da imagem fora da área */
+    }
+
+    #imgs_direita, #imgs_esquerda {
+        position: fixed; /* Posiciona as imagens sobre o conteúdo */
+    }
+
+
     
 }
 

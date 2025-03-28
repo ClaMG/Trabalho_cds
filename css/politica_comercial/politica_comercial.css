@@ -100,6 +100,12 @@ main {
     margin-top: -5px;
 }
 
+.img_direita, .img_esquerda {
+    max-width: 300px; /* Mantém as imagens menores em telas pequenas */
+    opacity: 0.5; /* Reduz a opacidade para não sobrecarregar o layout */
+}
+
+
 /* ======= Responsividade ======= */
 
 @media only screen and (max-width: 850px) {
@@ -111,5 +117,20 @@ main {
     /* Exibe imagens ocultas em telas menores */
     .sumir {
         display: block;
+    }
+
+    .img_direita {
+        width: 200%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .cortar{
+        width: 150px;
+        overflow: hidden; /* Esconde parte da imagem fora da área */
+    }
+
+    #imgs_direita, #imgs_esquerda {
+        position: fixed; /* Posiciona as imagens sobre o conteúdo */
     }
 }
