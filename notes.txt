@@ -150,7 +150,6 @@ php_matriz{
             }
             -index
             -index_logado
-
         }
         >produtos{
             -todos_produtos
