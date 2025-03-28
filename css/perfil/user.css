@@ -8,7 +8,7 @@
 /* Configuração geral da seção principal */
 section{
     display: flex;
-    width: 70%; /* Define a largura da seção */
+    width: 900px; /* Define a largura da seção */
     margin: 50px auto; /* Centraliza a seção na tela */
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao contêiner */
     border-radius: 10px; /* Arredonda as bordas */
@@ -125,4 +125,48 @@ section{
     width: 240%;
     height: 101%;
     object-fit: cover; /* Garante que a imagem cubra a área sem distorção */
+}
+
+
+@media only screen and (max-width: 768px) {
+    section{
+        width: 450px;
+        height: auto;
+        flex-direction: column;
+    }
+
+    #esquerda{
+        width: 400px;
+        height: 250px;
+    }
+
+    #hr_em_pe{
+        width: 5px;
+        height: 452px;
+        margin-left: 49.3%;
+        transform: rotate(90deg);
+    }
+
+    #direita{
+        width: 450px;
+        margin-top: -250px;
+        flex-direction: column;
+        margin-left: 70px;
+    }
+
+    #butoes{
+        margin-left: 20px;
+    }
+
+    #cortar{
+        transform: rotate(90deg);
+        margin-left: 5px;
+        width: 305px;
+        height: 500px;
+        margin-top: -260px;
+        margin-bottom: -99px;
+        border-radius: 40px;
+        z-index: -1;
+    }
+
 }
