@@ -23,13 +23,13 @@ obsevação: os links dos slides podem ser removidos, contanto que o css que est
 
 Comentados:
 
-alterar.css
+alterar.css 
 avaliar_site.css
-cabeçalho_com_login_sem_menu.css R
-cabeçalho_com_login.css R
-cabeçalho_sem_login.css R
-cadastro.css R
-login.css R
+cabeçalho_com_login_sem_menu.css 
+cabeçalho_com_login.css 
+cabeçalho_sem_login.css 
+cadastro.css 
+login.css 
 politica_comercial.css
 artistas.css
 avalicao.css

@@ -32,11 +32,13 @@ main {
     font-weight: bold;
     border-radius: 10px; /* Bordas arredondadas */
     margin-top: 50px; /* Adiciona espaçamento superior */
+    max-width: 90%;
+    min-width: 320px; /* Garante que não fique pequeno demais */
 }
 
 /* Título principal */
 #titulo {
-    font-size: 60px; /* Define o tamanho da fonte */
+    font-size: 5vw; /* Define o tamanho da fonte */
     margin-bottom: 20px; /* Espaçamento inferior */
 }
 
@@ -188,6 +190,17 @@ main {
 
 /* == RESPONSIVIDADE == */
 
+@media only screen and (min-width: 1200px) {
+    #conteudo {
+        width: 80%;
+    }
+    .sumir {
+        display: block;
+    }
+}
+
+
+
 @media only screen and (max-width: 850px) {
     /* Ajusta o tamanho do conteúdo principal */
     #conteudo {
@@ -209,3 +222,29 @@ main {
         display: block;
     }
 }
+
+@media only screen and (max-width: 480px) {
+    #conteudo {
+        padding: 5px;
+    }
+
+    #titulo {
+        font-size: 6vw; /* Mantém o título legível */
+    }
+
+    #input_text {
+        width: 100%;
+    }
+
+    .input_baixo {
+        width: 100%;
+    }
+
+    #enviar {
+        width: 100%;
+    }
+    .sumir {
+        display: block;
+    }
+}
+
