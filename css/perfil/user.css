@@ -1,23 +1,27 @@
+/* Resetando margens e preenchimentos padrão */
 *{
     padding: 0px;
     margin: 0px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif; /* Define a fonte padrão */
 }
 
+/* Configuração geral da seção principal */
 section{
     display: flex;
-    width: 70%;
-    margin: 50px auto;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
+    width: 70%; /* Define a largura da seção */
+    margin: 50px auto; /* Centraliza a seção na tela */
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao contêiner */
+    border-radius: 10px; /* Arredonda as bordas */
 }
 
+/* Configuração da parte esquerda do perfil */
 #esquerda{
     margin-top: 40px;
     margin-left: 30px;
     width: 500px;
 }
 
+/* Configuração do cabeçalho do perfil (foto e nome) */
 #cima{
     display: flex;
     justify-content: space-around;
@@ -25,66 +29,75 @@ section{
     align-items: center;
 }
 
+/* Nome do usuário */
 #nome_user{
     color: #5d5d5d;
     margin-left: 10px;
 }
 
+/* Foto do perfil */
 #foto_perfil{
-    width: 80px;  /* Define um tamanho fixo */
-    height: 80px; /* Altura fixa */
-    border-radius: 50px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50px; /* Deixa a imagem circular */
 }
 
+/* Linha vertical separadora */
 #hr_em_pe{
     margin: 0px 30px;
-    width: 5px; /* Espessura da linha */
-    height: 500px; /* Altura da linha */
-    background-color: #303030; /* Cor da linha */
+    width: 5px;
+    height: 500px;
+    background-color: #303030; /* Define a cor da linha */
 }
 
+/* Configuração dos dados do usuário */
 .dados{
     margin-top: 30px;
     color: #5d5d5d;
-    border-bottom: 2px solid #7b7a7a; /* Apenas a borda inferior */
-    font-size: 25px; /* Tamanho da fonte */
-    width: 100%; /* Para evitar cortes laterais */
+    border-bottom: 2px solid #7b7a7a; /* Linha inferior para separar */
+    font-size: 25px;
+    width: 100%;
     max-width: 350px;
 }
 
+/* Botão de alteração de dados e botões gerais */
 #button, .butoes{
-    width: 250px; /* Para evitar cortes laterais */
+    width: 250px;
     max-width: 350px;
-    height: 40px; /* Altura do botão */
-    border-radius: 10px; /* Bordas arredondadas */
-    border: none; /* Sem borda */
-    margin: 50px 0px; /* Margem do botão */
-    background-color: #303030; /* Cor de fundo */
-    font-size: 25px; /* Tamanho da fonte */
-    font-weight: bold; /* Texto em negrito */
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    margin: 50px 0px;
+    background-color: #303030;
+    font-size: 25px;
+    font-weight: bold;
 }
 
-/* Estilo do botão ao passar o mouse */
+/* Efeito hover nos botões */
 #button:hover, .butoes:hover{
-    background-color: #abaaaa; /* Cor do fundo ao passar o mouse */
-    transition: 0.2s; /* Transição suave */
+    background-color: #abaaaa;
+    transition: 0.2s;
 }
 
+/* Links dentro dos botões */
 #a_buton_principal, .a_butoes{
-    color: white; /* Cor do texto */
+    color: white;
     text-decoration: none;
 }
 
+/* Efeito hover nos links dos botões */
 #a_buton_principal:hover, .a_butoes:hover{
-    color: #5d5d5d; /* Cor do texto ao passar o mouse */
-    transition: 0.2s; /* Transição suave */
+    color: #5d5d5d;
+    transition: 0.2s;
 }
 
+/* Configuração da parte direita do perfil */
 #direita{
     display: flex;
     width: 500px;
 }
 
+/* Área dos botões na seção direita */
 #butoes{
     display: flex;
     flex-direction: column;
@@ -92,21 +105,24 @@ section{
     height: 450px;
 }
 
+/* Estilização geral dos botões da seção direita */
 .butoes{
     margin: 20px 0px;
     height: 50px;
     font-size: 30px;
 }
 
+/* Área para exibição da imagem do disco */
 #cortar{
     margin-left: -15%;
-    width: 350px;  /* Define um tamanho fixo */
-    height: 500px; /* Altura fixa */
-    overflow: hidden; /* Esconde a parte cortada */
+    width: 350px;
+    height: 500px;
+    overflow: hidden; /* Esconde parte da imagem fora da área */
 }
 
+/* Imagem do disco lateral */
 #img_cd{
     width: 240%;
     height: 101%;
-    object-fit: cover; /* Corta a imagem mantendo a proporção */
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorção */
 }
