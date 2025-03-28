@@ -30,6 +30,7 @@ cabeçalho_com_login.css
 cabeçalho_sem_login.css 
 cadastro.css 
 login.css
+adm.css
 perfil.css 
 politica_comercial.css
 artistas.css
