@@ -96,6 +96,7 @@ produtos:
 todos_produtos
 produtos
 comprar
+artistas
 
 
 

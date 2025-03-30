@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+    <link rel="stylesheet" href="../../css/todos_produtos/todos_produtos.css">
+
+    <script src="../../js/todos_produtos/filtro_part1.js" defer></script>
+</head>
+<body>
+    <section>
+        <div id="caminho">
+            <a href="#" id="home" class="link_caminho">
+                <img src="../../img/todos_produtos/icone_home.png" alt="Home" id="img_home">
+                <p>Home</p>
+            </a>
+            <div class="proxima_part">
+                <img src="../../img/todos_produtos/icone_seta_direita.png" alt="Seta" class="seta">
+                <a href="#" class="link_caminho">Produtos</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="meio">
+        <div id="filtro">
+            <h1 id="titulo_filtro">Filtro</h1>
+            <hr id="linha">
+
+            <div>
+                <div class="part_cima">
+                    <h1 class="titulo">Gênero</h1>
+                    <img src="../../img/todos_produtos/icone_seta_direita.png" alt="Seta para abrir seleção" id="button_filtro_generos" class="setas_filtro">
+                </div>
+                <div id="generos" class="contener">
+                    <label class="itens"><input type="checkbox" id="checkbox1"> <label for="checkbox1"></label> Gênero 1</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox2"> <label for="checkbox2"></label> Gênero 2</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox3"> <label for="checkbox3"></label> Gênero 3</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox4"> <label for="checkbox4"></label> Gênero 4</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox5"> <label for="checkbox5"></label> Gênero 5</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox6"> <label for="checkbox6"></label> Gênero 6</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox7"> <label for="checkbox7"></label> Gênero 7</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox8"> <label for="checkbox8"></label> Gênero 8</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox9"> <label for="checkbox9"></label> Gênero 9</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox10"> <label for="checkbox10"></label> Gênero 10</label><br>
+                </div>
+            </div>
+            
+            <div>
+                <div class="part_cima">
+                    <h1 class="titulo">Artistas</h1>
+                    <img src="../../img/todos_produtos/icone_seta_direita.png" alt="Seta para abrir seleção" id="button_filtro_artistas" class="setas_filtro">
+                </div>
+                <div id="artistas" class="contener">
+                    <label class="itens"><input type="checkbox" id="checkbox11"> <label for="checkbox11"></label> Artista 1</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox12"> <label for="checkbox12"></label> Artista 2</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox13"> <label for="checkbox13"></label> Artista 3</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox14"> <label for="checkbox14"></label> Artista 4</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox15"> <label for="checkbox15"></label> Artista 5</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox16"> <label for="checkbox16"></label> Artista 6</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox17"> <label for="checkbox17"></label> Artista 7</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox18"> <label for="checkbox18"></label> Artista 8</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox19"> <label for="checkbox19"></label> Artista 9</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox20"> <label for="checkbox20"></label> Artista 10</label><br>
+                </div>
+            </div>
+            
+            <div>
+                <div class="part_cima">
+                    <h1 class="titulo">Musicas</h1>
+                    <img src="../../img/todos_produtos/icone_seta_direita.png" alt="Seta para abrir seleção" id="button_filtro_musicas" class="setas_filtro">
+                </div>
+                <div id="musicas" class="contener">
+                    <label class="itens"><input type="checkbox" id="checkbox21"> <label for="checkbox21"></label> Música 1</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox22"> <label for="checkbox22"></label> Música 2</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox23"> <label for="checkbox23"></label> Música 3</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox24"> <label for="checkbox24"></label> Música 4</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox25"> <label for="checkbox25"></label> Música 5</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox26"> <label for="checkbox26"></label> Música 6</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox27"> <label for="checkbox27"></label> Música 7</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox28"> <label for="checkbox28"></label> Música 8</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox29"> <label for="checkbox29"></label> Música 9</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox30"> <label for="checkbox30"></label> Música 10</label><br>
+                </div>
+            </div>
+    
+            <div>
+                <h1 class="titulo" id="preço">Preço: <p id="valor">R$<span id="valor_range">500</span></p></h1> 
+                <lable id="valor_ponta">R$5<input type="range" min="5" max="1000" value="500" step="5" id="valor_input">R$1000</lable>
+                
+            </div>
+        </div>
+
+        <div>
+            <p>0000 Produtos</p>
+            <div>
+                <p>Ordenar Por</p>
+                <img src="#" alt="Seta">
+            </div>
+
+            <div>
+                <img src="#" alt="Capa cd">
+                <div>
+                    <h1>Nome</h1>
+                    <p>Gênero - Artista</p>
+                    <p>Álbum</p>
+                </div>
+                <div>
+                    <h1>Valor</h1>
+                    <p>Promoção</p>
+                    <button><img src="#" alt="Favoritos"></button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        // Obtém o elemento do input range e o elemento onde o valor será mostrado
+        const rangeInput = document.getElementById('valor_input');
+        const rangeValue = document.getElementById('valor_range');
+
+        // Atualiza o valor exibido em tempo real enquanto o usuário interage com o slider
+        rangeInput.addEventListener('input', () => {
+            rangeValue.textContent = rangeInput.value; // Atualiza o valor do texto para o valor atual do range
+        });
+    </script>
+
+</body>
+</html>
