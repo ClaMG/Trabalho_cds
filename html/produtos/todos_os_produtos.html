@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos</title>
-    <link rel="stylesheet" href="../../css/todos_produtos/todos_produtos.css">
+    <link rel="stylesheet" href="../../css/todos_produtos/todos_produtos_filtro.css">
+    <link rel="stylesheet" href="../../css/todos_produtos/todos_produtos_produto.css">
 
     <script src="../../js/todos_produtos/filtro_part1.js" defer></script>
+    <script src="../../js/todos_produtos/filtro_part2.js" defer></script>
 </head>
 <body>
     <section>
@@ -91,14 +93,31 @@
             </div>
         </div>
 
-        <div>
-            <p>0000 Produtos</p>
-            <div>
-                <p>Ordenar Por</p>
-                <img src="#" alt="Seta">
+        <div id="main">
+            <div id="part_cima_produtos">
+                <p id="quantidade">0000 Produtos</p>
+                <div>
+                    <div id="ordenar_produtos">
+                        <p id="ordenar">Ordenar Por</p>
+                        <img src="../../img/todos_produtos/icone_seta_direita.png" alt="Seta" id="seta_ordenar">
+                    </div>
+
+                    <div id="formas_de_ordenar">
+                        <div id="forma_ordenar">
+                            <button id="button_ordenar">Preço: Baixo</button>
+                            <button id="button_ordenar">Preço: Alto</button>
+                            <button id="button_ordenar">Data de Adição: Recente</button>
+                            <button id="button_ordenar">Data de Adição: Antigo</button>
+                            <button id="button_ordenar">Maior Descontos</button>
+                            <button id="button_ordenar">Mais Vendido</button>
+                            <button id="button_ordenar">Relevancia</button>
+                            <button id="button_ordenar">Avaliação</button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div>
+            <div id="produto">
                 <img src="#" alt="Capa cd">
                 <div>
                     <h1>Nome</h1>
@@ -116,15 +135,33 @@
     </section>
 
     <script>
-        // Obtém o elemento do input range e o elemento onde o valor será mostrado
-        const rangeInput = document.getElementById('valor_input');
-        const rangeValue = document.getElementById('valor_range');
+        // Função para alternar a visibilidade do conteúdo e trocar a imagem
+        function toggleContent(buttonId, contentId, imgId, imgClose, imgOpen) {
+            const button = document.getElementById(buttonId);
+            const content = document.getElementById(contentId);
+            const img = document.getElementById(imgId);
 
-        // Atualiza o valor exibido em tempo real enquanto o usuário interage com o slider
-        rangeInput.addEventListener('input', () => {
-            rangeValue.textContent = rangeInput.value; // Atualiza o valor do texto para o valor atual do range
-        });
+            button.addEventListener('click', () => {
+                content.classList.toggle('contener'); // Alterna a visibilidade
+
+                // Troca a imagem dependendo do estado do conteúdo
+                if (content.classList.contains('contener')) {
+                    img.src = imgOpen;  // Imagem para "abrir"
+                } else {
+                    img.src = imgClose; // Imagem para "fechar"
+                }
+
+                // Alterna a visibilidade da seção de formas de ordenar
+                if (content.style.display === "none") {
+                    content.style.display = "block";
+                } else {
+                    content.style.display = "none";
+                }
+            });
+        }
+
+        // Chama a função para o conteúdo de "Ordenar Produtos"
+        toggleContent('ordenar_produtos', 'formas_de_ordenar', 'seta_ordenar', '../../img/todos_produtos/icone_seta_baixo.png', '../../img/todos_produtos/icone_seta_direita.png');
     </script>
-
 </body>
 </html>

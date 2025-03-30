@@ -1,120 +1,65 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8"> <!-- Define a codificação de caracteres para UTF-8 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade para diferentes tamanhos de tela -->
-    <title>Estilizando o Input Range</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordenação de Produtos</title>
     <style>
-        /* Estilização do input range */
-        input[type="range"] {
-            -webkit-appearance: none; /* Remove o estilo padrão para navegadores WebKit (Chrome, Safari, etc.) */
-            appearance: none; /* Remove o estilo padrão para Firefox */
-            width: 50%; /* Define a largura do controle range para ocupar toda a largura do elemento pai */
-            height: 8px; /* Define a altura do trilho */
-            background: #ddd; /* Cor do fundo do trilho (cinza claro) */
-            border-radius: 5px; /* Bordas arredondadas no trilho */
-            outline: none; /* Remove o contorno que aparece quando o input está em foco */
-            transition: 0.3s ease-in-out; /* Transição suave quando a cor do trilho muda */
+        #Formas_de_ordenar{
+            display: none; /* Começa escondido */
         }
-
-        /* Estilizando o trilho (track) no WebKit (Chrome, Safari, etc.) */
-        input[type="range"]::-webkit-slider-runnable-track {
-            height: 8px; /* Altura do trilho */
-            background: #ddd; /* Cor do trilho */
-            border-radius: 5px; /* Bordas arredondadas */
-        }
-
-        /* Estilizando o trilho (track) no Firefox */
-        input[type="range"]::-moz-range-track {
-            height: 8px; /* Altura do trilho */
-            background: #ddd; /* Cor do trilho */
-            border-radius: 5px; /* Bordas arredondadas */
-        }
-
-        /* Estilizando o trilho (track) no Internet Explorer */
-        input[type="range"]::-ms-track {
-            height: 8px; /* Altura do trilho */
-            background: #ddd; /* Cor do trilho */
-            border-radius: 5px; /* Bordas arredondadas */
-            border-color: transparent; /* Remove a borda padrão */
-            border-width: 0; /* Remove a borda */
-            color: transparent; /* Torna o texto invisível */
-            /* Remove os padrões do track no Internet Explorer */
-        }
-
-        /* Estilizando o controle deslizante (thumb) no WebKit */
-        input[type="range"]::-webkit-slider-thumb {
-            -webkit-appearance: none; /* Remove o estilo padrão */
-            appearance: none; /* Remove o estilo padrão */
-            width: 20px; /* Largura do controle deslizante */
-            height: 20px; /* Altura do controle deslizante */
-            margin-top: -5px;
-            border-radius: 50%; /* Faz o controle deslizante ser redondo */
-            border: 3px solid #1f1f1f;
-            background-image: radial-gradient(circle, #5d5d5d 30%, #303030 40%);
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Sombra para dar destaque */
-            cursor: pointer; /* Mostra o cursor de ponteiro para indicar que é interativo */
-            transition:  0.3s ease-in-out; /* Transição suave quando a cor do thumb muda */
-        }
-
-        /* Estilizando o controle deslizante (thumb) no Firefox */
-        input[type="range"]::-moz-range-thumb {
-            width: 20px; /* Largura do controle deslizante */
-            height: 20px; /* Altura do controle deslizante */
-            border-radius: 50%; /* Tornando o controle deslizante redondo */
-            border: 3px solid #1f1f1f;
-            background-image: radial-gradient(circle, #5d5d5d 30%, #303030 40%);
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Sombra para dar destaque */
-            cursor: pointer; /* Mostra o cursor de ponteiro */
-            transition: 0.3s ease-in-out; /* Transição suave para a mudança de cor */
-        }
-
-        /* Estilizando o controle deslizante (thumb) no Internet Explorer */
-        input[type="range"]::-ms-thumb {
-            width: 20px; /* Largura do controle deslizante */
-            height: 20px; /* Altura do controle deslizante */
-            border-radius: 50%; /* Tornando o controle deslizante redondo */
-            border: 3px solid #1f1f1f;
-            background-image: radial-gradient(circle, #5d5d5d 30%, #303030 40%);
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Sombra para dar destaque */
-            cursor: pointer; /* Mostra o cursor de ponteiro */
-            transition:  0.3s ease-in-out; /* Transição suave para a mudança de cor */
-        }
-
-        /* Efeito quando o cursor passa sobre o controle deslizante (thumb) */
-        input[type="range"]:hover::-webkit-slider-thumb {
-            background-image: radial-gradient(circle, #aaaaaa 30%, #303030 40%);
-        }
-
-        input[type="range"]:hover::-moz-range-thumb {
-            background-image: radial-gradient(circle, #aaaaaa 30%, #303030 40%); /* Muda a cor do thumb no Firefox */
-        }
-
-        input[type="range"]:hover::-ms-thumb {
-            background-image: radial-gradient(circle, #aaaaaa 30%, #303030 40%); /* Muda a cor do thumb no Internet Explorer */
+        #ordenar_produtos {
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-
-    <!-- Título da seção -->
-    <h1>Preço <p>R$<span id="valor_range">50</span></p></h1> 
-    
-
-    <!-- Input range (controle deslizante) com valor exibido -->
-    <lable>1<input type="range" min="1" max="100" value="50" id="valor_input">100</lable> <!-- O input range vai de 0 a 100, com valor inicial de 50 -->
-     <!-- Exibe o valor atual do controle deslizante -->
+    <div>
+        <div id="ordenar_produtos">
+            <p id="ordenar">Ordenar Por</p>
+            <img src="../../img/todos_produtos/icone_seta_direita.png" alt="Seta" id="seta_ordenar">
+        </div>
+        
+        <div id="Formas_de_ordenar">
+            <button>Preço (Mais Barato)</button>
+            <button>Preço (Mais Caro)</button>
+            <button>Mais Vendido</button>
+            <button>Relevancia</button>
+            <button>Avaliação</button>
+            <button>Descontos</button>
+            <button>Data de Adição(Mais recente)</button>
+            <button>Data de Adição(Mais antigo)</button>
+        </div>
+    </div>
 
     <script>
-        // Obtém o elemento do input range e o elemento onde o valor será mostrado
-        const rangeInput = document.getElementById('valor_input');
-        const rangeValue = document.getElementById('valor_range');
+        // Função para alternar a visibilidade do conteúdo e trocar a imagem
+        function toggleContent(buttonId, contentId, imgId, imgClose, imgOpen) {
+            const button = document.getElementById(buttonId);
+            const content = document.getElementById(contentId);
+            const img = document.getElementById(imgId);
 
-        // Atualiza o valor exibido em tempo real enquanto o usuário interage com o slider
-        rangeInput.addEventListener('input', () => {
-            rangeValue.textContent = rangeInput.value; // Atualiza o valor do texto para o valor atual do range
-        });
+            button.addEventListener('click', () => {
+                content.classList.toggle('contener'); // Alterna a visibilidade
+
+                // Troca a imagem dependendo do estado do conteúdo
+                if (content.classList.contains('contener')) {
+                    img.src = imgOpen;  // Imagem para "abrir"
+                } else {
+                    img.src = imgClose; // Imagem para "fechar"
+                }
+
+                // Alterna a visibilidade da seção de formas de ordenar
+                if (content.style.display === "none") {
+                    content.style.display = "block";
+                } else {
+                    content.style.display = "none";
+                }
+            });
+        }
+
+        // Chama a função para o conteúdo de "Ordenar Produtos"
+        toggleContent('ordenar_produtos', 'Formas_de_ordenar', 'seta_ordenar', '../../img/todos_produtos/icone_seta_baixo.png', '../../img/todos_produtos/icone_seta_direita.png');
     </script>
-
 </body>
 </html>
