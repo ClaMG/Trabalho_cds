@@ -39,12 +39,18 @@
 }
 
 #button_ordenar{
-    background-color: #f6f6f6;
+    background-color: #ffffff;
     border: 1px solid #6d6d6d;
     padding: 5px 10px;
     color: #303030;
     font-size: 15px;
     text-align: left;
+}
+
+#button_ordenar:hover{
+    background-color: #7b7a7a;
+    color: #ffffff;
+    transition: 0.2s; 
 }
 
 
