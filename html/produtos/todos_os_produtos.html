@@ -6,9 +6,11 @@
     <title>Produtos</title>
     <link rel="stylesheet" href="../../css/todos_produtos/todos_produtos_filtro.css">
     <link rel="stylesheet" href="../../css/todos_produtos/todos_produtos_orderna.css">
+    <link rel="stylesheet" href="../../css/todos_produtos/todos_produtos_produto.css">
 
     <script src="../../js/todos_produtos/filtro_part1.js" defer></script>
     <script src="../../js/todos_produtos/filtro_part2.js" defer></script>
+    <script src="../../js/todos_produtos/ordernar.js" defer></script>
 </head>
 <body>
     <section>
@@ -104,6 +106,7 @@
 
                     <div id="formas_de_ordenar">
                         <div id="forma_ordenar">
+                            <button id="button_ordenar">Todos</button>
                             <button id="button_ordenar">Preço: Baixo</button>
                             <button id="button_ordenar">Preço: Alto</button>
                             <button id="button_ordenar">Data de Adição: Recente</button>
@@ -133,35 +136,5 @@
 
         </div>
     </section>
-
-    <script>
-        // Função para alternar a visibilidade do conteúdo e trocar a imagem
-        function toggleContent(buttonId, contentId, imgId, imgClose, imgOpen) {
-            const button = document.getElementById(buttonId);
-            const content = document.getElementById(contentId);
-            const img = document.getElementById(imgId);
-
-            button.addEventListener('click', () => {
-                content.classList.toggle('contener'); // Alterna a visibilidade
-
-                // Troca a imagem dependendo do estado do conteúdo
-                if (content.classList.contains('contener')) {
-                    img.src = imgOpen;  // Imagem para "abrir"
-                } else {
-                    img.src = imgClose; // Imagem para "fechar"
-                }
-
-                // Alterna a visibilidade da seção de formas de ordenar
-                if (content.style.display === "none") {
-                    content.style.display = "block";
-                } else {
-                    content.style.display = "none";
-                }
-            });
-        }
-
-        // Chama a função para o conteúdo de "Ordenar Produtos"
-        toggleContent('ordenar_produtos', 'formas_de_ordenar', 'seta_ordenar', '../../img/todos_produtos/icone_seta_baixo.png', '../../img/todos_produtos/icone_seta_direita.png');
-    </script>
 </body>
 </html>
