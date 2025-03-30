@@ -37,6 +37,9 @@
     color: #303030;
     text-decoration: none;
 }
+.link_caminho:hover{
+    color: #7b7a7a;
+}
 
 /* === Conteudo === */
 
@@ -90,6 +93,10 @@
     display: flex;
     align-items: center;
     font-size: 20px;
+}
+
+.itens:hover{
+    color: #7b7a7a;
 }
 
 /* Checkbox */
