@@ -11,6 +11,7 @@
     <script src="../../js/todos_produtos/filtro_part1.js" defer></script>
     <script src="../../js/todos_produtos/filtro_part2.js" defer></script>
     <script src="../../js/todos_produtos/ordernar.js" defer></script>
+    <script src="../../js/todos_produtos/favoritos.js" defer></script>
 </head>
 <body>
     <section>
@@ -120,17 +121,21 @@
                 </div>
             </div>
 
-            <div id="produto">
+            <div class="produto">
                 <img src="#" alt="Capa cd">
                 <div>
-                    <h1>Nome</h1>
-                    <p>Gênero - Artista</p>
-                    <p>Álbum</p>
-                </div>
-                <div>
-                    <h1>Valor</h1>
-                    <p>Promoção</p>
-                    <button><img src="#" alt="Favoritos"></button>
+                    <div>
+                        <h1 class="nome_cd">Nome</h1>
+                        <p class="descricao">Gênero - <a href="#" class="artista">Artista</a></p>
+                        <p class="descricao">Álbum</p>
+                    </div>
+                    <div class="baixo_part">
+                        <div>
+                            <h1 class="valor">R$500</h1>
+                            <p class="promo">Promoção</p>
+                        </div>
+                        <img src="../../img/todos_produtos/icone_favoritos.png" alt="Favoritos" class="img_favorito">
+                    </div>
                 </div>
             </div>
 

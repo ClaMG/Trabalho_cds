@@ -1,0 +1,45 @@
+.produto{
+    border: 2px solid #404040;
+    width: 200px;
+    height: 300px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+.nome_cd, .valor{
+    font-size: 25px;
+    color: #686868;
+}
+
+.descricao, .promo{
+    color: #6d6d6d;
+    font-size: 15px;
+}
+
+.artista{
+    color: #6d6d6d;
+}
+
+.artista:hover{
+    color: #303030;
+}
+
+.baixo_part{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.img_favorito{
+    width: 50px;
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    transition: transform 0.2s ease-in-out;
+}
+
+.img_favorito:active {
+    transform: scale(0.95); /* Efeito de clique */
+}

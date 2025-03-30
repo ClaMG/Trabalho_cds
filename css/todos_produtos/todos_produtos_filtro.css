@@ -54,6 +54,7 @@
     padding: 20px;
     margin-left: 20px;
     background-color: #fff;
+    height: min-content;
 }
 
 #titulo_filtro{
