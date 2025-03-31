@@ -1,3 +1,22 @@
+.link_produto, .link_produto2{
+    text-decoration: none;
+    color: #6d6d6d;
+    width: 234px;
+    height: 225px;
+    margin-top: 50px;
+    z-index: 1;
+}
+
+.link_produto2{
+    height: 86px;
+    margin-top: 20px;
+    z-index: 1;
+}
+
+.produto:hover{
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
 .produto{
     border: 2px solid #404040;
     width: 200px;
@@ -8,6 +27,13 @@
     padding: 15px;
     margin-top: 50px;
     border-radius: 10px;
+    background-color: white;
+    position: absolute;
+    z-index: 0;
+}
+
+.img_capa_cd{
+    height: 180px;
 }
 
 .nome_cd, .valor{
@@ -20,8 +46,14 @@
     font-size: 15px;
 }
 
+.descricao{
+    z-index: 3;
+}
+
 .artista{
     color: #6d6d6d;
+    z-index: 3;
+    position: relative;
 }
 
 .artista:hover{
@@ -43,3 +75,4 @@
 .img_favorito:active {
     transform: scale(0.95); /* Efeito de clique */
 }
+
