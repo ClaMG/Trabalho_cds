@@ -4,9 +4,20 @@
     margin: 0px;
 }
 
+:root{
+    --cinza-1: #303030;
+    --cinza-2: #5d5d5d;
+    --cinza-3: #6d6d6d;
+    --cinza-4: #7b7a7a;
+    --cinza-5: #888888;
+    --cinza-6: #949494;
+    --cinza-7: #abaaaa;
+    --branco: #ffffff;
+  }
+
 /* == Seção de Avaliações == */
 #avliacoes {
-    background-color: #303030; /* Define um fundo escuro para a seção */
+    background-color: var(--cinza-1); /* Define um fundo escuro para a seção */
     width: 100%; /* Ocupa toda a largura da tela */
     height: 500px; /* Define a altura da seção */
     margin-top: 60px; /* Adiciona espaçamento superior */
@@ -14,7 +25,7 @@
 
 /* == Título da Seção == */
 #avaliacao {
-    color: white; /* Define a cor do texto */
+    color: var(--branco); /* Define a cor do texto */
     display: flex;
     justify-content: center; /* Centraliza o título horizontalmente */
     font-size: 70px; /* Define o tamanho da fonte */
@@ -29,8 +40,8 @@
 
 /* == Bloco individual de cada avaliação == */
 .conteiner_avaliacao {
-    background-color: #949494; /* Cor de fundo do bloco */
-    color: white; /* Cor do texto */
+    background-color: var(--cinza-6); /* Cor de fundo do bloco */
+    color: var(--branco); /* Cor do texto */
     display: flex;
     margin: 50px 40px; /* Adiciona espaçamento externo */
     flex-direction: column; /* Organiza os elementos verticalmente */

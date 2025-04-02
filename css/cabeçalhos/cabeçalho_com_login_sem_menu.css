@@ -8,6 +8,17 @@
     font-family: Arial, Helvetica, sans-serif; /* Define a fonte padrão */
 }
 
+:root{
+    --cinza-1: #303030;
+    --cinza-2: #5d5d5d;
+    --cinza-3: #6d6d6d;
+    --cinza-4: #7b7a7a;
+    --cinza-5: #888888;
+    --cinza-6: #949494;
+    --cinza-7: #abaaaa;
+    --branco: #ffffff;
+  }
+
 /* Oculta a barra de rolagem no Chrome, Safari e navegadores baseados em WebKit */
 body::-webkit-scrollbar {
     display: none;
@@ -17,7 +28,7 @@ body::-webkit-scrollbar {
 
 /* Define um fundo escuro para o cabeçalho */
 header {
-    background-color: #303030;
+    background-color: var(--cinza-1);
 }
 
 /* Organiza os elementos na parte superior do cabeçalho */
@@ -35,7 +46,7 @@ header {
 /* === Estilização da Barra de Pesquisa === */
 
 #complemento_pesquisa {
-    background-color: white;
+    background-color: var(--branco);
     border-radius: 10px; /* Arredonda as bordas */
     width: 350px;
     height: 37px;
@@ -59,7 +70,7 @@ header {
 #lupa, #buttom_lupa {
     margin-top: 5px;
     margin-left: 5px;
-    background-color: white;
+    background-color: var(--branco);
     border-radius: 10px;
 }
 

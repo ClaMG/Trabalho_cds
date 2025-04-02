@@ -3,6 +3,17 @@ body {
     overflow-x: hidden; 
 }
 
+:root{
+    --cinza-1: #303030;
+    --cinza-2: #5d5d5d;
+    --cinza-3: #6d6d6d;
+    --cinza-4: #7b7a7a;
+    --cinza-5: #888888;
+    --cinza-6: #949494;
+    --cinza-7: #abaaaa;
+    --branco: #ffffff;
+}
+
 /* Define a margem superior da seção "Gênero" */
 #genero {
     position: relative; /* Define a seção como referência para posicionamento absoluto */
@@ -15,7 +26,7 @@ body {
     top: -10%; /* Ajuste para alinhar corretamente abaixo do título */
     width: 100vw;
     height: 170px;
-    background-color: white;
+    background-color: var(--branco);
     background-image: radial-gradient(circle, black 10%, transparent 20%);
     background-size: 40px 40px;
     background-repeat: repeat;
@@ -32,7 +43,7 @@ body {
     font-size: 70px; /* Define o tamanho da fonte */
     margin-left: 30px; /* Define um espaçamento à esquerda */
     margin-bottom: 50px; /* Define um espaçamento abaixo do título */
-    background-color: white;
+    background-color: var(--branco);
 }
 
 /* Posição do título "Gênero" */
@@ -56,7 +67,7 @@ body {
 
 /* Estiliza a barra de rolagem dentro de #imagens_genero no Chrome, Edge e Safari */
 #imagens_genero::-webkit-scrollbar {
-    background: #888; /* Degradê do preto ao cinza */
+    background: var(--cinza-5); /* Degradê do preto ao cinza */
     
 }
 
@@ -85,7 +96,7 @@ body {
 /* Estiliza as imagens dentro de cada item de gênero */
 .img_genero img {
     width: 300px; /* Define um tamanho fixo para as imagens */
-    border: 15px solid #7b7a7a; /* Adiciona uma borda cinza ao redor da imagem */
+    border: 15px solid var(--cinza-4); /* Adiciona uma borda cinza ao redor da imagem */
 }
 
 /* Estiliza o botão que sobrepõe as imagens */
@@ -104,7 +115,7 @@ body {
 
 /* Estiliza o link dentro do botão */
 .button_genero a {
-    color: white; /* Define a cor do texto como branco */
+    color: var(--branco); /* Define a cor do texto como branco */
     text-decoration: none; /* Remove o sublinhado do link */
 }
 

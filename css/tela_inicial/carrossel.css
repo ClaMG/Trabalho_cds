@@ -1,5 +1,16 @@
 /* === Estilos do Carrossel === */
 
+:root{
+    --cinza-1: #303030;
+    --cinza-2: #5d5d5d;
+    --cinza-3: #6d6d6d;
+    --cinza-4: #7b7a7a;
+    --cinza-5: #888888;
+    --cinza-6: #949494; 
+    --cinza-7: #abaaaa; 
+    --branco: #ffffff;
+  }
+
 /* Contêiner principal do carrossel */
 .slider {
     margin: 0px;
@@ -40,13 +51,13 @@
     margin-top: 35%; /* Ajusta a posição dos botões */
     display: flex;
     justify-content: center;
-    background-color: #303030;
+    background-color: var(--cinza-1);
     padding: 7px;
 }
 
 /* Estiliza os botões de navegação */
 .nav_manual .manual_btn, .nav_auto div {
-    border: 1px solid #7b7a7a;
+    border: 1px solid var(--cinza-4);
     padding: 10px;
     border-radius: 50%; /* Deixa os botões redondos */
     cursor: pointer;
@@ -57,14 +68,14 @@
 
 /* Efeito hover nos botões de navegação */
 .nav_manual .manual_btn:hover {
-    background-color: #ffffff;
+    background-color: var(--branco);
 }
 
 /* Destaque do botão de navegação ativo */
 #radio1:checked ~ .nav_auto .auto_btn1,
 #radio2:checked ~ .nav_auto .auto_btn2,
 #radio3:checked ~ .nav_auto .auto_btn3 {
-    background-color: #ffffff;
+    background-color: var(--branco);
 }
 
 /* Movimentação do carrossel baseada no input de rádio */

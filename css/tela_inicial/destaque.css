@@ -1,5 +1,16 @@
 /* === Estilos da Seção de Destaque === */
 
+:root{
+  --cinza-1: #303030;
+  --cinza-2: #5d5d5d;
+  --cinza-3: #6d6d6d;
+  --cinza-4: #7b7a7a;
+  --cinza-5: #888888;
+  --cinza-6: #949494;
+  --cinza-7: #abaaaa;
+  --branco: #ffffff;
+}
+
 /* Define margem superior para separar a seção do restante da página */
 #destaque {
   margin-top: 60px;
@@ -86,7 +97,7 @@ img.right.visible {
 
 .imagem_destaque {
   width: 300px;
-  border: 15px solid #7b7a7a;
+  border: 15px solid var(--cinza-4);
   margin-right: 120px;
 }
 
@@ -139,7 +150,7 @@ img.right.visible {
 }
 
 .bar.gray {
-  background-color: #ffffff;
+  background-color: var(--branco);
 }
 
 .bar::before {

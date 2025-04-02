@@ -5,6 +5,17 @@
     padding: 0px;
 }
 
+:root{
+    --cinza-1: #303030;
+    --cinza-2: #5d5d5d;
+    --cinza-3: #6d6d6d;
+    --cinza-4: #7b7a7a;
+    --cinza-5: #888888;
+    --cinza-6: #949494;
+    --cinza-7: #abaaaa;
+    --branco: #ffffff;
+  }
+
 /* == Seção da Logo no Rodapé == */
 #logo_rodape {
     display: flex;
@@ -18,7 +29,7 @@
 .linha_logo_rodape {
     flex: 1; /* Faz com que as linhas ocupem o espaço disponível */
     height: 2px; /* Define a espessura da linha */
-    background-color: #303030; /* Define a cor da linha */
+    background-color: var(--cinza-1); /* Define a cor da linha */
 }
 
 /* Estilização da imagem do logo */
@@ -64,7 +75,7 @@
 
 /* Efeito hover nos links */
 .link_rodape:hover {
-    color: #949494; /* Muda a cor ao passar o mouse */
+    color: var(--cinza-6); /* Muda a cor ao passar o mouse */
     text-decoration: underline; /* Adiciona sublinhado */
 }
 
@@ -77,7 +88,7 @@
 /* == Linha Separadora do Rodapé == */
 #hr_rodape {
     height: 2px; /* Define a espessura da linha */
-    background-color: #303030; /* Define a cor */
+    background-color: var(--cinza-1); /* Define a cor */
     border: none; /* Remove a borda padrão */
 }
 
