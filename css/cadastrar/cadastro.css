@@ -65,20 +65,9 @@ main{
     justify-content: center;
 }
 
-/* Estilo da parte inferior do formulário */
-#baixo{
-    margin-left: 20px; /* Margem à esquerda */
-}
-
-/* Estilo para o container lateral de entradas */
-#lado{
-    display: flex;
-    flex-wrap: wrap; /* Permite que os campos se reorganizem quando necessário */
-    justify-content: center;
-}
 
 /* Estilo comum para as divisões de entrada */
-.separacao, .separacao2{
+.separacao{
     display: flex; /* Flexbox para alinhar itens */
     flex-direction: column; /* Organiza os campos em coluna */
     width: 350px; /* Largura padrão das divisões */
@@ -86,19 +75,9 @@ main{
     max-width: 400px; /* Impede que fique muito largo */
 }
 
-/* Ajuste na largura para a classe separacao2 */
-.separacao2{
-    width: 310px; /* Largura reduzida para a separacao2 */
-}
-
 /* Estilo para a coluna direita */
 #direita{
     margin-left: 50px; /* Margem à esquerda da coluna direita */
-}
-
-/* Estilo para a coluna direita na parte inferior */
-#direita_baixo{
-    margin-left: 90px; /* Margem à esquerda */
 }
 
 /* Estilo dos subtítulos */
@@ -117,19 +96,13 @@ main{
     width: 230px; /* Largura específica */
 }
 
-/* Estilo do subtítulo "Dados de endereço" */
-#endereco{
-    margin-top: 20px; /* Espaço superior */
-    width: 750px; /* Largura específica */
-}
-
 /* Estilo do container de inputs */
 #inputs{
     margin: 50px 30px; /* Margem interna do container */
 }
 
 /* Estilo dos campos de entrada */
-.input, .input_baixo{
+.input{
     background-color: transparent; /* Fundo transparente */
     margin: 15px 10px; /* Margens internas */
     border: none; /* Remove as bordas padrão */
@@ -139,13 +112,8 @@ main{
     max-width: 350px;
 }
 
-/* Ajuste de margem para os campos de entrada na parte inferior */
-.input_baixo{
-    margin: 15px -10px; /* Margem ajustada */
-}
-
 /* Remover o contorno ao focar nos campos de entrada */
-.input:focus, .input_baixo:focus{
+.input:focus{
     outline: none; /* Remove o outline ao focar */
 }
 
@@ -156,7 +124,7 @@ main{
     height: 40px; /* Altura do botão */
     border-radius: 10px; /* Bordas arredondadas */
     border: none; /* Sem borda */
-    margin: 10px 0px; /* Margem do botão */
+    margin: 10px; /* Margem do botão */
     color: white; /* Cor do texto */
     background-color: #303030; /* Cor de fundo */
     font-size: 30px; /* Tamanho da fonte */
