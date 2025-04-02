@@ -1,3 +1,14 @@
+:root{
+    --cinza-1: #303030;
+    --cinza-2: #5d5d5d;
+    --cinza-3: #6d6d6d;
+    --cinza-4: #7b7a7a;
+    --cinza-5: #888888;
+    --cinza-6: #949494;
+    --cinza-7: #abaaaa;
+    --branco: #ffffff;
+}
+
 #main{
     display: flex;
     flex-direction: column;
@@ -13,11 +24,11 @@
 }
 
 #quantidade, #ordenar{
-    color: #6d6d6d;
+    color: var(--cinza-3);
 }
 
 #ordenar_produtos{
-    border: 2px solid #6d6d6d;
+    border: 2px solid var(--cinza-3);
     padding: 5px;
     display: flex;
     align-items: center;
@@ -39,16 +50,16 @@
 }
 
 #button_ordenar{
-    background-color: #ffffff;
-    border: 1px solid #6d6d6d;
+    background-color: var(--branco);
+    border: 1px solid var(--cinza-3);
     padding: 5px 10px;
-    color: #303030;
+    color: var(--cinza-1);
     font-size: 15px;
     text-align: left;
 }
 
 #button_ordenar:hover{
-    background-color: #7b7a7a;
-    color: #ffffff;
+    background-color: var(--cinza-4);
+    color: var(--branco);
     transition: 0.2s; 
 }

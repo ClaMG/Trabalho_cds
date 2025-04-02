@@ -5,6 +5,10 @@
     font-family: Arial, Helvetica, sans-serif; /* Define a fonte padrão para o documento */
 }
 
+:root{
+    --p-cinza: #595959;
+}
+
 /* Evita o scroll horizontal desnecessário */
 body {
     overflow-x: hidden;
@@ -28,13 +32,13 @@ main {
 
 /* Estilização do título principal */
 #principal {
-    color: #595959; /* Define a cor do texto */
+    color: var(--p-cinza); /* Define a cor do texto */
     font-size: 50px; /* Define o tamanho da fonte */
 }
 
 /* Estilização dos subtítulos */
 .titulo {
-    color: #595959;
+    color: var(--p-cinza);
     font-size: 30px;
     margin: 20px 0px; /* Espaçamento superior e inferior */
 }

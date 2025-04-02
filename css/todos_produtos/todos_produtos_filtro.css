@@ -4,6 +4,16 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+:root{
+    --cinza-1: #303030;
+    --cinza-2: #5d5d5d;
+    --cinza-3: #6d6d6d;
+    --cinza-4: #7b7a7a;
+    --cinza-5: #888888;
+    --cinza-6: #949494;
+    --cinza-7: #abaaaa;
+    --branco: #ffffff;
+}
 
 /* === Caminho === */
 
@@ -34,11 +44,11 @@
 }
 
 .link_caminho{
-    color: #303030;
+    color: var(--cinza-1);
     text-decoration: none;
 }
 .link_caminho:hover{
-    color: #7b7a7a;
+    color: var(--cinza-4);
 }
 
 /* === Conteudo === */
@@ -50,21 +60,21 @@
 /* === Carrinho === */
 
 #filtro{
-    border: 2px solid #6d6d6d;
+    border: 2px solid var(--cinza-3);
     padding: 15px;
     margin-left: 10px;
-    background-color: #fff;
+    background-color: var(--branco);
     height: min-content;
 }
 
 #titulo_filtro{
     font-size: 50px;
-    color: #6d6d6d;
+    color: var(--cinza-3);
 }
 
 #linha{
     height: 2px;
-    background-color: #7b7a7a;
+    background-color: var(--cinza-4);
     margin: 0px;
 }
 
@@ -81,7 +91,7 @@
 
 .titulo{
     font-size: 30px;
-    color: #6d6d6d;
+    color: var(--cinza-3);
 }
 
 .setas_filtro{
@@ -89,7 +99,7 @@
 }
 
 .itens{
-    color: #5d5d5d;
+    color: var(--cinza-2);
     font-weight: bold;
     display: flex;
     align-items: center;
@@ -97,7 +107,7 @@
 }
 
 .itens:hover{
-    color: #7b7a7a;
+    color: var(--cinza-4);
 }
 
 /* Checkbox */
@@ -110,8 +120,8 @@ input[type="checkbox"] + label {
     display: inline-block;
     width: 20px; /* Largura do quadrado */
     height: 20px; /* Altura do quadrado */
-    background-color: #fff; /* Cor de fundo */
-    border: 2px solid #5d5d5d; /* Borda do quadrado */
+    background-color: var(--branco); /* Cor de fundo */
+    border: 2px solid var(--cinza-2); /* Borda do quadrado */
     border-radius: 5px; /* Bordas arredondadas */
     cursor: pointer; /* Cursor de ponteiro */
     transition: background-color 0.3s ease, border-color 0.3s ease;
@@ -120,8 +130,8 @@ input[type="checkbox"] + label {
 }
 
 input[type="checkbox"]:checked + label {
-    background-color: #fff; /* Cor de fundo quando marcado */
-    border-color: #fff; /* Cor da borda quando marcado */
+    background-color: var(--branco); /* Cor de fundo quando marcado */
+    border-color: var(--branco); /* Cor da borda quando marcado */
 }
 
 input[type="checkbox"]:checked + label::after {
@@ -134,8 +144,8 @@ input[type="checkbox"]:checked + label::after {
     height: 20px;
     border: 3px solid #1f1f1f;
     border-radius: 50%; /* Criar o círculo do CD */
-    background-color: #fff;
-    background-image: radial-gradient(circle, #5d5d5d 30%, #303030 40%);
+    background-color: var(--branco);
+    background-image: radial-gradient(circle, var(--cinza-2) 30%, var(--cinza-1) 40%);
     background-size: 100%;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Sombra para dar destaque */
 }
@@ -163,7 +173,7 @@ input[type="checkbox"]:hover + label {
 }
 
 #valor_ponta{
-    color: #5d5d5d;
+    color: var(--cinza-2);
     display: block;
     width: 300px;
 }
@@ -213,7 +223,7 @@ input[type="range"]::-webkit-slider-thumb {
     margin-top: -5px;
     border-radius: 50%; /* Faz o controle deslizante ser redondo */
     border: 3px solid #1f1f1f;
-    background-image: radial-gradient(circle, #5d5d5d 30%, #303030 40%);
+    background-image: radial-gradient(circle, var(--cinza-2) 30%, var(--cinza-1) 40%);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Sombra para dar destaque */
     cursor: pointer; /* Mostra o cursor de ponteiro para indicar que é interativo */
     transition:  0.3s ease-in-out; /* Transição suave quando a cor do thumb muda */
@@ -225,7 +235,7 @@ input[type="range"]::-moz-range-thumb {
     height: 20px; /* Altura do controle deslizante */
     border-radius: 50%; /* Tornando o controle deslizante redondo */
     border: 3px solid #1f1f1f;
-    background-image: radial-gradient(circle, #5d5d5d 30%, #303030 40%);
+    background-image: radial-gradient(circle, var(--cinza-2) 30%, var(--cinza-1) 40%);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Sombra para dar destaque */
     cursor: pointer; /* Mostra o cursor de ponteiro */
     transition: 0.3s ease-in-out; /* Transição suave para a mudança de cor */
@@ -237,7 +247,7 @@ input[type="range"]::-ms-thumb {
     height: 20px; /* Altura do controle deslizante */
     border-radius: 50%; /* Tornando o controle deslizante redondo */
     border: 3px solid #1f1f1f;
-    background-image: radial-gradient(circle, #5d5d5d 30%, #303030 40%);
+    background-image: radial-gradient(circle, var(--cinza-2) 30%, var(--cinza-1) 40%);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Sombra para dar destaque */
     cursor: pointer; /* Mostra o cursor de ponteiro */
     transition:  0.3s ease-in-out; /* Transição suave para a mudança de cor */
@@ -245,13 +255,13 @@ input[type="range"]::-ms-thumb {
 
 /* Efeito quando o cursor passa sobre o controle deslizante (thumb) */
 input[type="range"]:hover::-webkit-slider-thumb {
-    background-image: radial-gradient(circle, #aaaaaa 30%, #303030 40%);
+    background-image: radial-gradient(circle, #aaaaaa 30%, var(--cinza-1) 40%);
 }
 
 input[type="range"]:hover::-moz-range-thumb {
-    background-image: radial-gradient(circle, #aaaaaa 30%, #303030 40%); /* Muda a cor do thumb no Firefox */
+    background-image: radial-gradient(circle, #aaaaaa 30%, var(--cinza-1) 40%); /* Muda a cor do thumb no Firefox */
 }
 
 input[type="range"]:hover::-ms-thumb {
-    background-image: radial-gradient(circle, #aaaaaa 30%, #303030 40%); /* Muda a cor do thumb no Internet Explorer */
+    background-image: radial-gradient(circle, #aaaaaa 30%, var(--cinza-1) 40%); /* Muda a cor do thumb no Internet Explorer */
 }
