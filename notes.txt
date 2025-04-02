@@ -132,7 +132,6 @@ php_matriz{
                     >puro{...}
                 }
                 >butoes{
-                    -detalhes_cd ??????
                     -favoritos
                     -logout (sair)
                     -sugestao
@@ -160,7 +159,7 @@ php_matriz{
         >produtos{
             -todos_produtos
             -artista
-            -produtos
+            -detalhes_cd (produto)
             -comprar
         }
     }
