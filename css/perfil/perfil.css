@@ -10,9 +10,13 @@
     --cinza-2: #5d5d5d;
     --cinza-3: #6d6d6d;
     --cinza-4: #7b7a7a;
-    --cinza-5: #abaaaa;
+    --cinza-5: #888888;
+    --cinza-6: #949494;
+    --cinza-7: #abaaaa;
     --branco: #ffffff;
 }
+
+
 
 /* Configuração geral da seção principal */
 section{
@@ -86,7 +90,7 @@ section{
 
 /* Efeito hover nos botões */
 #button:hover, .butoes:hover{
-    background-color: var(--cinza-5);
+    background-color: var(--cinza-7);
     transition: 0.2s;
 }
 
