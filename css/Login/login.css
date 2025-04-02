@@ -11,7 +11,10 @@
     --cinza-1: #303030;
     --cinza-2: #5d5d5d;
     --cinza-3: #6d6d6d;
-    --cinza-4: #abaaaa;
+    --cinza-4: #7b7a7a;
+    --cinza-5: #888888;
+    --cinza-6: #949494;
+    --cinza-7: #abaaaa;
     --branco: #ffffff;
 }
 
@@ -134,7 +137,7 @@ main{
     border-radius: 10px;
     border: none;
     margin: 25px 15px 0px 15px;
-    background-color: var(--cinza-4); /* Cor de fundo */
+    background-color: var(--cinza-7); /* Cor de fundo */
     color: var(--cinza-2); /* Cor do texto */
     font-size: 25px; /* Tamanho da fonte */
     font-weight: bold; /* Negrito */

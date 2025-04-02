@@ -111,6 +111,7 @@ php_matriz{
                     >add{
                         -adicionar_artistas
                         -adicionar_cd
+                        -adicionar_usuarios
                         -adicionar_musica
                     }
                     >delete{
@@ -119,11 +120,13 @@ php_matriz{
                     >edicao{
                         -editar_artista
                         -editar_cd
+                        -editar_usuarios
                         -editar_musica
                     }
                     >gerenciamento{
                         -gerenciar_artista
                         -gerenciar_cd
+                        -gerenciar_usuarios
                         -gerenciar_musicas
                     }
                     >puro{...}
@@ -131,11 +134,11 @@ php_matriz{
                 >butoes{
                     -detalhes_cd ??????
                     -favoritos
-                    -logout
+                    -logout (sair)
                     -sugestao
                     -uploud_foto
                     -carrinho
-                    -avaliar_site
+                    -historico_compras
                 }
                 >uplouds{...}
                 -editar_cliente (alterar_dados)
@@ -149,12 +152,14 @@ php_matriz{
         >pagina_inicial{
             >rodape{
                 -politica_comercial
+                -avaliar_site
             }
             -index
             -index_logado
         }
         >produtos{
             -todos_produtos
+            -artista
             -produtos
             -comprar
         }
@@ -164,3 +169,5 @@ php_matriz{
     >js{...}
 }
 
+alterar_dados > alterar foto de perfil
+cadastro > adicionar foto de perfil

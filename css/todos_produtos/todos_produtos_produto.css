@@ -1,21 +1,55 @@
-.link_produto, .link_produto2{
-    text-decoration: none;
-    color: #6d6d6d;
-    width: 234px;
-    height: 225px;
-    margin-top: 50px;
-    z-index: 1;
+:root{
+    --cinza-1: #303030;
+    --cinza-2: #5d5d5d;
+    --cinza-3: #6d6d6d;
+    --cinza-4: #7b7a7a;
+    --cinza-5: #888888;
+    --cinza-6: #949494;
+    --cinza-7: #abaaaa;
+    --branco: #ffffff;
+}
+
+.fileira_produtos{
+    display: flex;
+    width: 1000px;
+    height: auto;
+    justify-content: space-between;
+    margin-top: 35px;
+    margin-right: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
 }
 
 .link_produto2{
-    height: 86px;
-    margin-top: 20px;
+    width: 140px;
+    height: 80px;
     z-index: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: -85px;
 }
 
-.produto:hover{
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+.butao{
+    display: none;
+    position: absolute;
+    background-color: var(--cinza-2);
+    color: var(--branco);
+    padding: 5px;
+    border-radius: 5px;
+    width: 140px;
+    font-size: 30px;
+    text-align: center;
+    height: 50px;
+    margin-top: 5px;
+    margin-left: 10px;
+    line-height: 50px;
 }
+
+.link_produto2:hover .butao {
+    display: block;
+    transition: 2s;
+  }
 
 .produto{
     border: 2px solid #404040;
@@ -25,11 +59,11 @@
     display: flex;
     flex-direction: column;
     padding: 15px;
-    margin-top: 50px;
     border-radius: 10px;
-    background-color: white;
-    position: absolute;
+    background-color: var(--branco);
     z-index: 0;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
 }
 
 .img_capa_cd{
@@ -42,7 +76,7 @@
 }
 
 .descricao, .promo{
-    color: #6d6d6d;
+    color: var(--cinza-3);
     font-size: 15px;
 }
 
