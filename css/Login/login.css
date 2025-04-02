@@ -1,9 +1,20 @@
 /* Reseta as margens e o preenchimento de todos os elementos e define a fonte padrão */
+
+
 * {
     margin: 0px;
     padding: 0px;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+:root{
+    --cinza-1: #303030;
+    --cinza-2: #5d5d5d;
+    --cinza-3: #6d6d6d;
+    --cinza-4: #abaaaa;
+    --branco: #ffffff;
+}
+
 main{
     display: flex;
     justify-content: center;
@@ -11,7 +22,7 @@ main{
 
 /* Estilo para o container principal de login */
 #login {
-    background-color: #6d6d6d; /* Cor de fundo cinza */
+    background-color: var(--cinza-3); /* Cor de fundo cinza */
     display: flex; /* Flexbox para organizar o layout dos elementos */
     margin-top: 70px;
     width: 700px; /* Largura fixa do box de login */
@@ -25,7 +36,7 @@ main{
 /* Estilos para a parte esquerda do container de login */
 #lado_esquerdo {
     margin: 20px;
-    color: white; /* Cor do texto em branco */
+    color: var(--branco); /* Cor do texto em branco */
 }
 
 /* Estilo do título principal */
@@ -40,12 +51,12 @@ main{
 
 /* Estilo do link de início */
 #link_inicio {
-    color: white;
+    color: var(--branco);
 }
 
 /* Efeito hover para o link de início */
 #link_inicio:hover {
-    color: #303030; /* Altera a cor para um cinza mais escuro ao passar o mouse */
+    color: var(--cinza-1); /* Altera a cor para um cinza mais escuro ao passar o mouse */
     transition: 0.2s;
 }
 
@@ -100,7 +111,7 @@ main{
 
 /* Estilos para os links relacionados à senha */
 #link_senha, #p_link_senha {
-    color: white; /* Cor do texto branco */
+    color: var(--branco); /* Cor do texto branco */
     font-size: 15px; /* Tamanho da fonte pequeno */
 }
 
@@ -111,7 +122,7 @@ main{
 
 /* Efeito hover no link de senha */
 #link_senha:hover {
-    color: #303030; /* Cor ao passar o mouse */
+    color: var(--cinza-1); /* Cor ao passar o mouse */
     transition: 0.2s;
 }
 
@@ -123,27 +134,27 @@ main{
     border-radius: 10px;
     border: none;
     margin: 25px 15px 0px 15px;
-    background-color: #abaaaa; /* Cor de fundo */
-    color: #5d5d5d; /* Cor do texto */
+    background-color: var(--cinza-4); /* Cor de fundo */
+    color: var(--cinza-2); /* Cor do texto */
     font-size: 25px; /* Tamanho da fonte */
     font-weight: bold; /* Negrito */
 }
 
 /* Efeito hover no botão de acesso */
 #acessar:hover {
-    color: white; /* Cor do texto ao passar o mouse */
-    background-color: #303030; /* Cor de fundo ao passar o mouse */
+    color: var(--branco); /* Cor do texto ao passar o mouse */
+    background-color: var(--cinza-1); /* Cor de fundo ao passar o mouse */
     transition: 0.3s;
 }
 
 /* Estilos para o link de criar conta */
 #link_criar, #p_link_criar {
-    color: white; /* Cor do texto branco */
+    color: var(--branco); /* Cor do texto branco */
 }
 
 /* Efeito hover no link de criar conta */
 #link_criar:hover {
-    color: #303030; /* Cor ao passar o mouse */
+    color: var(--cinza-1); /* Cor ao passar o mouse */
     transition: 0.2s;
 }
 
@@ -197,7 +208,7 @@ main{
 
 /* Estilos para as barras cinzas */
 .bar.gray {
-    background-color: #ffffff; /* Cor de fundo branca */
+    background-color: var(--branco); /* Cor de fundo branca */
 }
 
 /* Animação das barras */
@@ -275,9 +286,10 @@ main{
 #img_login {
     width: 340px;
     border-radius: 0px 20px 20px 0px; /* Bordas arredondadas do lado direito */
+    background-position: center;
 }
 
-/* ✅ Para telas grandes (a partir de 1200px) */
+/* Para telas grandes (a partir de 1200px) */
 @media only screen and (max-width: 1200px) {
     #login {
         width: 50%; /* Evita que fique pequeno em telas grandes */
@@ -337,7 +349,7 @@ main{
     }
 
     body {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../img/login/img_login.jpg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../img/login/img_login_cel.png);
         background-repeat: no-repeat; /* Evita que a imagem de fundo se repita */
         background-size: cover; /* Faz a imagem cobrir toda a tela */
         background-position: center; /* Centraliza a imagem de fundo */
@@ -347,7 +359,7 @@ main{
     }
 }
 
-/* ✅ Para telas pequenas, como celulares (até 480px) */
+/*  Para telas pequenas, como celulares (até 480px) */
 @media only screen and (max-width: 480px) {
     #login {
         width: 95%;
