@@ -11,11 +11,10 @@
 
 .fileira_produtos{
     display: flex;
-    width: 1000px;
+    width: 980px;
     height: auto;
     justify-content: space-between;
     margin-top: 35px;
-    margin-right: 20px;
     flex-wrap: wrap;
     margin-bottom: 30px;
 }
@@ -28,6 +27,7 @@
     display: flex;
     align-items: center;
     margin-top: -85px;
+    margin-left: 5px;
 }
 
 .butao{
@@ -64,6 +64,7 @@
     z-index: 0;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
     margin-top: 20px;
+    margin-right: 10px;
 }
 
 .img_capa_cd{
