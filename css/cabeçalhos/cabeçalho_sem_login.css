@@ -39,7 +39,11 @@ header {
 
 /* Define a posição do logo dentro do cabeçalho */
 #logo {
-    margin: 15px 0 0 100px;
+    margin: -3px 0 0 100px;
+}
+
+#img_logo{
+    width: 150px;
 }
 
 /* === Estilização da Seção de Login e Carrinho === */

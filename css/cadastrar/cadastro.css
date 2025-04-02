@@ -5,6 +5,18 @@
     font-family: Arial, Helvetica, sans-serif; /* Define a fonte padrão */
 }
 
+:root{
+    --cinza-1: #303030;
+    --cinza-2: #5d5d5d;
+    --cinza-3: #6d6d6d;
+    --cinza-4: #7b7a7a;
+    --cinza-5: #888888;
+    --cinza-6: #949494;
+    --cinza-7: #abaaaa;
+    --branco: #ffffff;
+    --roxo: #7445cc;
+}
+
 /* Estilo para o corpo da página */
 body {
     overflow-x: hidden; /* Impede o overflow horizontal, evitando barras de rolagem indesejadas */
@@ -33,7 +45,7 @@ main{
 
 /* Estilo do título principal */
 #titulo{
-    color: #595959; /* Cor do título */
+    color: var(--roxo); /* Cor do título */
     margin-left: 10px; /* Margem à esquerda */
     font-size: 8vw; /* Se adapta ao tamanho da tela */
     text-align: center;
@@ -41,20 +53,20 @@ main{
 
 /* Estilo do parágrafo com link para login */
 #p_titulo{
-    color: #595959; /* Cor do texto */
+    color: var(--cinza-1); /* Cor do texto */
     margin: -10px 20px; /* Margens superiores e laterais */
     font-size: 15px; /* Tamanho da fonte */
 }
 
 /* Estilo do link de login */
 #link_login{
-    color: #595959; /* Cor do link */
+    color: var(--cinza-1); /* Cor do link */
     font-weight: bold; /* Deixa o link em negrito */
 }
 
 /* Estilo do link ao passar o mouse */
 #link_login:hover{
-    color: #abaaaa; /* Cor ao passar o mouse */
+    color: var(--roxo); /* Cor ao passar o mouse */
     transition: 0.2s; /* Transição suave */
 }
 
@@ -82,7 +94,7 @@ main{
 
 /* Estilo dos subtítulos */
 .subtitulo{
-    color: #5d5d5d; /* Cor do subtítulo */
+    color: var(--cinza-2); /* Cor do subtítulo */
     border-bottom: 2px dotted rgb(142, 142, 142); /* Linha pontilhada abaixo do subtítulo */
 }
 
@@ -106,10 +118,20 @@ main{
     background-color: transparent; /* Fundo transparente */
     margin: 15px 10px; /* Margens internas */
     border: none; /* Remove as bordas padrão */
-    border-bottom: 2px solid #7b7a7a; /* Apenas a borda inferior */
+    border-bottom: 2px solid var(--cinza-4); /* Apenas a borda inferior */
     font-size: 20px; /* Tamanho da fonte */
     width: 100%; /* Para evitar cortes laterais */
     max-width: 350px;
+}
+
+#add_perfil_img {
+    display: inline-block;
+    cursor: pointer;
+    color: var(--cinza-4);
+}
+
+#add_perfil_img:hover {
+    background-color: #dedddd;
 }
 
 /* Remover o contorno ao focar nos campos de entrada */
@@ -125,16 +147,16 @@ main{
     border-radius: 10px; /* Bordas arredondadas */
     border: none; /* Sem borda */
     margin: 10px; /* Margem do botão */
-    color: white; /* Cor do texto */
-    background-color: #303030; /* Cor de fundo */
+    color: var(--branco); /* Cor do texto */
+    background-color: var(--cinza-1); /* Cor de fundo */
     font-size: 30px; /* Tamanho da fonte */
     font-weight: bold; /* Texto em negrito */
 }
 
 /* Estilo do botão ao passar o mouse */
 #button:hover{
-    background-color: #abaaaa; /* Cor do fundo ao passar o mouse */
-    color: #5d5d5d; /* Cor do texto ao passar o mouse */
+    background-color: var(--cinza-7); /* Cor do fundo ao passar o mouse */
+    color: var(--cinza-2); /* Cor do texto ao passar o mouse */
     transition: 0.2s; /* Transição suave */
 }
 

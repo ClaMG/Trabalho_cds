@@ -14,6 +14,7 @@
     --cinza-6: #949494;
     --cinza-7: #abaaaa;
     --branco: #ffffff;
+    --roxo: #7445cc;
   }
 
 /* == Seção da Logo no Rodapé == */
@@ -34,13 +35,17 @@
 
 /* Estilização da imagem do logo */
 #img_rodape_logo {
-    width: 70px; /* Define o tamanho da imagem */
-    margin: 0px 10px; /* Espaçamento ao redor da imagem */
+    width: 150px; /* Define o tamanho da imagem */
+    margin: 0px; /* Espaçamento ao redor da imagem */
 }
 
 /* == Corpo Principal do Rodapé == */
 #corpo_rodape {
     margin: 20px 40px; /* Espaçamento externo */
+}
+
+.titulo{
+    color: var(--roxo);
 }
 
 /* Estilização do texto "Sobre nós" */
@@ -75,7 +80,7 @@
 
 /* Efeito hover nos links */
 .link_rodape:hover {
-    color: var(--cinza-6); /* Muda a cor ao passar o mouse */
+    color: var(--roxo); /* Muda a cor ao passar o mouse */
     text-decoration: underline; /* Adiciona sublinhado */
 }
 

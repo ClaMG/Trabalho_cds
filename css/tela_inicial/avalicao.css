@@ -13,6 +13,7 @@
     --cinza-6: #949494;
     --cinza-7: #abaaaa;
     --branco: #ffffff;
+    --roxo: #7445cc;
   }
 
 /* == Seção de Avaliações == */
@@ -25,7 +26,7 @@
 
 /* == Título da Seção == */
 #avaliacao {
-    color: var(--branco); /* Define a cor do texto */
+    color: var(--roxo); /* Define a cor do texto */
     display: flex;
     justify-content: center; /* Centraliza o título horizontalmente */
     font-size: 70px; /* Define o tamanho da fonte */

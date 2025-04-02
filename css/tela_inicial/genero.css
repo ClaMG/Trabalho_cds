@@ -12,6 +12,7 @@ body {
     --cinza-6: #949494;
     --cinza-7: #abaaaa;
     --branco: #ffffff;
+    --roxo: #7445cc;
 }
 
 /* Define a margem superior da seção "Gênero" */
@@ -96,20 +97,19 @@ body {
 /* Estiliza as imagens dentro de cada item de gênero */
 .img_genero img {
     width: 300px; /* Define um tamanho fixo para as imagens */
-    border: 15px solid var(--cinza-4); /* Adiciona uma borda cinza ao redor da imagem */
+    border: 15px solid var(--roxo); /* Adiciona uma borda cinza ao redor da imagem */
 }
 
 /* Estiliza o botão que sobrepõe as imagens */
 .button_genero {
     position: absolute; /* Fixa o botão dentro do elemento pai */
-    top: 5%; /* Posiciona o botão no topo da imagem */
-    left: 50%; /* Centraliza horizontalmente */
-    transform: translateX(-50%); /* Ajusta para manter centralizado */
     background-color: rgba(0, 0, 0, 0.5); /* Define um fundo semitransparente */
     border: none; /* Remove a borda do botão */
     padding: 99.5px 14.5px; /* Ajusta o tamanho do botão */
     font-size: 62px; /* Define um tamanho grande para o texto */
     cursor: pointer; /* Define o cursor como ponteiro ao passar por cima */
+    width: 300px;
+    height: 300px;
     z-index: 1; /* Mantém o botão acima da imagem */
 }
 

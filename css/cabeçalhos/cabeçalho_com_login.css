@@ -17,6 +17,7 @@
     --cinza-6: #949494;
     --cinza-7: #abaaaa;
     --branco: #ffffff;
+    --roxo: #7445cc;
   }
 
 /* Oculta a barra de rolagem no Chrome, Safari e navegadores baseados em WebKit */
@@ -41,6 +42,15 @@ header {
 #logo, #barra_pesquisa, #login_carrinho {
     margin-top: 15px;
     margin-bottom: 10px;
+}
+
+#logo{
+    margin-top: 0px;
+}
+
+#img_logo{
+    width: 150px;
+
 }
 
 /* === Estilização da Barra de Pesquisa === */
@@ -118,7 +128,7 @@ header {
 
 /* Efeito hover para os links do menu */
 .a_menu:hover {
-    color: var(--cinza-4);
+    color: var(--roxo);
     transition: 0.2s; /* Suaviza a transição ao passar o mouse */
 }
 
@@ -133,7 +143,7 @@ header {
 
 /* Efeito hover nos botões do menu */
 .b_menu:hover {
-    color: var(--cinza-4);
+    color: var(--roxo);
     transition: 0.2s;
 }
 

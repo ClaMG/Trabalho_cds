@@ -5,29 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ordenação de Produtos</title>
     <style>
-         .container {
-    position: relative;
+        .custom-file-upload {
     display: inline-block;
-  }
+    cursor: pointer;
+    background-color: transparent; /* Fundo transparente */
+    margin: 15px 10px; /* Margens internas */
+    border: none; /* Remove as bordas padrão */
+    border-bottom: 2px solid black; /* Apenas a borda inferior */
+    font-size: 20px; /* Tamanho da fonte */
+    width: 100%; /* Para evitar cortes laterais */
+    max-width: 350px;
+}
 
-  .texto {
-    display: none;
-    position: absolute;
-    background-color: black;
-    color: white;
-    padding: 5px;
-    border-radius: 5px;
-  }
+.custom-file-upload:hover {
+    background-color: #d2d2d2;
+}
 
-  .container:hover .texto {
-    display: block;
-  }
       </style>
 </head>
 <body>
-    <div class="container">
-        Passe o mouse aqui
-        <div class="butao">Texto aparecendo no hover!</div>
-      </div>
+  <label for="upload" class="custom-file-upload">Escolher Arquivo</label>
+  <input type="file" id="upload" hidden>
+  
 </body>
 </html>

@@ -9,6 +9,7 @@
   --cinza-6: #949494;
   --cinza-7: #abaaaa;
   --branco: #ffffff;
+  --roxo: #7445cc;
 }
 
 /* Define margem superior para separar a seção do restante da página */
@@ -97,7 +98,7 @@ img.right.visible {
 
 .imagem_destaque {
   width: 300px;
-  border: 15px solid var(--cinza-4);
+  border: 15px solid var(--roxo);
   margin-right: 120px;
 }
 

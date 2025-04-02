@@ -21,7 +21,7 @@
         <div id="parte_de_cima_cab">
 
             <!-- Logo da página -->
-            <a href="#" id="logo"><img src="#" alt="Logo"></a> 
+            <a href="#" id="logo"><img src="../../img/cabeçario/logo.png" alt="Logo" id="img_logo"></a> 
                 <div id="login_cadastro"> <!-- Login e cadastro -->
                     <a href="#"><img src="../../img/cabeçario/icone_perfil.png" alt="Perfil" id="Perfil"></a><!-- Ícone de perfil -->
                     <p id="p_cadastro_login">
@@ -66,9 +66,12 @@
                         <input type="text" placeholder="Nome Completo" class="input">
                         <input type="text" id="telefone" placeholder="Telefone" maxlength="15" class="input">
                         <input type="text" id="cpf" placeholder="CPF" maxlength="14" class="input">
-                        <!-- Botão de cadastro -->
-                        <button id="button">Cadastrar</button>
-                    </div>
+                        <div>
+                            <label for="upload" class="input" id="add_perfil_img">Escolher foto de perfil</label>
+                            <input type="file" id="upload" hidden></div>
+                        </div>
+                    <!-- Botão de cadastro -->
+                    <button id="button">Cadastrar</button>
                 </div>
             </div>
         </section>
