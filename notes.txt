@@ -73,6 +73,7 @@ Falta telas:
 -gerenciar_cd
 -gerenciar_usuarios
 -gerenciar_musicas
+-deletar_cd
 
 -favoritos
 -sugestao

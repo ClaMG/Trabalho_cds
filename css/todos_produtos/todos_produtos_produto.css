@@ -42,8 +42,8 @@
     text-align: center;
     height: 50px;
     margin-top: 5px;
-    margin-left: 10px;
-    line-height: 50px;
+    margin-left: 5px;
+    line-height: 40px;
 }
 
 .link_produto2:hover .butao {
@@ -53,8 +53,8 @@
 
 .produto{
     border: 2px solid #404040;
-    width: 200px;
-    height: 300px;
+    width: 220px;
+    height: 340px;
     justify-content: space-between;
     display: flex;
     flex-direction: column;

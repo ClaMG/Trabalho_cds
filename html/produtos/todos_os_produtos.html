@@ -7,13 +7,118 @@
     <link rel="stylesheet" href="../../css/todos_produtos/todos_produtos_filtro.css">
     <link rel="stylesheet" href="../../css/todos_produtos/todos_produtos_orderna.css">
     <link rel="stylesheet" href="../../css/todos_produtos/todos_produtos_produto.css">
+    <link rel="stylesheet" href="../../css/todos_produtos/todos_produtos_responsividade.css">
+    <link rel="stylesheet" href="../../css/cabeçalhos/cabeçalho_com_login.css">
+    
 
     <script src="../../js/todos_produtos/filtro_part1.js" defer></script>
     <script src="../../js/todos_produtos/filtro_part2.js" defer></script>
     <script src="../../js/todos_produtos/ordernar.js" defer></script>
     <script src="../../js/todos_produtos/favoritos.js" defer></script>
+    <script src="../../js/cabeçalho/menu.js"></script> <!-- Script do menu interativo -->
 </head>
 <body>
+
+    <!-- Cabeçalho da página (logado) -->
+    <header> 
+
+        <div id="parte_de_cima_cab">
+
+            <!-- Logo da página -->
+            <a href="#" id="logo"><img src="../../img/cabeçario/logo.png" alt="Logo" id="img_logo"></a>  
+            
+            <!-- Barra de pesquisa -->
+            <div id="barra_pesquisa">
+                <input type="checkbox" id="check"> <!-- Controle de visibilidade -->
+                <div id="complemento_pesquisa">
+
+                    <!-- Campo de pesquisa -->
+                    <input type="text" id="input_barra_pesquisa" placeholder="Buscar..." >
+
+                    <!-- Botão de pesquisa -->
+                    <label for="check" id="buttom_lupa">
+                        <img src="../../img/cabeçario/icone_lupa.png" alt="Lupa" id="lupa">
+                    </label>
+                </div>
+            </div>
+
+            <div id="login_carrinho"> <!-- Login e Carrinho -->
+                <a href="#"><img src="../../img/cabeçario/icone_perfil.png" alt="Perfil" id="Perfil"></a><!-- Foto de perfil -->
+
+                <a href="#"><img src="../../img/cabeçario/icone_carrinho.png" alt="Carrinho" id="Carrinho"></a><!-- Ícone de carrinho -->
+            </div>
+        </div>
+
+        <hr style="color: #7b7a7a;"><!-- Linha separadora -->
+
+        <!-- Menu de navegação -->
+        <nav class="menu-underline">
+            <input type="checkbox" id="menu_toggle" class="menu_toggle"><!-- Menu responsivo -->
+            <label for="menu_toggle" class="menu_icon">&#9776;</label> 
+
+            <ul id="menu">
+
+                <li class="p_menu"><a href="#" class="a_menu">Inicio</a></li>
+                <li class="p_menu"><a href="#" class="a_menu">Produtos</a></li>
+                
+                 <!-- Menu suspenso de gêneros musicais -->
+                <li class="p_menu" id="menu_genero">
+
+                    <button onclick="aparecer_g('sumir_g')" class="b_menu">
+                        Gênero
+                    </button>
+
+                    <!-- Submenu de Gêneros -->
+                    <ul class="subclasse_menu" id="sumir_g">
+                        
+                        <ul class="sub_subclasse_menu">
+                            <li><a href="#" class="sub_a">Clássica</a></li>
+                            <li><a href="#" class="sub_a">Eletrônica</a></li>
+                            <li><a href="#" class="sub_a">Forro</a></li>
+                            <li><a href="#" class="sub_a">Hip Hop</a></li>
+                            <li><a href="#" class="sub_a">MPB</a></li>
+                        </ul>
+                        
+                        <ul class="sub_subclasse_menu">
+                            <li><a href="#" class="sub_a">Pagode</a></li>
+                            <li><a href="#" class="sub_a">Pop</a></li>
+                            <li><a href="#" class="sub_a">Reggae</a></li>
+                            <li><a href="#" class="sub_a">Rock</a></li>
+                            <li><a href="#" class="sub_a">Sertanejo</a></li>
+                        </ul>
+                    </ul>
+                </li>
+
+                <!-- Menu suspenso para Artistas -->
+                <li class="p_menu" id="arredondar_b">
+
+                    <button onclick="aparecer_a('sumir_a')" class="b_menu">
+                        Artistas
+                    </button>
+
+                    <!-- Submenu de Artistas -->
+                    <ul class="subclasse_menu_a" id="sumir_a">
+                        
+                        <ul class="sub_subclasse_menu">
+                            <li><a href="#" class="sub_a">Ludwing Beethowen</a></li>
+                            <li><a href="#" class="sub_a">Marshmello</a></li>
+                            <li><a href="#" class="sub_a">Luiz Gonzaga</a></li>
+                            <li><a href="#" class="sub_a">Snoop Dogg</a></li>
+                            <li><a href="#" class="sub_a">Maria Bethânia</a></li>
+                        </ul>
+                        
+                        <ul class="sub_subclasse_menu">
+                            <li><a href="#" class="sub_a">Péricles</a></li>
+                            <li><a href="#" class="sub_a">Michael Jackson</a></li>
+                            <li><a href="#" class="sub_a">Bob Marley</a></li>
+                            <li><a href="#" class="sub_a">Elvis Presley</a></li>
+                            <li><a href="#" class="sub_a">Luan Santana</a></li>
+                        </ul>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <section>
         <div id="caminho">
             <a href="#" id="home" class="link_caminho">
@@ -38,16 +143,16 @@
                     <img src="../../img/todos_produtos/icone_seta_direita.png" alt="Seta para abrir seleção" id="button_filtro_generos" class="setas_filtro">
                 </div>
                 <div id="generos" class="contener">
-                    <label class="itens"><input type="checkbox" id="checkbox1"> <label for="checkbox1"></label> Gênero 1</label><br>
-                    <label class="itens"><input type="checkbox" id="checkbox2"> <label for="checkbox2"></label> Gênero 2</label><br>
-                    <label class="itens"><input type="checkbox" id="checkbox3"> <label for="checkbox3"></label> Gênero 3</label><br>
-                    <label class="itens"><input type="checkbox" id="checkbox4"> <label for="checkbox4"></label> Gênero 4</label><br>
-                    <label class="itens"><input type="checkbox" id="checkbox5"> <label for="checkbox5"></label> Gênero 5</label><br>
-                    <label class="itens"><input type="checkbox" id="checkbox6"> <label for="checkbox6"></label> Gênero 6</label><br>
-                    <label class="itens"><input type="checkbox" id="checkbox7"> <label for="checkbox7"></label> Gênero 7</label><br>
-                    <label class="itens"><input type="checkbox" id="checkbox8"> <label for="checkbox8"></label> Gênero 8</label><br>
-                    <label class="itens"><input type="checkbox" id="checkbox9"> <label for="checkbox9"></label> Gênero 9</label><br>
-                    <label class="itens"><input type="checkbox" id="checkbox10"> <label for="checkbox10"></label> Gênero 10</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox1" class="input"> <label for="checkbox1"></label> Gênero 1</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox2" class="input"> <label for="checkbox2"></label> Gênero 2</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox3" class="input"> <label for="checkbox3"></label> Gênero 3</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox4" class="input"> <label for="checkbox4"></label> Gênero 4</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox5" class="input"> <label for="checkbox5"></label> Gênero 5</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox6" class="input"> <label for="checkbox6"></label> Gênero 6</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox7" class="input"> <label for="checkbox7"></label> Gênero 7</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox8" class="input"> <label for="checkbox8"></label> Gênero 8</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox9" class="input"> <label for="checkbox9"></label> Gênero 9</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox10" class="input"> <label for="checkbox10"></label> Gênero 10</label><br>
                 </div>
             </div>
             
@@ -57,16 +162,16 @@
                     <img src="../../img/todos_produtos/icone_seta_direita.png" alt="Seta para abrir seleção" id="button_filtro_artistas" class="setas_filtro">
                 </div>
                 <div id="artistas" class="contener">
-                    <label class="itens"><input type="checkbox" id="checkbox11"> <label for="checkbox11"></label> Artista 1</label><br>
-                    <label class="itens"><input type="checkbox" id="checkbox12"> <label for="checkbox12"></label> Artista 2</label><br>
-                    <label class="itens"><input type="checkbox" id="checkbox13"> <label for="checkbox13"></label> Artista 3</label><br>
-                    <label class="itens"><input type="checkbox" id="checkbox14"> <label for="checkbox14"></label> Artista 4</label><br>
-                    <label class="itens"><input type="checkbox" id="checkbox15"> <label for="checkbox15"></label> Artista 5</label><br>
-                    <label class="itens"><input type="checkbox" id="checkbox16"> <label for="checkbox16"></label> Artista 6</label><br>
-                    <label class="itens"><input type="checkbox" id="checkbox17"> <label for="checkbox17"></label> Artista 7</label><br>
-                    <label class="itens"><input type="checkbox" id="checkbox18"> <label for="checkbox18"></label> Artista 8</label><br>
-                    <label class="itens"><input type="checkbox" id="checkbox19"> <label for="checkbox19"></label> Artista 9</label><br>
-                    <label class="itens"><input type="checkbox" id="checkbox20"> <label for="checkbox20"></label> Artista 10</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox11" class="input"> <label for="checkbox11"></label> Artista 1</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox12" class="input"> <label for="checkbox12"></label> Artista 2</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox13" class="input"> <label for="checkbox13"></label> Artista 3</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox14" class="input"> <label for="checkbox14"></label> Artista 4</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox15" class="input"> <label for="checkbox15"></label> Artista 5</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox16" class="input"> <label for="checkbox16"></label> Artista 6</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox17" class="input"> <label for="checkbox17"></label> Artista 7</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox18" class="input"> <label for="checkbox18"></label> Artista 8</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox19" class="input"> <label for="checkbox19"></label> Artista 9</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox20" class="input"> <label for="checkbox20"></label> Artista 10</label><br>
                 </div>
             </div>
             
@@ -76,22 +181,22 @@
                     <img src="../../img/todos_produtos/icone_seta_direita.png" alt="Seta para abrir seleção" id="button_filtro_musicas" class="setas_filtro">
                 </div>
                 <div id="musicas" class="contener">
-                    <label class="itens"><input type="checkbox" id="checkbox21"> <label for="checkbox21"></label> Música 1</label><br>
-                    <label class="itens"><input type="checkbox" id="checkbox22"> <label for="checkbox22"></label> Música 2</label><br>
-                    <label class="itens"><input type="checkbox" id="checkbox23"> <label for="checkbox23"></label> Música 3</label><br>
-                    <label class="itens"><input type="checkbox" id="checkbox24"> <label for="checkbox24"></label> Música 4</label><br>
-                    <label class="itens"><input type="checkbox" id="checkbox25"> <label for="checkbox25"></label> Música 5</label><br>
-                    <label class="itens"><input type="checkbox" id="checkbox26"> <label for="checkbox26"></label> Música 6</label><br>
-                    <label class="itens"><input type="checkbox" id="checkbox27"> <label for="checkbox27"></label> Música 7</label><br>
-                    <label class="itens"><input type="checkbox" id="checkbox28"> <label for="checkbox28"></label> Música 8</label><br>
-                    <label class="itens"><input type="checkbox" id="checkbox29"> <label for="checkbox29"></label> Música 9</label><br>
-                    <label class="itens"><input type="checkbox" id="checkbox30"> <label for="checkbox30"></label> Música 10</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox21" class="input"> <label for="checkbox21"></label> Música 1</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox22" class="input"> <label for="checkbox22"></label> Música 2</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox23" class="input"> <label for="checkbox23"></label> Música 3</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox24" class="input"> <label for="checkbox24"></label> Música 4</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox25" class="input"> <label for="checkbox25"></label> Música 5</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox26" class="input"> <label for="checkbox26"></label> Música 6</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox27" class="input"> <label for="checkbox27"></label> Música 7</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox28" class="input"> <label for="checkbox28"></label> Música 8</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox29" class="input"> <label for="checkbox29"></label> Música 9</label><br>
+                    <label class="itens"><input type="checkbox" id="checkbox30" class="input"> <label for="checkbox30"></label> Música 10</label><br>
                 </div>
             </div>
     
             <div>
                 <h1 class="titulo" id="preço">Preço: <p id="valor">R$<span id="valor_range">500</span></p></h1> 
-                <lable id="valor_ponta">R$5<input type="range" min="5" max="1000" value="500" step="5" id="valor_input">R$1000</lable>
+                <lable id="valor_ponta">R$5<input type="range" min="5" max="1000" value="500" step="5" id="valor_input" class="input">R$1000</lable>
                 
             </div>
         </div>

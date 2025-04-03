@@ -1,0 +1,33 @@
+@media only screen and (max-width: 768px){
+    body {
+        overflow-x: hidden;
+    }
+
+    #meio{
+        display: block;
+    }
+
+    #filtro{
+        margin-bottom: 20px;
+    }
+
+    .input[type="range"] {
+        width: 350px; /* Define a largura do controle range para */
+    }
+
+    #valor_ponta{
+        color: var(--cinza-2);
+        display: block;
+        width: 450px;
+    }
+
+    #part_cima_produtos{
+        display: flex;
+        width: 450px;
+    }
+
+    .fileira_produtos{
+        width: 490px;
+       margin-left: -15px;
+    }
+}

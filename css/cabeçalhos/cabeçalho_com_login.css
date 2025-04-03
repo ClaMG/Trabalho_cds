@@ -108,7 +108,7 @@ header {
 /* Define a estrutura do menu principal */
 #menu {
     display: flex;
-    justify-content: center; /* Centraliza o menu */  
+    justify-content: center; /* Centraliza o menu */ 
 }
 
 /* Estilização dos itens do menu */
@@ -281,7 +281,7 @@ header {
         display: none; /* Esconde o menu */
         width: 100%;
         position: absolute;
-        top: 110px; /* Define a posição do menu abaixo do cabeçalho */
+        top: 120px; /* Define a posição do menu abaixo do cabeçalho */
         z-index: 1;
         opacity: 0;
         transform: translateY(-20px);

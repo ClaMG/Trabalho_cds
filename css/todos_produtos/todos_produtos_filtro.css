@@ -112,11 +112,11 @@
 
 /* Checkbox */
 
-input[type="checkbox"] {
+.input[type="checkbox"] {
     display: none;
 }
 
-input[type="checkbox"] + label {
+.input[type="checkbox"] + label {
     display: inline-block;
     width: 20px; /* Largura do quadrado */
     height: 20px; /* Altura do quadrado */
@@ -129,12 +129,12 @@ input[type="checkbox"] + label {
     position: relative;
 }
 
-input[type="checkbox"]:checked + label {
+.input[type="checkbox"]:checked + label {
     background-color: var(--branco); /* Cor de fundo quando marcado */
     border-color: var(--branco); /* Cor da borda quando marcado */
 }
 
-input[type="checkbox"]:checked + label::after {
+.input[type="checkbox"]:checked + label::after {
     content: '';
     position: absolute;
     top: 50%;
@@ -151,7 +151,7 @@ input[type="checkbox"]:checked + label::after {
 }
 
 /* Efeito de hover */
-input[type="checkbox"]:hover + label {
+.input[type="checkbox"]:hover + label {
     background-color: #ecf0f1; /* Cor de fundo ao passar o mouse */
 }
 
@@ -178,7 +178,7 @@ input[type="checkbox"]:hover + label {
     width: 300px;
 }
 
-input[type="range"] {
+.input[type="range"] {
     -webkit-appearance: none; /* Remove o estilo padrão para navegadores WebKit (Chrome, Safari, etc.) */
     appearance: none; /* Remove o estilo padrão para Firefox */
     width: 200px; /* Define a largura do controle range para ocupar toda a largura do elemento pai */
@@ -190,21 +190,21 @@ input[type="range"] {
 }
 
 /* Estilizando o trilho (track) no WebKit (Chrome, Safari, etc.) */
-input[type="range"]::-webkit-slider-runnable-track {
+.input[type="range"]::-webkit-slider-runnable-track {
     height: 8px; /* Altura do trilho */
     background: #ddd; /* Cor do trilho */
     border-radius: 5px; /* Bordas arredondadas */
 }
 
 /* Estilizando o trilho (track) no Firefox */
-input[type="range"]::-moz-range-track {
+.input[type="range"]::-moz-range-track {
     height: 8px; /* Altura do trilho */
     background: #ddd; /* Cor do trilho */
     border-radius: 5px; /* Bordas arredondadas */
 }
 
 /* Estilizando o trilho (track) no Internet Explorer */
-input[type="range"]::-ms-track {
+.input[type="range"]::-ms-track {
     height: 8px; /* Altura do trilho */
     background: #ddd; /* Cor do trilho */
     border-radius: 5px; /* Bordas arredondadas */
@@ -215,7 +215,7 @@ input[type="range"]::-ms-track {
 }
 
 /* Estilizando o controle deslizante (thumb) no WebKit */
-input[type="range"]::-webkit-slider-thumb {
+.input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none; /* Remove o estilo padrão */
     appearance: none; /* Remove o estilo padrão */
     width: 20px; /* Largura do controle deslizante */
@@ -230,7 +230,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 /* Estilizando o controle deslizante (thumb) no Firefox */
-input[type="range"]::-moz-range-thumb {
+.input[type="range"]::-moz-range-thumb {
     width: 20px; /* Largura do controle deslizante */
     height: 20px; /* Altura do controle deslizante */
     border-radius: 50%; /* Tornando o controle deslizante redondo */
@@ -242,7 +242,7 @@ input[type="range"]::-moz-range-thumb {
 }
 
 /* Estilizando o controle deslizante (thumb) no Internet Explorer */
-input[type="range"]::-ms-thumb {
+.input[type="range"]::-ms-thumb {
     width: 20px; /* Largura do controle deslizante */
     height: 20px; /* Altura do controle deslizante */
     border-radius: 50%; /* Tornando o controle deslizante redondo */
@@ -254,14 +254,14 @@ input[type="range"]::-ms-thumb {
 }
 
 /* Efeito quando o cursor passa sobre o controle deslizante (thumb) */
-input[type="range"]:hover::-webkit-slider-thumb {
+.input[type="range"]:hover::-webkit-slider-thumb {
     background-image: radial-gradient(circle, #aaaaaa 30%, var(--cinza-1) 40%);
 }
 
-input[type="range"]:hover::-moz-range-thumb {
+.input[type="range"]:hover::-moz-range-thumb {
     background-image: radial-gradient(circle, #aaaaaa 30%, var(--cinza-1) 40%); /* Muda a cor do thumb no Firefox */
 }
 
-input[type="range"]:hover::-ms-thumb {
+.input[type="range"]:hover::-ms-thumb {
     background-image: radial-gradient(circle, #aaaaaa 30%, var(--cinza-1) 40%); /* Muda a cor do thumb no Internet Explorer */
 }
