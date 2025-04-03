@@ -31,10 +31,18 @@ destaque.css
 genero.css
 rodape.css
 artistas.css
+cadastro.css 
+adm.css
+perfil.css 
+politica_comercial.css
 
+adm.html > cabeçalho_com_login.css
+user.html > cabeçalho_com_login.css
 login.html > cabeçalho_sem_login.css
 index_logado.html > cabeçalho_com_login.css (Falta Alterar as imagens dos carrosseis e do destaque)
 index.html > cabeçalho_sem_login.css(Falta Alterar as imagens dos carrosseis e do destaque)
+cadastro.html > cabeçalho_sem_login.css
+politica_comercial.html > cabeçalho_com_login.css
 
 
 estrelas.js
@@ -54,22 +62,12 @@ Falta:
 alterar.css 
 avaliar_site.css
 cabeçalho_com_login_sem_menu.css 
-cadastro.css 
-adm.css
-perfil.css 
-politica_comercial.css
-
 
 
 alterar_dados.html > cabeçalho_com_login_sem_menu.css
-cadastro.html > cabeçalho_sem_login.css
-politica_comercial.html > cabeçalho_com_login.css
 avaliar.html > cabeçalho_com_login_sem_menu.css
-adm.html > cabeçalho_com_login.css
-user.html > cabeçalho_com_login.css
 
-
-pastas html
+pastas html:
 
 login_cadastro:
 login
@@ -177,4 +175,3 @@ php_matriz{
 }
 
 alterar_dados > alterar foto de perfil
-cadastro > adicionar foto de perfil

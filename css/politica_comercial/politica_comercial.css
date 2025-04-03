@@ -7,6 +7,7 @@
 
 :root{
     --p-cinza: #595959;
+    --roxo: #7445cc;
 }
 
 /* Evita o scroll horizontal desnecessário */
@@ -32,13 +33,13 @@ main {
 
 /* Estilização do título principal */
 #principal {
-    color: var(--p-cinza); /* Define a cor do texto */
+    color: var(--roxo); /* Define a cor do texto */
     font-size: 50px; /* Define o tamanho da fonte */
 }
 
 /* Estilização dos subtítulos */
 .titulo {
-    color: var(--p-cinza);
+    color: var(--roxo);
     font-size: 30px;
     margin: 20px 0px; /* Espaçamento superior e inferior */
 }

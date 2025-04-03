@@ -14,6 +14,7 @@
     --cinza-6: #949494;
     --cinza-7: #abaaaa;
     --branco: #ffffff;
+    --roxo: #7445cc;
 }
 
 
@@ -46,7 +47,7 @@ section{
 
 /* Nome do usuário */
 #nome_user{
-    color: var(--cinza-2);
+    color: var(--roxo);
     margin-left: 10px;
 }
 
@@ -54,6 +55,7 @@ section{
 #foto_perfil{
     width: 80px;
     height: 80px;
+    border: 1px solid var(--roxo);
     border-radius: 50px; /* Deixa a imagem circular */
 }
 
@@ -62,14 +64,14 @@ section{
     margin: 0px 30px;
     width: 5px;
     height: 500px;
-    background-color: var(--cinza-1); /* Define a cor da linha */
+    background-color: var(--roxo); /* Define a cor da linha */
 }
 
 /* Configuração dos dados do usuário */
 .dados{
     margin-top: 30px;
-    color: var(--cinza-2);
-    border-bottom: 2px solid var(--cinza-4); /* Linha inferior para separar */
+    color: var(--roxo);
+    border-bottom: 2px solid var(--roxo); /* Linha inferior para separar */
     font-size: 25px;
     width: 100%;
     max-width: 350px;
@@ -88,11 +90,16 @@ section{
     font-weight: bold;
 }
 
+#button{
+    background-color: var(--cinza-2); /* Cor de fundo */
+}
+
 /* Efeito hover nos botões */
 #button:hover, .butoes:hover{
     background-color: var(--cinza-7);
     transition: 0.2s;
 }
+
 
 /* Links dentro dos botões */
 #a_buton_principal, .a_butoes{
