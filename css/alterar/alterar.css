@@ -5,6 +5,18 @@
     font-family: Arial, Helvetica, sans-serif; /* Define a fonte padrão */
 }
 
+:root{
+    --cinza-1: #303030;
+    --cinza-2: #5d5d5d;
+    --cinza-3: #6d6d6d;
+    --cinza-4: #7b7a7a;
+    --cinza-5: #888888;
+    --cinza-6: #949494;
+    --cinza-7: #abaaaa;
+    --branco: #ffffff;
+    --roxo: #7445cc;
+}
+
 /* Estilo para o corpo da página */
 body {
     overflow-x: hidden; /* Impede o overflow horizontal, evitando barras de rolagem indesejadas */
@@ -29,43 +41,31 @@ main{
 
 /* Estilo do título principal */
 #titulo{
-    color: #595959; /* Cor do título */
+    color: var(--roxo); /* Cor do título */
     font-size: 80px; /* Tamanho da fonte */
     margin-left: 10px; /* Margem à esquerda */
+    text-align: center;
 }
 
 /* Estilo do link ao passar o mouse */
 #link_login:hover{
-    color: #abaaaa; /* Cor ao passar o mouse */
+    color: var(--cinza-7); /* Cor ao passar o mouse */
     transition: 0.2s; /* Transição suave */
 }
 
 /* Estilo da parte superior do formulário */
 #cima{
-    display: flex; /* Flexbox para alinhamento dos itens */
-}
-
-/* Estilo da parte inferior do formulário */
-#baixo{
-    margin-left: 20px; /* Margem à esquerda */
-}
-
-/* Estilo para o container lateral de entradas */
-#lado{
-    display: flex; /* Flexbox para alinhar as colunas */
+    display: flex;
+    flex-wrap: wrap; /* Permite que os campos se reorganizem quando necessário */
+    justify-content: center;
 }
 
 /* Estilo comum para as divisões de entrada */
-.separacao, .separacao2{
+.separacao{
     display: flex; /* Flexbox para alinhar itens */
     flex-direction: column; /* Organiza os campos em coluna */
     width: 350px; /* Largura padrão das divisões */
     margin-left: 20px; /* Margem à esquerda */
-}
-
-/* Ajuste na largura para a classe separacao2 */
-.separacao2{
-    width: 310px; /* Largura reduzida para a separacao2 */
 }
 
 /* Estilo para a coluna direita */
@@ -73,14 +73,9 @@ main{
     margin-left: 50px; /* Margem à esquerda da coluna direita */
 }
 
-/* Estilo para a coluna direita na parte inferior */
-#direita_baixo{
-    margin-left: 90px; /* Margem à esquerda */
-}
-
 /* Estilo dos subtítulos */
 .subtitulo{
-    color: #5d5d5d; /* Cor do subtítulo */
+    color: var(--cinza-2); /* Cor do subtítulo */
     border-bottom: 2px dotted rgb(142, 142, 142); /* Linha pontilhada abaixo do subtítulo */
 }
 
@@ -94,56 +89,55 @@ main{
     width: 200px; /* Largura específica */
 }
 
-/* Estilo do subtítulo "Dados de endereço" */
-#endereco{
-    margin-top: 20px; /* Espaço superior */
-    width: 750px; /* Largura específica */
-}
-
 /* Estilo do container de inputs */
 #inputs{
     margin: 50px 30px; /* Margem interna do container */
 }
 
 /* Estilo dos campos de entrada */
-.input, .input_baixo{
+.input{
     background-color: transparent; /* Fundo transparente */
     margin: 15px 10px; /* Margens internas */
     border: none; /* Remove as bordas padrão */
-    border-bottom: 2px solid #7b7a7a; /* Apenas a borda inferior */
+    border-bottom: 2px solid var(--cinza-4); /* Apenas a borda inferior */
     font-size: 1.2rem;
     width: 100%;
     max-width: 350px;
 }
 
-/* Ajuste de margem para os campos de entrada na parte inferior */
-.input_baixo{
-    margin: 15px -10px; /* Margem ajustada */
+#add_perfil_img {
+    display: inline-block;
+    cursor: pointer;
+    color: var(--cinza-4);
+}
+
+#add_perfil_img:hover {
+    background-color: #dedddd;
 }
 
 /* Remover o contorno ao focar nos campos de entrada */
-.input:focus, .input_baixo:focus{
+.input:focus{
     outline: none; /* Remove o outline ao focar */
 }
 
 /* Estilo do botão de cadastro */
 #button{
+    width: 100%; /* Para evitar cortes laterais */
+    max-width: 350px;
     height: 40px; /* Altura do botão */
     border-radius: 10px; /* Bordas arredondadas */
     border: none; /* Sem borda */
-    margin: 10px 0px; /* Margem do botão */
-    color: white; /* Cor do texto */
-    background-color: #303030; /* Cor de fundo */
+    margin: 10px; /* Margem do botão */
+    color: var(--branco); /* Cor do texto */
+    background-color: var(--cinza-1); /* Cor de fundo */
+    font-size: 30px; /* Tamanho da fonte */
     font-weight: bold; /* Texto em negrito */
-    width: 100%;
-    max-width: 300px;
-    font-size: 2rem;
 }
 
 /* Estilo do botão ao passar o mouse */
 #button:hover{
-    background-color: #abaaaa; /* Cor do fundo ao passar o mouse */
-    color: #5d5d5d; /* Cor do texto ao passar o mouse */
+    background-color: var(--cinza-7); /* Cor do fundo ao passar o mouse */
+    color: var(--cinza-2); /* Cor do texto ao passar o mouse */
     transition: 0.2s; /* Transição suave */
 }
 
@@ -205,7 +199,7 @@ main{
 /* == Estilos responsivos == */
 
 
-/* 🖥️ Para telas maiores que 1440px (monitores grandes) */
+/* Para telas maiores que 1440px (monitores grandes) */
 @media only screen and (max-width: 1200px) {
     #alterar {
         max-width: 1100px;
@@ -280,7 +274,7 @@ main{
 
 }
 
-/* 📱 Para telas menores que 480px (celulares pequenos) */
+/* Para telas menores que 480px (celulares pequenos) */
 @media only screen and (max-width: 480px) {
 
     

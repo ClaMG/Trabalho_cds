@@ -35,15 +35,17 @@ cadastro.css
 adm.css
 perfil.css 
 politica_comercial.css
+alterar.css
+cabeçalho_com_login_sem_menu.css
+avaliar_site.css 
 
 adm.html > cabeçalho_com_login.css
 user.html > cabeçalho_com_login.css
 login.html > cabeçalho_sem_login.css
-index_logado.html > cabeçalho_com_login.css (Falta Alterar as imagens dos carrosseis e do destaque)
-index.html > cabeçalho_sem_login.css(Falta Alterar as imagens dos carrosseis e do destaque)
 cadastro.html > cabeçalho_sem_login.css
 politica_comercial.html > cabeçalho_com_login.css
-
+alterar_dados.html > cabeçalho_com_login_sem_menu.css
+avaliar.html > cabeçalho_com_login_sem_menu.css
 
 estrelas.js
 menu.js
@@ -53,19 +55,12 @@ mascara_tel.js
 carrossel.js
 carrosselArtistas.js
 destaque.js
-avalicao.css
-
-
 
 Falta:
 
-alterar.css 
-avaliar_site.css
-cabeçalho_com_login_sem_menu.css 
-
-
-alterar_dados.html > cabeçalho_com_login_sem_menu.css
-avaliar.html > cabeçalho_com_login_sem_menu.css
+index_logado.html > cabeçalho_com_login.css (Falta Alterar as imagens dos carrosseis e do destaque)
+index.html > cabeçalho_sem_login.css(Falta Alterar as imagens dos carrosseis e do destaque)
+(Colocar rodape nas outras paginas)
 
 pastas html:
 
@@ -174,4 +169,3 @@ php_matriz{
     >js{...}
 }
 
-alterar_dados > alterar foto de perfil

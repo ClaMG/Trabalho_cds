@@ -43,6 +43,15 @@ header {
     margin-bottom: 10px;
 }
 
+#logo{
+    margin-top: 0px;
+}
+
+#img_logo{
+    width: 150px;
+
+}
+
 /* === Estilização da Barra de Pesquisa === */
 
 #complemento_pesquisa {
