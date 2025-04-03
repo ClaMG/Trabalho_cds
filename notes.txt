@@ -23,83 +23,65 @@ obsevação: os links dos slides podem ser removidos, contanto que o css que est
 
 Codigos feitos:
 
-cabeçalho_com_login.css 
-cabeçalho_sem_login.css 
+alterar.css
+avaliar_site.css 
+cabeçalho_com_login_sem_menu.css
+cabeçalho_com_login.css
+cabeçalho_sem_login.css
+cadastro.css 
 login.css
+adm.css
+perfil.css 
+politica_comercial.css
+artistas.css
+avalicao.css
 carrossel.css
 destaque.css
 genero.css
 rodape.css
-artistas.css
-cadastro.css 
-adm.css
-perfil.css 
-politica_comercial.css
-alterar.css
-cabeçalho_com_login_sem_menu.css
-avaliar_site.css 
 
-adm.html > cabeçalho_com_login.css
-user.html > cabeçalho_com_login.css
-login.html > cabeçalho_sem_login.css
 cadastro.html > cabeçalho_sem_login.css
-politica_comercial.html > cabeçalho_com_login.css
+login.html > cabeçalho_sem_login.css
+adm.html > cabeçalho_com_login.css
 alterar_dados.html > cabeçalho_com_login_sem_menu.css
+user.html > cabeçalho_com_login.css
+politica_comercial.html > cabeçalho_com_login.css
 avaliar.html > cabeçalho_com_login_sem_menu.css
 
-estrelas.js
-menu.js
-login.js
-mascara_cpf.js
-mascara_tel.js
-carrossel.js
-carrosselArtistas.js
-destaque.js
 
-Falta:
+Falta terminar:
 
+todos_produtos_filtro.css
+todos_produtos_orderna.css
+todos_produtos_produto.css
+
+todos_os_produtos.html
 index_logado.html > cabeçalho_com_login.css (Falta Alterar as imagens dos carrosseis e do destaque)
 index.html > cabeçalho_sem_login.css(Falta Alterar as imagens dos carrosseis e do destaque)
 (Colocar rodape nas outras paginas)
 
-pastas html:
+Falta telas:
+-adicionar_artistas
+-adicionar_cd
+-adicionar_usuarios
+-adicionar_musica
+-editar_artista
+-editar_cd
+-editar_usuarios
+-editar_musica
+-gerenciar_artista
+-gerenciar_cd
+-gerenciar_usuarios
+-gerenciar_musicas
 
-login_cadastro:
-login
-cadastro
+-favoritos
+-sugestao
+-carrinho
+-historico_compras
 
->perfil:
-alterar_dados
-perfil_user
-perfil_adm
-
->>adm:
-alterar_cds
-alterar_user
-alterar_atividades
-
->>butoes:
-favoritos
-carrinho
-avaliar
-recomendar
-
-
-pagina_inicial:
-index
-index_logado
-
->rodape:
-politica_comercial
-
-
-produtos:
-todos_produtos
-produtos
-comprar
-artistas
-
-
+-artista
+-detalhes_cd (produto)
+-comprar
 
 Organização:
 
