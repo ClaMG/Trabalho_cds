@@ -29,6 +29,7 @@
     border: 2px solid var(--roxo);
     padding: 10px;
     margin: 20px 10px;
+    border-radius: 10px;
 }
 
 #separar{
@@ -71,4 +72,16 @@
     color: var(--branco); /* Cor do texto ao passar o mouse */
     background-color: var(--cinza-2); /* Cor de fundo ao passar o mouse */
     transition: 0.3s;
+}
+
+
+#tabelao{
+    padding: 10px;
+    margin: 10px;
+    
+}
+
+.titulo_item{
+    border: 2px solid var(--roxo);
+    padding: 1px 5px;
 }
