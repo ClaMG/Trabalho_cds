@@ -6,6 +6,9 @@
     <title>Adicionar Usuarios</title>
     <link rel="stylesheet" href="../../../../../css/adm/add_edit/add_edit.css">
     <link rel="stylesheet" href="../../../../../css/cabeçalhos/cabeçalho_com_login_sem_menu.css">
+
+    <script src="../../../../../js/mascaras/mascara_cpf.js" defer></script>
+    <script src="../../../../../js/mascaras/mascara_tel.js" defer></script>
 </head>
 <body>
 
@@ -68,7 +71,7 @@
                         
                         <!-- Campos de entrada para nome completo, telefone e CPF -->
                         <input type="text" placeholder="Nome Completo" class="input">
-                        <input type="text" id="telefone" placeholder="Telefone" maxlength="15" class="input">
+                        <input type="tel" id="telefone" placeholder="Telefone" maxlength="15" class="input">
                         <input type="text" id="cpf" placeholder="CPF" maxlength="14" class="input">
                         <div>
                             <label for="upload" class="input add_perfil_img">Adicionar foto de perfil</label>

@@ -23,10 +23,13 @@ obsevação: os links dos slides podem ser removidos, contanto que o css que est
 
 Codigos feitos:
 
-add_cds.css
+add_edit_cds.css
+add_edit_musicas.css
+add_edit.css
 gerenciar_artista.css
 gerenciar_cds.css
 gerenciar_user.css
+gerenciar_musica.css
 add_edit.css
 alterar.css
 avaliar_site.css 
@@ -64,14 +67,16 @@ gerenciar_user.html > cabeçalho_com_login_sem_menu.css
 add_artista.html > cabeçalho_com_login_sem_menu.css
 add_cds.html > cabeçalho_com_login_sem_menu.css
 add_user.html > cabeçalho_com_login_sem_menu.css
+add_musica.html > cabeçalho_com_login_sem_menu.css
 editar_artistas.html > cabeçalho_com_login_sem_menu.css
 editar_cds.html > cabeçalho_com_login_sem_menu.css
 editar_user.html > cabeçalho_com_login_sem_menu.css
+editar_musicas.html > cabeçalho_com_login_sem_menu.css
 gerenciar_artistas.html > cabeçalho_com_login_sem_menu.css
 gerenciar_cds.html > cabeçalho_com_login_sem_menu.css
 gerenciar_user.html > cabeçalho_com_login_sem_menu.css
+gerenciar_musicas.html > cabeçalho_com_login_sem_menu.css
 favoritos.html > cabeçalho_com_login.css
-
 
 Falta terminar:
 
@@ -81,9 +86,6 @@ index.html > cabeçalho_sem_login.css(Falta Alterar as imagens dos carrosseis e 
 
 Falta telas:
 
--adicionar_musica
--editar_musica
--gerenciar_musicas
 -deletar_cd
 
 -sugestao
