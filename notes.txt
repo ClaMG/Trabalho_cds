@@ -23,10 +23,11 @@ obsevação: os links dos slides podem ser removidos, contanto que o css que est
 
 Codigos feitos:
 
-
+add_cds.css
 gerenciar_artista.css
 gerenciar_cds.css
 gerenciar_user.css
+add_edit.css
 alterar.css
 avaliar_site.css 
 cabeçalho_com_login_sem_menu.css
@@ -59,6 +60,16 @@ todos_os_produtos.html > cabeçalho_com_login.css
 gerenciar_artistas.html > cabeçalho_com_login_sem_menu.css
 gerenciar_cds.html > cabeçalho_com_login_sem_menu.css
 gerenciar_user.html > cabeçalho_com_login_sem_menu.css
+add_artista.html > cabeçalho_com_login_sem_menu.css
+add_cds.html > cabeçalho_com_login_sem_menu.css
+add_user.html > cabeçalho_com_login_sem_menu.css
+editar_artistas.html > cabeçalho_com_login_sem_menu.css
+editar_cds.html > cabeçalho_com_login_sem_menu.css
+editar_user.html > cabeçalho_com_login_sem_menu.css
+gerenciar_artistas.html > cabeçalho_com_login_sem_menu.css
+gerenciar_cds.html > cabeçalho_com_login_sem_menu.css
+gerenciar_user.html > cabeçalho_com_login_sem_menu.css
+
 
 Falta terminar:
 
@@ -67,13 +78,8 @@ index.html > cabeçalho_sem_login.css(Falta Alterar as imagens dos carrosseis e 
 (Colocar rodape nas outras paginas)
 
 Falta telas:
--adicionar_artistas
--adicionar_cd
--adicionar_usuarios
+
 -adicionar_musica
--editar_artista
--editar_cd
--editar_usuarios
 -editar_musica
 -gerenciar_musicas
 -deletar_cd
