@@ -5,44 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ordenação de Produtos</title>
     <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
+        .btn_filtro {
+  display: none;
+  margin-bottom: 10px;
+}
+
+.filtro {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .btn_filtro {
+    display: block;
+  }
+
+  .filtro {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .filtro.mostrar {
+    display: flex;
+  }
+}
+
     </style>
     
 </head>
 <body>
-    <table>
-        <thead>
-            <tr>
-                <th>Nome</th>
-                <th>Idade</th>
-                <th>Profissão</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Ana</td>
-                <td>25</td>
-                <td>Engenheira</td>
-            </tr>
-            <tr>
-                <td>Carlos</td>
-                <td>30</td>
-                <td>Designer</td>
-            </tr>
-        </tbody>
-    </table>
-    
+    <button class="btn_filtro">Filtros</button>
+
+<div class="filtro">
+  <div class="separa">
+    <label>Nome:</label>
+    <input type="text" />
+  </div>
+  <div class="separa">
+    <label>Categoria:</label>
+    <select>
+      <option>Todos</option>
+      <option>Rock</option>
+      <option>Pop</option>
+    </select>
+  </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.querySelector('.btn_filtro');
+      const filtros = document.querySelector('.filtro');
+  
+      btn.addEventListener('click', () => {
+        filtros.classList.toggle('mostrar');
+      });
+    });
+</script>
+      
   
 </body>
 </html>

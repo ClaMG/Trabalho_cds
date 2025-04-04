@@ -5,20 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerenciar Cds</title>
     <link rel="stylesheet" href="../../../../../css/adm/gerenciar/gerenciar_cds.css">
+    <link rel="stylesheet" href="../../../../../css/adm/gerenciar/gerenciar.css">
 </head>
 <body>
 
     <h1 id="titulo">Gerenciar CDs</h1>
 
+    <button id="btn_filtro">Filtros</button>
+
     <section id="filtro">
         <div id="separar">
-            <p class="p_filtro">Titulo:<input type="text" class="input_filtro"></p>
-            <p class="p_filtro">Gênero:<input type="text" class="input_filtro"></p>
-            <p class="p_filtro">Lançamento:<input type="text" class="input_filtro"></p>
-            <p class="p_filtro">Durabilidade:<input type="text" class="input_filtro"></p>
+            <div class="lado">
+                <p class="p_filtro">Titulo:<input type="text" class="input_filtro"></p>
+                <p class="p_filtro">Gênero:<input type="text" class="input_filtro"></p>
+            </div>
+            <div class="lado">
+                <p class="p_filtro">Lançamento:<input type="text" class="input_filtro"></p>
+                <p class="p_filtro">Durabilidade:<input type="text" class="input_filtro"></p>
+            </div>
+            <div class="lado">
+                <p class="p_filtro">Preço max:<input type="text" class="input_filtro"></p>
+                <p class="p_filtro">Preço min:<input type="text" class="input_filtro"></p>
+            </div>
             <p class="p_filtro">Destaque:<input type="text" class="input_filtro"></p>
-            <p class="p_filtro">Preço min:<input type="text" class="input_filtro"></p>
-            <p class="p_filtro">Preço max:<input type="text" class="input_filtro"></p>
         </div>
         <button id="button_filtro">Procurar</button>
     </section>
@@ -94,5 +103,16 @@
             </tbody>
         </table>
     </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const btn = document.querySelector('#btn_filtro');
+          const filtros = document.querySelector('#filtro');
+      
+          btn.addEventListener('click', () => {
+            filtros.classList.toggle('mostrar');
+          });
+        });
+    </script>
 </body>
 </html>
