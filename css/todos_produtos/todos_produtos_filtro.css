@@ -1,9 +1,11 @@
+/* === Reset de estilos globais === */
 *{
     padding: 0px;
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* === Definição de variáveis de cores === */
 :root{
     --cinza-1: #303030;
     --cinza-2: #5d5d5d;
@@ -13,10 +15,10 @@
     --cinza-6: #949494;
     --cinza-7: #abaaaa;
     --branco: #ffffff;
+    --roxo: #7445cc;
 }
 
-/* === Caminho === */
-
+/* === Estilização do caminho de navegação === */
 #caminho{
     display: flex;
     align-items: center;
@@ -47,20 +49,19 @@
     color: var(--cinza-1);
     text-decoration: none;
 }
+
 .link_caminho:hover{
     color: var(--cinza-4);
 }
 
-/* === Conteudo === */
-
+/* === Layout geral do conteúdo === */
 #meio{
     display: flex;
 }
 
-/* === Carrinho === */
-
+/* === Estilização do filtro lateral === */
 #filtro{
-    border: 2px solid var(--cinza-3);
+    border: 2px solid var(--roxo);
     padding: 15px;
     margin-left: 10px;
     background-color: var(--branco);
@@ -69,12 +70,12 @@
 
 #titulo_filtro{
     font-size: 50px;
-    color: var(--cinza-3);
+    color: var(--roxo);
 }
 
 #linha{
-    height: 2px;
-    background-color: var(--cinza-4);
+    height: 3px;
+    background-color: var(--roxo);
     margin: 0px;
 }
 
@@ -107,31 +108,30 @@
 }
 
 .itens:hover{
-    color: var(--cinza-4);
+    color: var(--roxo);
 }
 
-/* Checkbox */
-
+/* === Estilização dos checkboxes === */
 .input[type="checkbox"] {
     display: none;
 }
 
 .input[type="checkbox"] + label {
     display: inline-block;
-    width: 20px; /* Largura do quadrado */
-    height: 20px; /* Altura do quadrado */
-    background-color: var(--branco); /* Cor de fundo */
-    border: 2px solid var(--cinza-2); /* Borda do quadrado */
-    border-radius: 5px; /* Bordas arredondadas */
-    cursor: pointer; /* Cursor de ponteiro */
+    width: 20px;
+    height: 20px;
+    background-color: var(--branco);
+    border: 2px solid var(--cinza-2);
+    border-radius: 5px;
+    cursor: pointer;
     transition: background-color 0.3s ease, border-color 0.3s ease;
     margin-right: 5px;
     position: relative;
 }
 
 .input[type="checkbox"]:checked + label {
-    background-color: var(--branco); /* Cor de fundo quando marcado */
-    border-color: var(--branco); /* Cor da borda quando marcado */
+    background-color: var(--branco);
+    border-color: var(--branco);
 }
 
 .input[type="checkbox"]:checked + label::after {
@@ -143,20 +143,14 @@
     width: 20px;
     height: 20px;
     border: 3px solid #1f1f1f;
-    border-radius: 50%; /* Criar o círculo do CD */
+    border-radius: 50%;
     background-color: var(--branco);
-    background-image: radial-gradient(circle, var(--cinza-2) 30%, var(--cinza-1) 40%);
+    background-image: radial-gradient(circle, var(--roxo) 30%, var(--cinza-1) 40%);
     background-size: 100%;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Sombra para dar destaque */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
-/* Efeito de hover */
-.input[type="checkbox"]:hover + label {
-    background-color: #ecf0f1; /* Cor de fundo ao passar o mouse */
-}
-
-/* Estilização do input range  */
-
+/* === Estilização do input range para controle de preço === */
 #preço{
     display: flex;
     align-items: center;
@@ -173,95 +167,39 @@
 }
 
 #valor_ponta{
-    color: var(--cinza-2);
+    color: var(--roxo);
     display: block;
     width: 300px;
 }
 
+/* === Estilização geral do input range === */
 .input[type="range"] {
-    -webkit-appearance: none; /* Remove o estilo padrão para navegadores WebKit (Chrome, Safari, etc.) */
-    appearance: none; /* Remove o estilo padrão para Firefox */
-    width: 200px; /* Define a largura do controle range para ocupar toda a largura do elemento pai */
-    height: 8px; /* Define a altura do trilho */
-    background: #ddd; /* Cor do fundo do trilho (cinza claro) */
-    border-radius: 5px; /* Bordas arredondadas no trilho */
-    outline: none; /* Remove o contorno que aparece quando o input está em foco */
-    transition: 0.3s ease-in-out; /* Transição suave quando a cor do trilho muda */
+    -webkit-appearance: none;
+    appearance: none;
+    width: 200px;
+    height: 8px;
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s ease-in-out;
 }
 
-/* Estilizando o trilho (track) no WebKit (Chrome, Safari, etc.) */
-.input[type="range"]::-webkit-slider-runnable-track {
-    height: 8px; /* Altura do trilho */
-    background: #ddd; /* Cor do trilho */
-    border-radius: 5px; /* Bordas arredondadas */
-}
-
-/* Estilizando o trilho (track) no Firefox */
-.input[type="range"]::-moz-range-track {
-    height: 8px; /* Altura do trilho */
-    background: #ddd; /* Cor do trilho */
-    border-radius: 5px; /* Bordas arredondadas */
-}
-
-/* Estilizando o trilho (track) no Internet Explorer */
-.input[type="range"]::-ms-track {
-    height: 8px; /* Altura do trilho */
-    background: #ddd; /* Cor do trilho */
-    border-radius: 5px; /* Bordas arredondadas */
-    border-color: transparent; /* Remove a borda padrão */
-    border-width: 0; /* Remove a borda */
-    color: transparent; /* Torna o texto invisível */
-    /* Remove os padrões do track no Internet Explorer */
-}
-
-/* Estilizando o controle deslizante (thumb) no WebKit */
+/* === Estilizando o controle deslizante (thumb) === */
 .input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Remove o estilo padrão */
-    appearance: none; /* Remove o estilo padrão */
-    width: 20px; /* Largura do controle deslizante */
-    height: 20px; /* Altura do controle deslizante */
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
     margin-top: -5px;
-    border-radius: 50%; /* Faz o controle deslizante ser redondo */
+    border-radius: 50%;
     border: 3px solid #1f1f1f;
     background-image: radial-gradient(circle, var(--cinza-2) 30%, var(--cinza-1) 40%);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Sombra para dar destaque */
-    cursor: pointer; /* Mostra o cursor de ponteiro para indicar que é interativo */
-    transition:  0.3s ease-in-out; /* Transição suave quando a cor do thumb muda */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
 }
 
-/* Estilizando o controle deslizante (thumb) no Firefox */
-.input[type="range"]::-moz-range-thumb {
-    width: 20px; /* Largura do controle deslizante */
-    height: 20px; /* Altura do controle deslizante */
-    border-radius: 50%; /* Tornando o controle deslizante redondo */
-    border: 3px solid #1f1f1f;
-    background-image: radial-gradient(circle, var(--cinza-2) 30%, var(--cinza-1) 40%);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Sombra para dar destaque */
-    cursor: pointer; /* Mostra o cursor de ponteiro */
-    transition: 0.3s ease-in-out; /* Transição suave para a mudança de cor */
-}
-
-/* Estilizando o controle deslizante (thumb) no Internet Explorer */
-.input[type="range"]::-ms-thumb {
-    width: 20px; /* Largura do controle deslizante */
-    height: 20px; /* Altura do controle deslizante */
-    border-radius: 50%; /* Tornando o controle deslizante redondo */
-    border: 3px solid #1f1f1f;
-    background-image: radial-gradient(circle, var(--cinza-2) 30%, var(--cinza-1) 40%);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Sombra para dar destaque */
-    cursor: pointer; /* Mostra o cursor de ponteiro */
-    transition:  0.3s ease-in-out; /* Transição suave para a mudança de cor */
-}
-
-/* Efeito quando o cursor passa sobre o controle deslizante (thumb) */
+/* === Efeito de hover no controle deslizante === */
 .input[type="range"]:hover::-webkit-slider-thumb {
-    background-image: radial-gradient(circle, #aaaaaa 30%, var(--cinza-1) 40%);
-}
-
-.input[type="range"]:hover::-moz-range-thumb {
-    background-image: radial-gradient(circle, #aaaaaa 30%, var(--cinza-1) 40%); /* Muda a cor do thumb no Firefox */
-}
-
-.input[type="range"]:hover::-ms-thumb {
-    background-image: radial-gradient(circle, #aaaaaa 30%, var(--cinza-1) 40%); /* Muda a cor do thumb no Internet Explorer */
+    background-image: radial-gradient(circle, var(--roxo) 30%, var(--cinza-1) 40%);
 }

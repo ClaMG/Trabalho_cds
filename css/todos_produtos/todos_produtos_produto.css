@@ -1,4 +1,5 @@
-:root{
+/* === VARIÁVEIS DE CORES GLOBAIS === */
+:root {
     --cinza-1: #303030;
     --cinza-2: #5d5d5d;
     --cinza-3: #6d6d6d;
@@ -7,33 +8,37 @@
     --cinza-6: #949494;
     --cinza-7: #abaaaa;
     --branco: #ffffff;
+    --roxo: #7445cc;
 }
 
-.fileira_produtos{
-    display: flex;
+/* === CONTAINER QUE AGRUPA OS PRODUTOS EM FILEIRAS === */
+.fileira_produtos {
+    display: flex;                 /* Exibe os produtos em linha */
     width: 980px;
     height: auto;
-    justify-content: space-between;
+    justify-content: space-between; /* Espaço igual entre os produtos */
     margin-top: 35px;
-    flex-wrap: wrap;
+    flex-wrap: wrap;              /* Quebra linha caso não caibam na mesma */
     margin-bottom: 30px;
 }
 
-.link_produto2{
+/* === LINK SOBRE O PRODUTO COM BOTÃO SOBREPOSTO === */
+.link_produto2 {
     width: 140px;
     height: 80px;
     z-index: 1;
     position: relative;
     display: flex;
     align-items: center;
-    margin-top: -85px;
+    margin-top: -85px;           /* Posicionamento relativo ao produto */
     margin-left: 5px;
 }
 
-.butao{
-    display: none;
+/* === BOTÃO SOBRE O PRODUTO (APARECE AO PASSAR O MOUSE) === */
+.butao {
+    display: none;               /* Escondido por padrão */
     position: absolute;
-    background-color: var(--cinza-2);
+    background-color: var(--roxo);
     color: var(--branco);
     padding: 5px;
     border-radius: 5px;
@@ -46,13 +51,15 @@
     line-height: 40px;
 }
 
+/* === EXIBE O BOTÃO AO PASSAR O MOUSE SOBRE O LINK DO PRODUTO === */
 .link_produto2:hover .butao {
     display: block;
-    transition: 2s;
-  }
+    transition: 2s;              /* Transição suave na aparição */
+}
 
-.produto{
-    border: 2px solid #404040;
+/* === CARD DO PRODUTO === */
+.produto {
+    border: 2px solid var(--roxo); /* Borda com a cor roxa padrão */
     width: 220px;
     height: 340px;
     justify-content: space-between;
@@ -62,52 +69,60 @@
     border-radius: 10px;
     background-color: var(--branco);
     z-index: 0;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3); /* Sombra suave */
     margin-top: 20px;
     margin-right: 10px;
 }
 
-.img_capa_cd{
+/* === IMAGEM DO PRODUTO (CAPA DO CD) === */
+.img_capa_cd {
     height: 180px;
 }
 
-.nome_cd, .valor{
+/* === NOME DO CD E VALOR === */
+.nome_cd, .valor {
     font-size: 25px;
-    color: #686868;
+    color: var(--roxo);
 }
 
-.descricao, .promo{
+/* === DESCRIÇÃO E INFORMAÇÃO DE PROMOÇÃO === */
+.descricao, .promo {
     color: var(--cinza-3);
     font-size: 15px;
 }
 
-.descricao{
+/* === AJUSTE ESPECÍFICO DA DESCRIÇÃO === */
+.descricao {
     z-index: 3;
 }
 
-.artista{
-    color: #6d6d6d;
+/* === NOME DO ARTISTA === */
+.artista {
+    color: var(--cinza-3);
     z-index: 3;
     position: relative;
 }
 
-.artista:hover{
-    color: #303030;
+/* === EFEITO AO PASSAR O MOUSE NO NOME DO ARTISTA === */
+.artista:hover {
+    color: var(--roxo);
 }
 
-.baixo_part{
+/* === CONTAINER INFERIOR DO CARD: CONTÉM ÍCONE DE FAVORITO E OUTROS === */
+.baixo_part {
     margin-top: 15px;
     display: flex;
     justify-content: space-between;
 }
 
-.img_favorito{
+/* === ÍCONE DE FAVORITO === */
+.img_favorito {
     width: 50px;
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
-    transition: transform 0.2s ease-in-out;
+    cursor: pointer; /* Mostra que o ícone é clicável */
+    transition: transform 0.2s ease-in-out; /* Suaviza o efeito de clique */
 }
 
+/* === EFEITO DE CLIQUE NO ÍCONE DE FAVORITO === */
 .img_favorito:active {
-    transform: scale(0.95); /* Efeito de clique */
+    transform: scale(0.95); /* Reduz o tamanho ligeiramente ao clicar */
 }
-

@@ -1,4 +1,5 @@
-:root{
+/* === VARIÁVEIS DE CORES GLOBAIS === */
+:root {
     --cinza-1: #303030;
     --cinza-2: #5d5d5d;
     --cinza-3: #6d6d6d;
@@ -7,59 +8,74 @@
     --cinza-6: #949494;
     --cinza-7: #abaaaa;
     --branco: #ffffff;
+    --roxo: #7445cc;
 }
 
-#main{
-    display: flex;
+/* === SEÇÃO PRINCIPAL QUE CONTÉM OS PRODUTOS === */
+#main {
+    display: flex;           /* Exibe os elementos em coluna */
     flex-direction: column;
-    margin-left: 20px;
+    margin-left: 20px;       /* Margem lateral para espaçamento */
 }
 
-#part_cima_produtos{
+/* === PARTE SUPERIOR DA LISTAGEM DE PRODUTOS === */
+#part_cima_produtos {
+    display: flex;           /* Exibe os elementos lado a lado */
+    width: 900px;            /* Largura fixa */
+    justify-content: space-between; /* Distribui os elementos uniformemente */
+    z-index: 5;              /* Define sobreposição no layout */
+    position: absolute;       /* Posicionamento absoluto em relação ao contêiner pai */
+}
+
+/* === ESTILIZAÇÃO DOS ELEMENTOS DE QUANTIDADE E ORDENAMENTO === */
+#quantidade, #ordenar {
+    color: var(--cinza-3);  /* Cor padrão */
+}
+
+/* === ALTERA A COR DO TEXTO PARA O QUANTIDADE === */
+#quantidade {
+    color: var(--roxo);     /* Usa a cor roxa definida na variável */
+}
+
+/* === CONTAINER PARA O BOTÃO DE ORDENAR PRODUTOS === */
+#ordenar_produtos {
+    border: 2px solid var(--roxo); /* Borda roxa */
+    padding: 5px;                  /* Espaçamento interno */
+    display: flex;                  /* Exibe os elementos em linha */
+    align-items: center;             /* Centraliza verticalmente */
+    cursor: pointer;                 /* Indica que o elemento é clicável */
+    justify-content: space-between;  /* Espaça os elementos internos */
+}
+
+/* === ÍCONE DA SETA PARA ORDENAR === */
+#seta_ordenar {
+    width: 20px; /* Define um tamanho fixo para o ícone */
+}
+
+/* === MENU DE OPÇÕES DE ORDENAMENTO (ESCONDIDO POR PADRÃO) === */
+#formas_de_ordenar {
+    display: none; /* Inicialmente oculto */
+}
+
+/* === CONTAINER PARA AS OPÇÕES DE ORDENAMENTO === */
+#forma_ordenar {
     display: flex;
-    width: 900px;
-    justify-content: space-between;
-    z-index: 5;
-    position: absolute;
+    flex-direction: column; /* Organiza as opções em coluna */
 }
 
-#quantidade, #ordenar{
-    color: var(--cinza-3);
-}
-
-#ordenar_produtos{
-    border: 2px solid var(--cinza-3);
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    justify-content: space-between;
-}
-
-#seta_ordenar{
-    width: 20px;
-}
-
-#formas_de_ordenar{
-    display: none; /* Começa escondido */
-}
-
-#forma_ordenar{
-    display: flex;
-    flex-direction: column;
-}
-
-#button_ordenar{
-    background-color: var(--branco);
-    border: 1px solid var(--cinza-3);
-    padding: 5px 10px;
-    color: var(--cinza-1);
+/* === BOTÃO PARA SELECIONAR O TIPO DE ORDENAMENTO === */
+#button_ordenar {
+    background-color: var(--branco); /* Fundo branco */
+    border: 1px solid var(--roxo);   /* Borda roxa */
+    padding: 5px 10px;               /* Espaçamento interno */
+    color: var(--cinza-1);           /* Cor do texto */
     font-size: 15px;
-    text-align: left;
+    text-align: left;                 /* Alinhamento do texto à esquerda */
 }
 
-#button_ordenar:hover{
-    background-color: var(--cinza-4);
-    color: var(--branco);
-    transition: 0.2s; 
+/* === EFEITO AO PASSAR O MOUSE NO BOTÃO DE ORDENAMENTO === */
+#button_ordenar:hover {
+    background-color: var(--roxo); /* Muda a cor de fundo */
+    color: var(--branco);          /* Muda a cor do texto */
+    transition: 0.2s;              /* Suaviza a mudança de cor */
 }

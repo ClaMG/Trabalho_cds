@@ -1,33 +1,42 @@
-@media only screen and (max-width: 768px){
+/* Aplica regras apenas para telas com largura máxima de 768px (dispositivos móveis, por exemplo) */
+@media only screen and (max-width: 768px) {
+
+    /* Impede a rolagem horizontal da página */
     body {
         overflow-x: hidden;
     }
 
-    #meio{
+    /* Altera a exibição do elemento com id "meio" para bloco (ocupa 100% da largura) */
+    #meio {
         display: block;
     }
 
-    #filtro{
+    /* Adiciona espaçamento inferior ao elemento com id "filtro" */
+    #filtro {
         margin-bottom: 20px;
     }
 
+    /* Define uma largura fixa para inputs do tipo range com classe .input */
     .input[type="range"] {
-        width: 350px; /* Define a largura do controle range para */
+        width: 350px; /* Define a largura do controle range */
     }
 
-    #valor_ponta{
-        color: var(--cinza-2);
-        display: block;
-        width: 450px;
+    /* Ajustes visuais para o elemento com id "valor_ponta" */
+    #valor_ponta {
+        color: var(--cinza-2);  /* Usa uma cor definida por variável CSS */
+        display: block;         /* Ocupa a linha inteira */
+        width: 450px;           /* Largura fixa */
     }
 
-    #part_cima_produtos{
+    /* Exibe o conteúdo em linha flexível e define uma largura fixa */
+    #part_cima_produtos {
         display: flex;
         width: 450px;
     }
 
-    .fileira_produtos{
-        width: 490px;
-       margin-left: -15px;
+    /* Ajustes para o layout dos produtos em fileira */
+    .fileira_produtos {
+        width: 490px;      /* Largura fixa */
+        margin-left: -15px; /* Move um pouco para a esquerda para alinhamento */
     }
 }
