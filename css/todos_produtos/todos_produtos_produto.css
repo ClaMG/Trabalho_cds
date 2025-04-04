@@ -14,12 +14,13 @@
 /* === CONTAINER QUE AGRUPA OS PRODUTOS EM FILEIRAS === */
 .fileira_produtos {
     display: flex;                 /* Exibe os produtos em linha */
-    width: 980px;
+    width: 1000px;
     height: auto;
-    justify-content: space-between; /* Espaço igual entre os produtos */
     margin-top: 35px;
     flex-wrap: wrap;              /* Quebra linha caso não caibam na mesma */
     margin-bottom: 30px;
+    gap: 30px;
+    justify-content: center;
 }
 
 /* === LINK SOBRE O PRODUTO COM BOTÃO SOBREPOSTO === */
@@ -70,8 +71,7 @@
     background-color: var(--branco);
     z-index: 0;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3); /* Sombra suave */
-    margin-top: 20px;
-    margin-right: 10px;
+    margin-top: 15px;
 }
 
 /* === IMAGEM DO PRODUTO (CAPA DO CD) === */

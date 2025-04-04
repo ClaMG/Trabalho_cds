@@ -51,6 +51,7 @@ header {
 /* Define a altura dos ícones de carrinho e perfil */
 #Perfil {
     height: 40px;
+    border-radius: 50px;
 }
 
 /* Estilização da área de login e cadastro */

@@ -56,6 +56,7 @@
 #titulo{
     font-size: 100px;
     color: var(--roxo);
+    margin: 20px;
 }
 
 /* === SEÇÃO PRINCIPAL QUE CONTÉM OS PRODUTOS === */
@@ -63,6 +64,7 @@
     display: flex;           /* Exibe os elementos em coluna */
     flex-direction: column;
     margin: 10px auto;      /* Margem lateral para espaçamento */
+    width: 1300px;
 }
 
 /* === PARTE SUPERIOR DA LISTAGEM DE PRODUTOS === */
@@ -72,6 +74,7 @@
     justify-content: space-between; /* Distribui os elementos uniformemente */
     z-index: 5;              /* Define sobreposição no layout */
     position: absolute;       /* Posicionamento absoluto em relação ao contêiner pai */
+    margin: 0px auto;
 }
 
 /* === ESTILIZAÇÃO DOS ELEMENTOS DE QUANTIDADE E ORDENAMENTO === */
@@ -127,17 +130,16 @@
     transition: 0.2s;              /* Suaviza a mudança de cor */
 }
 
-
 /* === CONTAINER QUE AGRUPA OS PRODUTOS EM FILEIRAS === */
 .fileira_produtos {
     display: flex;                 /* Exibe os produtos em linha */
     width: 1300px;
     height: auto;
-    justify-content: space-between; /* Espaço igual entre os produtos */
     margin-top: 35px;
     flex-wrap: wrap;              /* Quebra linha caso não caibam na mesma */
     margin-bottom: 30px;
-    margin-left: 20px;
+    gap: 50px;
+    justify-content: center;
 }
 
 /* === LINK SOBRE O PRODUTO COM BOTÃO SOBREPOSTO === */
@@ -149,7 +151,7 @@
     display: flex;
     align-items: center;
     margin-top: -85px;           /* Posicionamento relativo ao produto */
-    margin-left: 5px;
+    margin-left: 10px;
 }
 
 /* === BOTÃO SOBRE O PRODUTO (APARECE AO PASSAR O MOUSE) === */
@@ -165,8 +167,7 @@
     text-align: center;
     height: 50px;
     margin-top: 5px;
-    margin-left: 5px;
-    line-height: 50px;
+    line-height: 45px;
 }
 
 /* === EXIBE O BOTÃO AO PASSAR O MOUSE SOBRE O LINK DO PRODUTO === */
@@ -189,6 +190,7 @@
     z-index: 0;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3); /* Sombra suave */
     margin-top: 15px;
+    
 }
 
 /* === IMAGEM DO PRODUTO (CAPA DO CD) === */
@@ -266,6 +268,6 @@
     /* Ajustes para o layout dos produtos em fileira */
     .fileira_produtos {
         width: 490px;      /* Largura fixa */
-        margin-left: -15px; /* Move um pouco para a esquerda para alinhamento */
+        margin-left: 5px; /* Move um pouco para a esquerda para alinhamento */
     }
 }

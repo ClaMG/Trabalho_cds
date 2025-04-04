@@ -103,6 +103,10 @@ header {
     height: 40px;
 }
 
+#Perfil{
+    border-radius: 50px;
+}
+
 /* === Estilização do Menu de Navegação === */
 
 /* Define a estrutura do menu principal */

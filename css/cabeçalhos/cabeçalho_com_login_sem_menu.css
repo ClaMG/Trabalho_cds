@@ -102,6 +102,10 @@ header {
     height: 40px;
 }
 
+#Perfil{
+    border-radius: 50px;
+}
+
 /* === Responsividade === */
 @media only screen and (max-width: 650px) {
 

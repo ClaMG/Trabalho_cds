@@ -5,8 +5,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Favoritos</title>
     <link rel="stylesheet" href="../../../../css/favoritos/favoritos.css">
+    <link rel="stylesheet" href="../../../../css/cabeçalhos/cabeçalho_com_login.css"> <!-- Estilos do cabeçalho -->
+
+    <script src="../../../../js/favoritos/favoritos_butao.js" defer></script>
+    <script src="../../../../js/favoritos/favoritos_ordenar.js" defer></script>
+    <script src="../../../../js/cabeçalho/menu.js" defer></script>
+
 </head>
 <body>
+
+    <!-- Cabeçalho da página (logado) -->
+    <header> 
+
+        <div id="parte_de_cima_cab">
+
+            <!-- Logo da página -->
+            <a href="#" id="logo"><img src="../../../../img/cabeçario/logo.png" alt="Logo" id="img_logo"></a> 
+            
+            <!-- Barra de pesquisa -->
+            <div id="barra_pesquisa">
+                <input type="checkbox" id="check"> <!-- Controle de visibilidade -->
+                <div id="complemento_pesquisa">
+
+                    <!-- Campo de pesquisa -->
+                    <input type="text" id="input_barra_pesquisa" placeholder="Buscar..." >
+
+                    <!-- Botão de pesquisa -->
+                    <label for="check" id="buttom_lupa">
+                        <img src="../../../../img/cabeçario/icone_lupa.png" alt="Lupa" id="lupa">
+                    </label>
+                </div>
+            </div>
+
+            <div id="login_carrinho"> <!-- Login e Carrinho -->
+                    <a href="#"><img src="../../../../img/cabeçario/icone_perfil.png" alt="Perfil" id="Perfil"></a><!-- Foto de perfil -->
+
+                <a href="#"><img src="../../../../img/cabeçario/icone_carrinho.png" alt="Carrinho" id="Carrinho"></a><!-- Ícone de carrinho -->
+            </div>
+        </div>
+
+        <hr style="color: #7b7a7a;"><!-- Linha separadora -->
+
+        <!-- Menu de navegação -->
+        <nav class="menu-underline">
+            <input type="checkbox" id="menu_toggle" class="menu_toggle"><!-- Menu responsivo -->
+            <label for="menu_toggle" class="menu_icon">&#9776;</label> 
+
+            <ul id="menu">
+
+                <li class="p_menu"><a href="#" class="a_menu">Inicio</a></li>
+                <li class="p_menu"><a href="#" class="a_menu">Produtos</a></li>
+                
+                 <!-- Menu suspenso de gêneros musicais -->
+                <li class="p_menu" id="menu_genero">
+
+                    <button onclick="aparecer_g('sumir_g')" class="b_menu">
+                        Gênero
+                    </button>
+
+                    <!-- Submenu de Gêneros -->
+                    <ul class="subclasse_menu" id="sumir_g">
+                        
+                        <ul class="sub_subclasse_menu">
+                            <li><a href="#" class="sub_a">Clássica</a></li>
+                            <li><a href="#" class="sub_a">Eletrônica</a></li>
+                            <li><a href="#" class="sub_a">Forro</a></li>
+                            <li><a href="#" class="sub_a">Hip Hop</a></li>
+                            <li><a href="#" class="sub_a">MPB</a></li>
+                        </ul>
+                        
+                        <ul class="sub_subclasse_menu">
+                            <li><a href="#" class="sub_a">Pagode</a></li>
+                            <li><a href="#" class="sub_a">Pop</a></li>
+                            <li><a href="#" class="sub_a">Reggae</a></li>
+                            <li><a href="#" class="sub_a">Rock</a></li>
+                            <li><a href="#" class="sub_a">Sertanejo</a></li>
+                        </ul>
+                    </ul>
+                </li>
+
+                <!-- Menu suspenso para Artistas -->
+                <li class="p_menu" id="arredondar_b">
+
+                    <button onclick="aparecer_a('sumir_a')" class="b_menu">
+                        Artistas
+                    </button>
+
+                    <!-- Submenu de Artistas -->
+                    <ul class="subclasse_menu_a" id="sumir_a">
+                        
+                        <ul class="sub_subclasse_menu">
+                            <li><a href="#" class="sub_a">Ludwing Beethowen</a></li>
+                            <li><a href="#" class="sub_a">Marshmello</a></li>
+                            <li><a href="#" class="sub_a">Luiz Gonzaga</a></li>
+                            <li><a href="#" class="sub_a">Snoop Dogg</a></li>
+                            <li><a href="#" class="sub_a">Maria Bethânia</a></li>
+                        </ul>
+                        
+                        <ul class="sub_subclasse_menu">
+                            <li><a href="#" class="sub_a">Péricles</a></li>
+                            <li><a href="#" class="sub_a">Michael Jackson</a></li>
+                            <li><a href="#" class="sub_a">Bob Marley</a></li>
+                            <li><a href="#" class="sub_a">Elvis Presley</a></li>
+                            <li><a href="#" class="sub_a">Luan Santana</a></li>
+                        </ul>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
     <section>
         <div id="caminho">
@@ -63,7 +170,7 @@
                                    <h1 class="valor">R$500</h1>
                                    <p class="promo">Promoção</p>
                                </div>
-                               <img src="../../../../img/favoritos/icone_favoritos.png" alt="Favoritos" class="img_favorito">
+                               <img src="../../../../img/favoritos/icone_favoritos_selecionado.png" alt="Favoritos" class="img_favorito">
                            </div>
                        </div>
                 </div>
@@ -84,7 +191,7 @@
                                    <h1 class="valor">R$500</h1>
                                    <p class="promo">Promoção</p>
                                </div>
-                               <img src="../../../../img/favoritos/icone_favoritos.png" alt="Favoritos" class="img_favorito">
+                               <img src="../../../../img/favoritos/icone_favoritos_selecionado.png" alt="Favoritos" class="img_favorito">
                            </div>
                        </div>
                 </div>
@@ -104,7 +211,7 @@
                                    <h1 class="valor">R$500</h1>
                                    <p class="promo">Promoção</p>
                                </div>
-                               <img src="../../../../img/favoritos/icone_favoritos.png" alt="Favoritos" class="img_favorito">
+                               <img src="../../../../img/favoritos/icone_favoritos_selecionado.png" alt="Favoritos" class="img_favorito">
                            </div>
                        </div>
                 </div>
@@ -124,7 +231,7 @@
                                    <h1 class="valor">R$500</h1>
                                    <p class="promo">Promoção</p>
                                </div>
-                               <img src="../../../../img/favoritos/icone_favoritos.png" alt="Favoritos" class="img_favorito">
+                               <img src="../../../../img/favoritos/icone_favoritos_selecionado.png" alt="Favoritos" class="img_favorito">
                            </div>
                        </div>
                 </div>
@@ -144,7 +251,47 @@
                                    <h1 class="valor">R$500</h1>
                                    <p class="promo">Promoção</p>
                                </div>
-                               <img src="../../../../img/favoritos/icone_favoritos.png" alt="Favoritos" class="img_favorito">
+                               <img src="../../../../img/favoritos/icone_favoritos_selecionado.png" alt="Favoritos" class="img_favorito">
+                           </div>
+                       </div>
+                </div>
+                <a href="#" class="link_produto2"> <div class="butao">Ver Mais</div></a>
+            </div>
+            <div>
+                <div class="produto">
+                       <img src="../../../../img/favoritos/capa_cd.jpg" alt="Capa cd" class="img_capa_cd">
+                       <div>
+                           <div>
+                               <h1 class="nome_cd">Nome</h1>
+                               <p class="descricao"><a href="#" class="artista">Artista</a></p>
+                               <p class="descricao">Disponibilidade</p>
+                           </div>
+                           <div class="baixo_part">
+                               <div>
+                                   <h1 class="valor">R$500</h1>
+                                   <p class="promo">Promoção</p>
+                               </div>
+                               <img src="../../../../img/favoritos/icone_favoritos_selecionado.png" alt="Favoritos" class="img_favorito">
+                           </div>
+                       </div>
+                </div>
+                <a href="#" class="link_produto2"> <div class="butao">Ver Mais</div></a>
+            </div>
+            <div>
+                <div class="produto">
+                       <img src="../../../../img/favoritos/capa_cd.jpg" alt="Capa cd" class="img_capa_cd">
+                       <div>
+                           <div>
+                               <h1 class="nome_cd">Nome</h1>
+                               <p class="descricao"><a href="#" class="artista">Artista</a></p>
+                               <p class="descricao">Disponibilidade</p>
+                           </div>
+                           <div class="baixo_part">
+                               <div>
+                                   <h1 class="valor">R$500</h1>
+                                   <p class="promo">Promoção</p>
+                               </div>
+                               <img src="../../../../img/favoritos/icone_favoritos_selecionado.png" alt="Favoritos" class="img_favorito">
                            </div>
                        </div>
                 </div>
