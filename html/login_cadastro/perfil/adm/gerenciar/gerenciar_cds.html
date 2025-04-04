@@ -6,8 +6,42 @@
     <title>Gerenciar Cds</title>
     <link rel="stylesheet" href="../../../../../css/adm/gerenciar/gerenciar_cds.css">
     <link rel="stylesheet" href="../../../../../css/adm/gerenciar/gerenciar.css">
+    <link rel="stylesheet" href="../../../../../css/cabeçalhos/cabeçalho_com_login_sem_menu.css">
+
+    <script src="../../../../../js/adm/gerenciar/gerenciar_filtro.js" defer></script>
 </head>
 <body>
+
+    <!-- Cabeçalho da página (com user logado) -->
+    <header> 
+
+        <div id="parte_de_cima_cab">
+
+              <!-- Logo da página -->
+              <a href="#" id="logo"><img src="../../../../../img/cabeçario/logo.png" alt="Logo" id="img_logo"></a> 
+            
+            <!-- Barra de pesquisa -->
+            <div id="barra_pesquisa">
+                <input type="checkbox" id="check"> <!-- Controle de visibilidade -->
+                <div id="complemento_pesquisa">
+
+                    <!-- Campo de pesquisa -->
+                    <input type="text" id="input_barra_pesquisa" placeholder="Buscar..." >
+
+                    <!-- Botão de pesquisa -->
+                    <label for="check" id="buttom_lupa">
+                        <img src="../../../../../img/cabeçario/icone_lupa.png" alt="Lupa" id="lupa">
+                    </label>
+                </div>
+            </div>
+
+            <div id="login_carrinho"> <!-- Conta e Carrinho -->
+                    <a href="#"><img src="../../../../../img/cabeçario/icone_perfil.png" alt="Perfil" id="Perfil"></a><!-- Imagem de perfil -->
+
+                <a href="#"><img src="../../../../../img/cabeçario/icone_carrinho.png" alt="Carrinho" id="Carrinho"></a><!-- Ícone de carrinho -->
+            </div>
+        </div>
+    </header>
 
     <h1 id="titulo">Gerenciar CDs</h1>
 
@@ -103,16 +137,5 @@
             </tbody>
         </table>
     </section>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-          const btn = document.querySelector('#btn_filtro');
-          const filtros = document.querySelector('#filtro');
-      
-          btn.addEventListener('click', () => {
-            filtros.classList.toggle('mostrar');
-          });
-        });
-    </script>
 </body>
 </html>
