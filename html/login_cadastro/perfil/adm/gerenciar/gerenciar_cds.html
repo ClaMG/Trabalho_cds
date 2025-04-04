@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Cds</title>
+    <link rel="stylesheet" href="../../../../../css/adm/gerenciar/gerenciar_cds.css">
+</head>
+<body>
+
+    <h1 id="titulo">Gerenciar CDs</h1>
+
+    <section id="filtro">
+        <div id="separar">
+            <p class="p_filtro">Titulo:<input type="text" class="input_filtro"></p>
+            <p class="p_filtro">Gênero:<input type="text" class="input_filtro"></p>
+            <p class="p_filtro">Lançamento:<input type="text" class="input_filtro"></p>
+            <p class="p_filtro">Durabilidade:<input type="text" class="input_filtro"></p>
+            <p class="p_filtro">Destaque:<input type="text" class="input_filtro"></p>
+            <p class="p_filtro">Preço min:<input type="text" class="input_filtro"></p>
+            <p class="p_filtro">Preço max:<input type="text" class="input_filtro"></p>
+        </div>
+        <button id="button_filtro">Procurar</button>
+    </section>
+
+    <section id="tabelao">
+        <table id="table">
+            <thead id="cabeca">
+                <tr id="itens_cabeca">
+                    <th class="titulo_item">ID</th>
+                    <th class="titulo_item">Titulo</th>
+                    <th class="titulo_item">Capa</th>
+                    <th class="titulo_item">Disponibilidade</th>
+                    <th class="titulo_item">Preço</th>
+                    <th class="titulo_item">Destaque</th>
+                    <th class="titulo_item">Lançamento</th>
+                    <th class="titulo_item">Gênero</th>
+                    <th class="titulo_item">Descrição</th>
+                    <th class="titulo_item">Artistas</th>
+                    <th class="titulo_item">Musicas</th>
+                    <th class="titulo_item">Promoção</th>
+                    <th class="titulo_item">Preço com desconto</th>
+                    <th class="titulo_item">Vendas</th>
+                    <th class="titulo_item">Ações</th>
+                </tr>
+            </thead>
+            <tbody id="conteudo">
+                <tr class="informações">
+                    <th class="info">1</th>
+                    <th class="info">Titulo</th>
+                    <th class="info"><img src="#" alt="capa_cd"></th>
+                    <th class="info">50</th>
+                    <th class="info">R$100,00</th>
+                    <th class="info"><img src="#" alt="icone de sim"></th>
+                    <th class="info">1969</th>
+                    <th class="info">Gênero</th>
+                    <th class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla est possimus nemo esse quos</th>
+                    <th class="info">Artistas</th>
+                    <th class="info">Musicas</th>
+                    <th class="info">
+                        <input type="number">%
+                        <button>Aplicar</button>
+                    </th>
+                    <th class="info">R$50,00</th>
+                    <th class="info">5</th>
+                    <th class="info">
+                        <a href="#">Editar</a>
+                        <a href="#">Excluir</a>
+                    </th>
+                </tr>
+                <tr class="informações">
+                    <th class="info">2</th>
+                    <th class="info">Titulo</th>
+                    <th class="info"><img src="#" alt="capa_cd"></th>
+                    <th class="info">20</th>
+                    <th class="info">R$200,00</th>
+                    <th class="info"><img src="#" alt="icone de sim"></th>
+                    <th class="info">1869</th>
+                    <th class="info">Gênero</th>
+                    <th class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla est possimus nemo esse quos</th>
+                    <th class="info">Artistas</th>
+                    <th class="info">Musicas</th>
+                    <th class="info">
+                        <input type="number">%
+                        <button>Aplicar</button>
+                    </th>
+                    <th class="info">R$100,00</th>
+                    <th class="info">5</th>
+                    <th class="info">
+                        <a href="#">Editar</a>
+                        <a href="#">Excluir</a>
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</body>
+</html>

@@ -5,27 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ordenação de Produtos</title>
     <style>
-        .custom-file-upload {
-    display: inline-block;
-    cursor: pointer;
-    background-color: transparent; /* Fundo transparente */
-    margin: 15px 10px; /* Margens internas */
-    border: none; /* Remove as bordas padrão */
-    border-bottom: 2px solid black; /* Apenas a borda inferior */
-    font-size: 20px; /* Tamanho da fonte */
-    width: 100%; /* Para evitar cortes laterais */
-    max-width: 350px;
-}
-
-.custom-file-upload:hover {
-    background-color: #d2d2d2;
-}
-
-      </style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+    
 </head>
 <body>
-  <label for="upload" class="custom-file-upload">Escolher Arquivo</label>
-  <input type="file" id="upload" hidden>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Profissão</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ana</td>
+                <td>25</td>
+                <td>Engenheira</td>
+            </tr>
+            <tr>
+                <td>Carlos</td>
+                <td>30</td>
+                <td>Designer</td>
+            </tr>
+        </tbody>
+    </table>
+    
   
 </body>
 </html>
