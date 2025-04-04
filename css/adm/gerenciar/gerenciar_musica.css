@@ -1,0 +1,27 @@
+:root{
+    --cinza-1: #303030;
+    --cinza-2: #5d5d5d;
+    --cinza-3: #6d6d6d;
+    --cinza-4: #7b7a7a;
+    --cinza-5: #888888;
+    --cinza-6: #949494;
+    --cinza-7: #abaaaa;
+    --branco: #ffffff;
+    --roxo: #7445cc;
+}
+
+.audio {
+    border: 2px solid var(--roxo);
+    border-radius: 30px;
+    margin: 5px;
+}
+
+#filtro{
+    width: 760px;
+}
+
+@media (max-width: 768px){
+    #filtro{
+        width: 400px;
+    }
+}

@@ -1,0 +1,41 @@
+:root{
+    --cinza-1: #303030;
+    --cinza-2: #5d5d5d;
+    --cinza-3: #6d6d6d;
+    --cinza-4: #7b7a7a;
+    --cinza-5: #888888;
+    --cinza-6: #949494;
+    --cinza-7: #abaaaa;
+    --branco: #ffffff;
+    --roxo: #7445cc;
+}
+
+.add_perfil_img {
+    display: inline-block;
+    cursor: pointer;
+    color: var(--cinza-4);
+}
+
+.add_perfil_img:hover {
+    background-color: #dedddd;
+}
+
+#upload {
+    display: none;
+}
+
+#audio {
+    color: var(--cinza-4);
+    cursor: pointer;
+    display: inline-block;
+    background-color: transparent; /* Fundo transparente */
+    margin: 15px 10px; /* Margens internas */
+    border: none; /* Remove as bordas padrão */
+    border-bottom: 2px solid var(--cinza-4); /* Apenas a borda inferior */
+    font-size: 1.2rem;
+    width: 350px;
+  }
+
+#audio:hover {
+background-color: #dedddd;
+}

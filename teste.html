@@ -4,36 +4,27 @@
   <meta charset="UTF-8">
   <title>Checkbox Sim e Não</title>
   <style>
-    label {
-      display: block;
-      margin-bottom: 10px;
-      font-size: 18px;
-    }
+    #input-arquivo {
+    display: none;
+  }
+
+  .label-arquivo {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+  }
+
+  .label-arquivo:hover {
+    background-color: #0056b3;
+  }
   </style>
 </head>
 <body>
-  <label>
-    <input type="checkbox" id="sim"> Sim
-  </label>
-  <label>
-    <input type="checkbox" id="nao"> Não
-  </label>
-
-  <script>
-    const checkboxSim = document.getElementById('sim');
-    const checkboxNao = document.getElementById('nao');
-
-    checkboxSim.addEventListener('change', () => {
-      if (checkboxSim.checked) {
-        checkboxNao.checked = false;
-      }
-    });
-
-    checkboxNao.addEventListener('change', () => {
-      if (checkboxNao.checked) {
-        checkboxSim.checked = false;
-      }
-    });
-  </script>
+  <label class="label-arquivo" for="input-arquivo">📁 Selecionar arquivo</label>
+  <input type="file" id="input-arquivo">
 </body>
 </html>
