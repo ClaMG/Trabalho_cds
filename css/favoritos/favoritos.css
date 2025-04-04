@@ -1,0 +1,271 @@
+/* === VARIÁVEIS DE CORES GLOBAIS === */
+:root {
+    --cinza-1: #303030;
+    --cinza-2: #5d5d5d;
+    --cinza-3: #6d6d6d;
+    --cinza-4: #7b7a7a;
+    --cinza-5: #888888;
+    --cinza-6: #949494;
+    --cinza-7: #abaaaa;
+    --branco: #ffffff;
+    --roxo: #7445cc;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* === Estilização do caminho de navegação === */
+#caminho{
+    display: flex;
+    align-items: center;
+    margin: 20px 0px 20px 20px;
+}
+
+#home{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70px;
+}
+
+#img_home{
+    width: 25px;
+}
+
+.seta{
+    width: 20px;
+}
+
+.proxima_part{
+    display: flex;
+    align-items: center;
+}
+
+.link_caminho{
+    color: var(--cinza-1);
+    text-decoration: none;
+}
+
+.link_caminho:hover{
+    color: var(--cinza-4);
+}
+
+#titulo{
+    font-size: 100px;
+    color: var(--roxo);
+}
+
+/* === SEÇÃO PRINCIPAL QUE CONTÉM OS PRODUTOS === */
+#main {
+    display: flex;           /* Exibe os elementos em coluna */
+    flex-direction: column;
+    margin: 10px auto;      /* Margem lateral para espaçamento */
+}
+
+/* === PARTE SUPERIOR DA LISTAGEM DE PRODUTOS === */
+#part_cima_produtos {
+    display: flex;           /* Exibe os elementos lado a lado */
+    width: 1300px;            /* Largura fixa */
+    justify-content: space-between; /* Distribui os elementos uniformemente */
+    z-index: 5;              /* Define sobreposição no layout */
+    position: absolute;       /* Posicionamento absoluto em relação ao contêiner pai */
+}
+
+/* === ESTILIZAÇÃO DOS ELEMENTOS DE QUANTIDADE E ORDENAMENTO === */
+#quantidade, #ordenar {
+    color: var(--cinza-3);  /* Cor padrão */
+}
+
+/* === ALTERA A COR DO TEXTO PARA O QUANTIDADE === */
+#quantidade {
+    color: var(--roxo);     /* Usa a cor roxa definida na variável */
+}
+
+/* === CONTAINER PARA O BOTÃO DE ORDENAR PRODUTOS === */
+#ordenar_produtos {
+    border: 2px solid var(--roxo); /* Borda roxa */
+    padding: 5px;                  /* Espaçamento interno */
+    display: flex;                  /* Exibe os elementos em linha */
+    align-items: center;             /* Centraliza verticalmente */
+    cursor: pointer;                 /* Indica que o elemento é clicável */
+    justify-content: space-between;  /* Espaça os elementos internos */
+}
+
+/* === ÍCONE DA SETA PARA ORDENAR === */
+#seta_ordenar {
+    width: 20px; /* Define um tamanho fixo para o ícone */
+}
+
+/* === MENU DE OPÇÕES DE ORDENAMENTO (ESCONDIDO POR PADRÃO) === */
+#formas_de_ordenar {
+    display: none; /* Inicialmente oculto */
+}
+
+/* === CONTAINER PARA AS OPÇÕES DE ORDENAMENTO === */
+#forma_ordenar {
+    display: flex;
+    flex-direction: column; /* Organiza as opções em coluna */
+}
+
+/* === BOTÃO PARA SELECIONAR O TIPO DE ORDENAMENTO === */
+#button_ordenar {
+    background-color: var(--branco); /* Fundo branco */
+    border: 1px solid var(--roxo);   /* Borda roxa */
+    padding: 5px 10px;               /* Espaçamento interno */
+    color: var(--cinza-1);           /* Cor do texto */
+    font-size: 15px;
+    text-align: left;                 /* Alinhamento do texto à esquerda */
+}
+
+/* === EFEITO AO PASSAR O MOUSE NO BOTÃO DE ORDENAMENTO === */
+#button_ordenar:hover {
+    background-color: var(--roxo); /* Muda a cor de fundo */
+    color: var(--branco);          /* Muda a cor do texto */
+    transition: 0.2s;              /* Suaviza a mudança de cor */
+}
+
+
+/* === CONTAINER QUE AGRUPA OS PRODUTOS EM FILEIRAS === */
+.fileira_produtos {
+    display: flex;                 /* Exibe os produtos em linha */
+    width: 1300px;
+    height: auto;
+    justify-content: space-between; /* Espaço igual entre os produtos */
+    margin-top: 35px;
+    flex-wrap: wrap;              /* Quebra linha caso não caibam na mesma */
+    margin-bottom: 30px;
+}
+
+/* === LINK SOBRE O PRODUTO COM BOTÃO SOBREPOSTO === */
+.link_produto2 {
+    width: 140px;
+    height: 80px;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: -85px;           /* Posicionamento relativo ao produto */
+    margin-left: 5px;
+}
+
+/* === BOTÃO SOBRE O PRODUTO (APARECE AO PASSAR O MOUSE) === */
+.butao {
+    display: none;               /* Escondido por padrão */
+    position: absolute;
+    background-color: var(--roxo);
+    color: var(--branco);
+    padding: 5px;
+    border-radius: 5px;
+    width: 140px;
+    font-size: 30px;
+    text-align: center;
+    height: 50px;
+    margin-top: 5px;
+    margin-left: 5px;
+    line-height: 40px;
+}
+
+/* === EXIBE O BOTÃO AO PASSAR O MOUSE SOBRE O LINK DO PRODUTO === */
+.link_produto2:hover .butao {
+    display: block;
+    transition: 2s;              /* Transição suave na aparição */
+}
+
+/* === CARD DO PRODUTO === */
+.produto {
+    border: 2px solid var(--roxo); /* Borda com a cor roxa padrão */
+    width: 220px;
+    height: 340px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: var(--branco);
+    z-index: 0;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+/* === IMAGEM DO PRODUTO (CAPA DO CD) === */
+.img_capa_cd {
+    height: 180px;
+}
+
+/* === NOME DO CD E VALOR === */
+.nome_cd, .valor {
+    font-size: 25px;
+    color: var(--roxo);
+}
+
+/* === DESCRIÇÃO E INFORMAÇÃO DE PROMOÇÃO === */
+.descricao, .promo {
+    color: var(--cinza-3);
+    font-size: 15px;
+}
+
+/* === AJUSTE ESPECÍFICO DA DESCRIÇÃO === */
+.descricao {
+    z-index: 3;
+}
+
+/* === NOME DO ARTISTA === */
+.artista {
+    color: var(--cinza-3);
+    z-index: 3;
+    position: relative;
+}
+
+/* === EFEITO AO PASSAR O MOUSE NO NOME DO ARTISTA === */
+.artista:hover {
+    color: var(--roxo);
+}
+
+/* === CONTAINER INFERIOR DO CARD: CONTÉM ÍCONE DE FAVORITO E OUTROS === */
+.baixo_part {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* === ÍCONE DE FAVORITO === */
+.img_favorito {
+    width: 50px;
+    cursor: pointer; /* Mostra que o ícone é clicável */
+    transition: transform 0.2s ease-in-out; /* Suaviza o efeito de clique */
+}
+
+/* === EFEITO DE CLIQUE NO ÍCONE DE FAVORITO === */
+.img_favorito:active {
+    transform: scale(0.95); /* Reduz o tamanho ligeiramente ao clicar */
+}
+
+/* Aplica regras apenas para telas com largura máxima de 768px (dispositivos móveis, por exemplo) */
+@media only screen and (max-width: 768px) {
+
+    /* Impede a rolagem horizontal da página */
+    body {
+        overflow-x: hidden;
+    }
+
+    /* Altera a exibição do elemento com id "meio" para bloco (ocupa 100% da largura) */
+    #meio {
+        display: block;
+    }
+
+    /* Exibe o conteúdo em linha flexível e define uma largura fixa */
+    #part_cima_produtos {
+        display: flex;
+        width: 450px;
+    }
+
+    /* Ajustes para o layout dos produtos em fileira */
+    .fileira_produtos {
+        width: 490px;      /* Largura fixa */
+        margin-left: -15px; /* Move um pouco para a esquerda para alinhamento */
+    }
+}
