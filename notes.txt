@@ -33,7 +33,8 @@ avaliar_site.css
 cabeçalho_com_login_sem_menu.css
 cabeçalho_com_login.css
 cabeçalho_sem_login.css
-cadastro.css 
+cadastro.css
+favoritos.css 
 login.css
 adm.css
 perfil.css 
@@ -69,6 +70,7 @@ editar_user.html > cabeçalho_com_login_sem_menu.css
 gerenciar_artistas.html > cabeçalho_com_login_sem_menu.css
 gerenciar_cds.html > cabeçalho_com_login_sem_menu.css
 gerenciar_user.html > cabeçalho_com_login_sem_menu.css
+favoritos.html > cabeçalho_com_login.css
 
 
 Falta terminar:
@@ -84,7 +86,6 @@ Falta telas:
 -gerenciar_musicas
 -deletar_cd
 
--favoritos
 -sugestao
 -carrinho
 -historico_compras
