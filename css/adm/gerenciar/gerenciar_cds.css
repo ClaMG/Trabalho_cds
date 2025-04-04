@@ -10,66 +10,6 @@
     --roxo: #7445cc;
 }
 
-#filtro{
-    width: 1300px;
-    border: 2px solid var(--roxo);
-    padding: 10px;
-    margin: 20px 10px;
-    border-radius: 10px;
-}
-
-#btn_filtro {
-    display: none;
-    margin-bottom: 10px;
-}
-
-#separar{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.lado{
-    display: flex;
-    width: 370px;
-}
-
-.p_filtro{
-    color: var(--cinza-1);
-    font-weight: bold;
-    font-size: 20px;
-    text-align: center;
-    width: 200px;
-}
-
-.input_filtro{
-    color: var(--cinza-2);
-    border-radius: 5px;
-    border: 2px solid var(--cinza-1);
-    font-size: 18px;
-    width: 170px;
-    padding-left: 5px;
-    margin-top: 5px;
-}
-
-#button_filtro{
-    margin-top: 10px;
-    width: 150px;
-    border-radius: 5px;
-    border: none;
-    background-color: #e2e2e2; /* Cor de fundo */
-    color: var(--cinza-2); /* Cor do texto */
-    font-size: 20px; /* Tamanho da fonte */
-    font-weight: bold; /* Negrito */
-    padding: 5px;
-}
-
-#button_filtro:hover{
-    color: var(--branco); /* Cor do texto ao passar o mouse */
-    background-color: var(--cinza-2); /* Cor de fundo ao passar o mouse */
-    transition: 0.3s;
-}
-
 .capa {
     width: 50px;
 }
@@ -101,41 +41,4 @@
     color: var(--branco); /* Cor do texto ao passar o mouse */
     background-color: var(--cinza-2); /* Cor de fundo ao passar o mouse */
     transition: 0.3s;
-}
-
- /* Responsivo */
- @media (max-width: 768px) {
-    #btn_filtro {
-        display: block;
-        margin-left: 40px;
-        width: 150px;
-        border-radius: 5px;
-        border: none;
-        background-color: #e2e2e2; /* Cor de fundo */
-        color: var(--cinza-2); /* Cor do texto */
-        font-size: 20px; /* Tamanho da fonte */
-        font-weight: bold; /* Negrito */
-        padding: 5px;
-    }
-  
-    #filtro {
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      width: 400px;
-      
-    }
-  
-    #filtro.mostrar {
-      display: flex;
-    }
-
-    #separar{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .p_filtro{
-        margin-top: 5px;
-    }
 }

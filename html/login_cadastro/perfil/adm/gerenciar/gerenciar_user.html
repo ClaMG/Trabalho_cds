@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../../../../../css/adm/gerenciar/gerenciar.css">
     <link rel="stylesheet" href="../../../../../css/adm/gerenciar/gerenciar_user.css">
     <link rel="stylesheet" href="../../../../../css/cabeçalhos/cabeçalho_com_login_sem_menu.css">
+
+    <script src="../../../../../js/adm/gerenciar/gerenciar_filtro.js" defer></script>
 </head>
 <body>
 
@@ -43,6 +45,23 @@
     
     <button id="button_voltar">Voltar</button>
     <h1 id="titulo">Gerenciar Usuarios</h1>
+
+    <button id="btn_filtro">Filtros</button>
+
+    <section id="filtro">
+        <div id="separar">
+            <div class="lado">
+                <p class="p_filtro">Usuario:<input type="text" class="input_filtro"></p>
+                <p class="p_filtro">E-mail:<input type="text" class="input_filtro"></p>
+            </div>
+            <div class="lado">
+                <p class="p_filtro">Nome:<input type="text" class="input_filtro"></p>
+                <p class="p_filtro">CPF:<input type="text" class="input_filtro"></p>
+            </div>
+            <p class="p_filtro">Telefone:<input type="text" class="input_filtro"></p>
+        </div>
+        <button id="button_filtro">Procurar</button>
+    </section>
 
     <section id="tabelao">
         <table id="tabela">
