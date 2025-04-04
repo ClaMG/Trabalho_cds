@@ -23,6 +23,10 @@ obsevação: os links dos slides podem ser removidos, contanto que o css que est
 
 Codigos feitos:
 
+
+gerenciar_artista.css
+gerenciar_cds.css
+gerenciar_user.css
 alterar.css
 avaliar_site.css 
 cabeçalho_com_login_sem_menu.css
@@ -52,6 +56,9 @@ user.html > cabeçalho_com_login.css
 politica_comercial.html > cabeçalho_com_login.css
 avaliar.html > cabeçalho_com_login_sem_menu.css
 todos_os_produtos.html > cabeçalho_com_login.css
+gerenciar_artistas.html > cabeçalho_com_login_sem_menu.css
+gerenciar_cds.html > cabeçalho_com_login_sem_menu.css
+gerenciar_user.html > cabeçalho_com_login_sem_menu.css
 
 Falta terminar:
 
@@ -68,9 +75,6 @@ Falta telas:
 -editar_cd
 -editar_usuarios
 -editar_musica
--gerenciar_artista
--gerenciar_cd
--gerenciar_usuarios
 -gerenciar_musicas
 -deletar_cd
 
