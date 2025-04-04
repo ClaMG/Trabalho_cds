@@ -226,6 +226,9 @@ main{
     #cadastro{
         width: 450px; /* Ajuste de largura para telas menores */
         height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     #cima{

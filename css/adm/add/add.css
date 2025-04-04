@@ -29,7 +29,7 @@ main{
 }
 
 /* Estilo da seção de alterar dados */
-#alterar{
+#adicionar{
     background-color: rgb(247, 247, 247); /* Cor de fundo */
     border-radius: 10px; /* Borda arredondada */
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidade */
@@ -42,7 +42,7 @@ main{
 /* Estilo do título principal */
 #titulo{
     color: var(--roxo); /* Cor do título */
-    font-size: 80px; /* Tamanho da fonte */
+    font-size: 70px; /* Tamanho da fonte */
     margin-left: 10px; /* Margem à esquerda */
     text-align: center;
 }
@@ -105,13 +105,13 @@ main{
     max-width: 350px;
 }
 
-#add_perfil_img {
+.add_perfil_img {
     display: inline-block;
     cursor: pointer;
     color: var(--cinza-4);
 }
 
-#add_perfil_img:hover {
+.add_perfil_img:hover {
     background-color: #dedddd;
 }
 
@@ -222,7 +222,7 @@ main{
 
 /* Estilos para telas pequenas (máximo de 850px) */
 @media only screen and (max-width: 743px){
-    #alterar{
+    #adicionar{
         width: 95%;
         display: flex;
         flex-direction: column;
