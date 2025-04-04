@@ -35,10 +35,10 @@
 }
 
 .titulo_item{
-    border: 2px solid var(--roxo);
-    background-color: #c0a2f8;
+    border: 2px solid #461e92;
+    background-color: var(--roxo);
     padding: 1px 7px;
-    color: #461e92;
+    color: #c0a2f8;
 }
 
 .info{
