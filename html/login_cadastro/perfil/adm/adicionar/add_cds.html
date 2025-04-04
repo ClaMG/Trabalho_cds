@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adicionar Usuarios</title>
-    <link rel="stylesheet" href="../../../../../css/adm/add/add.css">
+    <title>Adicionar CDs</title>
+    <link rel="stylesheet" href="../../../../../css/adm/add_edit.css">
     <link rel="stylesheet" href="../../../../../css/adm/add/add_cds.css">
     <link rel="stylesheet" href="../../../../../css/cabeçalhos/cabeçalho_com_login_sem_menu.css">
+
+    <script src="../../../../../js/adm/add/add_alt_cds.js" defer></script>
 </head>
 <body>
 
@@ -113,22 +115,5 @@
         <img src="../../../../../img/alterar_dados/img_cantos.png" alt="notas musicais" class="img_esquerda" id="sumir_d">
         <img src="../../../../../img/alterar_dados/img_cantos.png" alt="notas musicais" class="img_esquerda" id="sumir_d2">
     </div>
-
-    <script>
-    const checkboxSim = document.getElementById('sim');
-    const checkboxNao = document.getElementById('nao');
-
-    checkboxSim.addEventListener('change', () => {
-      if (checkboxSim.checked) {
-        checkboxNao.checked = false;
-      }
-    });
-
-    checkboxNao.addEventListener('change', () => {
-      if (checkboxNao.checked) {
-        checkboxSim.checked = false;
-      }
-    });
-  </script>
 </body>
 </html>

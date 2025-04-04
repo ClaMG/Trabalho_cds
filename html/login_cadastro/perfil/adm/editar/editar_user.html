@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adicionar Artista</title>
+    <title>Editar Usuarios</title>
     <link rel="stylesheet" href="../../../../../css/adm/add_edit.css">
     <link rel="stylesheet" href="../../../../../css/cabeçalhos/cabeçalho_com_login_sem_menu.css">
 </head>
@@ -41,40 +41,42 @@
     </header>
 
     <main>
-        <!-- Seção de Adicionar Artista -->
+        <!-- Seção de Alterar Dados do Usuario -->
         <section id="adicionar">
         
             <!-- Título principal da página -->
-            <h1 id="titulo">Adicionar Novo Artista</h1>
+            <h1 id="titulo">Alterar Dados do Usuario</h1>
             
             <!-- Div que contém os campos de entrada do formulário -->
             <div id="inputs">
                 
-                <!-- Div para os dados do artista-->
+                <!-- Div para os dados de acesso -->
                 <div id="cima">
                     <div class="separacao">
-                        <!-- Subtítulo para a seção de dados do artista -->
-                        <h1 class="subtitulo" id="acesso">Dados do artista:</h1>
+                        <!-- Subtítulo para a seção de dados de acesso -->
+                        <h1 class="subtitulo" id="acesso">Dados de acesso:</h1>
                         
-                        <!-- Campos de entrada -->
-                        <input type="text" placeholder="Nome" class="input">
+                        <!-- Campos de entrada para usuário, e-mail e senha -->
+                        <input type="text" placeholder="Usuario" class="input">
+                        <input type="email" placeholder="E-mail" class="input">
+                        <input type="text" placeholder="Senha" maxlength="20" class="input">
+                    </div>
+                    
+                    <!-- Div para os dados pessoais -->
+                    <div class="separacao" id="direita">
+                        <h1 class="subtitulo" id="pessoais">Dados pessoais:</h1>
+                        
+                        <!-- Campos de entrada para nome completo, telefone e CPF -->
+                        <input type="text" placeholder="Nome Completo" class="input">
+                        <input type="text" id="telefone" placeholder="Telefone" maxlength="15" class="input">
+                        <input type="text" id="cpf" placeholder="CPF" maxlength="14" class="input">
                         <div>
-                            <label for="upload" class="input add_perfil_img">Adicionar foto do Artista</label>
+                            <label for="upload" class="input add_perfil_img">Adicionar foto de perfil</label>
                             <input type="file" id="upload" hidden>
                         </div>
                     </div>
-                    
-                    <!-- Div para os dados do artista -->
-                    <div class="separacao" id="direita">
-                        
-                        <!-- Campos de entrada -->
-                        <input type="text" placeholder="Data de Nascimento" maxlength="20" class="input">
-                        <input type="text" placeholder="Descrição" class="input">
-                        <input type="text" placeholder="CDs Associados" class="input">
-                        
-                    </div>
-                    <!-- Botão de Adicionar -->
-                    <button id="button">Adicionar</button>
+                    <!-- Botão de Alterar -->
+                    <button id="button">Alterar</button>
                 </div>
             </div>
         </section>

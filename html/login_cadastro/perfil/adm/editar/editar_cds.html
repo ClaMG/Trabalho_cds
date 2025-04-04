@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adicionar Artista</title>
+    <title>Editar CDs</title>
     <link rel="stylesheet" href="../../../../../css/adm/add_edit.css">
+    <link rel="stylesheet" href="../../../../../css/adm/add/add_cds.css">
     <link rel="stylesheet" href="../../../../../css/cabeçalhos/cabeçalho_com_login_sem_menu.css">
+
+    <script src="../../../../../js/adm/add/add_alt_cds.js" defer></script>
 </head>
 <body>
 
@@ -41,40 +44,53 @@
     </header>
 
     <main>
-        <!-- Seção de Adicionar Artista -->
+        <!-- Seção de Alterar Dados do Cds -->
         <section id="adicionar">
         
             <!-- Título principal da página -->
-            <h1 id="titulo">Adicionar Novo Artista</h1>
+            <h1 id="titulo">Alterar Dados do CD</h1>
             
             <!-- Div que contém os campos de entrada do formulário -->
             <div id="inputs">
                 
-                <!-- Div para os dados do artista-->
+                <!-- Div para os dados do Cd -->
                 <div id="cima">
                     <div class="separacao">
-                        <!-- Subtítulo para a seção de dados do artista -->
-                        <h1 class="subtitulo" id="acesso">Dados do artista:</h1>
+                        <!-- Subtítulo para a seção de dados do Cd -->
+                        <h1 class="subtitulo" id="acesso">Dados do Cd:</h1>
                         
                         <!-- Campos de entrada -->
-                        <input type="text" placeholder="Nome" class="input">
+                        <input type="text" placeholder="Titulo" class="input">
                         <div>
-                            <label for="upload" class="input add_perfil_img">Adicionar foto do Artista</label>
+                            <label for="upload" class="input add_perfil_img" id="add_perfil_img">Alterar foto da Capa</label>
                             <input type="file" id="upload" hidden>
+                        </div>
+                        <input type="number" placeholder="Estoque" maxlength="20" class="input">
+                        <input type="number" placeholder="Preço" maxlength="20" class="input">
+                        <div id="destaque">
+                            <h1 id="titulo_destaque">Destaque</h1>
+                            <div id="inputs_destaque">
+                                <label class="itens">Sim <input type="checkbox" class="input" id="sim"><label for="sim"></label></label>
+                                <label class="itens">Não <input type="checkbox" class="input" id="nao"><label for="nao"></label></label>
+                            </div>
                         </div>
                     </div>
                     
-                    <!-- Div para os dados do artista -->
+                    <!-- Div para o lado -->
                     <div class="separacao" id="direita">
                         
                         <!-- Campos de entrada -->
-                        <input type="text" placeholder="Data de Nascimento" maxlength="20" class="input">
+                        
+
+                        <input type="text" placeholder="Estreia" class="input">
+                        <input type="text" placeholder="Gênero" class="input">
                         <input type="text" placeholder="Descrição" class="input">
-                        <input type="text" placeholder="CDs Associados" class="input">
+                        <input type="text" placeholder="Artistas" class="input">
+                        <input type="text" placeholder="Artistas" class="input">
                         
                     </div>
-                    <!-- Botão de Adicionar -->
-                    <button id="button">Adicionar</button>
+                    <!-- Botão de Alterar -->
+                    <button id="button">Alterar</button>
                 </div>
             </div>
         </section>
