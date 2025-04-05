@@ -150,8 +150,8 @@
     position: relative;
     display: flex;
     align-items: center;
-    margin-top: -85px;           /* Posicionamento relativo ao produto */
-    margin-left: 10px;
+    margin-top: -80px;           /* Posicionamento relativo ao produto */
+    margin-left: 5px;
 }
 
 /* === BOTÃO SOBRE O PRODUTO (APARECE AO PASSAR O MOUSE) === */
@@ -180,7 +180,7 @@
 .produto {
     border: 2px solid var(--roxo); /* Borda com a cor roxa padrão */
     width: 220px;
-    height: 340px;
+    height: 380px;
     justify-content: space-between;
     display: flex;
     flex-direction: column;
@@ -190,7 +190,6 @@
     z-index: 0;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3); /* Sombra suave */
     margin-top: 15px;
-    
 }
 
 /* === IMAGEM DO PRODUTO (CAPA DO CD) === */
@@ -244,6 +243,26 @@
 /* === EFEITO DE CLIQUE NO ÍCONE DE FAVORITO === */
 .img_favorito:active {
     transform: scale(0.95); /* Reduz o tamanho ligeiramente ao clicar */
+}
+
+.carrinho{
+    background-color: var(--roxo);
+    color: var(--branco);
+    padding: 5px;
+    border-radius: 5px;
+    width: 110px;
+    font-size: 15px;
+    text-align: center;
+    height: 40px;
+    margin-top: 5px;
+    line-height: 15px;
+    border: none;
+}
+
+.carrinho:hover{
+    background-color: var(--cinza-1);
+    color: var(--branco);
+    transition: 0.2s;
 }
 
 /* Aplica regras apenas para telas com largura máxima de 768px (dispositivos móveis, por exemplo) */

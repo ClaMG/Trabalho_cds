@@ -31,7 +31,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    margin-top: -85px;           /* Posicionamento relativo ao produto */
+    margin-top: -80px;           /* Posicionamento relativo ao produto */
     margin-left: 5px;
 }
 
@@ -55,14 +55,14 @@
 /* === EXIBE O BOTÃO AO PASSAR O MOUSE SOBRE O LINK DO PRODUTO === */
 .link_produto2:hover .butao {
     display: block;
-    transition: 2s;              /* Transição suave na aparição */
+    transition: 1s;             /* Transição suave na aparição */
 }
 
 /* === CARD DO PRODUTO === */
 .produto {
     border: 2px solid var(--roxo); /* Borda com a cor roxa padrão */
     width: 220px;
-    height: 340px;
+    height: 380px;
     justify-content: space-between;
     display: flex;
     flex-direction: column;
@@ -106,6 +106,26 @@
 /* === EFEITO AO PASSAR O MOUSE NO NOME DO ARTISTA === */
 .artista:hover {
     color: var(--roxo);
+}
+
+.carrinho{
+    background-color: var(--roxo);
+    color: var(--branco);
+    padding: 5px;
+    border-radius: 5px;
+    width: 110px;
+    font-size: 15px;
+    text-align: center;
+    height: 40px;
+    margin-top: 5px;
+    line-height: 15px;
+    border: none;
+}
+
+.carrinho:hover{
+    background-color: var(--cinza-1);
+    color: var(--branco);
+    transition: 0.2s;
 }
 
 /* === CONTAINER INFERIOR DO CARD: CONTÉM ÍCONE DE FAVORITO E OUTROS === */

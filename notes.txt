@@ -167,3 +167,48 @@ php_matriz{
     >js{...}
 }
 
+
+
+
+Alterações:
+
+
+add um button no todos_os_produtos para o user mandar o produto para o carrinho
+
+add campo no gerenciar_cds de procedencia
+add ou alt um campo no filtro do gerenciar_cds de artistas e musicas
+
+add button de reastart nos filtros
+add filtro ano de destaque
+add um button no gerenciar_usuarios para o adm selecionar os usuarios para excluir ou editar
+remover do gerenciar_usuarios o id e a senha 
+
+Artista info  
+
+ nome 
+ foto 
+ data de nascimento
+ descrição
+
+produto info
+
+título 
+capa 
+disponibilidade
+preço 
+os nomes e os tempos das músicas 
+nomes dos artistas 
+descrição 
+ano de lançamento 
+gênero 
+procedência
+trecho de uma música
+
+
+Pagamento
+
+forma de pagamento (à vista ou a 
+prazo) 
+tipo de pagamento (boleto bancário ou cartão) 
+as opções de envio (transporte: aéreo ou marítimo) 
+endereço de entrega
