@@ -1,0 +1,138 @@
+/* Reset básico para remover margens e paddings padrão dos elementos */
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif; /* Define a fonte padrão para o documento */
+}
+
+:root{
+    --p-cinza: #595959;
+    --roxo: #7445cc;
+}
+
+/* Evita o scroll horizontal desnecessário */
+body {
+    overflow-x: hidden;
+}
+
+/* Centraliza o conteúdo principal */
+main {
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilização da área de conteúdo principal */
+#conteudo {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Adiciona sombra para efeito de profundidade */
+    background-color: rgb(247, 247, 247); /* Define a cor de fundo */
+    width: 1000px; /* Define a largura do conteúdo */
+    height: auto; /* Altura ajustável conforme o conteúdo */
+    padding: 10px;
+    border-radius: 0px 0px 10px 10px;
+}
+
+/* Estilização do título principal */
+#principal {
+    color: var(--roxo); /* Define a cor do texto */
+    font-size: 50px; /* Define o tamanho da fonte */
+}
+
+/* Estilização dos subtítulos */
+.titulo_pergunta {
+    color: var(--p-cinza);
+    font-size: 30px;
+    margin: 20px 0px; /* Espaçamento superior e inferior */
+}
+
+/* Estilização dos parágrafos dentro da seção de conteúdo */
+#conteudo p {
+    text-align: justify; /* Justifica o texto para melhor leitura */
+    margin: 0px 15px;
+}
+
+/* ======= Estilização das imagens laterais ======= */
+
+/* Classe para esconder elementos específicos */
+.sumir {
+    display: none; /* Oculta as imagens */
+}
+
+/* Estilização das imagens posicionadas à direita */
+#imgs_direita {
+    display: flex; /* Usa flexbox para organização */
+    align-items: flex-end; /* Alinha as imagens ao fundo */
+    flex-direction: column; /* Organiza as imagens em coluna */
+    position: fixed; /* Posicionamento absoluto sobre o conteúdo */
+    bottom: 0; /* Alinha ao fundo da tela */
+    right: 0; /* Alinha à direita */
+    z-index: -1; /* Coloca as imagens atrás do conteúdo principal */
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilização das imagens posicionadas à esquerda */
+#imgs_esquerda {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+/* Ajuste das imagens da direita */
+.img_direita {
+    width: 300px; /* Define a largura das imagens */
+    margin-right: -200px; /* Ajusta a posição da imagem */
+}
+
+/* Ajuste na margem das imagens da direita, exceto a primeira */
+.img_direita:not(:first-child) {
+    margin-top: -5px; /* Define espaçamento entre imagens */
+}
+
+/* Ajuste das imagens da esquerda (invertidas) */
+.img_esquerda {
+    width: 300px;
+    margin-left: -200px;
+    transform: scaleX(-1); /* Inverte horizontalmente a imagem */
+}
+
+/* Ajuste na margem das imagens da esquerda, exceto a primeira */
+.img_esquerda:not(:first-child) {
+    margin-top: -5px;
+}
+
+.img_direita, .img_esquerda {
+    max-width: 300px; /* Mantém as imagens menores em telas pequenas */
+    opacity: 0.5; /* Reduz a opacidade para não sobrecarregar o layout */
+}
+
+
+/* ======= Responsividade ======= */
+
+@media only screen and (max-width: 850px) {
+    /* Ajuste da largura do conteúdo para telas menores */
+    #conteudo {
+        width: 430px;
+    }
+
+    /* Exibe imagens ocultas em telas menores */
+    .sumir {
+        display: block;
+    }
+
+    .img_direita {
+        width: 200%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .cortar{
+        width: 150px;
+        overflow: hidden; /* Esconde parte da imagem fora da área */
+    }
+
+}
