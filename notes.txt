@@ -172,9 +172,6 @@ php_matriz{
 
 Alterações:
 
-
-add um button no todos_os_produtos para o user mandar o produto para o carrinho
-
 add campo no gerenciar_cds de procedencia
 add ou alt um campo no filtro do gerenciar_cds de artistas e musicas
 
