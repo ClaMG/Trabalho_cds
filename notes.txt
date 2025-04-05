@@ -91,6 +91,7 @@ Falta telas:
 -deletar_cd
 
 -sugestao
+-perguntas_frequentes
 -carrinho
 -historico_compras
 
@@ -148,10 +149,6 @@ php_matriz{
             -login
         }
         >pagina_inicial{
-            >rodape{
-                -politica_comercial
-                -avaliar_site
-            }
             -index
             -index_logado
         }
@@ -161,6 +158,11 @@ php_matriz{
             -detalhes_cd (produto)
             -comprar
         }
+        >rodape{
+                -politica_comercial
+                -avaliar_site
+                -perguntas_frequentes
+            }
     }
     >imagens{...}
     >img_code{...}

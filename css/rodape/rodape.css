@@ -19,6 +19,7 @@
 
   footer{
     background-color: var(--branco);
+    position: sticky;
   }
 
 /* == Seção da Logo no Rodapé == */
