@@ -17,6 +17,10 @@
     --roxo: #7445cc;
   }
 
+  footer{
+    background-color: var(--branco);
+  }
+
 /* == Seção da Logo no Rodapé == */
 #logo_rodape {
     display: flex;

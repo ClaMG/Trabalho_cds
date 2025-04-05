@@ -223,6 +223,10 @@ header {
         margin: 0px 20px;
     }
 
+    #img_logo{
+        width: 100px;
+    }
+
     /* === Ajustes na Barra de Pesquisa === */
 
     /* Define um tamanho máximo para a barra de pesquisa no mobile */

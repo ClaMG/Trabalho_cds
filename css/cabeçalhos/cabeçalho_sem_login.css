@@ -72,4 +72,8 @@ header {
     #parte_de_cima_cab {
         margin: 0 20px;
     }
+
+    #img_logo{
+        width: 100px;
+    }
 }

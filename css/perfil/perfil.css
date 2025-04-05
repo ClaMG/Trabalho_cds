@@ -20,7 +20,7 @@
 
 
 /* Configuração geral da seção principal */
-section{
+#section_perfil{
     display: flex;
     background-color: var(--branco);
     width: 900px; /* Define a largura da seção */
