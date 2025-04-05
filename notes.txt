@@ -86,6 +86,8 @@ index.html > cabeçalho_sem_login.css(Falta Alterar as imagens dos carrosseis e 
 
 Falta telas:
 
+-atividades
+
 -deletar_cd
 
 -sugestao
@@ -126,6 +128,7 @@ php_matriz{
                         -gerenciar_musicas
                     }
                     >puro{...}
+                    -atividades
                 }
                 >butoes{
                     -favoritos
