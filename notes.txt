@@ -86,7 +86,7 @@ index.html > cabeçalho_sem_login.css > rodape.css (Falta Alterar as imagens dos
 
 Falta telas:
 
--atividades
+-gerenciar_atividades
 
 -sugestao
 -carrinho
@@ -121,9 +121,9 @@ php_matriz{
                         -gerenciar_cd
                         -gerenciar_usuarios
                         -gerenciar_musicas
+                        -gerenciar_atividades
                     }
                     >puro{...}
-                    -atividades
                 }
                 >butoes{
                     -favoritos
