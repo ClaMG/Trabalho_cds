@@ -47,6 +47,7 @@
 
     <button class="button_voltar"><a href="#" class="link_voltar">Voltar</a></button>
     
+    
     <h1 id="titulo">Gerenciar CDs</h1>
     
 
@@ -54,30 +55,39 @@
 
     <section id="filtro">
         <div id="separar">
-            <div class="lado">
-                <p class="p_filtro">Titulo:<input type="text" class="input_filtro"></p>
-                <p class="p_filtro">Gênero:<input type="text" class="input_filtro"></p>
+            <div class="separar_pc">
+                <div class="lado">
+                    <p class="p_filtro">Titulo:<input type="text" class="input_filtro"></p>
+                    <p class="p_filtro">Gênero:<input type="text" class="input_filtro"></p>
+                </div>
+                <div class="lado">
+                    <p class="p_filtro">Lançamento:<input type="text" class="input_filtro"></p>
+                    <p class="p_filtro">Durabilidade:<input type="text" class="input_filtro"></p>
+                </div>
+                <div class="lado">
+                    <p class="p_filtro">Preço max:<input type="text" class="input_filtro"></p>
+                    <p class="p_filtro">Preço min:<input type="text" class="input_filtro"></p>
+                </div>
             </div>
-            <div class="lado">
-                <p class="p_filtro">Lançamento:<input type="text" class="input_filtro"></p>
-                <p class="p_filtro">Durabilidade:<input type="text" class="input_filtro"></p>
+            <div class="separar_pc">
+                <div class="lado">
+                    <p class="p_filtro">Artistas:<input type="text" class="input_filtro"></p>
+                    <p class="p_filtro">Musicas:<input type="text" class="input_filtro"></p>
+                </div>
+                <p class="p_filtro">Destaque:<input type="text" class="input_filtro"></p>
             </div>
-            <div class="lado">
-                <p class="p_filtro">Preço max:<input type="text" class="input_filtro"></p>
-                <p class="p_filtro">Preço min:<input type="text" class="input_filtro"></p>
-            </div>
-            <p class="p_filtro">Destaque:<input type="text" class="input_filtro"></p>
         </div>
         <button id="button_filtro">Procurar</button>
     </section>
 
     <button class="button_voltar"><a href="#" class="link_voltar">Adicionar CDs</a></button>
+    <button id="button_excluir">Excluir</button>
     
     <section id="tabelao">
         <table id="tabela">
             <thead>
                 <tr id="itens_cabeca">
-                    <th class="titulo_item">ID</th>
+                    <th class="titulo_item id">ID</th>
                     <th class="titulo_item">Titulo</th>
                     <th class="titulo_item">Capa</th>
                     <th class="titulo_item">Estoque</th>
@@ -88,6 +98,7 @@
                     <th class="titulo_item">Descrição</th>
                     <th class="titulo_item">Artistas</th>
                     <th class="titulo_item">Musicas</th>
+                    <th class="titulo_item">Procedencia</th>
                     <th class="titulo_item">Promoção</th>
                     <th class="titulo_item">Preço Final</th>
                     <th class="titulo_item">Vendas</th>
@@ -96,7 +107,7 @@
             </thead>
             <tbody>
                 <tr class="informações">
-                    <th class="info">1</th>
+                    <th class="info id">1</th>
                     <th class="info">Titulo</th>
                     <th class="info"><img src="../../../../../img/gerenciar/cd/capa1.jpg" alt="capa_cd" class="capa"></th>
                     <th class="info">50</th>
@@ -107,6 +118,7 @@
                     <th class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla est possimus nemo esse quos</th>
                     <th class="info">Artistas</th>
                     <th class="info">Musicas</th>
+                    <th class="info">Procedencia</th>
                     <th class="info" class="promocao">
                         <input type="number" class="promocao_input">%
                         <button class="button_promo">Aplicar</button>
@@ -115,11 +127,11 @@
                     <th class="info">5</th>
                     <th class="info">
                         <a href="#" class="link_acao">Editar</a> <br>
-                        <a href="#" class="link_acao excluir">Excluir</a>
+                        <input type="checkbox" id="checkbox1" class="input"> <label for="checkbox1"></label>
                     </th>
                 </tr>
                 <tr class="informações">
-                    <th class="info">2</th>
+                    <th class="info id">2</th>
                     <th class="info">Titulo</th>
                     <th class="info"><img src="../../../../../img/gerenciar/cd/capa2.jpg" alt="capa_cd" class="capa"></th>
                     <th class="info">20</th>
@@ -130,6 +142,7 @@
                     <th class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla est possimus nemo esse quos</th>
                     <th class="info">Artistas</th>
                     <th class="info">Musicas</th>
+                    <th class="info">Procedencia</th>
                     <th class="info" class="promocao">
                         <input type="number" class="promocao_input">%
                         <button class="button_promo">Aplicar</button>
@@ -138,7 +151,7 @@
                     <th class="info">5</th>
                     <th class="info">
                         <a href="#" class="link_acao">Editar</a> <br>
-                        <a href="#" class="link_acao excluir">Excluir</a>
+                        <input type="checkbox" id="checkbox2" class="input"> <label for="checkbox2"></label>
                     </th>
                 </tr>
             </tbody>

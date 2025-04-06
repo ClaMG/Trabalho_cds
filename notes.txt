@@ -168,14 +168,6 @@ php_matriz{
 
 Alterações:
 
-add campo no gerenciar_cds de procedencia
-add ou alt um campo no filtro do gerenciar_cds de artistas e musicas
-
-add button de reastart nos filtros
-add filtro ano de destaque
-add um button no gerenciar_usuarios para o adm selecionar os usuarios para excluir ou editar
-remover do gerenciar_usuarios o id e a senha 
-
 Artista info  
 
  nome 

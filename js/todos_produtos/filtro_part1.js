@@ -24,3 +24,6 @@ toggleContent('button_filtro_artistas', 'artistas', 'button_filtro_artistas', '.
 
 // Chama a função para o conteúdo de "Músicas"
 toggleContent('button_filtro_musicas', 'musicas', 'button_filtro_musicas', '../../img/todos_produtos/icone_seta_direita.png', '../../img/todos_produtos/icone_seta_baixo.png');   
+
+// Chama a função para o conteúdo de "Destaque"
+toggleContent('button_filtro_destaque', 'destaque', 'button_filtro_destaque', '../../img/todos_produtos/icone_seta_direita.png', '../../img/todos_produtos/icone_seta_baixo.png');

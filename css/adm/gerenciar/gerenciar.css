@@ -17,7 +17,7 @@
 }
 
 #filtro{
-    width: 1300px;
+    width: 1150px;
     border: 2px solid var(--roxo);
     padding: 10px;
     margin: 20px auto;
@@ -80,14 +80,17 @@
     transition: 0.3s;
 }
 
-.button_voltar{
+.button_voltar, #button_excluir{
     border-radius: 5px;
     border: none;
     background-color: var(--roxo); /* Cor de fundo */
-    
     padding: 5px;
     font-weight: bold;
     margin: 10px;
+}
+
+#button_excluir{
+    color: var(--branco); /* Cor do texto */
 }
 
 .link_voltar{
@@ -101,6 +104,12 @@
 
 .button_voltar:hover{
     background-color: var(--cinza-7); /* Cor de fundo ao passar o mouse */
+    transition: 0.3s;
+}
+
+#button_excluir:hover{
+    background-color: rgb(255, 29, 29); /* Cor de fundo ao passar o mouse */
+    color: var(--cinza-1);
     transition: 0.3s;
 }
 
@@ -136,6 +145,10 @@
     color: var(--cinza-2);
 }
 
+.id{
+    display: none;
+}
+
 .link_acao{
     text-decoration: none;
     color: var(--roxo);
@@ -146,11 +159,44 @@
     color: var(--cinza-2);
 }
 
-.excluir{
-    color: rgb(191, 1, 1);
+/* === Estilização dos checkboxes === */
+.input[type="checkbox"] {
+    display: none;
 }
-.excluir:hover{
-    color: rgb(121, 0, 0);
+
+.input[type="checkbox"] + label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--branco);
+    border: 2px solid var(--cinza-2);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    margin-right: 5px;
+    position: relative;
+    margin-top: 10px;
+}
+
+.input[type="checkbox"]:checked + label {
+    background-color: var(--branco);
+    border-color: var(--branco);
+}
+
+.input[type="checkbox"]:checked + label::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border: 3px solid #1f1f1f;
+    border-radius: 50%;
+    background-color: var(--branco);
+    background-image: radial-gradient(circle, var(--roxo) 30%, var(--cinza-1) 40%);
+    background-size: 100%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 /* Responsivo */

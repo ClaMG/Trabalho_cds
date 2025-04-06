@@ -63,12 +63,13 @@
     </section>
 
     <button class="button_voltar"><a href="#" class="link_voltar">Adicionar Artistas</a></button>
+    <button id="button_excluir">Excluir</button>
 
     <section id="tabelao">
         <table id="tabela">
             <thead>
                 <tr id="itens_cabeca">
-                    <th class="titulo_item">ID</th>
+                    <th class="titulo_item id">ID</th>
                     <th class="titulo_item">Nome</th>
                     <th class="titulo_item">Foto</th>
                     <th class="titulo_item">Nascimento</th>
@@ -79,7 +80,7 @@
             </thead>
             <tbody>
                 <tr class="informações">
-                    <th class="info">1</th>
+                    <th class="info id">1</th>
                     <th class="info">Nome</th>
                     <th class="info"><img src="../../../../../img/gerenciar/artista/artista1.jpg" alt="foto do artista" class="foto"></th>
                     <th class="info">1995-03-02</th>
@@ -87,11 +88,11 @@
                     <th class="info">CDs Associados</th>
                     <th class="info">
                         <a href="#" class="link_acao">Editar</a> <br>
-                        <a href="#" class="link_acao excluir">Excluir</a>
+                        <input type="checkbox" id="checkbox1" class="input"> <label for="checkbox1"></label>
                     </th>
                 </tr>
                 <tr class="informações">
-                    <th class="info">2</th>
+                    <th class="info id">2</th>
                     <th class="info">Nome</th>
                     <th class="info"><img src="../../../../../img/gerenciar/artista/artista2.jpg" alt="foto do artista" class="foto"></th>
                     <th class="info">1996-01-11</th>
@@ -99,7 +100,7 @@
                     <th class="info">CDs Associados</th>
                     <th class="info">
                         <a href="#" class="link_acao">Editar</a> <br>
-                        <a href="#" class="link_acao excluir">Excluir</a>
+                        <input type="checkbox" id="checkbox2" class="input"> <label for="checkbox2"></label>
                 </tr>
             </tbody>
         </table>

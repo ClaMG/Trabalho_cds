@@ -42,3 +42,22 @@
     background-color: var(--cinza-2); /* Cor de fundo ao passar o mouse */
     transition: 0.3s;
 }
+
+#separar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.separar_pc{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    .separar_pc{
+        flex-direction: column;
+    }
+}
