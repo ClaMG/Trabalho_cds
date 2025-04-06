@@ -3,28 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <title>Checkbox Sim e Não</title>
-  <style>
-    #input-arquivo {
-    display: none;
-  }
-
-  .label-arquivo {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 16px;
-    border-radius: 6px;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 14px;
-  }
-
-  .label-arquivo:hover {
-    background-color: #0056b3;
-  }
-  </style>
 </head>
+
+<style>
+  input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  position:absolute; right:10px; top:50%; transform:translateY(-50%); cursor:pointer; color:red;
+}
+
+</style>
 <body>
-  <label class="label-arquivo" for="input-arquivo">📁 Selecionar arquivo</label>
-  <input type="file" id="input-arquivo">
+  <div class="search-wrapper" style="position: relative;">
+    <input type="search" id="search" placeholder="Buscar..." oninput="toggleClearButton()" />
+    <span id="clear-btn" onclick="document.getElementById('search').value=''; this.style.display='none';" 
+          style="display:none; position:absolute; right:10px; top:50%; transform:translateY(-50%); cursor:pointer; color:red;">
+      &#10005; <!-- Isso é o símbolo “X” -->
+    </span>
+  </div>
+  
+  <script>
+    function toggleClearButton() {
+      const input = document.getElementById('search');
+      const clearBtn = document.getElementById('clear-btn');
+      clearBtn.style.display = input.value ? 'block' : 'none';
+    }
+  </script>
+  
 </body>
 </html>

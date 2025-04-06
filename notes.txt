@@ -169,14 +169,12 @@ php_matriz{
 Alterações:
 
 Artista info  
-
  nome 
  foto 
  data de nascimento
  descrição
 
 produto info
-
 título 
 capa 
 disponibilidade
@@ -191,7 +189,6 @@ trecho de uma música
 
 
 Pagamento
-
 forma de pagamento (à vista ou a 
 prazo) 
 tipo de pagamento (boleto bancário ou cartão) 
