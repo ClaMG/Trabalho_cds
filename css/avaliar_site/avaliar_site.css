@@ -108,23 +108,6 @@ main {
     margin-top: 5px;
 }
 
-/* == CAMPOS DE INFORMAÇÕES (NOME E EMAIL) == */
-
-#informacoes {
-    display: flex;
-    justify-content: space-between; /* Alinha os campos um ao lado do outro */
-    margin-top: 10px;
-}
-
-/* Estilização dos inputs de nome e email */
-.input_baixo {
-    width: 450px;
-    height: 30px;
-    font-size: 20px;
-    border: 1px solid black;
-    border-radius: 5px; /* Bordas arredondadas */
-    margin-top: 5px;
-}
 
 /* == BOTÃO DE ENVIO == */
 
@@ -231,11 +214,6 @@ main {
         width: 420px;
     }
 
-    /* Reduz a largura dos inputs de nome e email */
-    .input_baixo {
-        width: 200px;
-    }
-
     /* Exibe imagens ocultas em telas menores */
     .sumir {
         display: block;
@@ -264,10 +242,6 @@ main {
     }
 
     #input_text {
-        width: 100%;
-    }
-
-    .input_baixo {
         width: 100%;
     }
 
